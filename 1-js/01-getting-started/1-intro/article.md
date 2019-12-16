@@ -1,65 +1,65 @@
-# An Introduction to JavaScript
+# Eine Einführung in JavaScript
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Mal sehen, was das Besondere an JavaScript ist, was wir damit erreichen können und welche anderen Technologien gut damit umgehen.
 
-## What is JavaScript?
+## Was ist JavaScript?
 
-*JavaScript* was initially created to *"make web pages alive"*.
+*JavaScript* wurde ursprünglich entwickelt, um *"Webseiten lebendig zu machen "*.
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Die Programme dieser Sprache werden *scripts* genannt. Sie können direkt im HTML der Seite geschrieben werden und werden automatisch beim laden der Seite ausgeführt.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Diese Scripts werden im Klartext bereitgestellt und ausgeführt. Sie benötigen keine spezielle Vorbereitung oder Kompilierung um zu funktionieren.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+In diesem Aspekt unterscheidet sich JavaScript sehr von einer anderen Sprache namens [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Wiso wird es <u>Java</u>Script genannt?"
+Als JavaScript erstellt wurde, hatte es zunächst einen anderen Namen: "LiveScript". Aber Java war damals sehr beliebt, so dass beschlossen wurde, dass die Positionierung einer neuen Sprache als "jüngerer Bruder" von Java helfen würde.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Aber als es sich entwickelte, wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation namens [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und jetzt hat es überhaupt keinen Bezug zu Java.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Heute kann JavaScript nicht mehr nur im Browser ausgeführt werden. Es ist möglich JavaScript auch auf dem Server oder einem anderen beliebigen Geräte auszuführen, welches über ein Programm namens [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "JavaScript Virtual Machine" bezeichnet wird.
 
-Different engines have different "codenames". For example:
+Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- ...Es existieren auch noch andere Codenamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" fpr Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet verwendet werden. Wir werden sie auch benutzen. Wenn zum Beispiel "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
-```smart header="How do engines work?"
+```smart header="Wie funktioniert die Engine?"
 
-Engines are complicated. But the basics are easy.
+Engines sind kompliziert. Aber die Grundlagen sind einfach.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. Die Engine (embedded if it's a browser) liest ("parses") den Script.
+2. Danach wird der Script in die Maschinensprache übersetzt ("compiles").
+3. Und zum Schluss wird der Maschienen Code ausgeführt, was ziemlich schnell passiert.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript, während es läuft, analysiert die Daten, die durch es fließen, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
 ```
 
-## What can in-browser JavaScript do?
+## Was kann in-browser JavaScript tun?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser erstellt wurde, die es nicht benötigen.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+Die Funktionen von JavaScript hängen stark von der Umgebung ab, in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen, die es JavaScript ermöglichen, beliebige Dateien zu lesen/schreiben, Netzwerkanfragen durchzuführen, etc.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+In-Browser JavaScript kann alles, was mit der Manipulation von Webseiten, der Interaktion mit dem Benutzer und dem Webserver zu tun hat.
 
-For instance, in-browser JavaScript is able to:
+So ist beispielsweise In-Browser JavaScript in der Lage:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- Der Seite neues HTML zu addieren, den existierenden content zu modifizieren, oder die Stile anzupassen.
+- Auf Benutzeraktionen zu reagieren, zum Beispiel Mausklicks, Mauszeigerbewegungen oder Tastenanschläge.
+- Anfragen and entfernte Server über das Netzwerk zu versenden und Daten hoch und runter zu laden (dies technologien werden [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) und [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) genannt).
+- Lesen und schreiben von cookies sowie das abragen des Benutzers oder das anzeigen von Nachrichten.
+- Speichern der Daten auf der client-side ("local storage").
 
-## What CAN'T in-browser JavaScript do?
+## Was kann JavaScript im Browser nicht tun?
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des Benutzers eingeschränkt. Ziel ist es, zu verhindern, dass eine bösartige Webseite auf private Informationen zugreift oder die Daten des Benutzers schädigt.
 
 Examples of such restrictions include:
 
