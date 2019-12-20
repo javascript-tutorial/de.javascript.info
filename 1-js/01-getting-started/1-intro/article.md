@@ -12,21 +12,21 @@ Diese Scripts werden im Klartext bereitgestellt und ausgeführt. Sie benötigen 
 
 In diesem Aspekt unterscheidet sich JavaScript sehr von einer anderen Sprache namens [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
-```smart header="Wiso wird es <u>Java</u>Script genannt?"
+```smart header="Warum wird es <u>Java</u>Script genannt?"
 Als JavaScript erstellt wurde, hatte es zunächst einen anderen Namen: "LiveScript". Aber Java war damals sehr beliebt, so dass beschlossen wurde, dass die Positionierung einer neuen Sprache als "jüngerer Bruder" von Java helfen würde.
 
-Aber als es sich entwickelte, wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation namens [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und jetzt hat es überhaupt keinen Bezug zu Java.
+Aber als es sich entwickelte, wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation namens [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und jetzt hat es überhaupt keinen Bezug mehr zu Java.
 ```
 
 Heute kann JavaScript nicht mehr nur im Browser ausgeführt werden. Es ist möglich JavaScript auch auf dem Server oder einem anderen beliebigen Geräte auszuführen, welches über ein Programm namens [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
 
 Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "JavaScript Virtual Machine" bezeichnet wird.
 
-Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
+Verschiedene Engines haben unterschiedliche "Kodnamen". Zum Beispiel:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...Es existieren auch noch andere Codenamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" fpr Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
+- ...Es existieren auch noch andere Kodnamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
 
 Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet verwendet werden. Wir werden sie auch benutzen. Wenn zum Beispiel "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
@@ -34,8 +34,8 @@ Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet
 
 Engines sind kompliziert. Aber die Grundlagen sind einfach.
 
-1. Die Engine (embedded if it's a browser) liest ("parses") den Script.
-2. Danach wird der Script in die Maschinensprache übersetzt ("compiles").
+1. Die Engine (eingebettet, wenn es sich um einen Browser handelt) liest ("parses") den Script.
+2. Danach wird der Script in die Maschinensprache übersetzt ("Kompilieren").
 3. Und zum Schluss wird der Maschienen Code ausgeführt, was ziemlich schnell passiert.
 
 Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript, während es läuft, analysiert die Daten, die durch es fließen, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
@@ -43,9 +43,9 @@ Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet
 
 ## Was kann in-browser JavaScript tun?
 
-Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser erstellt wurde, die es nicht benötigen.
+Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser erstellt wurde.
 
-Die Funktionen von JavaScript hängen stark von der Umgebung ab, in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen, die es JavaScript ermöglichen, beliebige Dateien zu lesen/schreiben, Netzwerkanfragen durchzuführen, etc.
+Die Funktionen von JavaScript hängen stark von der Umgebung ab, in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen, die es JavaScript z.B. ermöglichen, beliebige Dateien zu lesen oder zu schreiben, sowie Netzwerkanfragen durchzuführen.
 
 In-Browser JavaScript kann alles, was mit der Manipulation von Webseiten, der Interaktion mit dem Benutzer und dem Webserver zu tun hat.
 
@@ -53,9 +53,9 @@ So ist beispielsweise In-Browser JavaScript in der Lage:
 
 - Der Seite neues HTML zu addieren, den existierenden content zu modifizieren, oder die Stile anzupassen.
 - Auf Benutzeraktionen zu reagieren, zum Beispiel Mausklicks, Mauszeigerbewegungen oder Tastenanschläge.
-- Anfragen and entfernte Server über das Netzwerk zu versenden und Daten hoch und runter zu laden (dies technologien werden [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) und [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) genannt).
-- Lesen und schreiben von cookies sowie das abragen des Benutzers oder das anzeigen von Nachrichten.
-- Speichern der Daten auf der client-side ("local storage").
+- Anfragen and entfernte Server über das Netzwerk zu versenden und Daten hoch und runter zu laden (diese technologien werden [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) und [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) genannt).
+- Lesen und schreiben von cookies, sowie das abfragen des Benutzers oder das anzeigen von Nachrichten.
+- Speichern der Daten auf der client-side ("local storage"), also im Browser des Benutzers.
 
 ## Was kann JavaScript im Browser nicht tun?
 
@@ -65,10 +65,10 @@ Beispiele für solche Beschränkungen sind:
 
 - JavaScript auf einer Webebsite darf keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem darf es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebsystems. 
 
-    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser "dropping" oder es via `<input>` tag auswählen.
+    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser per "drag and drop" lädt oder sie via `<input>` tag auswählt.
 
     Es gibt auch Möglichkeiten mit der Kamera oder dem Mikrofon des Geräts zu interagieren. Dies benötigt aber die explizite Zustimmung des Benutzers. Deshalb kann eine JavaScript-enabled Website nicht heimlich die Webcam aktivieren, die Umgebung beobachten und die Informationen and die [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) übermitteln.
-- Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren wenn durch JavaScript ein neues Fenster geöffnet wird.Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
+- Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren, wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
 
     Dies wird die "Same Origin Policy" genannt. Um das zu umgehen, müssen *beide Seiten* für den Datenaustausch übereinstimmen und einen speziellen JavaScript-Code enthalten, der dies behandelt. Wir werden das im Tutorial behandeln.
 
@@ -85,9 +85,9 @@ Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers,
 Es gibt mindestens *drei* großartige Dinge über JavaScript:
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
++ Volle integration in HTML und CSS.
++ Einfache Dinge werden einfach gemacht.
++ Unterstützung von allen gängigen Browsern und standardmäßig aktiviert.
 ```
 JavaScript ist die einzige Browser-Technologie, die diese drei Dinge vereint.
 
@@ -112,7 +112,7 @@ Beispiele für solche Sprachen sind:
 - [Flow](http://flow.org/) fügt auch "data typing" hinzu, aber auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine hat, die in Nicht-Browser-Umgebungen (wie z.B. mobilen Anwendungen) läuft, aber auch in JavaScript umgesetzt werden kann. Sie wurde von Google entwickelt.
 
-Es gibt noch mehr. Natürlich, auch wenn wir eine der transponierten Sprachen verwenden, sollten wir auch JavaScript kennen, um wirklich zu verstehen, was wir tun.
+Es gibt noch mehr. Auch wenn wir eine der transpilierten Sprachen verwenden sollten wir auch JavaScript trozdem kennen. Es ist wichtig zu verstehen, was im Hintergrund passiert und was wir eigentlich tun.
 
 ## Zusammenfassung
 
