@@ -61,60 +61,61 @@ So ist beispielsweise In-Browser JavaScript in der Lage:
 
 Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des Benutzers eingeschränkt. Ziel ist es, zu verhindern, dass eine bösartige Webseite auf private Informationen zugreift oder die Daten des Benutzers schädigt.
 
-Examples of such restrictions include:
+Beispiele für solche Beschränkungen sind:
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS system functions.
+- JavaScript auf einer Webebsite darf keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem darf es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebsystems. 
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser "dropping" oder es via `<input>` tag auswählen.
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+    Es gibt auch Möglichkeiten mit der Kamera oder dem Mikrofon des Geräts zu interagieren. Dies benötigt aber die explizite Zustimmung des Benutzers. Deshalb kann eine JavaScript-enabled Website nicht heimlich die Webcam aktivieren, die Umgebung beobachten und die Informationen and die [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) übermitteln.
+- Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren wenn durch JavaScript ein neues Fenster geöffnet wird.Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+    Dies wird die "Same Origin Policy" genannt. Um das zu umgehen, müssen *beide Seiten* für den Datenaustausch übereinstimmen und einen speziellen JavaScript-Code enthalten, der dies behandelt. Wir werden das im Tutorial behandeln.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
+- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt. 
+Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (ausgedrückt in HTTP-Headern) von der entfernten Seite. Auch dies ist eine Sicherheitseinschränkung.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers, z.B. auf einem Server, verwendet wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
 
 ## What makes JavaScript unique?
 
-There are at least *three* great things about JavaScript:
+Es gibt mindestens *drei* großartige Dinge über JavaScript:
 
 ```compare
 + Full integration with HTML/CSS.
 + Simple things are done simply.
 + Support by all major browsers and enabled by default.
 ```
-JavaScript is the only browser technology that combines these three things.
+JavaScript ist die einzige Browser-Technologie, die diese drei Dinge vereint.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+Das macht JavaScript einzigartig. Deshalb ist es das am weitesten verbreitete Werkzeug zur Erstellung von Browser-Oberflächen.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+Trotzdem erlaubt JavaScript auch die Erstellung von Servern, mobilen Anwendungen, etc.
 
-## Languages "over" JavaScript
+## Sprachen "über" JavaScript
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+Die Syntax von JavaScript ist nicht für jeden geeignet. Verschiedene Menschen wollen unterschiedliche Funktionen.
 
-That's to be expected, because projects and requirements are different for everyone.
+Das ist zu erwarten, denn Projekte und Anforderungen sind für jeden anders.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+So sind vor kurzem eine Fülle neuer Sprachen erschienen, die in JavaScript *transpiled* (konvertiert) werden, bevor sie im Browser laufen.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+Moderne Werkzeuge machen die Transpilation sehr schnell und transparent und erlauben es den Entwicklern tatsächlich, in einer anderen Sprache zu programmieren und diese "unter der Haube" automatisch zu konvertieren.
 
-Examples of such languages:
+Beispiele für solche Sprachen sind:
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [CoffeeScript](http://coffeescript.org/) ist ein "syntactic sugar" für JavaScript. Es führt eine kürzere Syntax ein, was uns erlaubt, klareren und präziseren Code zu schreiben. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) ist darauf konzentriert "strict data typing" hinzuzufügen. TypeScript verfolg das Ziel den Entwicklungsprozess und den Support für komplexe Systeme zu vereinfachen. Die Sprache wurde von Microsoft entwickelt.
+- [Flow](http://flow.org/) fügt auch "data typing" hinzu, aber auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
+- [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine hat, die in Nicht-Browser-Umgebungen (wie z.B. mobilen Anwendungen) läuft, aber auch in JavaScript umgesetzt werden kann. Sie wurde von Google entwickelt.
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+Es gibt noch mehr. Natürlich, auch wenn wir eine der transponierten Sprachen verwenden, sollten wir auch JavaScript kennen, um wirklich zu verstehen, was wir tun.
 
-## Summary
+## Zusammenfassung
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
+- Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
+- Es gibt viele Sprachen, die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem man JavaScript beherrscht.
