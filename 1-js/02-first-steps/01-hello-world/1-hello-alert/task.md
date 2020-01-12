@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Show an alert
+# Zeige einen Alarm
 
-Create a page that shows a message "I'm JavaScript!".
+Erstelle eine Seite, die eine Nachricht "Ich bin JavaScript!" anzeigt.
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+Egal ob in einer Sandbox oder auf deiner Festplatte, stelle nur sicher, dass es funktioniert.
 
 [demo src="solution"]
 
