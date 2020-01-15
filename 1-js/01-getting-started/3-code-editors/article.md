@@ -27,7 +27,7 @@ Sie werden hauptsächlich zum sofortigen Öffnen und Bearbeiten einer Datei verw
 
 Der Hauptunterschied zwischen einem "Lightweight-Editor" und einer "IDE" besteht darin, dass eine IDE auf Projektebene arbeitet, also beim Start viel mehr Daten lädt, die Projektstruktur bei Bedarf analysiert und so weiter. Ein Lightweight-Editor ist viel schneller, wenn wir nur eine Datei benötigen.
 
-In der Praxis verfügen Lightweight-Editoren möglicherweise über eine Vielzahl von Plug-ins, darunter Syntaxanalysatoren und Autocompleter auf Verzeichnisebene. Daher gibt es keine strikte Grenze zwischen einem Lightweight-Editor und einer IDE.
+In der Praxis verfügen Lightweight-Editoren möglicherweise über eine Vielzahl von Plug-ins, darunter Syntaxanalyse und Autovervollständigung auf Verzeichnisebene. Daher gibt es keine exakte Grenze zwischen einem Lightweight-Editor und einer IDE.
 
 Die folgenden Optionen verdienen Ihre Aufmerksamkeit:
 
