@@ -35,7 +35,7 @@ Die folgenden Optionen verdienen Ihre Aufmerksamkeit:
 - [Visual Studio Code](https://code.visualstudio.com/) (plattformübergreifend, kostenlos).
 - [Sublime Text](http://www.sublimetext.com) (plattformübergreifend, Shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, kostenlos).
-- [Vim](http://www.vim.org/) und [Emacs](https://www.gnu.org/software/emacs/) sind auch cool, wenn du weißt, wie man sie benutzt.
+- [Vim](http://www.vim.org/) und [Emacs](https://www.gnu.org/software/emacs/) sind auch cool, wenn Sie wissen, wie man sie benutzt.
 
 ## Lass uns nicht streiten
 
