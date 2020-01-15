@@ -13,7 +13,7 @@ Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), ermöglicht d
 Wenn Sie noch keine IDE ausgewählt haben, prüfen Sie die folgenden Optionen:
 
 - [Visual Studio Code](https://code.visualstudio.com/) (plattformübergreifend, kostenlos).
-- [WebStorm](http://www.jetbrains.com/webstorm/) (plattformübergreifend, bezahlt).
+- [WebStorm](http://www.jetbrains.com/webstorm/) (plattformübergreifend, kostenpflichtig).
 
 Für Windows gibt es auch "Visual Studio", nicht zu verwechseln mit "Visual Studio Code". "Visual Studio" ist ein kostenpflichtiger und mächtiger Windows-Editor, der für die .NET-Plattform gut geeignet ist. Es ist auch gut in JavaScript. Es gibt auch eine kostenlose Version: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
