@@ -8,7 +8,7 @@ Es gibt zwei Haupttypen von Code-Editoren: IDEs und Lightweight-Editoren. Viele 
 
 Der Begriff [IDE](https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung) (Integrated Development Environment) bezieht sich auf einen leistungsstarken Editor mit vielen Funktionen, der normalerweise ein "ganzes Projekt" bearbeitet. Wie der Name schon sagt, handelt es sich nicht nur um einen Editor, sondern um eine umfassende "Entwicklungsumgebung".
 
-Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), ermöglicht das Navigieren zwischen Dateien, stellt die automatische Vervollständigung basierend auf dem gesamten Projekt (nicht nur der geöffneten Datei) bereit und lässt sich in ein Versionsverwaltungssystem (wie [git](https://git-scm.com/)), eine Testumgebung und andere Dinge auf "Projektebene".
+Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), ermöglicht das Navigieren zwischen Dateien, stellt die automatische Vervollständigung basierend auf dem gesamten Projekt (nicht nur der geöffneten Datei) bereit und lässt sich in ein Versionsverwaltungssystem (wie [git](https://git-scm.com/)), eine Testumgebung und andere Dinge auf "Projektebene" integrieren.
 
 Wenn Sie noch keine IDE ausgewählt haben, prüfen Sie die folgenden Optionen:
 
