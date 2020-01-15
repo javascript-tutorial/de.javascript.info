@@ -15,7 +15,7 @@ Wenn Sie noch keine IDE ausgewählt haben, prüfen Sie die folgenden Optionen:
 - [Visual Studio Code](https://code.visualstudio.com/) (plattformübergreifend, kostenlos).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (plattformübergreifend, kostenpflichtig).
 
-Für Windows gibt es auch "Visual Studio", nicht zu verwechseln mit "Visual Studio Code". "Visual Studio" ist ein kostenpflichtiger und mächtiger Windows-Editor, der für die .NET-Plattform gut geeignet ist. Es ist auch gut in JavaScript. Es gibt auch eine kostenlose Version: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
+Für Windows gibt es auch "Visual Studio", nicht zu verwechseln mit "Visual Studio Code". "Visual Studio" ist ein kostenpflichtiger und mächtiger Windows-Editor, der für die .NET-Plattform zugeschnitten ist. Er ist auch für JavaScript geeignet. Es gibt auch eine kostenlose Version: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
 Viele IDEs werden bezahlt, haben aber eine Probezeit. Ihre Kosten sind im Vergleich zum Gehalt eines qualifizierten Entwicklers in der Regel vernachlässigbar. Wählen Sie also einfach das beste für Sie aus.
 
