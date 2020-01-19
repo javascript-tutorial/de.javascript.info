@@ -143,14 +143,14 @@ In solchen Sprachen ist der Wert, sobald er "in der Kiste" gespeichert ist, für
 Auch wenn es auf den ersten Blick etwas seltsam erscheint, sind diese Sprachen durchaus für seriöse Softwareentwicklung geeignet. Mehr noch, es gibt Bereiche wie Parallelberechnungen, in denen diese Einschränkung gewisse Vorteile bringt. Das Studium einer solchen Sprache (auch wenn man nicht vorhat, sie bald zu benutzen) wird empfohlen, um den Geist zu erweitern.
 ```
 
-## Benamung der Variablen [#variable-naming]
+## Benennen der Variablen [#variable-naming]
 
 Es gibt zwei Einschränkungen für Variablennamen in JavaScript:
 
 1. Der Name darf nur Buchstaben, Ziffern oder die Symbole `$` und `_` enthalten.
 2. Das erste Zeichen darf keine Ziffer sein.
 
-Besipiele für gültige Namen:
+Beispiele für gültige Namen:
 
 ```js
 let userName;
@@ -164,7 +164,7 @@ Was interessant ist - das Dollarzeichen `'$'` und der Unterstrich `'_'` können 
 Diese Namen sind gültig:
 
 ```js run untrusted
-let $ = 1; // deklariert eine Variabe mit dem Namen "$"
+let $ = 1; // deklariert eine Variable mit dem Namen "$"
 let _ = 2; // und nun eine Variable mit dem Namen "_"
 
 alert($ + _); // 3
@@ -194,7 +194,7 @@ Technisch gesehen gibt es hier keinen Fehler, solche Namen sind erlaubt, aber es
 ````
 
 ````warn header="Reservierte Namen"
-Es gitb eine [Liste mit reservierten Wörtern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), die nicht als Variablennamen verwendet werden können, da sie von der Sprache selbst verwendet werden.
+Es gibt eine [Liste mit reservierten Wörtern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), die nicht als Variablennamen verwendet werden können, da sie von der Sprache selbst verwendet werden.
 
 Zum Beispiel: `let`, `class`, `return`, und `function` sind reserviert.
 
