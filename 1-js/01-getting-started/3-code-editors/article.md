@@ -10,7 +10,7 @@ Der Begriff [IDE](https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung
 
 Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), ermöglicht das Navigieren zwischen Dateien, stellt die automatische Vervollständigung basierend auf dem gesamten Projekt (nicht nur der geöffneten Datei) bereit und lässt sich in ein Versionsverwaltungssystem (wie [git](https://git-scm.com/)), eine Testumgebung und andere Dinge auf "Projektebene" integrieren.
 
-Wenn Sie noch keine IDE ausgewählt haben, prüfen Sie die folgenden Optionen:
+Wenn du noch keine IDE ausgewählt haben, prüfen Sie die folgenden Optionen:
 
 - [Visual Studio Code](https://code.visualstudio.com/) (plattformübergreifend, kostenlos).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (plattformübergreifend, kostenpflichtig).
