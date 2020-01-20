@@ -114,7 +114,7 @@ alert('Welt'); // Dieser Kommentar folgt der Anweisung
 
 **Mehrzeilige Kommentare beginnen mit einem Schrägstrich und einem Sternchen <code>/&#42;</code> und enden mit einem Sternchen und einem Schrägstrich <code>&#42;/</code>.**
 
-So was:
+So wie hier:
 
 ```js run
 /* Ein Beispiel mit zwei Nachrichten.
