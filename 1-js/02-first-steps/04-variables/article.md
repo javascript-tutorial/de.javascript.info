@@ -218,7 +218,7 @@ num = 5; // die Variable "num" wird erstellt, wenn sie nicht existiert
 alert(num); // 5
 ```
 
-Dies ist eine schlechte Praxis und würde im "strict-mode" einen Fehler verursachen:
+Dies ist eine schlechte Vorgehensweise und würde im "strict-mode" einen Fehler verursachen:
 
 ```js
 "use strict";
