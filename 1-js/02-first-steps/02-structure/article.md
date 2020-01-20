@@ -6,7 +6,7 @@ Das erste, was wir untersuchen werden, sind die Bausteine des Codes.
 
 Anweisungen sind Syntaxkonstrukte und Befehle, die Aktionen ausführen.
 
-Wir haben bereits eine Anweisung `alert('Hallo, Welt!')` gesehen, welches die Meldung "Hallo, Welt!" zeigt.
+Wir haben bereits eine Anweisung `alert('Hallo, Welt!')` gesehen, welche die Meldung "Hallo, Welt!" zeigt.
 
 Wir können so viele Anweisungen in unserem Code haben, wie wir wollen. Anweisungen können durch ein Semikolon getrennt werden.
 
