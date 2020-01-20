@@ -2,9 +2,9 @@ importance: 4
 
 ---
 
-# Uppercase const?
+# const in Großbuchstaben?
 
-Examine the following code:
+Betrachte den folgenden Code:
 
 ```js
 const birthday = '18.04.1982';
@@ -12,13 +12,13 @@ const birthday = '18.04.1982';
 const age = someCode(birthday);
 ```
 
-Here we have a constant `birthday` date and the `age` is calculated from `birthday` with the help of some code (it is not provided for shortness, and because details don't matter here).
+Hier haben wir ein konstantes Geburtsdatum `birthday` und das Alter `age`, welches berechnet wird aus `birthday` mittels eines gewissen Codes (dieser wird der Kürze wegen  nicht angegeben und weil Details hier keine Rolle spielen).
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+Wäre es richtig, für `birthday` Großbuchstaben zu verwenden? Für `age`? der sogar für beide
 
 ```js
-const BIRTHDAY = '18.04.1982'; // make uppercase?
+const BIRTHDAY = '18.04.1982'; // in Großbuchstaben?
 
-const AGE = someCode(BIRTHDAY); // make uppercase?
+const AGE = someCode(BIRTHDAY); // in Großbuchstaben?
 ```
 

@@ -1,7 +1,7 @@
-In the code below, each line corresponds to the item in the task list.
+Im nachfolgenden Code entspricht jede Zeile der Position in der Aufgabenliste.
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, name; // kann zwei Variablen auf einmal deklarieren
 
 name = "John";
 
