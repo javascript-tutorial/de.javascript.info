@@ -39,7 +39,7 @@ Die folgenden Optionen verdienen Ihre Aufmerksamkeit:
 
 ## Lass uns nicht streiten
 
-Die Editoren in den obigen Listen sind diejenigen, die ich oder meine Freunde, die ich für gute Entwickler halte, schon seit langer Zeit verwenden und mit denen ich zufrieden bin.
+Die Editoren in den obigen Listen sind diejenigen, die ich oder meine Freunde, die ich für gute Entwickler halte, schon seit langer Zeit verwenden und mit denen wir zufrieden sind.
 
 Es gibt andere großartige Editoren in unserer großen Welt. Bitte wählen Sie den aus, der Ihnen am besten gefällt.
 
