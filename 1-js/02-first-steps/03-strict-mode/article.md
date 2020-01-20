@@ -22,8 +22,8 @@ Beispielsweise:
 Wir werden bald Funktionen (eine Möglichkeit, Befehle zu gruppieren) lernen. Mit Blick auf die Zukunft sei angemerkt, dass `"use strict"` anstelle des gesamten Skripts am Anfang des Funktionskörpers stehen kann. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird es jedoch für das gesamte Skript verwendet.
 
 
-````warn header="Stellen Sie sicher, dass \"use strict\" am Anfang steht"
-Stellen Sie sicher, dass `"use strict"` am Anfang in Ihren Skripten steht, da sonst der strikte Modus möglicherweise nicht aktiviert ist.
+````warn header="Stellen sicher, dass \"use strict\" am Anfang steht"
+Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiviert ist.
 
 Der strikte Modus ist hier nicht aktiviert:
 
@@ -51,11 +51,11 @@ Wenn Sie in Zukunft eine Browserkonsole zum Testen von Eigenschaften verwenden, 
 
 Manchmal, wenn `use strict` einen Unterschied macht, erhalten Sie falsche Ergebnisse.
 
-Sie können versuchen, durch Drücken von `key:Umschalt+Eingabetaste` mehrere Zeilen einzugeben und `use strict` wie folgt an den Anfang zu setzen:
+Du kannst versuchen, durch Drücken von `key:Umschalt+Eingabetaste` mehrere Zeilen einzugeben und `use strict` wie folgt an den Anfang zu setzen:
 
 ```js
 'use strict'; <Umschalt+Eingabe für eine neue Zeile>
-//  ...Ihr Code
+//  ...Dein Code
 <Eingabe zum Ausführen>
 ```
 
