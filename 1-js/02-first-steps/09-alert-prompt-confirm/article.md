@@ -40,7 +40,7 @@ Es wir ein modales Fenster mit einer Meldung angezeigt, ein Eingabefeld für den
 
 Der Besucher kann etwas in das Feld tippen und dann auf OK klicken. Oder er beendet die Eingabe, indem er auf Abbrechen klickt oder die `key:Esc` Taste drückt.
 
-Der Aufruf von `prompt` gibt den Text des Eingabefelds zurück, oder `null`, falls die Eingabe abgebrochen wurde.
+Der Aufruf von `prompt` gibt den Text des Eingabefelds zurück. Wenn die Eingabe abgebrochen wurde, so ist der Rückgabewert `null`.
 
 Zum Beispiel:
 
