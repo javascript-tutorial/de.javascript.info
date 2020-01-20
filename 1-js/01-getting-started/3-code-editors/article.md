@@ -41,6 +41,6 @@ Die folgenden Optionen verdienen Ihre Aufmerksamkeit:
 
 Die Editoren in den obigen Listen sind diejenigen, die ich oder meine Freunde, die ich für gute Entwickler halte, schon seit langer Zeit verwenden und mit denen wir zufrieden sind.
 
-Es gibt andere großartige Editoren in unserer großen Welt. Bitte wählen Sie den aus, der Ihnen am besten gefällt.
+Es gibt andere großartige Editoren in unserer großen Welt. Bitte wähle den aus, der dir am besten gefällt.
 
 Die Wahl eines Editors ist, wie jedes andere Tool, individuell und hängt von Ihren Projekten, Gewohnheiten und persönlichen Vorlieben ab.
