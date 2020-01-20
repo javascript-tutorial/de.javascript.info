@@ -142,7 +142,7 @@ In den meisten Editoren können Sie eine Codezeile auskommentieren, indem Sie di
 ````warn header="Verschachtelte Kommentare werden nicht unterstützt!"
 Es ist nicht möglich `/*...*/` innerhalb eines anderen `/*...*/` zu setzen.
 
-Solcher Code beendet mit einem Fehler:
+Solcher Code resultiert in einem Fehler:
 
 ```js run no-beautify
 /*
