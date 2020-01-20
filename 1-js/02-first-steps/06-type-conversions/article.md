@@ -79,7 +79,7 @@ alert( Number(true) );        // 1
 alert( Number(false) );       // 0
 ```
 
-Bitte beachten Sie, dass sich `null` und `undefined` hier unterschiedlich verhalten: Aus `null` wird 0, während aus `undefined` `NaN` wird.
+Bitte beachte, dass sich `null` und `undefined` hier unterschiedlich verhalten: Aus `null` wird 0, während aus `undefined` `NaN` wird.
 
 Die meisten mathematischen Operatoren führen auch solche Umwandlungen durch, wir werden das im nächsten Kapitel sehen.
 
