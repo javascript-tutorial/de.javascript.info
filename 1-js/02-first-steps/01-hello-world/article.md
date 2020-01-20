@@ -70,7 +70,7 @@ Wenn wir viel JavaScript-Code haben, können wir diesen in eine separate Datei l
 Skript-Dateien werden zu HTML mit dem `src`-Attribute hinzugefügt:
 
 ```html
-<script src="/pfad/zum/skript.js"></script>
+<script src="/pfad/zum/script.js"></script>
 ```
 
 Hier ist `/pfad/zum/script.js` ein absoluter Pfad zu dem Skript, aus dem Wurzelverzeichnis der Seite. Auch ein relativer Pfad der aktuellen Seite kann angeben werden. Beispielsweise, `src="script.js"` würde eine Datei `"script.js"` im aktuellen Verzeichnis bedeuten.
