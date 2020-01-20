@@ -250,7 +250,7 @@ Wenn ein Programmierer sicher ist, dass eine Variable sich nie ändern wird, kan
 
 ### Konstanten in Großbuchstaben
 
-Es ist eine weit verbreitete Praxis, Konstanten als Alias für schwer zu merkende Werte zu verwenden, die bereits vor der Ausführung bekannt sind.
+Es ist eine weit verbreitete Vorgehensweise, Konstanten als Alias für schwer zu merkende Werte zu verwenden, die bereits vor der Ausführung bekannt sind.
 
 Solche Konstanten werden mit Großbuchstaben und Unterstrichen benannt.
 
