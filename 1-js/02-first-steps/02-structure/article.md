@@ -102,7 +102,7 @@ Kommentare können an jeder Stelle eines Skripts eingefügt werden. Sie haben ke
 
 **Einzeilige Kommentare beginnen mit zwei Schrägstrichen `//`.**
 
-Der Rest der Zeile ist ein Kommentar. Er kann eine ganze eigene Zeile belegen oder einer Aussage folgen.
+Der Rest der Zeile ist ein Kommentar. Er kann eine ganze eigene Zeile belegen oder einer Anweisung folgen.
 
 Wie hier:
 ```js run
