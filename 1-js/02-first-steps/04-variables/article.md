@@ -237,7 +237,7 @@ Um eine konstante (unveränderliche) Variable zu deklarieren, verwende `const` a
 const myBirthday = '18.04.1982';
 ```
 
-Variablen, die mit `const` deklariert werden, werden "Konstanten" genannt. Sie können nicht neu zugewiesen werden. Ein Versuch, dies zu tun, würde einen Fehler verursachen:
+Variablen, die mit `const` deklariert werden, nennen wir "Konstante". Sie können nicht neu zugewiesen werden. Ein Versuch, dies zu tun, würde einen Fehler verursachen:
 
 ```js run
 const myBirthday = '18.04.1982';
