@@ -43,4 +43,4 @@ Die Editoren in den obigen Listen sind diejenigen, die ich oder meine Freunde, d
 
 Es gibt andere großartige Editoren in unserer großen Welt. Bitte wähle den aus, der dir am besten gefällt.
 
-Die Wahl eines Editors ist, wie jedes andere Tool, individuell und hängt von Ihren Projekten, Gewohnheiten und persönlichen Vorlieben ab.
+Die Wahl eines Editors ist, wie jedes andere Tool, individuell und hängt von deinen Projekten, Gewohnheiten und persönlichen Vorlieben ab.
