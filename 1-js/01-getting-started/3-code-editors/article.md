@@ -29,7 +29,7 @@ Der Hauptunterschied zwischen einem "Lightweight-Editor" und einer "IDE" besteht
 
 In der Praxis verfügen Lightweight-Editoren möglicherweise über eine Vielzahl von Plug-ins, darunter Syntaxanalyse und Autovervollständigung auf Verzeichnisebene. Daher gibt es keine exakte Grenze zwischen einem Lightweight-Editor und einer IDE.
 
-Die folgenden Optionen verdienen Ihre Aufmerksamkeit:
+Die folgenden Optionen verdienen deine Aufmerksamkeit:
 
 - [Atom](https://atom.io/) (plattformübergreifend, kostenlos).
 - [Visual Studio Code](https://code.visualstudio.com/) (plattformübergreifend, kostenlos).
