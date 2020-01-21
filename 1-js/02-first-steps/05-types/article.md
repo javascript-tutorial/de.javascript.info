@@ -108,7 +108,7 @@ let name = "John";
 alert( `Hallo, *!*${name}*/!*!` ); // Hallo, John!
 
 // Einbetten eines Ausdrucks
-alert( `Das Ergebnis is *!*${1 + 2}*/!*` ); // Das Ergebnis is 3
+alert( `Das Ergebnis ist *!*${1 + 2}*/!*` ); // Das Ergebnis ist 3
 ```
 
 Der Ausdruck in `$ {…}` wird ausgewertet und das Ergebnis wird Teil des Strings. Wir können alles hineinstecken: eine Variable wie `name` oder einen arithmetischen Ausdruck wie `1 + 2` oder etwas komplexeres.
