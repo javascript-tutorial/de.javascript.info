@@ -1,6 +1,6 @@
 # Code-Struktur
 
-Das erste, was wir untersuchen werden, sind die Bausteine des Codes.
+Das Erste, was wir untersuchen werden, sind die Bausteine des Codes.
 
 ## Anweisungen
 
