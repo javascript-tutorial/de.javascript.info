@@ -22,7 +22,7 @@ Beispielsweise:
 Wir werden bald Funktionen (eine Möglichkeit, Befehle zu gruppieren) lernen. Mit Blick auf die Zukunft sei angemerkt, dass `"use strict"` anstelle des gesamten Skripts am Anfang des Funktionskörpers stehen kann. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird es jedoch für das gesamte Skript verwendet.
 
 
-````warn header="Stellen sicher, dass \"use strict\" am Anfang steht"
+````warn header="Stelle sicher, dass \"use strict\" am Anfang steht"
 Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiviert ist.
 
 Der strikte Modus ist hier nicht aktiviert:
