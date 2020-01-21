@@ -89,7 +89,7 @@ Da das Semikolon nicht automatisch eingefügt wird, wird der Code im ersten Beis
 alert("Es wird ein Fehler auftreten")[1, 2].forEach(alert)
 ```
 
-Aber es sollten zwei getrennte Aussagen sein, nicht eine. Eine solche Verschmelzung ist in diesem Fall einfach falsch, daher der Fehler. Dies kann in anderen Situationen auftreten.
+Aber es sollten zwei getrennte Anweisungen sein, nicht eine. Eine solche Verschmelzung ist in diesem Fall einfach falsch, daher der Fehler. Dies kann auch in anderen Situationen auftreten.
 ````
 
 Es wird empfohlen, Semikolons zwischen Anweisungen zu setzen, auch wenn diese durch Zeilenumbrüche getrennt sind. Diese Regel wird von der Community weitgehend übernommen. Lass uns noch einmal festhalten -- es ist möglich, Semikolons die meiste Zeit wegzulassen. Aber es ist sicherer -- besonders für Anfänger -- sie zu benutzen.
@@ -136,7 +136,7 @@ alert('Welt');
 ```
 
 ```smart header="Benutze Tastenkombination!"
-In den meisten Editoren können Sie eine Codezeile auskommentieren, indem Sie die Tastenkombination `key:Strg+/` für einen einzeiligen Kommentar und die Tastenkombination `key:Strg+Umschalt+/` für mehrzeilige Kommentare drücken (wählen Sie ein Stück Code aus und drücken Sie die Tastenkombination). Versuchen Sie bei einem Mac "key:Cmd" anstelle von "key:Strg".
+In den meisten Editoren kannst du eine Codezeile auskommentieren, indem du die Tastenkombination `key:Strg+/` für einen einzeiligen Kommentar und die Tastenkombination `key:Strg+Umschalt+/` für mehrzeilige Kommentare drückst (wähle ein Stück Code aus und drücke die Tastenkombination). Versuche bei einem Mac "key:Cmd" anstelle von "key:Strg".
 ```
 
 ````warn header="Verschachtelte Kommentare werden nicht unterstützt!"
@@ -152,7 +152,7 @@ alert( 'Welt' );
 ```
 ````
 
-Bitte zögern Sie nicht, Ihren Code zu kommentieren.
+Bitte zögere nicht, deinen Code zu kommentieren.
 
 Kommentare vergrößern den gesamten Code-Fussabdruck, aber das ist überhaupt kein Problem. Es gibt viele Werkzeuge, die den Code vor dem Veröffentlichen auf einem Produktionsserver minimieren. Sie entfernen Kommentare, sodass sie nicht in den Arbeitsskripten angezeigt werden. Kommentare wirken sich daher überhaupt nicht negativ auf die Produktion aus.
 
