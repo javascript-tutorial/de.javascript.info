@@ -53,7 +53,7 @@ Der Code gibt `6` aus, da JavaScript hier keine Semikolons einfügt. Es ist intu
 Fehler, die in solchen Fällen auftreten, sind schwer zu finden und zu beheben.
 
 ````smart header="Ein Beispiel für einen Fehler"
-Wenn Sie ein konkretes Beispiel für einen solchen Fehler sehen möchten, lesen Sie den folgenden Code:
+Wenn du ein konkretes Beispiel für einen solchen Fehler sehen möchten, lies den folgenden Code:
 
 ```js run
 [1, 2].forEach(alert)
