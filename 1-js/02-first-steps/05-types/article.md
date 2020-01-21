@@ -88,7 +88,7 @@ Ein String in JavaScript muss in Anführungszeichen gesetzt werden.
 ```js
 let str = "Hallo";
 let str2 = 'Einfache Anführungszeichen sind auch in Ordnung';
-let phrase = `kann eine andere einbetten ${str}`;
+let phrase = `kann einen anderen ${str} einbetten`;
 ```
 
 In JavaScript gibt es drei Arten von Anführungszeichen.
