@@ -241,7 +241,7 @@ typeof alert // "function"  (3)
 Die letzten drei Zeilen bedürfen möglicherweise einer zusätzlichen Erläuterung:
 
 1. `Math` ist ein eingebautes Objekt, das mathematische Operationen liefert. Wir werden es im Kapitel <info:number> lernen. Hier dient es nur als Beispiel für ein Objekt.
-2. Das Ergebnis von `typeof null` ist `"object"`. Das ist falsch. Es ist ein offiziell anerkannter Fehler, der aus Kompatibilitätgründen erhalten wurde. Natürlich ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ. Also, nochmal, es ist ein Fehler der Sprache.
+2. Das Ergebnis von `typeof null` ist `"object"`. Das ist falsch. Es ist ein offiziell anerkannter Fehler, der aus Kompatibilitätsgründen erhalten wurde. Natürlich ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ. Also, nochmal, es ist ein Fehler der Sprache.
 3. Das Ergebnis von `typeof alert` ist `"function"`, da `alert` eine Funktion ist. Wir werden Funktionen in den nächsten Kapiteln untersuchen, in denen wir auch feststellen werden, dass es in JavaScript keinen speziellen "Funktionstyp" gibt. Funktionen gehören zum Objekttyp. Aber `typeof` behandelt sie anders und gibt `"function"` zurück. Das ist nicht ganz richtig, aber in der Praxis sehr nützlich.
 
 ## Zusammenfassung
