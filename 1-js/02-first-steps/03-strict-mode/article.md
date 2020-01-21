@@ -2,13 +2,13 @@
 
 JavaScript hat sich lange Zeit ohne Kompatibilitätsprobleme weiterentwickelt. Der Sprache wurden neue Funktionen hinzugefügt, während sich die alten Funktionen nicht geändert haben.
 
-Dies hatte den Vorteil, dass der vorhandene Code nie beschädigt wurde. Der Nachteil war jedoch, dass jeder Fehler oder eine unvollständige Entscheidung der JavaScript-Entwickler für immer in der Sprache stecken blieb.
+Dies hatte den Vorteil, dass der vorhandene Code nie beschädigt wurde. Der Nachteil war jedoch, dass jeder Fehler oder eine Fehlentscheidung der JavaScript-Entwickler für immer in der Sprache hängen blieb.
 
 Dies war bis zum Erscheinen von ECMAScript 5 (ES5) im Jahr 2009 der Fall. Es wurden der Sprache neue Funktionen hinzugefügt und einige der vorhandenen geändert. Damit der alte Code weiterhin funktioniert, sind die meisten dieser Änderungen standardmäßig deaktiviert. Du musst sie explizit mit einer speziellen Anweisung aktivieren: `"use strict"`.
 
 ## "use strict"
 
-Die Direktive sieht aus wie eine Zeichenkette: `"use strict"` oder `'use strict'`. Wenn es sich am Anfang eines Skripts befindet, funktioniert das gesamte Skript auf "moderne" Weise.
+Die Direktive sieht aus wie ein String: `"use strict"` oder `'use strict'`. Wenn es sich am Anfang eines Skripts befindet, funktioniert das gesamte Skript auf "moderne" Weise.
 
 Beispielsweise:
 
@@ -22,8 +22,8 @@ Beispielsweise:
 Wir werden bald Funktionen (eine Möglichkeit, Befehle zu gruppieren) lernen. Mit Blick auf die Zukunft sei angemerkt, dass `"use strict"` anstelle des gesamten Skripts am Anfang des Funktionskörpers stehen kann. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird es jedoch für das gesamte Skript verwendet.
 
 
-````warn header="Stelle sicher, dass \"use strict\" am Anfang steht"
-Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiviert ist.
+````warn header="Stellen sicher, dass \"use strict\" am Anfang steht"
+Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiv ist.
 
 Der strikte Modus ist hier nicht aktiviert:
 
@@ -49,7 +49,7 @@ Sobald wir in den strikten Modus wechseln, gibt es kein Zurück mehr.
 
 Wenn du in Zukunft eine Browserkonsole zum Testen von Funktionalitäten verwendest, beachte bitte, dass `use strict` standardmäßig nicht verwendet wird.
 
-Manchmal, wenn `use strict` einen Unterschied macht, erhalten Sie falsche Ergebnisse.
+Manchmal, wenn `use strict` einen Unterschied macht, erhältst du falsche Ergebnisse.
 
 Du kannst versuchen, durch Drücken von `key:Umschalt+Eingabetaste` mehrere Zeilen einzugeben und `use strict` wie folgt an den Anfang zu setzen:
 
@@ -67,7 +67,7 @@ Wenn dies nicht der Fall ist, besteht die zuverlässigste Möglichkeit, um `use 
 (function() {
   'use strict';
 
-  // ...Ihr Code...
+  // ...Dein Code...
 })()
 ```
 
@@ -82,4 +82,4 @@ Im Moment genügt es, allgemein zu wissen:
 1. Die Anweisung `"use strict"` schaltet die Engine in den "modernen" Modus und ändert das Verhalten einiger eingebauter Funktionen. Wir werden die Details später im Tutorial sehen.
 2. Der strikte Modus wird aktiviert, indem `"use strict"` am Anfang eines Skripts oder einer Funktion platziert wird. Verschiedene Sprachfunktionen, wie "Klassen" und "Module", aktivieren den strikten Modus automatisch.
 3. Der strikte Modus wird von allen modernen Browsern unterstützt.
-4. Wir empfehlen, Skripte immer mit `"use strict"` zu starten. Alle Beispiele in diesem Lernprogramm gehen von einem strengen Modus aus, sofern nicht (sehr selten) anders angegeben.
+4. Wir empfehlen, Skripte immer mit `"use strict"` zu starten. Alle Beispiele in diesen Tutorial gehen von einem strengen Modus aus, sofern nicht (sehr selten) anders angegeben.
