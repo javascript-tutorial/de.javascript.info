@@ -59,7 +59,7 @@ Wenn Sie ein konkretes Beispiel für einen solchen Fehler sehen möchten, lesen 
 [1, 2].forEach(alert)
 ```
 
-Über die Bedeutung der Klammern `[]` und `forEach` muss noch nicht nachgedacht werden. Wir werden sie später studieren. Denken Sie vorerst nur an das Ergebnis des Codes: Es zeigt `1`, dann `2`.
+Über die Bedeutung der Klammern `[]` und `forEach` muss noch nicht nachgedacht werden. Wir werden sie später studieren. Denk vorerst nur an das Ergebnis des Codes: Es zeigt `1`, dann `2`.
 
 Fügen wir nun vor dem Code einen `alert` ein und beenden ihn *nicht* mit einem Semikolon:
 
