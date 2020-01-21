@@ -99,7 +99,7 @@ In JavaScript gibt es drei Arten von Anführungszeichen.
 
 Doppelte und einfache Anführungszeichen sind "simple" Anführungszeichen. In JavaScript gibt es praktisch keinen Unterschied zwischen ihnen.
 
-Backticks sind Anführungszeichen mit "erweiterter Funktionalität". Sie ermöglichen es uns, Variablen und Ausdrücke in einen String einzubetten, indem wir sie in `$ {…}` einschließen, zum Beispiel:
+Backticks sind Anführungszeichen mit "erweiterter Funktionalität". Sie ermöglichen es uns, Variablen und Ausdrücke in einen String einzubetten, indem wir sie in `${…}` einschließen, zum Beispiel:
 
 ```js run
 let name = "John";
