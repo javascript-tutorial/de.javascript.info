@@ -121,7 +121,7 @@ alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do n
 In diesem Kapitel werden wir uns eingehender mit Strings befassen <info:string>.
 
 ```smart header="Es gibt keinen *Zeichen*-Typ."
-In einigen Sprachen gibt es einen speziellen "Zeichen"-Typ für ein einzelnes Zeichen. In der C-Sprache und in Java heißt es beispielsweise "char".
+In einigen Sprachen gibt es einen speziellen "Zeichen"-Typ für ein einzelnes Zeichen. In der C-Sprache und in Java heißt er beispielsweise "char".
 
 In JavaScript gibt es so einen Typ nicht. Es gibt nur einen Typ: `string`. Eine Zeichenfolge kann aus nur einem oder mehreren Zeichen bestehen.
 ```
@@ -135,8 +135,8 @@ Dieser Typ wird häufig zum Speichern von Ja/Nein-Werten verwendet: `true` bedeu
 Zum Beispiel:
 
 ```js
-let nameFieldChecked = true; // Ja, das Namensfeld ist markiert
-let ageFieldChecked = false; // nein, altersfeld ist nicht markiert
+let nameFieldChecked = true; // ja, Feld (Name) ist markiert
+let ageFieldChecked = false; // nein, Feld (Alter) ist nicht markiert
 ```
 
 Boolesche Werte ergeben sich auch aus Vergleichen:
@@ -153,7 +153,7 @@ Wir werden uns im Kapitel <info:logical-operators> eingehender mit loglischen We
 
 Der spezielle `null`-Wert gehört zu keinem der oben beschriebenen Typen.
 
-Es bildet einen eigenen Typ, der nur den Wert `null` enthält:
+Er bildet einen eigenen Typ, der nur den Wert `null` enthält:
 
 ```js
 let age = null;
@@ -195,9 +195,9 @@ alert(x); // "undefined"
 
 Der Typ `object` ist etwas Besonderes.
 
-Alle anderen Typen werden als "primitive" (skalare) Datentypen bezeichnet, da ihre Werte nur ein einzelnes Element enthalten können (sei es eine Zeichenfolge oder eine Zahl oder was auch immer). Im Gegensatz dazu werden Objekte zum Speichern von Datensammlungen und komplexeren Einheiten verwendet. Wir werden später im Kapitel <info:object> darauf eingehen, nachdem wir mehr über Skalare Daten erfahren haben.
+Alle anderen Typen werden als "primitive" (skalare) Datentypen bezeichnet, da ihre Werte nur ein einzelnes Element enthalten können (sei es eine Zeichenfolge oder eine Zahl oder was auch immer). Im Gegensatz dazu werden Objekte zum Speichern von Datensammlungen und komplexeren Einheiten verwendet. Wir werden später im Kapitel <info:object> darauf eingehen, nachdem wir mehr über skalare Datentypen erfahren haben.
 
-Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstellen. Der Vollständigkeit halber erwähnen wir es hier, aber wir werden es nach Objekten untersuchen.
+Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstellen. Der Vollständigkeit halber erwähnen wir es hier, aber wir werden ihn nach den Objekten untersuchen.
 
 ## Der Operator typeof [#type-typeof]
 
@@ -208,7 +208,7 @@ Es werden zwei Syntaxformen unterstützt:
 1. Als Operator: `typeof x`.
 2. Als Funktion: `typeof(x)`.
 
-Mit anderen Worten, es funktioniert mit oder ohne Klammern. Das Ergebnis ist das gleiche.
+Mit anderen Worten, es funktioniert mit oder ohne Klammern. Das Ergebnis ist das Gleiche.
 
 Der Aufruf von `typeof x` gibt einen String mit dem Typ zurück:
 
