@@ -47,7 +47,7 @@ Sobald wir in den strikten Modus wechseln, gibt es kein Zurück mehr.
 
 ## Browser-Konsole
 
-Wenn Sie in Zukunft eine Browserkonsole zum Testen von Eigenschaften verwenden, beachten Sie bitte, dass `use strict` standardmäßig nicht verwendet wird.
+Wenn du in Zukunft eine Browserkonsole zum Testen von Funktionalitäten verwendest, beachte bitte, dass `use strict` standardmäßig nicht verwendet wird.
 
 Manchmal, wenn `use strict` einen Unterschied macht, erhalten Sie falsche Ergebnisse.
 
