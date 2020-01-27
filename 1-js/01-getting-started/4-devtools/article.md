@@ -1,63 +1,64 @@
-# Developer console
+# Entwickler-Konsole
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Code ist anfällig für Fehler. Du wirst sehr wahrscheinlich Fehler machen... Oh, was rede ich da? Du wirst *auf jeden Fall* Fehler machen, zumindest wenn du ein Mensch bist und kein [Roboter](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+Aber in Browsern sehen Benutzer standardmäßig keine Fehler. Also, wenn etwas im Skipt schief läuft, sehen wir nicht was falsch ist und können es nicht beheben.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Um Feheler zu sehen und weitere nützliche Informationen über Skripts zu bekommen, wurden "Entwicklertools" in Browsern eingebaut.
 
-Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most developers have a "favorite" browser and switch to others if a problem is browser-specific.
+Die meisten Entwickler tendieren zu Chrome oder Firefox für die Entwicklung, weil diese Browser die besten Entwicklertools haben. Andere Browser stellen ebenfalls Entwicklertools bereit, manchmal mit besonderen Eigenschaften aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler eine "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
 
-Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+Entwicklertools sind mächtig; sie haben viele Features. Zuerst lernen wir, wie man sie öffnet, sich Fehler ansieht und JavaScript Befehle ausführt
 
 ## Google Chrome
 
-Open the page [bug.html](bug.html).
+Öffne die Seite [bug.html](bug.html).
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Dort ist ein Fehler im JavaScript Code. Er ist aus Sich eines normalen Besuchers nicht zu sehen, also öffnen wird die Entwicklertools um ihn zu sehen.
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+Drücke `key:F12` oder wenn du auf einem Mac bist `key:Cmd+Opt+J`.
 
-The developer tools will open on the Console tab by default.
+Die Entwicklertools öffnen sich standardmäßig auf dem Konsolen-Reiter.
 
-It looks somewhat like this:
+Es sieht ungefähr wie das aus:
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+Wie genau die Entwicklertools aussehen, hängt von der Chrome Version ab. Sie ändern sich von Zeit zu Zeit aber sollten ähnlich aussehen.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Hier sehen wir die rot markierte Fehlermeldung. In diesem Fall beinhaltet das Skript einen unbekannten Befehl "lalala".
+- Auf der rechten Seite ist ein anklickbarer Link zur Quelle `bug.html:12` mit der Zeilennummer, wo der Fehler aufgetreten ist.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them.
+Unter der Fehlermeldung befindet sich ein Blaues `>` Symbol. Es markiert eine "Befehlszeile" wo wir JavaScript Befehle eingeben können. Drücke `key:Enter` um sie auszuführen.
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Nun können wir Fehler sehen und das ist genug für den Anfang. Wir kehren späte zu den Entwicklertoos zurück und behandeln das Debugging im Kapitel <info:debugging-chrome> tiefer.
+
 
 ```smart header="Multi-line input"
-Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
+Normalerweise, wenn wir eine Zeile Code in die Konsole eingeben und dann `key:Enter` drücken, wird er ausgeführt.
 
-To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
+Um mehrere Zeilen einzugeben, drücke `key:Shift+Enter`. Auf diese Weise können längere Fragmente JavaScript Code eingegeben werden.
 ```
 
-## Firefox, Edge, and others
+## Firefox, Edge, und andere
 
-Most other browsers use `key:F12` to open developer tools.
+Die meisten Browser benutzen `key:F12` um die Entwicklertools zu öffnen.
 
-The look & feel of them is quite similar. Once you know how to use one of these tools (you can start with Chrome), you can easily switch to another.
+Das Aussehen ist meist sehr ähnlich. Sobald du weißt wie man eins dieser Tools benutzt (du kannst mit Chrome anfangen), kannst du einfach zu einem anderen wechseln.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
+Safari (Mac Browser, nicht unterstützt werden Windows/Linux) ist etwas speziell. Wir müssen zuerst das "Entwickler Menü" aktivieren.
 
-Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom:
+Öffne Einstellungen und wähle "Erweitert" aus. Dort ist unten ein Kontrollkästchen:
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Nun kann `key:Cmd+Opt+C` die Konsole umschalten. Beachte ebenfalls den neuen Menüeintrag "Entwickler", der aufgetaucht ist. Dieser hat viele Befehle und Optionen.
 
-## Summary
+## Zusammenfassung
 
-- Developer tools allow us to see errors, run commands, examine variables, and much more.
-- They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- Entwicklertools ermöglichen uns Fehler zu sehen, Befehle auszuführen, Variablen zu untersuchen und vieles mehr
+- Sie können mit `key:F12` in den meisten Browsern auf Windows geöffnet werden. Chrome für den Mac benötigt `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (muss erst eingeschaltet werden).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Nun ist unsere Umgebung bereit. Im nächsten Abschnitt kommen wir zu JavaScript.
