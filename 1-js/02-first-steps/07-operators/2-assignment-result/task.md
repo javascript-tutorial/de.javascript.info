@@ -2,9 +2,9 @@ importance: 3
 
 ---
 
-# Assignment result
+# Zuweisungsergebnis
 
-What are the values of `a` and `x` after the code below?
+Was sind die Werte von `a` und `x` nach dem folgenden Code?
 
 ```js
 let a = 2;

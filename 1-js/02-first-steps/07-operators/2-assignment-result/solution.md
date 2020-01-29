@@ -1,5 +1,5 @@
-The answer is:
+Die Antwort ist:
 
-- `a = 4` (multiplied by 2)
-- `x = 5` (calculated as 1 + 4)
+- `a = 4` (multipliziert mit 2)
+- `x = 5` (berechnet als 1 + 4)
 
