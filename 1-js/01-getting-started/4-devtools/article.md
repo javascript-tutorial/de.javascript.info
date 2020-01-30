@@ -2,42 +2,41 @@
 
 Code ist anfällig für Fehler. Du wirst sehr wahrscheinlich Fehler machen... Oh, was rede ich da? Du wirst *auf jeden Fall* Fehler machen, zumindest wenn du ein Mensch bist und kein [Roboter](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-Aber in Browsern sehen Benutzer standardmäßig keine Fehler. Also, wenn etwas im Skipt schief läuft, sehen wir nicht was falsch ist und können es nicht beheben.
+Aber in Browsern sehen Benutzer standardmäßig keine Fehler. Also, wenn etwas im Skript schief läuft, sehen wir nicht was falsch ist und können es nicht beheben.
 
-Um Feheler zu sehen und weitere nützliche Informationen über Skripts zu bekommen, wurden "Entwicklertools" in Browsern eingebaut.
+Um Fehler zu sehen und weitere nützliche Informationen über Skripts zu bekommen, wurden "Entwicklertools" in Browser eingebaut.
 
-Die meisten Entwickler tendieren zu Chrome oder Firefox für die Entwicklung, weil diese Browser die besten Entwicklertools haben. Andere Browser stellen ebenfalls Entwicklertools bereit, manchmal mit besonderen Eigenschaften aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler eine "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
+Die meisten Entwickler tendieren zu Chrome oder Firefox für die Entwicklung, weil diese Browser die besten Entwicklertools haben. Andere Browser stellen ebenfalls Entwicklertools bereit, manchmal mit besonderen Eigenschaften aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler einen "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
 
-Entwicklertools sind mächtig; sie haben viele Features. Zuerst lernen wir, wie man sie öffnet, sich Fehler ansieht und JavaScript Befehle ausführt
+Entwicklertools sind leistungsstark; sie haben viele Features. Zuerst lernen wir, wie man sie öffnet, sich Fehler ansieht und JavaScript-Befehle ausführt.
 
 ## Google Chrome
 
 Öffne die Seite [bug.html](bug.html).
 
-Dort ist ein Fehler im JavaScript Code. Er ist aus Sich eines normalen Besuchers nicht zu sehen, also öffnen wird die Entwicklertools um ihn zu sehen.
+Dort ist ein Fehler im JavaScript-Code. Er ist aus Sicht eines normalen Besuchers nicht zu sehen, also öffnen wird die Entwicklertools um ihn zu sehen.
 
 Drücke `key:F12` oder wenn du auf einem Mac bist `key:Cmd+Opt+J`.
 
 Die Entwicklertools öffnen sich standardmäßig auf dem Konsolen-Reiter.
 
-Es sieht ungefähr wie das aus:
+Es sieht ungefähr so aus:
 
 ![chrome](chrome.png)
 
-Wie genau die Entwicklertools aussehen, hängt von der Chrome Version ab. Sie ändern sich von Zeit zu Zeit aber sollten ähnlich aussehen.
+Wie genau die Entwicklertools aussehen, hängt von der Chrome-Version ab. Sie ändern sich von Zeit zu Zeit, aber sollten ähnlich aussehen.
 
 - Hier sehen wir die rot markierte Fehlermeldung. In diesem Fall beinhaltet das Skript einen unbekannten Befehl "lalala".
 - Auf der rechten Seite ist ein anklickbarer Link zur Quelle `bug.html:12` mit der Zeilennummer, wo der Fehler aufgetreten ist.
 
-Unter der Fehlermeldung befindet sich ein Blaues `>` Symbol. Es markiert eine "Befehlszeile" wo wir JavaScript Befehle eingeben können. Drücke `key:Enter` um sie auszuführen.
+Unter der Fehlermeldung befindet sich ein blaues `>` Symbol. Es markiert eine "Befehlszeile" wo wir JavaScript-Befehle eingeben können. Drücke `key:Enter` um sie auszuführen.
 
 Nun können wir Fehler sehen und das ist genug für den Anfang. Wir kehren späte zu den Entwicklertoos zurück und behandeln das Debugging im Kapitel <info:debugging-chrome> tiefer.
-
 
 ```smart header="Multi-line input"
 Normalerweise, wenn wir eine Zeile Code in die Konsole eingeben und dann `key:Enter` drücken, wird er ausgeführt.
 
-Um mehrere Zeilen einzugeben, drücke `key:Shift+Enter`. Auf diese Weise können längere Fragmente JavaScript Code eingegeben werden.
+Um mehrere Zeilen einzugeben, drücke `key:Shift+Enter`. Auf diese Weise können längere Fragmente JavaScript-Code eingegeben werden.
 ```
 
 ## Firefox, Edge, und andere
@@ -48,7 +47,7 @@ Das Aussehen ist meist sehr ähnlich. Sobald du weißt wie man eins dieser Tools
 
 ## Safari
 
-Safari (Mac Browser, nicht unterstützt werden Windows/Linux) ist etwas speziell. Wir müssen zuerst das "Entwickler Menü" aktivieren.
+Safari (Mac Browser, nicht unterstützt werden Windows/Linux) ist etwas speziell. Wir müssen zuerst das "Entwickler-Menü" aktivieren.
 
 Öffne Einstellungen und wähle "Erweitert" aus. Dort ist unten ein Kontrollkästchen:
 
