@@ -196,7 +196,7 @@ Wir erhalten diese Ergebnisse, weil:
 
 Warum sind wir diese Beispiele durchgegangen? Sollten wir uns ständig an diese Besonderheiten erinnern? Nun, nicht wirklich. Mit der Zeit werden diese kniffligen Dinge allmählich vertraut werden, aber es gibt einen soliden Weg, um Problemen damit auszuweichen:
 
-Behandele einfach jeden Vergleich mit `undefined/null` mit Ausnahme der strikten Gleichheit `====` mit besonderer Vorsicht.
+Behandele einfach jeden Vergleich mit `undefined/null` mit Ausnahme der strikten Gleichheit `===` mit besonderer Vorsicht.
 
 Verwende keine Vergleiche `>= > < <=` mit einer Variablen, die `null/undefined` sein kann, es sei denn, du bist dir wirklich sicher, was du tust. Wenn eine Variable diese Werte haben kann, überprüfe sie separat.
 
