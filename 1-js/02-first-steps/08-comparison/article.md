@@ -106,7 +106,7 @@ Aus der Sicht von JavaScript ist dieses Ergebnis ganz normal. Eine Gleichheitspr
 
 ## Strikte Gleichheit
 
-Die normale Gleicheitsprüfung mit `==` hat ein Problem. Sie kann `0` nicht von `false` unterscheiden:
+Die normale Gleichheitsprüfung mit `==` hat ein Problem. Sie kann `0` nicht von `false` unterscheiden:
 
 ```js run
 alert( 0 == false ); // true
@@ -190,20 +190,20 @@ Warum mag es die Null so wenig? Immer `false`!
 Wir erhalten diese Ergebnisse, weil:
 
 - Vergleiche `(1)` und `(2)` ergeben `false`, weil `undefined` wird zu `NaN` umgewandelt und `NaN` ist ein spezieller numerischer Wert, der für alle Vergleiche `false` ergibt.
-- Die Gleichheitsprüfung `(3)` ergiebt `false`, weil `undefined` nur gleich `null` ist, und keinem anderen Wert. HÄ
+- Die Gleichheitsprüfung `(3)` ergibt `false`, weil `undefined` nur gleich `null` ist, und keinem anderen Wert.
 
-### Evade problems
+### Probleme vermeiden
 
-Why did we go over these examples? Should we remember these peculiarities all the time? Well, not really. Actually, these tricky things will gradually become familiar over time, but there's a solid way to evade problems with them:
+Warum sind wir diese Beispiele durchgegangen? Sollten wir uns ständig an diese Besonderheiten erinnern? Nun, nicht wirklich. Mit der Zeit werden diese kniffligen Dinge allmählich vertraut werden, aber es gibt einen soliden Weg, um Problemen damit auszuweichen:
 
-Just treat any comparison with `undefined/null` except the strict equality `===` with exceptional care.
+Behandele einfach jeden Vergleich mit `undefined/null` mit Ausnahme der strikten Gleichheit `====` mit besonderer Vorsicht.
 
-Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`, unless you're really sure of what you're doing. If a variable can have these values, check for them separately.
+Verwende keine Vergleiche `>= > < <=` mit einer Variablen, die `null/undefined` sein kann, es sei denn, du bist dir wirklich sicher, was du tust. Wenn eine Variable diese Werte haben kann, überprüfe sie separat.
 
-## Summary
+## Zusammenfassung
 
-- Comparison operators return a boolean value.
-- Strings are compared letter-by-letter in the "dictionary" order.
-- When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
-- The values `null` and `undefined` equal `==` each other and do not equal any other value.
-- Be careful when using comparisons like `>` or `<` with variables that can occasionally be `null/undefined`. Checking for `null/undefined` separately is a good idea.
+- Vergleichende Operatoren geben einen boolschen Wert zurück.
+- Strings (Zeichenfolgen) werden Buchstabe für Buchstabe in der "Wörterbuch"-Reihenfolge verglichen.
+- Wenn Werte unterschiedlichen Typs verglichen werden, werden sie in Zahlen (`number`) umgewandelt (außer bei der strikten Gleichheitsprüfung).
+- Die Werte `null` und `undefined` sind gleich `==`, aber ansonsten ist nichts gleich den zwei Werten.
+- Sei vorsichtig, wenn du Vergleiche wie `>` oder `<` mit Variablen verwendest, die gelegentlich `null/undefined` sein können. Es ist eine gute Idee, `null/undefined` separat zu prüfen.
