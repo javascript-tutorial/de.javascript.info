@@ -1,16 +1,16 @@
-# Data types
+# Datentypen
 
-A variable in JavaScript can contain any data. A variable can at one moment be a string and at another be a number:
+Eine Variable in JavaScript kann beliebige Daten enthalten. Eine Variable kann in einem Moment eine Zeichenkette und in einem anderen eine Zahl sein:
 
 ```js
-// no error
-let message = "hello";
+// kein Fehler
+let message = "Hallo";
 message = 123456;
 ```
 
-Programming languages that allow such things are called "dynamically typed", meaning that there are data types, but variables are not bound to any of them.
+Programmiersprachen, die solche Dinge erlauben, werden als "dynamisch typisiert" bezeichnet, was bedeutet, dass es Datentypen gibt, aber Variablen an keine von ihnen gebunden sind.
 
-There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+Es gibt acht grundlegende Datentypen in JavaScript. Hier werden wir sie allgemein behandeln und in den nächsten Kapiteln detailliert auf sie eingehen.
 
 ## Number
 
@@ -19,167 +19,167 @@ let n = 123;
 n = 12.345;
 ```
 
-The *number* type represents both integer and floating point numbers.
+Der Typ *number* repräsentiert sowohl Ganzzahl, als auch Gleitkommazahlen.
 
-There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-`, and so on.
+Es gibt viele Operationen für Zahlen, z.B. Multiplikation `*`, Division `/`, Addition `+`, Subtraktion `-` und so weiter.
 
-Besides regular numbers, there are so-called "special numeric values" which also belong to this data type: `Infinity`, `-Infinity` and `NaN`.
+Neben regulären Zahlen gibt es sogenannte "numerische Sonderwerte", die ebenfalls zu diesem Datentyp gehören: `Infinity`, `-Infinity` und `NaN`.
 
-- `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
+- `Infinity` repräsentiert die mathematische [Unendlichkeit](https://de.wikipedia.org/wiki/Unendlichkeit) ∞. Es ist ein spezieller Wert, der größer als jede Zahl ist.
 
-    We can get it as a result of division by zero:
+    Wir können es als Ergebnis der Division durch Null erhalten:
 
     ```js run
     alert( 1 / 0 ); // Infinity
     ```
 
-    Or just reference it directly:
+    Oder verweise einfach direkt darauf:
 
     ```js run
     alert( Infinity ); // Infinity
     ```
-- `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+- `NaN` repräsentiert einen Rechenfehler. Es ist das Ergebnis einer falschen oder undefinierten mathematischen Operation, zum Beispiel:
 
     ```js run
-    alert( "not a number" / 2 ); // NaN, such division is erroneous
+    alert( "keine Zahl" / 2 ); // NaN, eine solche Teilung ist falsch
     ```
 
-    `NaN` is sticky. Any further operation on `NaN` returns `NaN`:
+    `NaN` ist starr. Jede weitere Operation an `NaN` gibt` NaN` zurück:
 
     ```js run
-    alert( "not a number" / 2 + 5 ); // NaN
+    alert( "keine Zahl" / 2 + 5 ); // NaN
     ```
 
-    So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result.
+    Wenn sich also irgendwo in einem mathematischen Ausdruck ein `NaN` befindet, wird es zum gesamten Ergebnis weitergegeben.
 
-```smart header="Mathematical operations are safe"
-Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+```smart header="Mathematische Operationen sind sicher"
+Mathematik ist in JavaScript "sicher". Wir können alles tun: durch Null dividieren, nicht numerische Zeichenfolgen als Zahlen behandeln usw.
 
-The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
+Das Skript wird niemals mit einem schwerwiegenden Fehler ("Programmabbruch") beendet. Im schlimmsten Fall erhalten wir als Ergebnis `NaN`.
 ```
 
-Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
+Spezielle numerische Werte gehören formal zum Typ "number". Natürlich sind sie keine Zahlen im üblichen Sinne.
 
-We'll see more about working with numbers in the chapter <info:number>.
+Mehr über das Arbeiten mit Zahlen erfahren wir in diesem Kapitel <info:number>.
 
 ## BigInt
 
-In JavaScript, the "number" type cannot represent integer values larger than <code>2<sup>53</sup></code> (or less than <code>-2<sup>53</sup></code> for negatives), that's a technical limitation caused by their internal representation. That's about 16 decimal digits, so for most purposes the limitation isn't a problem, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+In JavaScript kann der Typ "number" keine Ganzzahlwerte darstellen, die größer als <code>2<sup>53</sup></code> (oder kleiner als <code>-2<sup>53</sup></code> für Negative), sind. Das ist eine technische Einschränkung, die durch ihre interne Darstellung verursacht wird. Das sind ungefähr 16 Dezimalstellen, daher ist die Beschränkung für die meisten Zwecke kein Problem, aber manchmal benötigen wir wirklich große Zahlen, z.B. für Verschlüsselungen oder Zeitstempel mit Mikrosekundengenauigkeit.
 
-`BigInt` type was recently added to the language to represent integers of arbitrary length.
+Der Typ `BigInt` wurde kürzlich der Sprache hinzugefügt, um Ganzzahlen beliebiger Länge darzustellen.
 
-A `BigInt` is created by appending `n` to the end of an integer literal:
+Ein `BigInt` wird durch Anhängen von `n` an das Ende einer Ganzzahl erstellt:
 
 ```js
-// the "n" at the end means it's a BigInt
+// Das "n" am Ende bedeutet, dass es ein BigInt ist
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
-As `BigInt` numbers are rarely needed, we devoted them a separate chapter <info:bigint>.
+Da `BigInt`-Zahlen selten benötigt werden, haben wir ihnen ein eigenes Kapitel gewidmet <info:bigint>.
 
-```smart header="Compatability issues"
-Right now `BigInt` is supported in Firefox and Chrome, but not in Safari/IE/Edge.
+```smart header="Kompatibilitätsprobleme"
+Derzeit wird `BigInt` in Firefox und Chrome unterstützt, nicht jedoch in Safari/IE/Edge.
 ```
 
 ## String
 
-A string in JavaScript must be surrounded by quotes.
+Ein String in JavaScript muss in Anführungszeichen gesetzt werden.
 
 ```js
-let str = "Hello";
-let str2 = 'Single quotes are ok too';
-let phrase = `can embed another ${str}`;
+let str = "Hallo";
+let str2 = 'Einfache Anführungszeichen sind auch in Ordnung';
+let phrase = `kann einen anderen ${str} einbetten`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+In JavaScript gibt es drei Arten von Anführungszeichen.
 
-1. Double quotes: `"Hello"`.
-2. Single quotes: `'Hello'`.
-3. Backticks: <code>&#96;Hello&#96;</code>.
+1. Doppelte Anführungszeichen: `"Hallo"`.
+2. Einfache Anführungszeichen: `'Hallo'`.
+3. Backticks: <code>&#96;Hallo&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
+Doppelte und einfache Anführungszeichen sind "simple" Anführungszeichen. In JavaScript gibt es praktisch keinen Unterschied zwischen ihnen.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Backticks sind Anführungszeichen mit "erweiterter Funktionalität". Sie ermöglichen es uns, Variablen und Ausdrücke in einen String einzubetten, indem wir sie in `${…}` einschließen, zum Beispiel:
 
 ```js run
 let name = "John";
 
-// embed a variable
-alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
+// Einbetten einer Variable
+alert( `Hallo, *!*${name}*/!*!` ); // Hallo, John!
 
-// embed an expression
-alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+// Einbetten eines Ausdrucks
+alert( `Das Ergebnis ist *!*${1 + 2}*/!*` ); // Das Ergebnis ist 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+Der Ausdruck in `${…}` wird ausgewertet und das Ergebnis wird Teil des Strings. Wir können alles hineinstecken: eine Variable wie `name` oder einen arithmetischen Ausdruck wie `1 + 2` oder etwas komplexeres.
 
-Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+Bitte beachte, dass dies nur bei Backticks möglich ist. Andere Anführungszeichen haben diese Einbettungsfunktion nicht!
 ```js run
 alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+In diesem Kapitel werden wir uns eingehender mit Strings befassen <info:string>.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is called "char".
+```smart header="Es gibt keinen *Zeichen*-Typ."
+In einigen Sprachen gibt es einen speziellen "Zeichen"-Typ für ein einzelnes Zeichen. In der C-Sprache und in Java heißt er beispielsweise "char".
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
+In JavaScript gibt es so einen Typ nicht. Es gibt nur einen Typ: `string`. Eine Zeichenfolge kann aus nur einem oder mehreren Zeichen bestehen.
 ```
 
-## Boolean (logical type)
+## Boolean (logische Werte)
 
-The boolean type has only two values: `true` and `false`.
+Ein Boolean hat nur zwei Werte: `true` und `false`.
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Dieser Typ wird häufig zum Speichern von Ja/Nein-Werten verwendet: `true` bedeutet "ja, richtig" und `false` bedeutet "nein, falsch".
 
-For instance:
+Zum Beispiel:
 
 ```js
-let nameFieldChecked = true; // yes, name field is checked
-let ageFieldChecked = false; // no, age field is not checked
+let nameFieldChecked = true; // ja, Feld (Name) ist markiert
+let ageFieldChecked = false; // nein, Feld (Alter) ist nicht markiert
 ```
 
-Boolean values also come as a result of comparisons:
+Boolesche Werte ergeben sich auch aus Vergleichen:
 
 ```js run
 let isGreater = 4 > 1;
 
-alert( isGreater ); // true (the comparison result is "yes")
+alert( isGreater ); // true (das Vergleichsergebnis ist "richtig")
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+Wir werden uns im Kapitel <info:logical-operators> eingehender mit loglischen Werten befassen.
 
-## The "null" value
+## Der Wert "null"
 
-The special `null` value does not belong to any of the types described above.
+Der spezielle `null`-Wert gehört zu keinem der oben beschriebenen Typen.
 
-It forms a separate type of its own which contains only the `null` value:
+Er bildet einen eigenen Typ, der nur den Wert `null` enthält:
 
 ```js
 let age = null;
 ```
 
-In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+In JavaScript ist `null` kein "Verweis auf ein nicht vorhandenes Objekt" oder ein "Nullzeiger" wie in einigen anderen Sprachen.
 
-It's just a special value which represents "nothing", "empty" or "value unknown".
+Es ist nur ein spezieller Wert, der "nichts", "leer" oder "Wert unbekannt" darstellt.
 
-The code above states that `age` is unknown or empty for some reason.
+Der obige Code besagt, dass `age` aus irgendeinem Grund unbekannt oder leer ist.
 
-## The "undefined" value
+## Der Wert "undefined"
 
-The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
+Der spezielle Wert `undefined` steht ebenfalls abseits. Er bildet einen eigenen Typ, genau wie `null`.
 
-The meaning of `undefined` is "value is not assigned".
+Die Bedeutung von `undefined` ist "Wert ist nicht zugewiesen".
 
-If a variable is declared, but not assigned, then its value is `undefined`:
+Wenn eine Variable deklariert, aber nicht zugewiesen ist, ist ihr Wert `undefined`:
 
 ```js run
 let x;
 
-alert(x); // shows "undefined"
+alert(x); // zeigt "undefined"
 ```
 
-Technically, it is possible to assign `undefined` to any variable:
+Technisch gesehen ist es möglich, jeder Variablen ein `undefined` zuzuweisen:
 
 ```js run
 let x = 123;
@@ -189,28 +189,28 @@ x = undefined;
 alert(x); // "undefined"
 ```
 
-...But we don't recommend doing that. Normally, we use `null` to assign an "empty" or "unknown" value to a variable, and we use `undefined` for checks like seeing if a variable has been assigned.
+...Aber wir empfehlen das nicht. Normalerweise verwenden wir `null`, um einer Variablen einen "leeren" oder "unbekannten" Wert zuzuweisen, und `undefined`, um zu überprüfen, ob eine Variable zugewiesen wurde.
 
-## Objects and Symbols
+## Objekte und Symbole
 
-The `object` type is special.
+Der Typ `object` ist etwas Besonderes.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter <info:object> after we learn more about primitives.
+Alle anderen Typen werden als "primitive" (skalare) Datentypen bezeichnet, da ihre Werte nur ein einzelnes Element enthalten können (sei es eine Zeichenfolge oder eine Zahl oder was auch immer). Im Gegensatz dazu werden Objekte zum Speichern von Datensammlungen und komplexeren Einheiten verwendet. Wir werden später im Kapitel <info:object> darauf eingehen, nachdem wir mehr über skalare Datentypen erfahren haben.
 
-The `symbol` type is used to create unique identifiers for objects. We mention it here for completeness, but we'll study it after objects.
+Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstellen. Der Vollständigkeit halber erwähnen wir es hier, aber wir werden ihn nach den Objekten untersuchen.
 
-## The typeof operator [#type-typeof]
+## Der Operator typeof [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
+Der Operator `typeof` gibt den Typ des Arguments zurück. Dies ist nützlich, wenn wir Werte verschiedener Typen unterschiedlich verarbeiten oder nur eine schnelle Überprüfung durchführen möchten.
 
-It supports two forms of syntax:
+Es werden zwei Syntaxformen unterstützt:
 
-1. As an operator: `typeof x`.
-2. As a function: `typeof(x)`.
+1. Als Operator: `typeof x`.
+2. Als Funktion: `typeof(x)`.
 
-In other words, it works with parentheses or without them. The result is the same.
+Mit anderen Worten, es funktioniert mit oder ohne Klammern. Das Ergebnis ist das Gleiche.
 
-The call to `typeof x` returns a string with the type name:
+Der Aufruf von `typeof x` gibt einen String mit dem Typ zurück:
 
 ```js
 typeof undefined // "undefined"
@@ -238,29 +238,29 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanation:
+Die letzten drei Zeilen bedürfen möglicherweise einer zusätzlichen Erläuterung:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's wrong. It is an officially recognized error in `typeof`, kept for compatibility. Of course, `null` is not an object. It is a special value with a separate type of its own. So, again, this is an error in the language.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That's not quite correct, but very convenient in practice.
+1. `Math` ist ein eingebautes Objekt, das mathematische Operationen liefert. Wir werden es im Kapitel <info:number> lernen. Hier dient es nur als Beispiel für ein Objekt.
+2. Das Ergebnis von `typeof null` ist `"object"`. Das ist falsch. Es ist ein offiziell anerkannter Fehler, der aus Kompatibilitätsgründen erhalten wurde. Natürlich ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ. Also, nochmal, es ist ein Fehler der Sprache.
+3. Das Ergebnis von `typeof alert` ist `"function"`, da `alert` eine Funktion ist. Wir werden Funktionen in den nächsten Kapiteln untersuchen, in denen wir auch feststellen werden, dass es in JavaScript keinen speziellen "Funktionstyp" gibt. Funktionen gehören zum Objekttyp. Aber `typeof` behandelt sie anders und gibt `"function"` zurück. Das ist nicht ganz richtig, aber in der Praxis sehr nützlich.
 
-## Summary
+## Zusammenfassung
 
-There are 8 basic data types in JavaScript.
+Es gibt 8 grundlegende Datentypen in JavaScript.
 
-- `number` for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup>.
-- `bigint` is for integer numbers of arbitrary length.
-- `string` for strings. A string may have one or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
+- `number` für Zahlen jeglicher Art: Ganzzahl oder Gleitkommazahl, ganze Zahlen werden begrenzt durch ±2<sup>53</sup>.
+- `bigint` steht für ganzzahlige Zahlen beliebiger Länge.
+- `string` für Zeichenketten. Eine String kann aus einem oder mehreren Zeichen bestehen. Es gibt keine separaten Einzelzeichen.
+- `boolean` für `true`/`false`.
+- `null` für unbekannte Werte -- ein eigenständiger Typ mit einem einzelnen Wert `null`.
+- `undefined` für nicht zugewiesene Werte -- ein eigenständiger Typ mit einem einzelnen Wert `undefined`.
+- `object` für komplexere Datenstrukturen.
+- `symbol` für eindeutige Kennungen.
 
-The `typeof` operator allows us to see which type is stored in a variable.
+Mit dem Operator `typeof` können wir sehen, welcher Typ in einer Variablen gespeichert ist.
 
-- Two forms: `typeof x` or `typeof(x)`.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+- Zwei Formen: `typeof x` oder `typeof(x)`.
+- Gibt einen String mit dem Namen des Typs zurück, wie `"string"`.
+- Für `null` gibt es `"object"` zurück -- dies ist ein Fehler in der Sprache, es ist eigentlich kein Objekt.
 
-In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+In den nächsten Kapiteln werden wir uns auf skalare Datentypen konzentrieren und, sobald wir mit ihnen vertraut sind, zu Objekten übergehen.
