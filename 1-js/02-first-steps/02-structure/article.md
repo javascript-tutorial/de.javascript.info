@@ -94,7 +94,11 @@ Aber es sollten zwei getrennte Anweisungen sein, nicht eine. Eine solche Verschm
 
 Es wird empfohlen, Semikolons zwischen Anweisungen zu setzen, auch wenn diese durch Zeilenumbrüche getrennt sind. Diese Regel wird von der Community weitgehend übernommen. Lass uns noch einmal festhalten -- es ist möglich, Semikolons die meiste Zeit wegzulassen. Aber es ist sicherer -- besonders für Anfänger -- sie zu benutzen.
 
+<<<<<<< HEAD
 ## Kommentare
+=======
+## Comments [#code-comments]
+>>>>>>> 10c7807f49122f475f7cda5d07a324247091c080
 
 Mit der Zeit werden Programme immer komplexer. Es müssen *Kommentare* hinzugefügt werden, die beschreiben, was der Code macht und warum.
 
