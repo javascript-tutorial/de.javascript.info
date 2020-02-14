@@ -1,40 +1,40 @@
-# Functions
+# Funktionen (*Functions*)
 
-Quite often we need to perform a similar action in many places of the script.
+Des öfteren kommt es vor dass wir eine (ähnliche) Aktion an mehreren Stellen eines *script* ausführen möchten. 
 
-For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
+Z. B. wenn wir dem Besucher unsere Seite eine schöne Nachreicht anzeigen wollen wenn dieser sich ein-, auslogt oder eventuell noch bei anderen Events. 
 
-Functions are the main "building blocks" of the program. They allow the code to be called many times without repetition.
+Funktionen kann man auch als das "Hauptgerüst" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
 
-We've already seen examples of built-in functions, like `alert(message)`, `prompt(message, default)` and `confirm(question)`. But we can create functions of our own as well.
+Wir wurden bereits Zeugen von eingebauten (*built-in*) Funktionen (*functions*) wie `alert(nachricht)`, `prompt(nachricht, default)` und `confirm(frage)`. Es ist uns aber auch möglich slebst Funktionen zu kreieren.
 
-## Function Declaration
+## Funktionsdeklarierung (*Function Declaration*)
 
-To create a function we can use a *function declaration*.
+Funktionen können wir m. H. von Funktionsdeklarierungen (*function declaration*) erstellen.
 
-It looks like this:
+Das sieht wie folgt aus:
 
 ```js
 function showMessage() {
-  alert( 'Hello everyone!' );
+  alert( 'Hallo an alle!' );
 }
 ```
 
-The `function` keyword goes first, then goes the *name of the function*, then a list of *parameters* between the parentheses (comma-separated, empty in the example above) and finally the code of the function, also named "the function body", between curly braces.
+Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Paranthesen (mit einem "," voneinander getrennt; om obigen Beispiel leer) und letztlich der Code der Funktion, der auch als "Körper der Funktion" (*the function body*) genannt wird, der zwischen den eckigen Klammern steht (*curly brackets*).
 
 ```js
-function name(parameters) {
+function name(parameter) {
   ...body...
 }
 ```
 
-Our new function can be called by its name: `showMessage()`.
+Unsere neue Funktion kann mittels dessen Name abgerufen werden (*called*): `showMessage()`.
 
-For instance:
+Bspw. :
 
 ```js run
 function showMessage() {
-  alert( 'Hello everyone!' );
+  alert( 'Hallo an alle!' );
 }
 
 *!*
@@ -43,53 +43,53 @@ showMessage();
 */!*
 ```
 
-The call `showMessage()` executes the code of the function. Here we will see the message two times.
+Der Abruf (*call*) `showMessage()` führt den Code der Funktion aus. Darum sehen wir die Nachricht hier zwei Mal.
 
-This example clearly demonstrates one of the main purposes of functions: to avoid code duplication.
+Dieses Beispeil zeigt perfekt was der hauptsächliche Zweck von Funktionen ist: sie verhindern die Duplikation von Code.
 
-If we ever need to change the message or the way it is shown, it's enough to modify the code in one place: the function which outputs it.
+Falls wir jemals die Nachricht ändern müssten oder die Art auf die sie angezeigt wird genügt es den Code einmalig umzuschreiben: der innerhalb der Funktion der ihn ausführt. Genial! 
 
-## Local variables
+## Lokale (*local*) Variabeln
 
-A variable declared inside a function is only visible inside that function.
+Eine Variabel die innerhalb einer Funktion deklariert wird ist ausschließlich innerhalb dieser sichtbar. 
 
-For example:
+Ein Beispiel:
 
 ```js run
 function showMessage() {
 *!*
-  let message = "Hello, I'm JavaScript!"; // local variable
+  let message = "Hallo, ich bin JavaScript!"; // Lokale (*local*) Variabel
 */!*
 
   alert( message );
 }
 
-showMessage(); // Hello, I'm JavaScript!
+showMessage(); // Hallo, ich bin JavaScript!
 
-alert( message ); // <-- Error! The variable is local to the function
+alert( message ); // <-- Fehler! Die Variabel ist lokal zur Funktion
 ```
 
-## Outer variables
+## Außenstehende (*outer*) Variabeln
 
-A function can access an outer variable as well, for example:
+Eine Funktion kann auch auf außenstehende Variabeln zugreifen wie folgendes Beispiel zeigt:
 
 ```js run no-beautify
-let *!*userName*/!* = 'John';
+let *!*userName*/!* = 'Johann';
 
 function showMessage() {
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hallo, ' + *!*userName*/!*;
   alert(message);
 }
 
-showMessage(); // Hello, John
+showMessage(); // Hallo, Johann
 ```
 
-The function has full access to the outer variable. It can modify it as well.
+Die Funktion hat vollständigen Zugriff auf außenstehende Variabeln. Und kann diese auch modifieren.
 
-For instance:
+Hier zu sehen:
 
 ```js run
-let *!*userName*/!* = 'John';
+let *!*userName*/!* = 'Johann';
 
 function showMessage() {
   *!*userName*/!* = "Bob"; // (1) changed the outer variable
