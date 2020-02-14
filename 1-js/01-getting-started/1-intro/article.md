@@ -1,121 +1,121 @@
 # Eine Einführung in JavaScript
 
-Mal sehen, was das Besondere an JavaScript ist, was wir damit erreichen können und welche anderen Technologien gut damit umgehen.
+Mal sehen was das Besondere an JavaScript ist, was wir damit alles anstellen können und welche anderen Technologien gut damit umgehen können.
 
 ## Was ist JavaScript?
 
-*JavaScript* wurde ursprünglich entwickelt, um *"Webseiten lebendig zu machen "*.
+JavaScript wurde ursprünglich entwickelt, um "Webseiten lebendig zu machen".
 
-Die Programme dieser Sprache werden *scripts* genannt. Sie können direkt im HTML der Seite geschrieben werden und werden automatisch beim laden der Seite ausgeführt.
+Die Programme dieser Sprache werden *scripts* genannt. Diese kann man direkt ins HTML einer Seite schreiben welche dann beim Laden der Seite automatisch ausgeführt werden.
 
-Diese Scripts werden im Klartext bereitgestellt und ausgeführt. Sie benötigen keine spezielle Vorbereitung oder Kompilierung um zu funktionieren.
+*Scripts* werden als reiner Text (*plain text*) bereitgestellt und ausgeführt, weshalb sie keine spezielle Aufbereitung oder Kompilierung benötigen.
 
-In diesem Aspekt unterscheidet sich JavaScript sehr von einer anderen Sprache namens [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+In diesem Aspekt unterscheidet sich JavaScript einer ihr ihm Namen ähnlichen Sprache: [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
-```smart header="Warum wird es <u>Java</u>Script genannt?"
-Als JavaScript erstellt wurde, hatte es zunächst einen anderen Namen: "LiveScript". Aber Java war damals sehr beliebt, so dass beschlossen wurde, dass die Positionierung einer neuen Sprache als "jüngerer Bruder" von Java helfen würde.
+```smart header="Warum heißt es <u>Java</u>Script?"
+Während der anfänglichen Entwicklung von JavaScript trug dieses noch den Namen "LiveScript". Da Java damals aber eine sehr beliebte Programmiersprache war beschloß man, um die Bekanntheit der neuen Sprache zu steigern, diese als "jüngeren Bruder" von Java darzustellen. 
 
-Aber als es sich entwickelte, wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation namens [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und jetzt hat es überhaupt keinen Bezug mehr zu Java.
+In der weiteren Entwicklung wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation, [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und hat darum überhaupt keinen Bezug mehr zu Java.
 ```
 
-Heute kann JavaScript nicht mehr nur im Browser ausgeführt werden. Es ist möglich JavaScript auch auf dem Server oder einem anderen beliebigen Geräte auszuführen, welches über ein Programm namens [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
+Heute kann JavaScript nicht nur im Browser ausgeführt werden. Es ist möglich JavaScript auch auf Servern oder einem anderen beliebigen Geräte auszuführen, welches über eine sogenannte [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
 
 Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "JavaScript Virtual Machine" bezeichnet wird.
 
-Verschiedene Engines haben unterschiedliche "Kodnamen". Zum Beispiel:
+Verschiedene Engines haben unterschiedliche Spitznamen (*codenames*). Zum Beispiel:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...Es existieren auch noch andere Kodnamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
+- Es gibt noch weitere *codenames*, sprich Engines, wie "Trident" und "Chakra" für verschiedene Versionen von IE, oder "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari usw.
 
-Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet verwendet werden. Wir werden sie auch benutzen. Wenn zum Beispiel "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
+Es ist gut sich ein paar der obigen Begriffe zu merken, da sie oft in Artikeln von Entwicklern (*developers*) im Internet verwendet werden. Wir werden sie auch benutzen wenn bspw. "ein *Feature* X von V8 unterstützt wird". Dieses *Feature* funktioniert dann wahrscheinlich in Chrome und Opera.
 
-```smart header="Wie funktioniert die Engine?"
+```smart header="Wie funktioniert eine Engine?"
 
 Engines sind kompliziert. Aber die Grundlagen sind einfach.
 
-1. Die Engine (eingebettet, wenn es sich um einen Browser handelt) liest ("parses") den Script.
-2. Danach wird der Script in die Maschinensprache übersetzt ("Kompilieren").
-3. Und zum Schluss wird der Maschienen Code ausgeführt, was ziemlich schnell passiert.
+1. Die Engine (eingebettet, wenn es sich um einen Browser handelt) liest ("parst") das Script.
+2. Danach wird das Script in Maschinensprache konvertiert ("kompiliert").
+3. Und zum Schluss wird der Maschienencode ausgeführt, was ziemlich schnell passiert.
 
-Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript, während es läuft, analysiert die Daten, die durch es fließen, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
+Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript während es läuft, analysiert die Daten welche sie verarbeitet, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
 ```
 
-## Was kann in-browser JavaScript tun?
+## Was kann im Browser ausgeführtes JavaScript?
 
-Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser erstellt wurde.
+Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen *Low-Level*-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser entwickelt wurde.
 
-Die Funktionen von JavaScript hängen stark von der Umgebung ab, in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen, die es JavaScript z.B. ermöglichen, beliebige Dateien zu lesen oder zu schreiben, sowie Netzwerkanfragen durchzuführen.
+Die Funktionen von JavaScript hängen stark von der Umgebung ab in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen die es JavaScript z. B. ermöglichen beliebige Dateien zu lesen oder zu schreiben, sowie Netzwerkanfragen durchzuführen.
 
-In-Browser JavaScript kann alles, was mit der Manipulation von Webseiten, der Interaktion mit dem Benutzer und dem Webserver zu tun hat.
+Im Browser ausgeführtes JavaScript kann alles was mit der Manipulation von Webseiten, der Interaktion mit dem Benutzer und dem Webserver zu tun hat.
 
-So ist beispielsweise In-Browser JavaScript in der Lage:
+So ist beispielsweise im Browser laufendes JavaScript in der Lage:
 
-- Der Seite neues HTML zu addieren, den existierenden content zu modifizieren, oder die Stile anzupassen.
+- Der Seite neues HTML hinzuzufügen, den existierenden Inhalt (*content*) zu modifizieren oder *styles* anzupassen.
 - Auf Benutzeraktionen zu reagieren, zum Beispiel Mausklicks, Mauszeigerbewegungen oder Tastenanschläge.
-- Anfragen and entfernte Server über das Netzwerk zu versenden und Daten hoch und runter zu laden (diese technologien werden [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) und [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) genannt).
-- Lesen und schreiben von cookies, sowie das abfragen des Benutzers oder das anzeigen von Nachrichten.
-- Speichern der Daten auf der client-side ("local storage"), also im Browser des Benutzers.
+- Anfragen über das Netzwerk an *remote server* zu schicken, Dateien herunter- und hochzuladen (mit Hilfe der sogenannten [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming))- und [COMET](https://en.wikipedia.org/wiki/Comet_(programming))- Technologien).
+- Cookies auszulesen und festzulegen, Fragen an Nutzer zu senden, Nachrichten anzuzeigen.
+- Daten auf der *client-side* zu speichern ("lokaler Speicher"). Also im Browser des Benutzers.
 
 ## Was kann JavaScript im Browser nicht tun?
 
-Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des Benutzers eingeschränkt. Ziel ist es, zu verhindern, dass eine bösartige Webseite auf private Informationen zugreift oder die Daten des Benutzers schädigt.
+Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des Benutzers eingeschränkt. Ziel ist es zu verhindern, dass eine bösartige Webseite auf private Informationen zugreifen oder die Daten des Benutzers schädigen kann.
 
 Beispiele für solche Beschränkungen sind:
 
-- JavaScript auf einer Webebsite darf keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem darf es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebsystems. 
+- JavaScript auf einer Webebsite kann keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem kann es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems. 
 
-    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser per "drag and drop" lädt oder sie via `<input>` tag auswählt.
+    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z. B. eine Datei in den Browser per "drag and drop" lädt oder sie via ein `<input>` tag auswählt.
 
-    Es gibt auch Möglichkeiten mit der Kamera oder dem Mikrofon des Geräts zu interagieren. Dies benötigt aber die explizite Zustimmung des Benutzers. Deshalb kann eine JavaScript-enabled Website nicht heimlich die Webcam aktivieren, die Umgebung beobachten und die Informationen and die [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) übermitteln.
-- Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren, wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
+    Es gibt auch Möglichkeiten mit der Kamera oder Mikrofon sowie weiteren Geräten zu interagieren. Dies benötigt aber die explizite Zustimmung des Benutzers. Deshalb kann eine Webseite – auf der JavaScript aktiviert ist – nicht heimlich die Webcam aktivieren, die Umgebung beobachten und die Informationen and die [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) übermitteln.
+- Verschiedene *Tabs*/Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen bei welchen dies doch der Fall sein kann. Z. B. dann wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in einem solchen Fall kann das auf der einen Seite laufende JavaScript nicht unbedingt auf die andere Seite zugreifen, sofern diese verschiedenen Ursprungs sind (unterschiedlichen Domänen entspringen, ein anderes Protokoll oder anderen Port haben).
 
-    Dies wird die "Same Origin Policy" genannt. Um das zu umgehen, müssen *beide Seiten* für den Datenaustausch übereinstimmen und einen speziellen JavaScript-Code enthalten, der dies behandelt. Wir werden das im Tutorial behandeln.
+    Das nennt man "Same Origin Policy". Um so etwas zu erreichen muss auf *beiden Seiten* ein Datenaustausch akzeptiert werden. Zudem müssen beide Seiten über einen speziellen JavaScript-Code verfügen der das händeln kann. Wir werden das im Tutorial behandeln.
 
-    Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
-- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt. 
-Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (ausgedrückt in HTTP-Headern) von der entfernten Seite. Auch dies ist eine Sicherheitseinschränkung.
+    Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein auf ein anderes Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
+- JavaScript kann mit Leichtigkeit über das Netz mit dem Server kommunizieren von dem die aktuelle Seite abgerufen wurde. Aber seine Fähigkeit Daten von anderen Seiten/Domains zu empfangen ist eingeschränkt. 
+Auch wenn es möglich ist erfordert es eine ausdrückliche Zustimmung (ausgedrückt in *HTTP-Headern*) von der anderen Seite. Auch dies ist eine sicherheitsbedingte Einschränkung.
 
 ![](limitations.svg)
 
-Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers, z.B. auf einem Server, verwendet wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
+Solche Einschränkungen bestehen nicht wenn JavaScript außerhalb des Browsers, z. B. auf einem Server, ausgeführt wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
 
-## What makes JavaScript unique?
+## Was macht JavaScript einzigartig?
 
-Es gibt mindestens *drei* großartige Dinge über JavaScript:
+Es gibt mindestens *drei* großartige Dinge welche JavaScript auszeichnen:
 
 ```compare
-+ Volle integration in HTML und CSS.
++ Volle Integration in HTML und CSS.
 + Einfache Dinge werden einfach gemacht.
-+ Unterstützung von allen gängigen Browsern und standardmäßig aktiviert.
++ Unterstützung von allen gängigen Browsern die JavaScript standardmäßig aktiviert haben.
 ```
 JavaScript ist die einzige Browser-Technologie, die diese drei Dinge vereint.
 
 Das macht JavaScript einzigartig. Deshalb ist es das am weitesten verbreitete Werkzeug zur Erstellung von Browser-Oberflächen.
 
-Trotzdem erlaubt JavaScript auch die Erstellung von Servern, mobilen Anwendungen, etc.
+Außerdem können mit JavaScript auch Server, mobile Anwendungen, usw. erstellt werden.
 
 ## Sprachen "über" JavaScript
 
-Die Syntax von JavaScript ist nicht für jeden geeignet. Verschiedene Menschen wollen unterschiedliche Funktionen.
+Die Syntax von JavaScript entspricht nicht jedem. Verschiedene Individuen bevorzugen verschiedene Funktionen.
 
 Das ist zu erwarten, denn Projekte und Anforderungen sind für jeden anders.
 
-So sind vor kurzem eine Fülle neuer Sprachen erschienen, die in JavaScript *transpiled* (konvertiert) werden, bevor sie im Browser laufen.
+So haben sich vor kurzem eine Fülle neuer Sprachen entwickelt, die in JavaScript *transpiled* (konvertiert) werden, bevor sie im Browser laufen.
 
-Moderne Werkzeuge machen die Transpilation sehr schnell und transparent und erlauben es den Entwicklern tatsächlich, in einer anderen Sprache zu programmieren und diese "unter der Haube" automatisch zu konvertieren.
+Moderne Werkzeuge erledigen die Konvertierung sehr schnell und transparent was es Entwicklern erlaubt in einer anderen Sprache zu programmieren und diese automatisch zu konvertieren – ohne unbedingt ein genaueres Verständnis davon zu haben wie JavaScript im Kern funktioniert.
 
 Beispiele für solche Sprachen sind:
 
-- [CoffeeScript](http://coffeescript.org/) ist ein "syntactic sugar" für JavaScript. Es führt eine kürzere Syntax ein, was uns erlaubt, klareren und präziseren Code zu schreiben. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) ist darauf konzentriert "strict data typing" hinzuzufügen. TypeScript verfolg das Ziel den Entwicklungsprozess und den Support für komplexe Systeme zu vereinfachen. Die Sprache wurde von Microsoft entwickelt.
-- [Flow](http://flow.org/) fügt auch "data typing" hinzu, aber auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
-- [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine hat, die in Nicht-Browser-Umgebungen (wie z.B. mobilen Anwendungen) läuft, aber auch in JavaScript umgesetzt werden kann. Sie wurde von Google entwickelt.
+- [CoffeeScript](http://coffeescript.org/): Es verfügt über eine kürzere Syntax was einen erlaubt klareren und präziseren Code zu schreiben. *Ruby devs* fungiert auf ähnliche Art und Weiße.
+- [TypeScript](http://www.typescriptlang.org/) ist darauf ausgelegt strikteren Schreibregeln zu folgen. D.h. der Code ist anfälliger für Fehler, ermöglicht im Gegenzug den Entwicklungsprozess und den Support für komplexe Systeme zu vereinfachen. Die Sprache wurde von Microsoft entwickelt.
+- [Flow](http://flow.org/) ist auch auf striktere Schreibregeln ausgelegt, jedoch auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
+- [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache die eine eigene Engine besitzt, welche in Nicht-Browser-Umgebungen (wie z. B. mobilen Anwendungen) läuft, die aber auch in JavaScript konvertiert werden kann. Sie wurde von Google entwickelt.
 
-Es gibt noch mehr. Auch wenn wir eine der transpilierten Sprachen verwenden sollten wir auch JavaScript trozdem kennen. Es ist wichtig zu verstehen, was im Hintergrund passiert und was wir eigentlich tun.
+Es gibt noch mehr. Auch wenn wir eine der kompremierten Sprachen verwenden, sollten wir auch JavaScript näher kennen um zu verstehen was im Hintergrund passiert und was wir eigentlich tun.
 
 ## Zusammenfassung
 
 - JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
 - Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
-- Es gibt viele Sprachen, die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem man JavaScript beherrscht.
+- Es gibt viele Sprachen die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es ist empfehlenswert sich diese zumindest kurz anzuschauen wenn man JavaScript beherrscht.
