@@ -2,11 +2,11 @@
 
 Des öfteren kommt es vor dass wir eine (ähnliche) Aktion an mehreren Stellen im *script* ausführen möchten. 
 
-Z. B. wenn wir dem Besucher unsere Seite eine schöne Nachreicht anzeigen wollen wenn dieser sich ein-, auslogt oder eventuell noch bei anderen Events. 
+Z. B. wenn wir dem Besucher unsere Seite eine schöne Nachricht anzeigen wollen wenn dieser sich einloggt, ausloggt und eventuell noch bei anderen Events. 
 
-Funktionen kann man auch als das "Hauptgerüst" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
+Funktionen kann man auch als das "Bausteine" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
 
-Wir wurden bereits Zeugen von eingebauten (*built-in*) Funktionen (*functions*) wie `alert(nachricht)`, `prompt(nachricht, default)` und `confirm(frage)`. Es ist uns aber auch möglich slebst Funktionen zu kreieren.
+Wir wurden bereits Zeugen von eingebauten (*built-in*) Funktionen (*functions*) wie `alert(message)`, `prompt(message, default)` und `confirm(question)`. Es ist uns aber auch möglich selbst Funktionen zu kreieren.
 
 ## Funktionsdeklarierung (*Function Declaration*)
 
@@ -45,39 +45,39 @@ Der Abruf (*call*) `showMessage()` führt den Code der Funktion aus. Darum sehen
 
 Dieses Beispeil zeigt perfekt was der hauptsächliche Zweck von Funktionen ist: sie verhindern die Duplikation von Code.
 
-Falls wir jemals die Nachricht ändern müssten oder die Art auf die sie angezeigt wird genügt es den Code einmalig umzuschreiben: der innerhalb der Funktion der ihn ausführt. Genial! 
+Falls wir jemals die Nachricht ändern müssten, oder die Art auf die sie angezeigt wird, genügt es den Code einmalig umzuschreiben: der innerhalb der Funktion der ihn ausführt.
 
-## Lokale (*local*) Variabeln
+## Lokale (*local*) Variablen
 
-Eine Variabel die innerhalb einer Funktion deklariert wird ist ausschließlich innerhalb dieser sichtbar. 
+Eine Variable, die innerhalb einer Funktion deklariert wird, ist ausschließlich innerhalb dieser sichtbar. 
 
 Ein Beispiel:
 
 ```js run
 function showMessage() {
 *!*
-  let message = "Hello, I'm JavaScript!"; // Lokale (*local*) Variabel
+  let message = "Hallo, ich bin JavaScript!"; // Lokale (*local*) Variable
 */!*
   alert( message );
 }
-showMessage(); // Hello, I'm JavaScript!
+showMessage(); // Hallo, ich bin JavaScript!
 alert( message ); // <-- Fehler! Die Variabel ist lokal zur Funktion
 ```
 
-## Außenstehende (*outer*) Variabeln
+## Außenstehende (*outer*) Variablen
 
-Eine Funktion kann auch auf außenstehende Variabeln zugreifen wie folgendes Beispiel zeigt:
+Eine Funktion kann auch auf außenstehende Variablen zugreifen, wie folgendes Beispiel zeigt:
 
 ```js run no-beautify
 let *!*userName*/!* = 'John';
 function showMessage() {
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hallo, ' + *!*userName*/!*;
   alert(message);
 }
-showMessage(); // Hello, John
+showMessage(); // Hallo, John
 ```
 
-Die Funktion hat vollständigen Zugriff auf außenstehende Variabeln. Und kann diese auch modifieren.
+Die Funktion hat vollständigen Zugriff auf außenstehende Variablen. Und kann diese auch modifieren.
 
 Hier zu sehen:
 
@@ -85,9 +85,9 @@ Hier zu sehen:
 let *!*userName*/!* = 'John';
 
 function showMessage() {
-  *!*userName*/!* = "Bob"; // (1) Ändert die außenstehende (*outer*) Variabel 
+  *!*userName*/!* = "Bob"; // (1) Ändert die außenstehende (*outer*) Variable
 
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hallo, ' + *!*userName*/!*;
   alert(message);
 }
 
@@ -98,34 +98,34 @@ showMessage();
 alert( userName ); // *!*Bob*/!*, Der Wert wurde von der Funktion modifiziert
 ```
 
-Die außenstehende Variabel wird nur genutzt wenn es keine lokale gibt.
+Die außenstehende Variable wird nur genutzt, wenn es keine lokale gibt.
 
-Falls innerhalb der Funktion eine gleichnamige Variabel deklariert wird, wird die außenstehende von dieser überschattet (*shadowed*). Im folgenden Beispiel greift die Funktion auf die lokale Variabel `userName` zu. Die außenstehende wird schlicht ignoriert: 
+Falls innerhalb der Funktion eine gleichnamige Variable deklariert wird, wird die außenstehende von dieser überschattet (*shadowed*). Im folgenden Beispiel greift die Funktion auf die lokale Variable `userName` zu. Die außenstehende wird schlicht ignoriert: 
 
 ```js run
 let userName = 'John';
 
 function showMessage() {
 *!*
-  let userName = "Bob"; // deklariert eine lokale Variabel
+  let userName = "Bob"; // deklariert eine lokale Variable
 */!*
 
-  let message = 'Hello, ' + userName; // *!*Bob*/!*
+  let message = 'Hallo, ' + userName; // *!*Bob*/!*
   alert(message);
 }
 
-// die Funktion wird ihre eigene Variabel erstellen und nutzen
+// die Funktion wird ihre eigene Variable erstellen und nutzen
 showMessage();
 
-alert( userName ); // *!*John*/!*, bleibt unverändert, die Funktion greift nicht auf die außenstehende Variabel zu
+alert( userName ); // *!*John*/!*, bleibt unverändert, die Funktion greift nicht auf die außenstehende Variable zu
 ```
 
 ```smart header="*Global* variables"
-Variabeln die außerhalb jeglicher Funktionen deklariert werden, wie das äußere `userName` im oben stehenden Code, nennt man *global*.
+Variablen, die außerhalb jeglicher Funktionen deklariert werden, wie das äußere `userName` im oben stehenden Code, nennt man *global*.
 
-Auf globale Variabeln kann von jeder Funktion aus zugegriffen werden (, solange diese nicht von einer lokalen "überschattet" wird).
+Auf globale Variablen kann von jeder Funktion aus zugegriffen werden (sofern diese nicht von Lokalen "überschattet" werden).
 
-So wenig globale Variabeln wie möglich nutzen ist gute Praxis, denn moderner Code hat wenige bis keine. Die meisten Variabeln verbleiben innerhalb ihrer Funktionen. Manchmal sind globale aber doch praktisch, wenn man bspw. Daten des Projektstands speichern möchte.
+So wenig globale Variablen wie möglich nutzen ist gute Praxis, denn moderner Code hat wenige bis keine. Die meisten Variablen verbleiben innerhalb ihrer Funktionen. Manchmal sind Globale aber doch praktisch, wenn man bspw. Daten des Projektstands speichern möchte.
 ```
 
 ## Parameter
@@ -135,7 +135,7 @@ Wir können Funktionen jedliche Art von Daten zukommen lassen (auch Funktionsarg
 Im unten stehenden Beispiel hat die Funktion zwei Parameter: `from` und `text`.
 
 ```js run
-function showMessage(*!*from, text*/!*) { // argumente: from, text
+function showMessage(*!*from, text*/!*) { // Argumente: from, text
   alert(from + ': ' + text);
 }
 
@@ -145,9 +145,9 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 */!*
 ```
 
-Wenn die Funktion in den Zeilen `(*)` und `(**)`abgerufen wird werden die gegebenen Werte in die lokalen Variabeln `from` und `text` kopiert, woraufhin die Funktion diese nutzt. 
+Wenn die Funktion in den Zeilen `(*)` und `(**)`abgerufen wird, werden die gegebenen Werte in die lokalen Variablen `from` und `text` kopiert, woraufhin die Funktion diese nutzt. 
 
-Hier ist ein weiteres Beispiel: wir haben eine Variabel `from` und spielen diese der Funktion zu. Beachte, dass die Funktion `from` ändert, jedoch diese Änderung außen nicht sichtbar wird weil die Funktion stets eine Kopie des Werts annimmt:
+Hier ist ein weiteres Beispiel: wir haben eine Variable `from` und spielen diese der Funktion zu. Beachte, dass die Funktion `from` ändert, jedoch diese Änderung außen nicht sichtbar wird, weil die Funktion stets eine Kopie des Werts annimmt:
 
 
 ```js run
@@ -162,7 +162,7 @@ function showMessage(from, text) {
 
 let from = "Ann";
 
-showMessage(from, "Hello"); // *Ann*: Hello
+showMessage(from, "Hallo"); // *Ann*: Hallo
 
 // der Wert von "from" bleibt der selbe, die Funktion hat nur eine lokale Kopie modifiziert
 alert( from ); // Ann
@@ -183,31 +183,31 @@ Das ist kein Fehler. Ein solcher Abruf würde `"Ann: undefined"` ausgeben, da es
 Falls wir in diesem Fall ein "default" für `text` festlegen wollen, können wir diesen hinter `=` definieren:
 
 ```js run
-function showMessage(from, *!*text = "no text given"*/!*) {
+function showMessage(from, *!*text = "kein Text übergeben"*/!*) {
   alert( from + ": " + text );
 }
 
-showMessage("Ann"); // Ann: no text given
+showMessage("Ann"); // Ann: kein Text übergeben
 ```
 Wenn der `text` Parameter jetzt nicht gegeben wird, erhält er den Wert `"no text given"`
 
-Hier ist `"no text given"` nur ein String, kann aber auch eine viel komplexere *Expression* sein die nur evaluiert und zugewissen wird wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
+Hier ist `"no text given"` nur ein String, kann aber auch eine viel komplexere *Expression* sein, die nur evaluiert und zugewissen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
 
 ```js run
 function showMessage(from, text = anotherFunction()) {
-  // anotherFunction() wird nur ausgeführt wenn kein Text gegebn ist
-  // dessen Resultat wird der Wert von Text sein
+  // anotherFunction() wird nur ausgeführt wenn kein Text gegeben ist
+  // dessen Resultat wird der Wert von *text* sein
 }
 ```
 
-```smart header="Evaluirtung von Default-Parametern"
-In JavaScript wird ein Default-Parameter immer dann evaluiert wenn die Funktion ohne den respektiven Parameter abgerufen wird.
+```smart header="Evaluierung von Default-Parametern"
+In JavaScript wird ein Default-Parameter immer dann evaluiert, wenn die Funktion ohne den respektiven Parameter abgerufen wird.
 
 Im oberen Beispiel wird `anotherFunction()` jedes Mal abgerufen, wenn `showMessage()` ohne den `text` Parameter abgerufen wird.
 ```
 
 ````smart header="Old-style Default-Parameter"
-In älteren JavaScript-Versionen waren Default-Parameter nicht unterstützt weshalb sich alternative Wege entwickelt haben um diese trotzdem zu unterstützen. Diese sind meist in alten *scripts* aufzufinden.
+In älteren JavaScript-Versionen waren Default-Parameter nicht unterstützt, weshalb sich alternative Wege entwickelt haben um diese trotzdem zu unterstützen. Diese sind meist in alten *scripts* aufzufinden.
 
 Beispielhaft ist eine strikte Prüfung auf `undefined`:
 
