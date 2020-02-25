@@ -28,7 +28,7 @@ function name(parameters) {
 }
 ```
 
-Unsere neue Funktion kann mittels dessen Name abgerufen werden (*called*): `showMessage()`.
+Unsere neue Funktion kann mit ihrem Namen abgerufen werden: `showMessage()`.
 
 Bspw. :
 
