@@ -125,7 +125,7 @@ Variablen, die außerhalb jeglicher Funktionen deklariert werden, wie das äuße
 
 Auf globale Variablen kann von jeder Funktion aus zugegriffen werden (sofern diese nicht von Lokalen "überschattet" werden).
 
-So wenig globale Variablen wie möglich nutzen ist gute Praxis, denn moderner Code hat wenige bis keine. Die meisten Variablen verbleiben innerhalb ihrer Funktionen. Manchmal sind Globale aber doch praktisch, wenn man bspw. Daten des Projektstands speichern möchte.
+Es hat sich als gute und moderne Praxis entwickelt, so wenig globale Variablen wie möglich zu verwenden. Moderner Code hat wenige bis keine dieser globalen Variablen. Die meisten Variablen verbleiben innerhalb ihrer Funktionen. Manchmal sind Globale Variabeln aber doch praktisch, wenn man z.B. Daten des Projektstands speichern möchte.
 ```
 
 ## Parameter
