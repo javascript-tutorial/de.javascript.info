@@ -172,7 +172,7 @@ alert( from ); // Ann
 
 Wenn ein Parameter nicht gegeben ist wird dessen Wert zu `undefined`.
 
-Bspw. kann die zuvor genannte Funktion `showMessage(from, text)` m. H. eines einzelen Arguments abgerufen werden:
+Bspw. kann die zuvor genannte Funktion `showMessage(from, text)` mit Hilfe eines einzelen Arguments abgerufen werden:
 
 ```js
 showMessage("Ann");
