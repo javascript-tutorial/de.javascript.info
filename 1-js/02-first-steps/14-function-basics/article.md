@@ -170,7 +170,7 @@ alert( from ); // Ann
 
 ## Default-Werte
 
-Wenn ein Parameter nicht gegeben ist wird dessen Wert zu `undefined`.
+Wenn ein Parameter nicht gegeben ist, wird dessen Wert zu `undefined`.
 
 Bspw. kann die zuvor genannte Funktion `showMessage(from, text)` mit Hilfe eines einzelen Arguments abgerufen werden:
 
