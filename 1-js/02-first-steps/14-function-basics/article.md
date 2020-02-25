@@ -30,7 +30,7 @@ function name(parameters) {
 
 Unsere neue Funktion kann mit ihrem Namen abgerufen werden: `showMessage()`.
 
-Bspw. :
+Zum Beispiel:
 
 ```js run
 function showMessage() {
