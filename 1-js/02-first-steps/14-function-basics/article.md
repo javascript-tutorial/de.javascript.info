@@ -207,7 +207,7 @@ Im oberen Beispiel wird `anotherFunction()` jedes Mal abgerufen, wenn `showMessa
 ```
 
 ````smart header="Old-style Default-Parameter"
-In älteren JavaScript-Versionen waren Default-Parameter nicht unterstützt, weshalb sich alternative Wege entwickelt haben um diese trotzdem zu unterstützen. Diese sind meist in alten *scripts* aufzufinden.
+In älteren JavaScript-Versionen waren Default-Parameter nicht unterstützt, weshalb sich alternative Wege entwickelt haben. Diese sind meist in alten *scripts* aufzufinden.
 
 Beispielhaft ist eine strikte Prüfung auf `undefined`:
 
