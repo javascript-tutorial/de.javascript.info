@@ -2,7 +2,7 @@
 
 Des öfteren kommt es vor, dass wir eine (ähnliche) Aktion an mehreren Stellen im *script* ausführen möchten. 
 
-Z. B. wenn wir dem Besucher unsere Seite eine schöne Nachricht anzeigen wollen wenn dieser sich einloggt, ausloggt und eventuell noch bei anderen Events. 
+Wenn sich der Benutzer einloggt, ausloggt oder sonstige Aktinen ausübt, möchten wir Ihm eine Nachricht anzeigen. 
 
 Funktionen kann man auch als das "Bausteine" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
 
