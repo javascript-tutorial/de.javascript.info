@@ -1,6 +1,6 @@
 # Funktionen (*Functions*)
 
-Des öfteren kommt es vor dass wir eine (ähnliche) Aktion an mehreren Stellen im *script* ausführen möchten. 
+Des öfteren kommt es vor, dass wir eine (ähnliche) Aktion an mehreren Stellen im *script* ausführen möchten. 
 
 Z. B. wenn wir dem Besucher unsere Seite eine schöne Nachricht anzeigen wollen wenn dieser sich einloggt, ausloggt und eventuell noch bei anderen Events. 
 
