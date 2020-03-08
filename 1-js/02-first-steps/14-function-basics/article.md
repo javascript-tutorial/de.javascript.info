@@ -191,7 +191,7 @@ showMessage("Ann"); // Ann: kein Text übergeben
 ```
 Wenn der `text` Parameter jetzt nicht gegeben wird, erhält er den Wert `"no text given"`
 
-Hier ist `"no text given"` nur ein String, kann aber auch eine viel komplexere *Expression* sein, die nur evaluiert und zugewissen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
+Hier ist `"no text given"` nur ein String, kann aber auch ein viel komplexerer Ausdruck (*expression*) sein, der nur evaluiert und zugewiesen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
 
 ```js run
 function showMessage(from, text = anotherFunction()) {
