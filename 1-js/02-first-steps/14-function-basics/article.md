@@ -20,7 +20,7 @@ function showMessage() {
 }
 ```
 
-Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Paranthesen (mit einem "," voneinander getrennt; om obigen Beispiel leer) und letztlich der Code der Funktion, der auch als "Körper der Funktion" (*the function body*) genannt wird, der zwischen den eckigen Klammern steht (*curly brackets*).
+Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Parenthesen (mit einem "," voneinander getrennt; im obigen Beispiel leer) und letztlich der Code der Funktion, der auch als "Körper der Funktion" (*the function body*) genannt wird, der zwischen den Akkoladen (*curly braces*) steht.
 
 ```js
 function name(parameters) {
