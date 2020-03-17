@@ -1,4 +1,4 @@
-Die Antwort: zuerst `1`, dann `2`.
+Antwort: zuerst `1`, dann `2`.
 
 ```js run
 alert( alert(1) || 2 || alert(3) );
