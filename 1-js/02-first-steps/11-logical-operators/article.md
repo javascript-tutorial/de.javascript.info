@@ -94,7 +94,7 @@ alert( true || 'egal was' ); // (true is effektiv wahr)
 
 alert( null || 1 ); // 1 (1 ist der erste effektiv wahre Wert)
 alert( null || 0 || 1 ); // 1 (der erste effektiv wahre Wert)
-alert( undefined || null || 0 ); // 0 (alle effektiv unwahr, gibt letzten Wert zurück)
+alert( undefined || null || 0 ); // 0 (alle effektiv nicht wahr, gibt letzten Wert zurück)
 ```
 
 Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu einigen interessanten Anwendungen:
@@ -116,7 +116,7 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
     alert( name ); // Gibt "John" aus – den ersten effektiv wahren Wert
     ```
 
-    Wären sowohl `currentUser` als auch `defaultUser` effektiv unwahr, lautete das Ergebnis `"unbenannt"`.
+    Wären sowohl `currentUser` als auch `defaultUser` effektiv nicht wahr, lautete das Ergebnis `"unbenannt"`.
 2. **Partielle Auswertung ( Short-circuit evaluation ).**
 
     Operanden können nicht nur Werte sondern beliebige Ausdrücke sein. ODER führt deren Auswertung und Test in der Reihenfolge von links nach rechts aus. Die Auswertung endet, wenn ein effektiv wahrer Wert erreicht wird, und dieser Wert wird zurückgegeben. Dieses Prinzip nennt man "partielle Auswertung" ( "short-circuit evaluation" ), da sie von links nach rechts fortschreitend frühestmöglich abbricht und ggf. nicht alle Operanden berücksichtigt.
@@ -181,12 +181,12 @@ Genau wie bei ODER ist jeder Wert als Operand von UND zulässig:
 
 ```js run
 if (1 && 0) { // Interpretiert als true && false
-  alert( "Nie zu sehen, denn das Ergebnis war effektiv unwahr." );
+  alert( "Nie zu sehen, denn das Ergebnis war effektiv nicht wahr." );
 }
 ```
 
 
-## UND "&&" findet den ersten effektiv unwahren Wert
+## UND "&&" findet den ersten effektiv nicht wahren Wert
 
 Für mehrere mit UND verknüpfte Werte:
 
@@ -200,9 +200,9 @@ arbeitet der Operator UND `&&` wie folgt:
 - Konvertiert jeden Operand in einen Booleschen Wert. Ist das Ergebnis `false`, endet seine Auswertung und er gibt den ursprünglichen Wert dieses Operanden zurück.
 - Sind alle Operanden ausgewertet ( d.h. alle waren effektiv wahr ), gibt er den letzten Operanden zurück.
 
-Mit anderen Worten, UND gibt den ersten effektiv unwahren Wert zurück oder - sofern kein solcher gefunden wird - den letzten Wert.
+Mit anderen Worten, UND gibt den ersten effektiv nicht wahren Wert zurück oder - sofern kein solcher gefunden wird - den letzten Wert.
 
-Die Regeln sind ähnlich denen für ODER. Der Unterschied besteht darin, daß UND den ersten *effektiv unwahren* Wert zurückgibt, während es bei ODER der erste *effektiv whare* ist.
+Die Regeln sind ähnlich denen für ODER. Der Unterschied besteht darin, daß UND den ersten *effektiv nicht wahren* Wert zurückgibt, während es bei ODER der erste *effektiv whare* ist.
 
 Beispiele:
 
@@ -212,13 +212,13 @@ Beispiele:
 alert( 1 && 0 ); // 0
 alert( 1 && 5 ); // 5
 
-// Ist der erste Operand effektiv unwahr,
+// Ist der erste Operand effektiv nicht wahr,
 // gibt ihn UND zurück. Der zweite Operand wird ignoriert.
 alert( null && 5 ); // null
 alert( 0 && "no matter what" ); // 0
 ```
 
-Wir können auch mehrere Werte am Stück verknüpfen. Hier sehen wir, wie der erste effektiv unwahre Wert zurückgegeben wird.
+Wir können auch mehrere Werte am Stück verknüpfen. Hier sehen wir, wie der erste effektiv nicht wahre Wert zurückgegeben wird.
 
 ```js run
 alert( 1 && 2 && null && 3 ); // null
