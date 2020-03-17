@@ -40,7 +40,7 @@
       <g id="Rectangle-1-+-&#x41A;&#x43E;&#x440;&#x435;&#x43D;&#x44C;-Copy-7" transform="translate(296 438)">
         <rect id="Rectangle-1" width="147" height="49" x="1" y="1" fill="#FFF9EB" stroke="#E8C48E" stroke-width="2" rx="24.5"/>
         <text id="Wrong-password" fill="#8A704D" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
-          <tspan x="18.152" y="29">Falsches Passwort</tspan>
+          <tspan x="17" y="29">Falsches Passwort</tspan>
         </text>
       </g>
       <path id="Line" fill="#EE6B47" fill-rule="nonzero" d="M222 35v23.049l8 .001-9.5 19-9.5-19 8-.001V35h3z"/>
@@ -55,7 +55,7 @@
       <g id="Rectangle-354-+-&#x41A;&#x430;&#x43A;&#x43E;&#x432;&#x43E;-&#x201C;&#x43E;&#x444;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435;&#x201D;-Copy" transform="translate(277 276)">
         <path id="Rectangle-354" fill="#FFF9EB" stroke="#E8C48E" stroke-width="2" d="M2.06 52l91.55 50.856L185.161 52 93.611 1.144 2.058 52z"/>
         <text id="Password?" fill="#8A704D" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
-          <tspan x="59.03" y="55">Passwort?</tspan>
+          <tspan x="60" y="55">Passwort?</tspan>
         </text>
       </g>
       <g id="Rectangle-356-+-&#x41E;&#x442;&#x43C;&#x435;&#x43D;&#x430;" transform="translate(39 191)">
