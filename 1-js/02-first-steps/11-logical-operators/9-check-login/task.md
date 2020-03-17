@@ -6,7 +6,7 @@ importance: 3
 
 Schreibe Code der mit `prompt` nach Anmeldedaten fragt.
 
-Gibt der Benutzer `"Admin"` ein, dann frage per `prompt` nach einem Passwort, ist die Eingabe eine Leerzeile oder `key:Esc` -- gib "Abbruch" aus, ist sie eine andere Zeichenkette -- dann gib aus "Diesen Nutzer kenne ich nicht".
+Gibt der Benutzer `"Admin"` ein, dann frage per `prompt` nach einem Passwort, ist die Eingabe eine Leerzeile oder `key:Esc` -- gib "Abbruch" aus, ist sie eine andere Zeichenkette -- dann gib aus "Ich kenne Sie nicht!".
 
 Das Passwort wird wie folgt geprüft:
 
