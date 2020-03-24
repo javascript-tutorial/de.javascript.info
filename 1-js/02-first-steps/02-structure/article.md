@@ -94,7 +94,11 @@ Aber es sollten zwei getrennte Anweisungen sein, nicht eine. Eine solche Verschm
 
 Es wird empfohlen, Semikolons zwischen Anweisungen zu setzen, auch wenn diese durch Zeilenumbrüche getrennt sind. Diese Regel wird von der Community weitgehend übernommen. Lass uns noch einmal festhalten -- es ist möglich, Semikolons die meiste Zeit wegzulassen. Aber es ist sicherer -- besonders für Anfänger -- sie zu benutzen.
 
+<<<<<<< HEAD
 ## Kommentare
+=======
+## Comments [#code-comments]
+>>>>>>> 162280b6d238ce32bbd8ff7a3f7992be82c2311a
 
 Mit der Zeit werden Programme immer komplexer. Es müssen *Kommentare* hinzugefügt werden, die beschreiben, was der Code macht und warum.
 
@@ -135,8 +139,13 @@ alert('Hallo');
 alert('Welt');
 ```
 
+<<<<<<< HEAD
 ```smart header="Benutze Tastenkombination!"
 In den meisten Editoren kannst du eine Codezeile auskommentieren, indem du die Tastenkombination `key:Strg+/` für einen einzeiligen Kommentar und die Tastenkombination `key:Strg+Umschalt+/` für mehrzeilige Kommentare drückst (wähle ein Stück Code aus und drücke die Tastenkombination). Versuche bei einem Mac "key:Cmd" anstelle von "key:Strg".
+=======
+```smart header="Use hotkeys!"
+In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+>>>>>>> 162280b6d238ce32bbd8ff7a3f7992be82c2311a
 ```
 
 ````warn header="Verschachtelte Kommentare werden nicht unterstützt!"
