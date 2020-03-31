@@ -1,7 +1,7 @@
 
-# Rewrite with arrow functions
+# Ersetzen von Code mit Pfeilfunktionen
 
-Replace Function Expressions with arrow functions in the code below:
+Ersetze im folgenden Code Funktionen innerhalb eines Ausdrucks mit Funktionen durch Pfeilfunktionen:
 
 ```js run
 function ask(question, yes, no) {
@@ -10,8 +10,8 @@ function ask(question, yes, no) {
 }
 
 ask(
-  "Do you agree?",
-  function() { alert("You agreed."); },
-  function() { alert("You canceled the execution."); }
+  "Stimmst Du zu?",
+  function() { alert("Du hast zugestimmt."); },
+  function() { alert("Du hast den Vorgang abgebrochen."); }
 );
 ```
