@@ -2,7 +2,7 @@
 
 In JavaScript ist eine Funktion keine "magische Sprachstruktur", sondern eine besondere Art Wert.
 
-Bisher haben wir die Syntax *function declaration* benutzt. 
+Bisher haben wir die Syntax *Function Declaration* benutzt. 
 
 ```js
 function sayHi() {
@@ -10,7 +10,7 @@ function sayHi() {
 }
 ```
 
-Es gibt allerdings auch die Syntax namens *function expression*
+Es gibt allerdings auch die Syntax namens *Function Expression*
 
 Diese sieht so aus:
 
@@ -57,11 +57,11 @@ sayHi(); // Hello    //     Die Funktion funktioniert immernoch (warum auch nich
 
 Das hier passiert oben im Detail:
 
-1. Die function declaration `(1)` definiert die funtion und schreibt sie in die Variable `sayHi`.
+1. Die Function Declaration `(1)` definiert die Funktion und schreibt sie in die Variable `sayHi`.
 2. Zeile `(2)` kopiert sie in die Variable  `func`. Wieder verwenden wir *keine* Klammern nach `sayHi`. Wenn wir Klammern verwenden würden, dann würde `func = sayHi()` das *Ergebnis des Aufrufs* `sayHi()` in Variable `func`kopieren, nicht den Quellcode selbst.
 3. Jetzt kann die Funktion unter beiden Namen `sayHi()` und `func()` aufgerufen werden.
 
-Wir hätten in der ersten Zeile auch die Syntax function expression nutzen können um `sayHi` zu definieren:
+Wir hätten in der ersten Zeile auch die Syntax Function Expression nutzen können um `sayHi` zu definieren:
 ```js
 let sayHi = function() {
   alert( "Hello" );
@@ -75,7 +75,7 @@ Alles würde gleich funktionieren.
 
 
 ````smart header="Wieso ist da ein Semikolon am Ende?"
-Man könnte sich fragen, wieso Funktionsausdrücke einen Semicolon `;` am Ende benötigen und function declarationen nicht.
+Man könnte sich fragen, wieso Function Expressions einen Semicolon `;` am Ende benötigen und Function Declarations nicht.
 
 ```js
 function sayHi() {
@@ -89,7 +89,7 @@ let sayHi = function() {
 
 Die Antwort ist:
 - Man benötigt keinen semicolon `;` am Ende von Blöcken und syntaktischen Strukturen, die `if { ... }`, `for {  }`, `function f { }` etc. verwenden.
-- Eine function expression dagegen wird im Befehl `let sayHi = ...;` als Wert verwandt. Es ist kein Block Code, sondern eine Zuweisung. Der Semicolon `;` ist am Ende von Statements empfohlen, egal was der Wert ist. Der Semicolon `;` hat an dieser Stelle also nichts mit der Funktion zu tun, sondern beendet nur das Statement.
+- Eine Function Expression dagegen wird im Befehl `let sayHi = ...;` als Wert verwandt. Es ist kein Block Code, sondern eine Zuweisung. Der Semicolon `;` ist am Ende von Statements empfohlen, egal was der Wert ist. Der Semicolon `;` hat an dieser Stelle also nichts mit der Funktion zu tun, sondern beendet nur das Statement.
 ````
 
 ## Callback Funktionen
@@ -131,7 +131,7 @@ ask("Einverstanden?", showOk, showCancel);
 
 In der Praxis sind solche Funktionen sehr nützlich. Der Hauptunterschied zwischen einem "professionellen" `ask` und dem Beispiel ist, dass "professionelle" Funktionen kompliziertere Verfahren nutzen, um mit dem Nutzer zu interagieren als ein einfaches `confirm`. Im browser erstellt eine solche Funktion normal ein schickes Fragefenster. Aber das ist eine andere Baustelle.
 
-**Die Argumente `showOK`und `shoeCancel` nennt man *Callback Funtionen* oder einfach *Callbacks*. **
+**Die Argumente `showOK`und `shoeCancel` nennt man *Callback Funktionen* oder einfach *Callbacks*. **
 
 Dabei geht es darum, dass wir eine Funktion vorgeben, die später aufgerufen werden soll, falls nötig. In unserem Fall, `showOK` wird aufgerufen, wenn der User bestätigt, `showCancel` wenn der User ablehnt.
 
@@ -164,11 +164,11 @@ Wir könne sie zwischen den Variablen verschieben und nutzen, wann wir wollen.
 
 
 ## Function Expression vs Function Declaration
-Was sind die Kernunterschiede zwischen function declarationen und Funktionsausdücken?
+Was sind die Kernunterschiede zwischen Function Declarations und Function Expressions?
 
 Erstens, die Syntax, wie man sie im Code unterscheidet
 
-- *function declaration*: eine Funktion, die separat deklariert wird. 
+- *Function Declaration*: eine Funktion, die separat deklariert wird. 
     ```js
     // Function Declaration
     function sum(a, b) {
@@ -227,9 +227,9 @@ let sayHi = function(name) {  // (*) kaputt...
 
 Funktionsausdrücke werden erst erstellt, wenn sie ausgeführt wurden. Dass passiert erst in Zeile `(*)`, wo es zu spät ist.
 
-Noch eine Spezialität von function declarationen ist ihre Sichtbarkeit im Block.
+Noch eine Spezialität von Function Declarations ist ihre Sichtbarkeit im Block.
 
-**Im modernen "strict mode" ist eine function declaration - falls in einem Block stehend - nur in dem Block auch sichtbar. Außerhalb nicht.
+**Im modernen "strict mode" ist eine Function Declaration - falls in einem Block stehend - nur in dem Block auch sichtbar. Außerhalb nicht.
 
 Stellen wir uns beispielsweise vor, wir bräuchten eine Funktion `welcome()`, die von der variable `age` abhängt, deren Wert während der Skriptausführung bestimmt wird.
 
@@ -287,7 +287,7 @@ if (age < 18) {
 }
 
 // Hier sind wir außerhalb der geschwungenen Klammern,
-// daher können wir die function declarations, die innerhalb geschehen, nicht sehen.
+// daher können wir die Function Declarations, die innerhalb geschehen, nicht sehen.
 
 *!*
 welcome(); // Error: welcome ist nicht definiert.
@@ -340,12 +340,12 @@ welcome(); // jetzt geht's
 ```
 
 
-```smart header="Wann sollte man eine function declaration, wann einen Ausdruck verwenden?"
-Als Daumenregel ist die Syntakx function declaration die erste Wahl. Sie gibt einem mehr Freiheit in der Organisation des Code, denn wir können sie aufrufen, bevor sie definiert wurde.
+```smart header="Wann sollte man eine Function Declaration, wann einen Ausdruck verwenden?"
+Als Daumenregel ist die Syntakx Function Declaration die erste Wahl. Sie gibt einem mehr Freiheit in der Organisation des Code, denn wir können sie aufrufen, bevor sie definiert wurde.
 
 Dies hilft auch der Lesbarkeit, denn es ist leichter, nach `function f(…) {…}` im Code zu suchen, als nach `let f = function(…) {…};`. function declarations "springen ins Auge".
 
-Aber manchmal benötigen wir eine bedingte Definition (wie eben im Beispiel) oder haben andere Gründe die function declaration zu bevorzugen.
+Aber manchmal benötigen wir eine bedingte Definition (wie eben im Beispiel) oder haben andere Gründe eine Function Expression zu bevorzugen.
 ```
 
 ## Zusammenfassung
@@ -356,6 +356,6 @@ Aber manchmal benötigen wir eine bedingte Definition (wie eben im Beispiel) ode
 - Function Declarations werden verarbeitet bevor der Block ausgeführt wird. Sie sind im ganzen Block sichtbar.
 - Function Expressions werden erst erstellt, wenn der Ausführungsfluss sie erreicht.
 
-Meistens, wenn wir eine Funktion definieren, sollten wir eine function declaration nutzen, da sie überall sichtbar ist. Das sorgt für flexiblere Codeorganisation und bessere Lesbarkeit.
+Meistens, wenn wir eine Funktion definieren, sollten wir eine Function Declaration nutzen, da sie überall sichtbar ist. Das sorgt für flexiblere Codeorganisation und bessere Lesbarkeit.
 
-Daher sollten wir einen function expression nur verwenden, wenn die function declaration ungeeignet ist. Dazu haben wir einige Beispiele behandelt und werden in Zukunft noch mehr kennenlernen.
+Daher sollten wir einen Function Expression nur verwenden, wenn die Function Declaration ungeeignet ist. Dazu haben wir einige Beispiele behandelt und werden in Zukunft noch mehr kennenlernen.
