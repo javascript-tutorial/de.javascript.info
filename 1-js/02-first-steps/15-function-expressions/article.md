@@ -1,4 +1,4 @@
-# Funktionsausdrücke
+# Function Expressions
 
 In JavaScript ist eine Funktion keine "magische Sprachstruktur", sondern eine besondere Art Wert.
 
@@ -185,24 +185,20 @@ Erstens, die Syntax, wie man sie im Code unterscheidet
 
 Der unauffälligere Unterschied ist, *wann* eine Funktion von der JavaScript Engine definiert wird.
 
-**Eine function expression wird erst erstellt, wenn die Ausführung des Skrpts dort ankommt und ist erst ab dort verwendbar**
+**Eine Function Expression wird erst erstellt, wenn die Ausführung des Skrpts dort ankommt und ist erst ab dort verwendbar**
 
 Erst wenn die rechte Seite von `let sum = function…` von der Engine erreicht wurde ist die Funktion verfügbar und kann zugewiesen oder ausgeführt werden.
 
 Function Declarations sind anders.
 
-**Eine function declaration kann verwendet werden, bevor sie definiert wurde**
+**Eine Function Declaration kann verwendet werden, bevor sie definiert wurde**
 
-For example, a global Function Declaration is visible in the whole script, no matter where it is.
-Z.B. eine globale function declaration ist im ganzen Skript sichtbar, egal, in welcher Zeile sie steht. 
+Z.B. eine globale Function Declaration ist im ganzen Skript sichtbar, egal, in welcher Zeile sie steht. 
 
-That's due to internal algorithms. When JavaScript prepares to run the script, it first looks for global Function Declarations in it and creates the functions. We can think of it as an "initialization stage".
-Das liegt an internen Algorithmen. Wenn JavaSkript beginnt, ein Skript auszuführen, dann sucht es zunächst globale function declarationen im Skript und erstellt die funktionen. Wir können uns das als die "Aufwärmphase" vorstellen.
+Das liegt an internen Algorithmen. Wenn JavaSkript beginnt, ein Skript auszuführen, dann sucht es zunächst, globale Function Declarations im Skript und erstellt die Funktionen. Wir können uns das als die "Aufwärmphase" vorstellen.
 
-And after all Function Declarations are processed, the code is executed. So it has access to these functions.
-Nachdem alle function declarationen verarbeitet wurden erst, wird der Code ausgeführt. Daher hat er schon Zugang zu dem Code.
+Nachdem alle Function Declarations verarbeitet wurden erst, wird der Code ausgeführt. Daher hat er schon Zugang zu den Funktionen.
 
-For example, this works:
 Das hier funktioniert: 
 
 ```js run refresh untrusted
@@ -215,10 +211,9 @@ function sayHi(name) {
 }
 ```
 
-The Function Declaration `sayHi` is created when JavaScript is preparing to start the script and is visible everywhere in it.
-Die function declaration `sayHi` wird schon in der Aufwärmphase erstellt und daher überall verfügbar.
+Die Function Declaration `sayHi` wird schon in der Aufwärmphase erstellt und daher überall verfügbar.
 
-...Wenn es einfunction expression wäre, dann würde es nicht funktionieren:
+...Wenn es eine Function Expression wäre, dann würde es nicht funktionieren:
 
 ```js run refresh untrusted
 *!*
@@ -230,20 +225,15 @@ let sayHi = function(name) {  // (*) kaputt...
 };
 ```
 
-Function Expressions are created when the execution reaches them. That would happen only in the line `(*)`. Too late.
 Funktionsausdrücke werden erst erstellt, wenn sie ausgeführt wurden. Dass passiert erst in Zeile `(*)`, wo es zu spät ist.
 
-Another special feature of Function Declarations is their block scope.
-Noch eine Spezialität von function declarationen ist ihre Sichtbarkeit über Blockgrenzen hinweg.
+Noch eine Spezialität von function declarationen ist ihre Sichtbarkeit im Block.
 
-**In strict mode, when a Function Declaration is within a code block, it's visible everywhere inside that block. But not outside of it.**
 **Im modernen "strict mode" ist eine function declaration - falls in einem Block stehend - nur in dem Block auch sichtbar. Außerhalb nicht.
 
-For instance, let's imagine that we need to declare a function `welcome()` depending on the `age` variable that we get during runtime. And then we plan to use it some time later.
 Stellen wir uns beispielsweise vor, wir bräuchten eine Funktion `welcome()`, die von der variable `age` abhängt, deren Wert während der Skriptausführung bestimmt wird.
 
-If we use Function Declaration, it won't work as intended:
-Per function declaration funktioniert es nicht wie gewünscht.
+Per Function Declaration funktioniert es nicht wie gewünscht.
 
 ```js run
 let age = prompt("What is your age?", 18);
@@ -269,10 +259,8 @@ welcome(); // Error: welcome ist undefiniert.
 */!*
 ```
 
-That's because a Function Declaration is only visible inside the code block in which it resides.
-Das liegt daran, dass function declarationen nur innerhalb von ihrem Codeblock verfügbar sind
+Das liegt daran, dass Function Declarations nur innerhalb von ihrem Codeblock verfügbar sind
 
-Here's another example:
 Ein weiteres Beispiel:
 
 ```js run
@@ -299,20 +287,17 @@ if (age < 18) {
 }
 
 // Hier sind wir außerhalb der geschwungenen Klammern,
-// daher können wir die function declarationen, die innerhalb geschehen, nicht sehen.
+// daher können wir die function declarations, die innerhalb geschehen, nicht sehen.
 
 *!*
-welcome(); // Error: welcome ist undefiniert.
+welcome(); // Error: welcome ist nicht definiert.
 */!*
 ```
 
-What can we do to make `welcome` visible outside of `if`?
-Wie machen wir `welcome`außerhalb von `if`sichtbar?
+Wie machen wir `welcome` außerhalb von `if` sichtbar?
 
-The correct approach would be to use a Function Expression and assign `welcome` to the variable that is declared outside of `if` and has the proper visibility.
 Korrekt wäre es, eine Function Expression zu verwenden und `welcome` der Variable zuzuweisen, die wir außerhalb des Blocks definiert haben, sodass sie überall sichtbar ist.
 
-This code works as intended:
 Das hier funktioniert: 
 
 ```js run
@@ -350,38 +335,27 @@ let welcome = (age < 18) ?
   function() { alert("Greetings!"); };
 
 *!*
-welcome(); // ok now
+welcome(); // jetzt geht's
 */!*
 ```
 
 
 ```smart header="Wann sollte man eine function declaration, wann einen Ausdruck verwenden?"
-As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
 Als Daumenregel ist die Syntakx function declaration die erste Wahl. Sie gibt einem mehr Freiheit in der Organisation des Code, denn wir können sie aufrufen, bevor sie definiert wurde.
 
-That's also better for readability, as it's easier to look up `function f(…) {…}` in the code than `let f = function(…) {…};`. Function Declarations are more "eye-catching".
-Dies hilft auch der Lesbarkeit, denn es ist leichter, nach `function f(…) {…}` im Code zu suchen, als nach `let f = function(…) {…};`. function declarationen "springen ins Auge".
+Dies hilft auch der Lesbarkeit, denn es ist leichter, nach `function f(…) {…}` im Code zu suchen, als nach `let f = function(…) {…};`. function declarations "springen ins Auge".
 
-...But if a Function Declaration does not suit us for some reason, or we need a conditional declaration (we've just seen an example), then Function Expression should be used.
-Aber manchmal benötigen wir eine konditionale Definition (wie eben im Beispiel) oder haben andere Gründe die function declaration zu bevorzugen.
+Aber manchmal benötigen wir eine bedingte Definition (wie eben im Beispiel) oder haben andere Gründe die function declaration zu bevorzugen.
 ```
 
-## Summary
 ## Zusammenfassung
 
-- Functions are values. They can be assigned, copied or declared in any place of the code.
 - Funktionen sind Werte. Sie können überall im Code zugewiesen, kopiert oder deklariert werden.
-- If the function is declared as a separate statement in the main code flow, that's called a "Function Declaration".
-- Wenn die Funktion in einem extra Statement im Hauptcode deklariert wird, dann nennt man das "function declaration".
-- If the function is created as a part of an expression, it's called a "Function Expression".
+- Wenn die Funktion in einem extra Statement im Hauptcode deklariert wird, dann nennt man das "Function Declaration".
 - Wenn sie als Teil eines Ausdrucks definiert wird, nennen wir das "function expression".
-- Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
-- function declarationen werden verarbeitet bevor der Block ausgeführt wird. Sie sind im ganzen Block sichtbar.
-- Function Expressions are created when the execution flow reaches them.
-- Funktionsausdrücke werden erst erstellt, wenn der Ausführungsfluss sie erreicht.
+- Function Declarations werden verarbeitet bevor der Block ausgeführt wird. Sie sind im ganzen Block sichtbar.
+- Function Expressions werden erst erstellt, wenn der Ausführungsfluss sie erreicht.
 
-In most cases when we need to declare a function, a Function Declaration is preferable, because it is visible prior to the declaration itself. That gives us more flexibility in code organization, and is usually more readable.
 Meistens, wenn wir eine Funktion definieren, sollten wir eine function declaration nutzen, da sie überall sichtbar ist. Das sorgt für flexiblere Codeorganisation und bessere Lesbarkeit.
 
-So we should use a Function Expression only when a Function Declaration is not fit for the task. We've seen a couple of examples of that in this chapter, and will see more in the future.
-Daher sollten wir einen function expression nur verwenden, wenn die function declaration ungeeignet ist. Dazu haben wir einige Beispiele gesehen und werden in Zukunft noch mehr kennenlernen.
+Daher sollten wir einen function expression nur verwenden, wenn die function declaration ungeeignet ist. Dazu haben wir einige Beispiele behandelt und werden in Zukunft noch mehr kennenlernen.
