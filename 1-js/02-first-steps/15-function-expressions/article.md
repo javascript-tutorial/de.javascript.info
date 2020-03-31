@@ -36,7 +36,7 @@ alert( sayHi ); // zeigt die Funktion als String
 */!*
 ```
 
-Interessanterweise führt die letzte Zeile die Funktion nicht aus, denn hinter `saHi` befinden sich keine Klammern. In einigen Programmiersprachen führt jede Erwähnung einer Funktion zur Ausführung, JavaScript gehört nicht dazu.
+Interessanterweise führt die letzte Zeile die Funktion nicht aus, denn hinter `sayHi` befinden sich keine Klammern. In einigen Programmiersprachen führt jede Erwähnung einer Funktion zur Ausführung, JavaScript gehört nicht dazu.
 
 In JavaScript ist eine Funktion ein Wert, also können wir damit auch umgehen, wie mit einem Wert. Der obige code zeigt die Funktion als String an, zeigt also den Quellcode.
 Sicher, eine Funktion ist ein besonderer Wert, denn wir können sie aufrufen, z.B. mit `sayHi()`.
@@ -96,7 +96,7 @@ Die Antwort ist:
 
 Schauen wir uns noch einige Beispiele an, in denen funktionen als Werte weitergegeben und in Funktionsausdrücken genutzt werden.
 
-Wir schreiben eine Funktion `ask(question, yes, no)`  mit drei Parametern:
+Wir schreiben eine Funktion `ask(Frage, ja, nein)`  mit drei Parametern:
 
 `Frage`
 : Fragetext
@@ -156,7 +156,7 @@ Wir deklarieren die Funktionen direkt im Aufruf von `ask` . Sie haben keinen Nam
 Solcher Code taucht in unseren Programmen natürllicherweise auf, es ist die Essez von JavaScript.
 
 ```smart header="Eine Funktion ist ein Wert, der eine \"Aktion\" repräsentiert"
-Normale Werte wie Strings oder Zahlen repräsentieren die "Daen".
+Normale Werte wie Strings oder Zahlen repräsentieren die "Daten".
 Eine Funktion ist also eine *Aktion*
 
 Wir könne sie zwischen den Variablen verschieben und nutzen, wann wir wollen.
@@ -175,7 +175,7 @@ Erstens, die Syntax, wie man sie im Code unterscheidet
       return a + b;
     }
     ```
-- *Function Expression:*: eine Funktion die in einem Ausdruck oder einem anderen Konstrukt erstellt wird. Hier wird die Funktion auf der rechten Seite der "Zuweisung" `=` definiert:
+- *Function Expression:* eine Funktion die in einem Ausdruck oder einem anderen Konstrukt erstellt wird. Hier wird die Funktion auf der rechten Seite der "Zuweisung" `=` definiert:
     ```js
     // Function Expression
     let sum = function(a, b) {
