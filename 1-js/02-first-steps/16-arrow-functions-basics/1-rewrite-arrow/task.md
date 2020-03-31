@@ -1,7 +1,7 @@
 
 # Ersetzen von Code mit Pfeilfunktionen
 
-Ersetze im folgenden Code Funktionen innerhalb eines Ausdrucks mit Funktionen durch Pfeilfunktionen:
+Ersetze im folgenden Code Funktionen innerhalb eines Ausdrucks durch Pfeilfunktionen:
 
 ```js run
 function ask(question, yes, no) {
