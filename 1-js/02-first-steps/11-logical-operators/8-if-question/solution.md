@@ -1,4 +1,4 @@
-Antwort: Erster und dritter Aufruf werde ausgeführt.
+Antwort: Erster und dritter Aufruf werden ausgeführt.
 
 Details:
 
@@ -17,4 +17,3 @@ if (-1 && 0) alert( 'Zweiter' );
 // null || -1 && 1  ->  null || 1  ->  1
 if (null || -1 && 1) alert( 'Dritter' );
 ```
-
