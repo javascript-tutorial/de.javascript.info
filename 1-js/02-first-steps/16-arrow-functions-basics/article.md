@@ -2,7 +2,7 @@
 
 Es gibt eine sehr einfache verkürzte Schreibweise für das Erstellen von Funktionen. Diese sind oftmals besser als Funktionsausdrücke.
 
-Sie werden Pfeilfunktionen genannt, weil sie so aussehen
+Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
 let func = (arg1, arg2, ...argN) => expression
@@ -10,7 +10,7 @@ let func = (arg1, arg2, ...argN) => expression
 
 ...Es wird eine Funktion `func` erzeugt, welche die Argumente `arg1..argN` akzeptiert. Danach wird der Ausdruck `expression` auf der rechten Seite ausgewertet und das Ergebnis zurückgegeben.
 
-In anderen Worten ist es die verkürzte Version von:
+In anderen Worten, es ist die verkürzte Version von:
 
 ```js
 let func = function(arg1, arg2, ...argN) {
@@ -18,12 +18,12 @@ let func = function(arg1, arg2, ...argN) {
 };
 ```
 
-Hier ein konkretes Beispiel:
+Sehen wir uns ein konkretes Beispiel an:
 
 ```js run
 let sum = (a, b) => a + b;
 
-/* Die Pfeilfunktion oben ist die verkürzte Form von:
+/* Diese Pfeilfunktion ist eine kürzere Form von:
 
 let sum = function(a, b) {
   return a + b;
@@ -42,7 +42,7 @@ Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei
     ```js run
     *!*
     let double = n => n * 2;
-    // ist in etwa dasselbe wie: let double = function(n) { return n * 2 }
+    // ungefähr dasselbe wie: let double = function(n) { return n * 2 }
     */!*
 
     alert( double(3) ); // 6
@@ -56,12 +56,12 @@ Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei
     sayHi();
     ```
 
-Pfeilfunktion können benutzt werden als Funktion innerhalb eines Ausdrucks:
+Pfeilfunktionen können auf die gleiche Weise wie Funktionsausdrücke verwendet werden.
 
-Ein Beispiel wie dynamisch eine Funktion erzeugt wird:
+Zum Beispiel, um eine Funktion dynamisch zu erstellen:
 
 ```js run
-let age = prompt("Wie alt bist Du", 18);
+let age = prompt("Wie alt bist Du?", 18);
 
 let welcome = (age < 18) ?
   () => alert('Hallo') :
@@ -72,21 +72,21 @@ welcome(); // ok now
 
 Pfeilfunktion mögen auf den ersten Blick ungewohnt sein. Das ändert sich aber schnell, wenn sich die Augen erst daran gewöhnt haben.
 
-Sie sind sehr bequem für Einzeiler, wenn wir zu faul sind viele Worte zu schreiben.
+Sie sind sehr praktisch für einfache einzeilige Aktionen, wenn wir einfach zu faul sind, viele Worte zu schreiben.
 
 ## Mehrzeilige Pfeilfunktionen
 
 Die Beispiele oben nahmen Argumente von der linken Seite `=>` und werteten den Ausdruck auf der rechten Seite damit aus.
 
-Manchmal brauchen wir etwas Komplizierteres, wie mehrfache Ausdrücke oder Anweisungen. Das ist möglich, aber sie sollten in geschweifte Klammern gesetzt werden und darin explizit `return` benutzt werden.
+Manchmal brauchen wir etwas Komplexeres, wie mehrfache Ausdrücke oder Anweisungen. Das ist auch möglich, aber wir sollten sie in geschweifte Klammern einschließen. Dann verwende ein normales `return` innerhalb dieser Klammern.
 
-Zum Beispiel so:
+Etwa so:
 
 ```js run
-let sum = (a, b) => {  // geschweifte Klammern öffnen eine mehrzeilige Funktion
+let sum = (a, b) => {  // die geschweifte Klammer öffnet eine mehrzeilige Funktion
   let result = a + b;
 *!*
-  return result; // wenn geschweifte Klammer benutzt werden, wird ein "return" benötigt
+  return result; // wenn wir geschweifte Klammern verwenden, dann brauchen wir ein explizites "return"
 */!*
 };
 
@@ -96,11 +96,11 @@ alert( sum(1, 2) ); // 3
 ```smart header="Noch mehr später"
 Wir haben Pfeilfunktionen für ihre Kürze gelobt. Aber das ist nicht alles!
 
-Pfeilfunktionen haben noch andere interessante Möglichkeiten.
+Pfeilfunktionen haben weitere interessante Eigenschaften.
 
 Um diese zu verstehen, müssen wir erst einige weitere Aspekte von JavaScript kennenlernen. Wir werden im Kapitel <info:arrow-functions> zu Pfeilfunktion zurückkehren.
 
-Bis hierher können wir die Pfeilfunktionen bereits für einzeilige Aktionen und Callback-Methoden benutzen.
+Für den Moment können wir Pfeilfunktionen für einzeilige Aktionen und Callback-Funktionen verwenden.
 ```
 
 ## Zusammenfassung
