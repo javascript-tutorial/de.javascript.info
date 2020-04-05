@@ -10,7 +10,7 @@ let func = (arg1, arg2, ...argN) => expression
 
 ...Es wird eine Funktion `func` erzeugt, welche die Argumente `arg1..argN` akzeptiert. Danach wird der Ausdruck `expression` auf der rechten Seite ausgewertet und das Ergebnis zurückgegeben.
 
-In anderen Worten ist es die verkürzte Version von:
+In anderen Worten, es ist die verkürzte Version von:
 
 ```js
 let func = function(arg1, arg2, ...argN) {
