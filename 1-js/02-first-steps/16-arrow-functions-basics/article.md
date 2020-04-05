@@ -42,7 +42,7 @@ Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei
     ```js run
     *!*
     let double = n => n * 2;
-    // ist in etwa dasselbe wie: let double = function(n) { return n * 2 }
+    // ungefähr dasselbe wie: let double = function(n) { return n * 2 }
     */!*
 
     alert( double(3) ); // 6
