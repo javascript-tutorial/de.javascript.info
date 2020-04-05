@@ -133,7 +133,7 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
     alert(x); // undefined, denn (x = 1) wird nicht ausgewertet
     ```
 
-    It hingegen das erste Argument `false`, wertet `||` das zweite aus und führt die Zuweisung durch:
+    Ist hingegen das erste Argument `false`, wertet `||` das Zweite aus und führt die Zuweisung durch:
 
     ```js run no-beautify
     let x;
