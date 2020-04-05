@@ -258,7 +258,7 @@ if (x > 0) {
 }
 ```
 
-Die Variante mit `&&` wirkt knapper. Aber `if` ist leichter zu identifizieren und tendenziell eines kleines bißchen verständlicher.
+Die Variante mit `&&` wirkt knapper. Aber `if` ist leichter zu identifizieren und tendenziell eines kleines bisschen verständlicher.
 
 Daher empfehlen wir, jedes Konstrukt gemäß seinem Zweck einzusetzen: `if` nutzen, wenn wir eine Fallunterscheidung haben wollen, `&&` für die logische Operation UND.
 
