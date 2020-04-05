@@ -18,7 +18,7 @@ let func = function(arg1, arg2, ...argN) {
 };
 ```
 
-Hier ein konkretes Beispiel:
+Sehen wir uns ein konkretes Beispiel an:
 
 ```js run
 let sum = (a, b) => a + b;
