@@ -194,7 +194,7 @@ Für mehrere mit UND verknüpfte Werte:
 result = value1 && value2 && value3;
 ```
 
-arbeitet der Operator UND `&&` wie folgt:
+Der Operator UND `&&` arbeitet wie folgt:
 
 - Wertet Operanden von links nach rechts aus.
 - Konvertiert jeden Operand in einen Booleschen Wert. Ist das Ergebnis `false`, endet seine Auswertung und er gibt den ursprünglichen Wert dieses Operanden zurück.
