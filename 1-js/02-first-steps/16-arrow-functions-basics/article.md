@@ -2,7 +2,7 @@
 
 Es gibt eine sehr einfache verkürzte Schreibweise für das Erstellen von Funktionen. Diese sind oftmals besser als Funktionsausdrücke.
 
-Sie werden Pfeilfunktionen genannt, weil sie so aussehen
+Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
 let func = (arg1, arg2, ...argN) => expression
