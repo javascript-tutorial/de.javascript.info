@@ -63,7 +63,7 @@ Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des 
 
 Beispiele für solche Beschränkungen sind:
 
-- JavaScript auf einer Webebsite darf keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem darf es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebsystems. 
+- JavaScript auf einer Webseite darf keine beliebigen Dateien auf der Festplatte lesen/schreiben, sie kopieren oder Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems.
 
     Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser per "drag and drop" lädt oder sie via `<input>` tag auswählt.
 
@@ -73,7 +73,7 @@ Beispiele für solche Beschränkungen sind:
     Dies wird die "Same Origin Policy" genannt. Um das zu umgehen, müssen *beide Seiten* für den Datenaustausch übereinstimmen und einen speziellen JavaScript-Code enthalten, der dies behandelt. Wir werden das im Tutorial behandeln.
 
     Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
-- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt. 
+- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt.
 Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (ausgedrückt in HTTP-Headern) von der entfernten Seite. Auch dies ist eine Sicherheitseinschränkung.
 
 ![](limitations.svg)

@@ -46,7 +46,7 @@ Der `<script>`-Tag beinhaltet JavaScript-Code, welcher automatisch ausgeführt w
 Der `<script>`-Tag hat einige Attribute die heutzutage nur selten Verwendung finden, aber noch immer in alten Code vorhanden sind:
 
 Das `type`-Attribute: <code>&lt;script <u>type</u>=...&gt;</code>
-: Der alte HTML-Standard, HTML4, setzte bei einem Skript den `Typ` voraus. Üblicherweise war es `type="text/javascript"`. Dies wird nicht länger benötigt. Zudem, der moderne HTML-Standard hat die Bedeutung des Attributs völlig verändert. Jetzt kann es für JavaScript-Module verwendet werden. Aber dies ist ein weiterführendes Thema; wir werden über Module in einem anderen Teil des Tutorials sprechen.
+: Der alte HTML-Standard, HTML4, setzte bei einem Skript den `Typ` voraus. Üblicherweise war es `type="text/javascript"`. Dies wird nicht länger benötigt. Zudem, der moderne HTML-Standard hat die Bedeutung des Attributs völlig verändert. Jetzt kann es für JavaScript-Module verwendet werden. Aber dies ist ein weiterführendes Thema, wir werden über Module in einem anderen Teil des Tutorials sprechen.
 
 Das `language`-Attribute: <code>&lt;script <u>language</u>=...&gt;</code>
 : Dieses Attribute war gedacht, um die Sprache des Skripts anzuzeigen. Dieses Attribute macht nicht länger Sinn, weil JavaScript die Standard-Sprache ist. Es gibt keinen Grund es zu nutzen.
