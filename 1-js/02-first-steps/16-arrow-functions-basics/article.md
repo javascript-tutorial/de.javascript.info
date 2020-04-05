@@ -23,7 +23,7 @@ Sehen wir uns ein konkretes Beispiel an:
 ```js run
 let sum = (a, b) => a + b;
 
-/* Die Pfeilfunktion oben ist die verkürzte Form von:
+/* Diese Pfeilfunktion ist eine kürzere Form von:
 
 let sum = function(a, b) {
   return a + b;
