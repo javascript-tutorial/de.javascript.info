@@ -145,7 +145,7 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
 
     Eine Zuweisung ist ein einfacher Fall. Es kann Seiteneffekte geben, deren Ausbleiben sich nicht unmittelbar manifestiert, wenn die Auswertung sie nicht erreicht.
 
-    Wir wir erkennen ist ein solcher Anwendungsfall eine verlürzte Fallunterschiedung mit `if`. Der erste Operand wird in einen Booleschen Wert konvertiert. Ist er `false`, wird der zweite Operand ausgewertet.
+    Wie wir erkennen ist ein solcher Anwendungsfall eine verkürzte Fallunterschiedung mit `if`. Der erste Operand wird in einen Booleschen Wert konvertiert. Ist er `false`, wird der zweite Operand ausgewertet.
     
     Meistens ist ein "normales" `if` vorzuziehen, um den Code möglichst verständlich zu halten, manchmal kann die Kurzvariante aber ganz praktisch sein.
 
