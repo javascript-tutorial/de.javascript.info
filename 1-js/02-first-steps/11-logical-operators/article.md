@@ -90,7 +90,7 @@ Beispiel:
 
 ```js run
 alert( 1 || 0 ); // 1 (1 is truthy)
-alert( true || 'egal was' ); // (true is effektiv wahr)
+alert( true || 'egal was' ); // (true ist effektiv wahr)
 
 alert( null || 1 ); // 1 (1 ist der erste effektiv wahre Wert)
 alert( null || 0 || 1 ); // 1 (der erste effektiv wahre Wert)
