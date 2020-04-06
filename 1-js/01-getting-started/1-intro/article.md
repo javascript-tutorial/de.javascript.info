@@ -4,7 +4,11 @@ Mal sehen, was das Besondere an JavaScript ist, was wir damit erreichen können 
 
 ## Was ist JavaScript?
 
+<<<<<<< HEAD
 *JavaScript* wurde ursprünglich entwickelt, um *"Webseiten lebendig zu machen "*.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> c89ddc5d92195e08e2c32e30526fdb755fec4622
 
 Die Programme dieser Sprache werden *scripts* genannt. Sie können direkt im HTML der Seite geschrieben werden und werden automatisch beim laden der Seite ausgeführt.
 
