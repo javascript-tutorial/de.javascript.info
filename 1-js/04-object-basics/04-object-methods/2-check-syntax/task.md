@@ -2,9 +2,9 @@ importance: 2
 
 ---
 
-# Syntax check
+# Syntaxprüfung
 
-What is the result of this code?
+Was ist das Resultat des folgenden Code? 
 
 
 ```js no-beautify
@@ -16,4 +16,4 @@ let user = {
 (user.go)()
 ```
 
-P.S. There's a pitfall :)
+P.S. Es gibt eine Falle :)
