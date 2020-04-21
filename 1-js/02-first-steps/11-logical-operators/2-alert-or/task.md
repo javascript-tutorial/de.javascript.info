@@ -2,9 +2,9 @@ importance: 3
 
 ---
 
-# What's the result of OR'ed alerts?
+# Was ergeben mit ODER verknüpfte `alert`-Aufrufe ?
 
-What will the code below output?
+Was gibt der untenstehende Code aus?
 
 ```js
 alert( alert(1) || 2 || alert(3) );

@@ -2,8 +2,8 @@ importance: 3
 
 ---
 
-# Check the range outside
+# Bereichsprüfung (negativ)
 
-Write an `if` condition to check that `age` is NOT between 14 and 90 inclusively.
+Schreibe die Bedingung für eine Fallunterscheidung mit `if` um zu prüfen, dass `age` NICHT zwischen `14` und `90` liegt (Grenzen inklusive).
 
-Create two variants: the first one using NOT `!`, the second one -- without it.
+Formuliere 2 Varianten, die Erste mit NICHT `!`, die Zweite -- ohne.

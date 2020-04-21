@@ -1,25 +1,25 @@
 
 
 ```js run demo
-let userName = prompt("Who's there?", '');
+let userName = prompt("Wer da?", '');
 
 if (userName == 'Admin') {
 
-  let pass = prompt('Password?', '');
+  let pass = prompt('Passwort?', '');
 
   if (pass == 'TheMaster') {
-    alert( 'Welcome!' );
+    alert( 'Willkommen!' );
   } else if (pass == '' || pass == null) {
-    alert( 'Canceled' );
+    alert( 'Abbruch' );
   } else {
-    alert( 'Wrong password' );
+    alert( 'Falsches Passwort' );
   }
 
 } else if (userName == '' || userName == null) {
-  alert( 'Canceled' );
+  alert( 'Abbruch' );
 } else {
-  alert( "I don't know you" );
+  alert( "Ich kenne Sie nicht!" );
 }
 ```
 
-Note the vertical indents inside the `if` blocks. They are technically not required, but make the code more readable.
+Achte auf die vertikalen Einrückungen innerhalb des `if`-Blocks, die syntaktisch nicht zwingend sind, aber den Code lesbarer machen.
