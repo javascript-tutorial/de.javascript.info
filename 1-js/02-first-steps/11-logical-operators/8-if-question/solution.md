@@ -4,7 +4,7 @@ Details:
 
 ```js run
 // Ausgeführt.
-// The result of -1 || 0 = -1, effektiv wahr
+// Das Resultat von -1 || 0 = -1, effektiv wahr
 if (-1 || 0) alert( 'Erster' );
 
 // Nicht ausgeführt
