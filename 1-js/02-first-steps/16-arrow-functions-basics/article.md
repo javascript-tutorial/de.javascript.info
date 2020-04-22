@@ -8,7 +8,7 @@ Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 let func = (arg1, arg2, ...argN) => expression
 ```
 
-...Es wird eine Funktion `func` erzeugt, welche die Argumente `arg1..argN` akzeptiert. Danach wird der Ausdruck `expression` auf der rechten Seite ausgewertet und das Ergebnis zurückgegeben.
+...Dies erzeugt eine Funktion `func`, welche die Argumente `arg1..argN` akzeptiert, dann den Ausdruck `expression` auf der rechten Seite auswertet und ihr Ergebnis zurückgibt.
 
 In anderen Worten, es ist die verkürzte Version von:
 
