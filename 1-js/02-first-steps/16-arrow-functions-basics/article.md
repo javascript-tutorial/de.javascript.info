@@ -76,7 +76,7 @@ Sie sind sehr praktisch für einfache einzeilige Aktionen, wenn wir einfach zu f
 
 ## Mehrzeilige Pfeilfunktionen
 
-Die Beispiele oben nahmen Argumente von der linken Seite `=>` und werteten den Ausdruck auf der rechten Seite damit aus.
+Die Beispiele oben nahmen Argumente von der linken Seite `=>` und bewerteten damit den Ausdruck auf der rechten Seite.
 
 Manchmal brauchen wir etwas Komplexeres, wie mehrfache Ausdrücke oder Anweisungen. Das ist auch möglich, aber wir sollten sie in geschweifte Klammern einschließen. Dann verwende ein normales `return` innerhalb dieser Klammern.
 
