@@ -70,7 +70,7 @@ let welcome = (age < 18) ?
 welcome(); // ok now
 ```
 
-Pfeilfunktion mögen auf den ersten Blick ungewohnt sein. Das ändert sich aber schnell, wenn sich die Augen erst daran gewöhnt haben.
+Pfeilfunktion mögen auf den ersten Blick ungewohnt und nicht sehr lesbar erscheinen, aber das ändert sich schnell, wenn sich die Augen an die Struktur gewöhnen.
 
 Sie sind sehr praktisch für einfache einzeilige Aktionen, wenn wir einfach zu faul sind, viele Worte zu schreiben.
 
