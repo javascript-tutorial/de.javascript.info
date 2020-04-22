@@ -1,5 +1,5 @@
 
-# Ersetzen von Code mit Pfeilfunktionen
+# Umschreiben mit Pfeilfunktionen
 
 Ersetze im folgenden Code Funktionen innerhalb eines Ausdrucks durch Pfeilfunktionen:
 
