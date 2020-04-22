@@ -48,7 +48,7 @@ Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei
     alert( double(3) ); // 6
     ```
 
-- Wenn keine Argument vorhanden sind, ist die Klammer leer (aber sie sollte vorhanden sein):
+- Wenn es keine Argument gibt, sind die Klammern leer (aber sie sollte vorhanden sein):
 
     ```js run
     let sayHi = () => alert("Hallo!");
