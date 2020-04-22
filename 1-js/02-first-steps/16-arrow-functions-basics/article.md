@@ -1,6 +1,6 @@
 # Pfeilfunktionen, die Grundlagen
 
-Es gibt eine sehr einfache verkürzte Schreibweise für das Erstellen von Funktionen. Diese sind oftmals besser als Funktionsausdrücke.
+Es gibt eine weitere sehr einfache und prägnante Syntax für die Erstellung von Funktionen, die oft besser ist als der Funktionsausdruck.
 
 Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
