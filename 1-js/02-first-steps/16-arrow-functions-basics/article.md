@@ -65,7 +65,7 @@ let age = prompt("Wie alt bist Du?", 18);
 
 let welcome = (age < 18) ?
   () => alert('Hallo') :
-  () => alert("Willkommen!");
+  () => alert("Grüße!");
 
 welcome(); // ok now
 ```
