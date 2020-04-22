@@ -105,7 +105,7 @@ Für den Moment können wir Pfeilfunktionen für einzeilige Aktionen und Callbac
 
 ## Zusammenfassung
 
-Pfeilfunktionen sind praktisch für Einzeiler und haben folgende Besonderheiten:
+Pfeilfunktionen sind praktische Einzeiler. Es gibt sie in zwei Varianten:
 
 1. Ohne geschweifte Klammern: `(...args) => expression` -- die rechte Seite ist ein Ausdruck: die Funktion wertet diesen aus und gibt das Ergebnis zurück
 2. Mit geschweiften Klammern: `(...args) => { body }` -- Klammern erlauben es mehrere Anweisungen zu schreiben, aber es braucht ein explizites `return` um etwas zurückzugeben.
