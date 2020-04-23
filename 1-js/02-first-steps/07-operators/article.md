@@ -138,17 +138,17 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
-| 16 | Unäres Plus | `+` |
-| 16 | Unäres Minus | `-` |
-| 14 | Multiplikation | `*` |
-| 14 | Division | `/` |
+| 17 | Unäres Plus | `+` |
+| 17 | Unäres Minus | `-` |
+| 15 | Multiplikation | `*` |
+| 15 | Division | `/` |
 | 13 | Addition | `+` |
-| 13 | Subtraction | `-` |
+| 13 | Subtraktion | `-` |
 | ... | ... | ... |
 | 3 | Zuweisung | `=` |
 | ... | ... | ... |
 
-Wie wir sehen können, hat das "unäre Plus" eine Priorität von `16`, die höher ist als die `13` von "Addition" (binäres Plus). Aus diesem Grund arbeiten im Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
+Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
 
 ## Zuweisung
 

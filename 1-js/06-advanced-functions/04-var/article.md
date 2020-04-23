@@ -153,7 +153,7 @@ So in the example above, `if (false)` branch never executes, but that doesn't ma
 
 **Declarations are hoisted, but assignments are not.**
 
-That's better to demonstrate with an example, like this:
+That's best demonstrated with an example:
 
 ```js run
 function sayHi() {
@@ -218,7 +218,7 @@ The Function Expression is wrapped with parenthesis `(function {...})`, because 
 
 ```js run
 // Try to declare and immediately call a function
-function() { // <-- Error: Unexpected token (
+function() { // <-- Error: Function statements require a function name
 
   let message = "Hello";
 
