@@ -1,6 +1,6 @@
-**Answer: an error.**
+**Die Antwort: Ein Fehler.**
 
-Try it:
+Man soll es einfach mal versuchen:
 ```js run
 function makeUser() {
   return {
@@ -11,29 +11,29 @@ function makeUser() {
 
 let user = makeUser();
 
-alert( user.ref.name ); // Error: Cannot read property 'name' of undefined
+alert( user.ref.name ); // Fehler: Cannot read property 'name' of undefined
 ```
 
-That's because rules that set `this` do not look at object definition. Only the moment of call matters.
+Das liegt an den Regeln die `this` festlegen: Sie schauen nicht nach der Definition eines Objekt. Nur der Zeipunkt des Aufruf spielt eine Rolle. 
 
-Here the value of `this` inside `makeUser()` is `undefined`, because it is called as a function, not as a method with "dot" syntax.
+Hier ist der Wert von `this` innerhlab von `makeUser()` `undefined`, da dieser als Funbktion aufgerufen wird und nicht als eine Methode mit dem "Punktsyntax". 
 
-The value of `this` is one for the whole function, code blocks and object literals do not affect it.
+Der Wert von `this` ist einer für die ganze Funktion. Code Blocks und literale Objekte haben keinen Einfluss darauf. 
 
-So `ref: this` actually takes current `this` of the function.
+Deshalb nimmt sich `ref: this` das aktuelle `this` der Funktion. 
 
-We can rewrite the function and return the same `this` with `undefined` value: 
+Wir koennen die Funktion umschreiben und das selbe `this` mit dem Wert `undefined` ausgeben: 
 
 ```js run
 function makeUser(){
-  return this; // this time there's no object literal
+  return this; // dieses Mal gibt es kein literales Objekt
 }
 
-alert( makeUser().name ); // Error: Cannot read property 'name' of undefined
+alert( makeUser().name ); // Fehler: Property 'name' von undefined kann nicht gelesen werden
 ```
-As you can see the result of `alert( makeUser().name )` is the same as the result of `alert( user.ref.name )` from the previous example.
+Wie man sehen kann ist das Resultat von `alert( makeUser().name )` das selbe wie von `alert( user.ref.name )` im obigen Beispiel. 
 
-Here's the opposite case:
+Hier der umgekehrte Fall: 
 
 ```js run
 function makeUser() {
@@ -52,4 +52,4 @@ let user = makeUser();
 alert( user.ref().name ); // John
 ```
 
-Now it works, because `user.ref()` is a method. And the value of `this` is set to the object before dot `.`.
+Jetzt funktioner es, da `user.ref()` eine Methode ist. Und der Wert von `this` wurde zu dem Objekt vor dem Punkt '.'.
