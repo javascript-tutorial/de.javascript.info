@@ -82,7 +82,7 @@ Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers,
 
 ## Was macht JavaScript einzigartig?
 
-Es gibt mindestens *drei* großartige Dinge welche JavaScript auszeichnen:
+Es gibt mindestens *drei* großartige Eigenschaften, welche JavaScript auszeichnen:
 
 ```compare
 + Volle Integration in HTML und CSS.
