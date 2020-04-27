@@ -22,7 +22,7 @@ Einfach ausgedrückt, "erreichbare" Werte sind diejenigen, die irgendwie zugäng
 
     Diese Werte werden *Wurzeln* genannt. 
 
-2. Jeder andere Wert wird als erreichbar betrachtet, wenn dieser von einer Wurzel aus durch eine Referenz oder von einer Kette an Referenzen erreichbar ist. 
+2. Jeder andere Wert gilt als erreichbar, wenn er von einer Wurzel aus durch eine Referenz oder durch eine Kette von Referenzen erreichbar ist.
 
     Wenn zum Beispiel es ein Objekt innerhalb einer Variabel gibt und dieses Objekt eine Property besitzt, die zu einem weiteren Objekt referenziert, dann gilt dieses Objekt als erreichbar. Und diejenigen, die es referenzieren sind auch errecihbar. Detaillierte Beispiele folgen. 
 
