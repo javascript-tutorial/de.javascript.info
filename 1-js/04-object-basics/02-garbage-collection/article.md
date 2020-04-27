@@ -7,7 +7,7 @@ Was passiert, wenn etwas nicht mehr gebraucht wird? Wie erkennt das die JavaScri
 
 ## Erreichbarkeit 
 
-Das Hauptkonzept des Speichermanagement in JavaScript ist *Erreichbarkeit*.
+Das zentrale Konzept der Speicherverwaltung in JavaScript ist *Erreichbarkeit*.
 
 Kurz gefasst: "Erreichbare" Werte sind diese, diejenigen auf die zugegriffen werden kann oder in irgendwie nutzbar sind. Diese werden garantiert im Speicher behalten. 
 
