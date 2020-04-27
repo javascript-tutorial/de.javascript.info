@@ -93,7 +93,7 @@ JavaScript ist die einzige Browser-Technologie, die diese drei Dinge vereint.
 
 Das macht JavaScript einzigartig. Deshalb ist es das am weitesten verbreitete Werkzeug zur Erstellung von Browser-Oberflächen.
 
-Außerdem können mit JavaScript auch Server, mobile Anwendungen, usw. erstellt werden.
+Davon abgesehen ermöglicht JavaScript auch die Erstellung von Servern, mobilen Anwendungen, usw.
 
 ## Sprachen "über" JavaScript
 
