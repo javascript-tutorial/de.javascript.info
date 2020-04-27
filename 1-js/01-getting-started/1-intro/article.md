@@ -109,7 +109,7 @@ Beispiele für solche Sprachen sind:
 
 - [CoffeeScript](http://coffeescript.org/): Es verfügt über eine kürzere Syntax was einen erlaubt klareren und präziseren Code zu schreiben. *Ruby devs* fungiert auf ähnliche Art und Weiße.
 - [TypeScript](http://www.typescriptlang.org/) konzentriert sich auf das Hinzufügen einer "strengen Datentypisierung", um die Entwicklung und Unterstützung komplexer Systeme zu vereinfachen. Es wird von Microsoft entwickelt.
-- [Flow](http://flow.org/) ist auch auf striktere Schreibregeln ausgelegt, jedoch auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
+- [Flow](http://flow.org/) fügt auch die Datentypisierung hinzu, jedoch auf andere Art und Weise. Entwickelt von Facebook.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache die eine eigene Engine besitzt, welche in Nicht-Browser-Umgebungen (wie z. B. mobilen Anwendungen) läuft, die aber auch in JavaScript konvertiert werden kann. Sie wurde von Google entwickelt.
 
 Es gibt noch mehr. Auch wenn wir eine der kompremierten Sprachen verwenden, sollten wir auch JavaScript näher kennen um zu verstehen was im Hintergrund passiert und was wir eigentlich tun.
