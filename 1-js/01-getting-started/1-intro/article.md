@@ -22,7 +22,7 @@ Heute kann JavaScript nicht nur im Browser ausgeführt werden, sondern auch auf 
 
 Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "JavaScript Virtual Machine" bezeichnet wird.
 
-Verschiedene Engines haben unterschiedliche Spitznamen (*codenames*). Zum Beispiel:
+Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
