@@ -30,7 +30,7 @@ Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
 
 Die oben genannten Begriffe sollte man sich merken, weil sie in Entwicklerarikeln im Internet verwendet werden. Wir werden sie auch verwenden. Wenn, zum Beispiel, "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
-```smart header="Wie funktioniert eine Engine?"
+```smart header="Wie funktionieren Engines?"
 
 Engines sind kompliziert. Aber die Grundlagen sind einfach.
 
