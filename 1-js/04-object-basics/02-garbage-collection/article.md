@@ -144,7 +144,7 @@ Das Speicherabbild wird zu:
 
 Diese Beispiel demonstriert, wie wichtig das Konzept der Erreichbarkeit ist. 
 
-Es ist offentsichtlic, dass John und Ann weiterhin miteinander verbunden sind, beide haben eingehende Referenzen. Aber das reicht nicht aus. 
+Es ist offensichtlich, dass John und Ann noch miteinander verbunden sind, beide haben eingehende Referenzen. Aber das reicht nicht aus.
 
 Die Verbindung des früheren Objekt `"family"` wurde von der Wurzel gekappt, es gibt keine Referenz mehr zu ihm, deshalb wird die ganze Insel unerreichbar und wird entfernt. 
 
