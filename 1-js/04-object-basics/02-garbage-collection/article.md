@@ -33,7 +33,7 @@ Es gibt einen Hintergrundprozess in der JavaScript-Engine, der [Garbage Collecto
 Hier ist das einfachste Beispiel:
 
 ```js
-// user hat eine Referenz zum Objekt
+// user hat eine Referenz auf das Objekt
 let user = {
   name: "John"
 };
