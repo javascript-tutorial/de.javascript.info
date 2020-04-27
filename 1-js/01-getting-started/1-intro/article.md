@@ -63,7 +63,7 @@ Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des 
 
 Beispiele für solche Beschränkungen sind:
 
-- JavaScript auf einer Webebsite kann keine Dateien auf dem Speichermedium lesen, schreiben oder kopieren. Zudem kann es keine Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems. 
+- JavaScript auf einer Webseite darf keine willkürlichen Dateien auf der Festplatte lesen, schreiben oder kopieren, oder Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems.
 
     Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z. B. eine Datei in den Browser per "drag and drop" lädt oder sie via ein `<input>` tag auswählt.
 
