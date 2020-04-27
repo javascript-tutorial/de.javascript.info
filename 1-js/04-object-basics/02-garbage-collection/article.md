@@ -199,7 +199,7 @@ Es existieren andere Optimierungen und Sorten von Algorithmen der Müllsammlung.
 Die wesentlichsten Dinge:
 
 - Die Müllsammlung läuft automatisch. Wir können sie nicht zwingen zu laufen oder sie verhindern. 
-- Objekte bleiben im Speicher solange sie erreichbar sind. 
+- Objekte bleiben im Speicher erhalten, solange sie erreichbar sind.
 - Referenziert zu werden ist nicht das selbe als erreichbar zu sein (von einer Wurzel aus): Ein Haufen an miteinander verbundenn Objekte kann als Ganzes unerreichbar werden. 
 
 Moderne Engines implementieren fortgeschrittenere Algroithmen der Müllsammlung. 
