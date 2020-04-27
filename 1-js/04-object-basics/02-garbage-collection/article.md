@@ -142,7 +142,7 @@ Das Speicherabbild wird zu:
 
 ![](family-no-family.svg)
 
-Diese Beispiel demonstriert, wie wichtig das Konzept von Erreichbarkeit ist. 
+Diese Beispiel demonstriert, wie wichtig das Konzept der Erreichbarkeit ist. 
 
 Es ist offentsichtlic, dass John und Ann weiterhin miteinander verbunden sind, beide haben eingehende Referenzen. Aber das reicht nicht aus. 
 
