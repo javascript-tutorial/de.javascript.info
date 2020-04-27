@@ -13,7 +13,7 @@ Skripte werden als reiner Text bereitgestellt und ausgeführt. Sie benötigen ke
 In diesem Aspekt unterscheidet sich JavaScript sehr von einer anderen Sprache namens [Java]https://de.wikipedia.org/wiki/Java_(Programmiersprache)).
 
 ```smart header="Warum heißt es <u>Java</u>Script?"
-Während der anfänglichen Entwicklung von JavaScript trug dieses noch den Namen "LiveScript". Da Java damals aber eine sehr beliebte Programmiersprache war beschloß man, um die Bekanntheit der neuen Sprache zu steigern, diese als "jüngeren Bruder" von Java darzustellen. 
+Als JavaScript entwickelt wurde, hatte es zunächst einen anderen Namen: "LiveScript". Aber Java war zu dieser Zeit sehr verbreitet, so dass beschlossen wurde, dass die Etablierung einer neuen Sprache als "kleiner Bruder" von Java helfen würde.
 
 In der weiteren Entwicklung wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation, [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und hat darum überhaupt keinen Bezug mehr zu Java.
 ```
