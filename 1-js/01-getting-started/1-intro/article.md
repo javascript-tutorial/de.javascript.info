@@ -68,7 +68,7 @@ Beispiele für solche Beschränkungen sind:
     Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z. B. eine Datei in den Browser per "drag and drop" lädt oder sie via ein `<input>` tag auswählt.
 
     Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren, aber sie erfordern die ausdrückliche Genehmigung des Benutzers. JavaScript auf einer Webseite darf also nicht heimlich eine Webcam aktivieren, die Umgebung beobachten und die Informationen an die [NSA](https://de.wikipedia.org/wiki/National_Security_Agency) senden.
-- Verschiedene *Tabs*/Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen bei welchen dies doch der Fall sein kann. Z. B. dann wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in einem solchen Fall kann das auf der einen Seite laufende JavaScript nicht unbedingt auf die andere Seite zugreifen, sofern diese verschiedenen Ursprungs sind (unterschiedlichen Domänen entspringen, ein anderes Protokoll oder anderen Port haben).
+- Verschiedene Tabs/Fenster wissen im Allgemeinen nichts voneinander. Manchmal tun sie es doch, z. B. wenn ein Fenster das andere mit JavaScript öffnet. Aber selbst in diesem Fall kann es vorkommen, dass JavaScript von einer Seite aus nicht auf die andere Seite zugreift, wenn ihr Ursprung verschieden ist (von einer anderen Domäne, einem anderen Protokoll oder Port).
 
     Das nennt man "Same Origin Policy". Um so etwas zu erreichen muss auf *beiden Seiten* ein Datenaustausch akzeptiert werden. Zudem müssen beide Seiten über einen speziellen JavaScript-Code verfügen der das händeln kann. Wir werden das im Tutorial behandeln.
 
