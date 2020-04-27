@@ -116,7 +116,7 @@ delete family.mother.husband;
 
 ![](family-delete-refs.svg)
 
-Es reicht nicht aus nur eine dieser Referenzen zu löschen, da alle Objekte weiterhin erreichbar wären.
+Es reicht nicht aus, nur einen dieser beiden Verweise zu löschen, denn dann wären alle Objekte noch erreichbar.
 
 Aber wenn wird beide löschen, dann können wir sehen, dass John keine eingehende Referenz mehr verfügt:
 
