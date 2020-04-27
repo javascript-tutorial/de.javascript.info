@@ -118,4 +118,4 @@ Es gibt noch mehr. Natürlich sollten wir, selbst wenn wir eine der transponiert
 
 - JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
 - Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
-- Es gibt viele Sprachen die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es ist empfehlenswert sich diese zumindest kurz anzuschauen wenn man JavaScript beherrscht.
+- Es gibt viele Sprachen, die in JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem du JavaScript beherrscht.
