@@ -118,7 +118,7 @@ delete family.mother.husband;
 
 Es reicht nicht aus, nur einen dieser beiden Verweise zu löschen, denn dann wären alle Objekte noch erreichbar.
 
-Aber wenn wird beide löschen, dann können wir sehen, dass John keine eingehende Referenz mehr verfügt:
+Aber wenn wir beide löschen, dann können wir sehen, dass John keine eingehende Referenz mehr hat:
 
 ![](family-no-father.svg)
 
