@@ -75,7 +75,7 @@ Wenn wir jetzt dasselbe tun:
 user = null;
 ```
 
-... dann ist das Objekt weiterhin erreichbar durch die globale Variabel `admin`, deshalb ist es im Speicher. Wenn wir auch `admin` überschreiben, kann es entfernt werden. 
+...dann ist das Objekt immer noch über die globale Variable `admin` erreichbar, es befindet sich also im Speicher. Wenn wir auch `admin` überschreiben, dann kann es entfernt werden.
 
 ## Interlinked objects
 
