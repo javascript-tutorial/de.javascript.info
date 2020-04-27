@@ -51,7 +51,7 @@ Im Browser ausgeführtes JavaScript kann alles was mit der Manipulation von Webs
 
 So ist beispielsweise im Browser laufendes JavaScript in der Lage:
 
-- Der Seite neues HTML hinzuzufügen, den existierenden Inhalt (*content*) zu modifizieren oder *styles* anzupassen.
+- Der Seite neues HTML hinzuzufügen, den existierenden Inhalt zu modifizieren oder Stile anzupassen.
 - Auf Benutzeraktionen zu reagieren, zum Beispiel Mausklicks, Mauszeigerbewegungen oder Tastenanschläge.
 - Anfragen über das Netzwerk an *remote server* zu schicken, Dateien herunter- und hochzuladen (mit Hilfe der sogenannten [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming))- und [COMET](https://en.wikipedia.org/wiki/Comet_(programming))- Technologien).
 - Cookies auszulesen und festzulegen, Fragen an Nutzer zu senden, Nachrichten anzuzeigen.
