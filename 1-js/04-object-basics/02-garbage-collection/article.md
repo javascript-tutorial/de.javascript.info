@@ -122,7 +122,7 @@ Aber wenn wir beide löschen, dann können wir sehen, dass John keine eingehende
 
 ![](family-no-father.svg)
 
-Ausgehende Referenzen spielen keine Rolle. Nur eingehende können ein Objekt erreichbar machen. Nun ist John unerreichbar und wird vom Speicher entfernt mit all seinen Daten, auf die auch nicht mehr zugegriffen werden kann. 
+Ausgehende Referenzen spielen keine Rolle. Nur eingehende Referenzen können ein Objekt erreichbar machen. Nun ist John unerreichbar und wird mit all seinen ebenfalls unerreichbar gewordenen Daten aus dem Speicher entfernt.
 
 Nach der Müllsammlung:
 
