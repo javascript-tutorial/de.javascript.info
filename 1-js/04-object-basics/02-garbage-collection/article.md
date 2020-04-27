@@ -157,7 +157,7 @@ Die folgenden Schritte der "Müllsammlung" werden regulär ausgeführt:
 - Die Müllsammlung nimmt sich die Wurzeln und "markiert" (erinnert sich an) diese. 
 - Dann besucht sie diese und "markiert" alle von ihnen ausgehenden Referenzen.
 - Dann besucht sie die markierten Objekte und markiert *deren* Referenzen. Alle besuchten Objekte werden vermerkt, sodass das selbe Objekt später nicht erneut besucht werden muss. 
-- ... und so weiter bis jedes jede erreichbare Referenz (von den Wurzel aus) besucht wurde. 
+- ...Und so weiter, bis alle erreichbaren Referenzen (ab der Wurzel) besucht sind.
 - Alle Objekte außer die markierten werden entfernt. 
 
 Wir nehmen als Beispiel an, dass die Struktur unseres Objekt so aussieht:
