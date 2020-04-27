@@ -70,7 +70,7 @@ Beispiele für solche Beschränkungen sind:
     Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren, aber sie erfordern die ausdrückliche Genehmigung des Benutzers. JavaScript auf einer Webseite darf also nicht heimlich eine Webcam aktivieren, die Umgebung beobachten und die Informationen an die [NSA](https://de.wikipedia.org/wiki/National_Security_Agency) senden.
 - Verschiedene Tabs/Fenster wissen im Allgemeinen nichts voneinander. Manchmal tun sie es doch, z. B. wenn ein Fenster das andere mit JavaScript öffnet. Aber selbst in diesem Fall kann es vorkommen, dass JavaScript von einer Seite aus nicht auf die andere Seite zugreift, wenn ihr Ursprung verschieden ist (von einer anderen Domäne, einem anderen Protokoll oder Port).
 
-    Das nennt man "Same Origin Policy". Um so etwas zu erreichen muss auf *beiden Seiten* ein Datenaustausch akzeptiert werden. Zudem müssen beide Seiten über einen speziellen JavaScript-Code verfügen der das händeln kann. Wir werden das im Tutorial behandeln.
+    Dies wird die "Same-Origin-Policy" genannt. Um dies zu umgehen, müssen *beide Seiten* dem Datenaustausch zustimmen und einen speziellen JavaScript-Code enthalten, der dies ermöglicht. Wir werden das im Tutorial behandeln.
 
     Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein auf ein anderes Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
 - JavaScript kann mit Leichtigkeit über das Netz mit dem Server kommunizieren von dem die aktuelle Seite abgerufen wurde. Aber seine Fähigkeit Daten von anderen Seiten/Domains zu empfangen ist eingeschränkt. 
