@@ -112,7 +112,7 @@ Beispiele für solche Sprachen sind:
 - [Flow](http://flow.org/) fügt auch die Datentypisierung hinzu, jedoch auf andere Art und Weise. Entwickelt von Facebook.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine besitzt, die in Nicht-Browser-Umgebungen (wie mobilen Anwendungen) läuft, aber auch in JavaScript transponiert werden kann. Entwickelt von Google.
 
-Es gibt noch mehr. Auch wenn wir eine der kompremierten Sprachen verwenden, sollten wir auch JavaScript näher kennen um zu verstehen was im Hintergrund passiert und was wir eigentlich tun.
+Es gibt noch mehr. Natürlich sollten wir, selbst wenn wir eine der transponierten Sprachen verwenden, auch JavaScript beherrschen, um zu verstehen, was wir tun.
 
 ## Zusammenfassung
 
