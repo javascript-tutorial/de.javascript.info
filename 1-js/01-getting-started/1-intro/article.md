@@ -10,7 +10,7 @@ Die Programme dieser Sprache werden *scripts* genannt. Diese kann man direkt ins
 
 Skripte werden als reiner Text bereitgestellt und ausgeführt. Sie benötigen keine spezielle Vorbereitung oder Kompilierung, um ausgeführt zu werden.
 
-In diesem Aspekt unterscheidet sich JavaScript einer ihr ihm Namen ähnlichen Sprache: [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+In diesem Aspekt unterscheidet sich JavaScript sehr von einer anderen Sprache namens [Java]https://de.wikipedia.org/wiki/Java_(Programmiersprache)).
 
 ```smart header="Warum heißt es <u>Java</u>Script?"
 Während der anfänglichen Entwicklung von JavaScript trug dieses noch den Namen "LiveScript". Da Java damals aber eine sehr beliebte Programmiersprache war beschloß man, um die Bekanntheit der neuen Sprache zu steigern, diese als "jüngeren Bruder" von Java darzustellen. 
