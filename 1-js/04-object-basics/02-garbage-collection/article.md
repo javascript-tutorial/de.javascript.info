@@ -55,7 +55,7 @@ Nun ist John unerreichbar. Es gibt keinen Weg auf ihn zuzugreifen, keine Referen
 
 ## Zwei Referenzen
 
-Wir nehmen uns nun vor, die Referenz von `user` zu `admin` zu kopieren:
+Nun stellen wir uns vor, wir kopieren den Verweis von `user` auf `admin`:
 
 ```js
 // user hat eine Referenz zum Objekt 
