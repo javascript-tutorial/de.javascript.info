@@ -43,7 +43,7 @@ Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet
 
 ## Was kann im Browser ausgeführtes JavaScript?
 
-Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen *Low-Level*-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser entwickelt wurde.
+Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser entwickelt wurde, die dies nicht benötigen.
 
 Die Funktionen von JavaScript hängen stark von der Umgebung ab in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen die es JavaScript z. B. ermöglichen beliebige Dateien zu lesen oder zu schreiben, sowie Netzwerkanfragen durchzuführen.
 
