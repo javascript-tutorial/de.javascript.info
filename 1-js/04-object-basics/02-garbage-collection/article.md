@@ -9,7 +9,7 @@ Was passiert, wenn etwas nicht mehr gebraucht wird? Wie erkennt das die JavaScri
 
 Das zentrale Konzept der Speicherverwaltung in JavaScript ist *Erreichbarkeit*.
 
-Kurz gefasst: "Erreichbare" Werte sind diese, diejenigen auf die zugegriffen werden kann oder in irgendwie nutzbar sind. Diese werden garantiert im Speicher behalten. 
+Einfach ausgedrückt, "erreichbare" Werte sind diejenigen, die irgendwie zugänglich oder nutzbar sind. Sie werden garantiert im Speicher abgelegt.
 
 1. Es gibt einen Basissatz mit von Natur aus erreichbare Werte, die aus offensichtlichen Gründen nicht gelöscht werden können. 
 
