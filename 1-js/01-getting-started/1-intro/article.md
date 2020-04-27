@@ -38,7 +38,7 @@ Engines sind kompliziert. Aber die Grundlagen sind einfach.
 2. Danach wird das Script in Maschinensprache konvertiert ("kompiliert").
 3. Und zum Schluss wird der Maschienencode ausgeführt, was ziemlich schnell passiert.
 
-Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript während es läuft, analysiert die Daten welche sie verarbeitet, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
+Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet sogar das kompilierte Skript während es läuft, analysiert die Daten, welche sie verarbeitet, und optimiert den Maschinencode basierend auf diesem Wissen weiter.
 ```
 
 ## Was kann im Browser ausgeführtes JavaScript?
