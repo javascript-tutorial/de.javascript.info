@@ -78,7 +78,7 @@ Auch wenn es möglich ist erfordert es eine ausdrückliche Zustimmung (ausgedrü
 
 ![](limitations.svg)
 
-Solche Einschränkungen bestehen nicht wenn JavaScript außerhalb des Browsers, z. B. auf einem Server, ausgeführt wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
+Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers, z. B. auf einem Server, ausgeführt wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
 
 ## Was macht JavaScript einzigartig?
 
