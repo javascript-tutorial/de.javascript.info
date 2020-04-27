@@ -25,7 +25,7 @@ Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "Java
 Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
 
 - [V8](https://de.wikipedia.org/wiki/V8_(JavaScript-Implementierung)) -- in Chrome und Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- [SpiderMonkey](https://de.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
 - Es gibt noch weitere *codenames*, sprich Engines, wie "Trident" und "Chakra" für verschiedene Versionen von IE, oder "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari usw.
 
 Es ist gut sich ein paar der obigen Begriffe zu merken, da sie oft in Artikeln von Entwicklern (*developers*) im Internet verwendet werden. Wir werden sie auch benutzen wenn bspw. "ein *Feature* X von V8 unterstützt wird". Dieses *Feature* funktioniert dann wahrscheinlich in Chrome und Opera.
