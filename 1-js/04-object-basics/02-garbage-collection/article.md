@@ -160,7 +160,7 @@ Die folgenden Schritte der "Müllsammlung" werden regulär ausgeführt:
 - ...Und so weiter, bis alle erreichbaren Referenzen (ab der Wurzel) besucht sind.
 - Alle Objekte außer die markierten werden entfernt. 
 
-Wir nehmen als Beispiel an, dass die Struktur unseres Objekt so aussieht:
+Gehen wir, beispielsweise, von folgender Objektstruktur aus:
 
 ![](garbage-collection-1.svg)
 
