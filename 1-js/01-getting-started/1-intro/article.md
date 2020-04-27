@@ -87,7 +87,7 @@ Es gibt mindestens *drei* großartige Eigenschaften, welche JavaScript auszeichn
 ```compare
 + Volle Integration in HTML und CSS.
 + Einfache Dinge werden einfach gemacht.
-+ Unterstützung von allen gängigen Browsern die JavaScript standardmäßig aktiviert haben.
++ Wird von allen gängigen Browsern unterstützt und ist standardmäßig aktiviert.
 ```
 JavaScript ist die einzige Browser-Technologie, die diese drei Dinge vereint.
 
