@@ -148,7 +148,7 @@ Es ist offensichtlich, dass John und Ann noch miteinander verbunden sind, beide 
 
 Die Verbindung des früheren Objekt `"family"` wurde von der Wurzel gekappt, es gibt keine Referenz mehr zu ihm, deshalb wird die ganze Insel unerreichbar und wird entfernt. 
 
-## Interner Algorithmus
+## Interne Algorithmen
 
 Die grundlegende Müllsammlung nennt sich "mark-and-sweep".
 
