@@ -8,7 +8,7 @@ JavaScript wurde ursprünglich entwickelt, um "Webseiten lebendig zu machen".
 
 Die Programme dieser Sprache werden *scripts* genannt. Diese kann man direkt ins HTML einer Seite schreiben welche dann beim Laden der Seite automatisch ausgeführt werden.
 
-*Scripts* werden als reiner Text (*plain text*) bereitgestellt und ausgeführt, weshalb sie keine spezielle Aufbereitung oder Kompilierung benötigen.
+Skripte werden als reiner Text bereitgestellt und ausgeführt. Sie benötigen keine spezielle Vorbereitung oder Kompilierung, um ausgeführt zu werden.
 
 In diesem Aspekt unterscheidet sich JavaScript einer ihr ihm Namen ähnlichen Sprache: [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
