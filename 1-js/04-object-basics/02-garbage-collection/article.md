@@ -70,7 +70,7 @@ let admin = user;
 
 ![](memory-user-john-admin.svg)
 
-Wenn wir jetzt das selbe tun: 
+Wenn wir jetzt dasselbe tun:
 ```js
 user = null;
 ```
