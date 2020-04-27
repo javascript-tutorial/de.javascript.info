@@ -28,7 +28,7 @@ Einfach ausgedrückt, "erreichbare" Werte sind diejenigen, die irgendwie zugäng
 
 Es gibt einen Hintergrundprozess in der JavaScript-Engine, der [Garbage Collector](https://de.wikipedia.org/wiki/Garbage_Collection) genannt wird. Dieser überwacht alle Objekte und entfernt diejenigen, die unerreichbar geworden sind.
 
-## Ein einzelnes Beispiel
+## Ein einfaches Beispiel
 
 Hier ist das einfachste Beispiel:
 
