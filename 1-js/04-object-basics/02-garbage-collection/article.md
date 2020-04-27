@@ -178,7 +178,7 @@ Dann werden ihre Referenzen markiert:
 
 ![](garbage-collection-4.svg)
 
-Nun werden die Objekte, die nicht besucht werden konnten als unerreichbar eingestuft und entfernt: 
+Die Objekte, die dabei nicht erreicht werden konnten, werden jetzt als unerreichbar eingestuft und entfernt:
 
 ![](garbage-collection-5.svg)
 
