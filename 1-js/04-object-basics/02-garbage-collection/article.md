@@ -1,6 +1,6 @@
 # Müllsammlung 
 
-Das Speichermanagement wird in JavaScript automatisch und unsichtbar ausgeführt. Wir schaffen Primitives, Objekte, Funktionen...
+Die Speicherverwaltung in JavaScript wird automatisch, für uns unsichtbar, durchgeführt. Wir erstellen einfache Datenstrukturen, Objekte, Funktionen... All das braucht Speicher.
 All das nimmt Speicher in Anspruch. 
 
 Was passiert wenn etwas nicht mehr länger gebraucht wird? Wie entdeckt der JavaScript Motor das und räumt es weg? 
