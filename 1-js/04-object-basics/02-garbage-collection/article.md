@@ -107,7 +107,7 @@ Die resultierende Speicherstruktur:
 
 Ab sofort sind alle Objekte erreichbar.
 
-Man entferne nun zwei Referenzen:
+Nun wollen wir zwei Referenzen entfernen:
 
 ```js
 delete family.father;
