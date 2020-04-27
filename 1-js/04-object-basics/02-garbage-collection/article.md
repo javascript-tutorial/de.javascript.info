@@ -138,7 +138,7 @@ Das Ursprungsobjekt ist das selbe wie oben. Denn:
 family = null;
 ```
 
-Das im Speicher abgelegt Bild wird zu:
+Das Speicherabbild wird zu:
 
 ![](family-no-family.svg)
 
