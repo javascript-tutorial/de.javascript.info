@@ -105,7 +105,7 @@ Die resultierende Speicherstruktur:
 
 ![](family.svg)
 
-Bis bier hin sind alle Objekte erreichbar. 
+Ab sofort sind alle Objekte erreichbar.
 
 Man entferne nun zwei Referenzen:
 
