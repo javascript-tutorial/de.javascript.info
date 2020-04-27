@@ -24,7 +24,7 @@ Einfach ausgedrückt, "erreichbare" Werte sind diejenigen, die irgendwie zugäng
 
 2. Jeder andere Wert gilt als erreichbar, wenn er von einer Wurzel aus durch eine Referenz oder durch eine Kette von Referenzen erreichbar ist.
 
-    Wenn zum Beispiel es ein Objekt innerhalb einer Variabel gibt und dieses Objekt eine Property besitzt, die zu einem weiteren Objekt referenziert, dann gilt dieses Objekt als erreichbar. Und diejenigen, die es referenzieren sind auch errecihbar. Detaillierte Beispiele folgen. 
+    Wenn sich beispielsweise ein Objekt in einer lokalen Variable befindet und dieses Objekt eine Eigenschaft hat, die auf ein anderes Objekt verweist, gilt dieses Objekt als erreichbar. Und diejenigen, die es referenziert, sind ebenfalls erreichbar. Ausführliche Beispiele folgen.
 
 Es gibt einen Hintergrundprozess bei der JavaScript Engine, die nennt sich [garbage collector](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)). Dieser zeichnet alle Objekt auf und entfernd diejenigen, die unerreichbar wurden. 
 
