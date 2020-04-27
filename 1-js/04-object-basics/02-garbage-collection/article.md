@@ -170,7 +170,7 @@ Beim ersten Schritt werden die Wurzeln markiert:
 
 ![](garbage-collection-2.svg)
 
-Dann werden deren Referenzen markiert: 
+Dann werden ihre Referenzen markiert:
 
 ![](garbage-collection-3.svg)
 
