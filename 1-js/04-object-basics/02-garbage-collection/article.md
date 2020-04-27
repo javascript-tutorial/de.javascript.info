@@ -182,7 +182,7 @@ Die Objekte, die dabei nicht erreicht werden konnten, werden jetzt als unerreich
 
 ![](garbage-collection-5.svg)
 
-Wir können und des Prozess auch als einen Farbeimer vorstellen, der von den Wurzeln ausgehend umgekippt wird und dessen Farbe durch alle Referenzen hindurchfließt und so die erreichbaren Objekte markiert. Die unmarkierten werden dann entfernt. 
+Wir können uns den Prozess auch als riesigen Farbeimer vorstellen, der bei den Wurzeln verschüttet wird und durch die Verweise fließt und alle erreichbaren Objekte markiert. Die Unmarkierten werden dann entfernt.
 
 Das ist das Konzept hinter der Müllsammlung. JavaScript Engines applizieren viele Optimierungen, sodass die Ausführung schneller abläuft und sie nicht behindert.
 
