@@ -188,7 +188,7 @@ Das ist das Konzept hinter der Müllsammlung. JavaScript Engines applizieren vie
 
 Einige der Optimierungen:
 
-- **Generationsgerechte Sammlung** -- Objekte werden in zwei Sorten unterteilt: "die Neuen" und "die Alten". Viele Objekte taufen auch, erledigen ihren Job und verschwinden schnell. Diese können aggressiv bereinigt werden. Diejenigen die lang genug überleben werden "alt" und werden seltener überprüft. 
+- **Generationelle Garbage Collection** -- Objekte werden in zwei Gruppen aufgeteilt: "Neue" und "Alte". Viele Objekte entstehen, erledigen ihre Arbeit und verschwinden schnell, sie können aggressiv bereinigt werden. Diejenigen, die lange genug bestehen, werden "alt" und seltener geprüft.
 - **Schrittweise Sammlung** -- wenn es eine große Anzahl an Objekten gibt und wir versuchen den ganzen Satz an Objekten abzulaufen und zu markieren, wird dies möglicherweise einige Zeit dauern und sichtbare Verzögerungen in der Ausführung mit sich bringen. Deshalb versucht die Engine die Müllsammlung in Stücke aufzuteilen. Diese Stücke werden dann, separat, eines nach dem anderen ausgeführt. Das verlangt extra Buchführung um die Veränderung zwischen ihnen um Auge zu behalten, jedoch wird man nur wenige kleine Verzögerungen haben, anstatt eine große.
 - **Sammlung zur Leerlaufzeit** -- die Müllsammlung versucht nur zu laufen, wenn die CPU inaktiv ist, um den möglichen Effekt auf die Ausführung zu vermindern. 
 
