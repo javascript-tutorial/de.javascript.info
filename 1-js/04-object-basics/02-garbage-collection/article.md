@@ -174,7 +174,7 @@ Dann werden ihre Referenzen markiert:
 
 ![](garbage-collection-3.svg)
 
-... und deren Referenzen, sofern möglich: 
+...und ihre Referenzen, sofern möglich:
 
 ![](garbage-collection-4.svg)
 
