@@ -190,7 +190,7 @@ Einige der Optimierungen:
 
 - **Generationelle Garbage Collection** -- Objekte werden in zwei Gruppen aufgeteilt: "Neue" und "Alte". Viele Objekte entstehen, erledigen ihre Arbeit und verschwinden schnell, sie können aggressiv bereinigt werden. Diejenigen, die lange genug bestehen, werden "alt" und seltener geprüft.
 - **Schrittweise Sammlung** -- wenn es eine große Anzahl an Objekten gibt und wir versuchen den ganzen Satz an Objekten abzulaufen und zu markieren, wird dies möglicherweise einige Zeit dauern und sichtbare Verzögerungen in der Ausführung mit sich bringen. Deshalb versucht die Engine die Müllsammlung in Stücke aufzuteilen. Diese Stücke werden dann, separat, eines nach dem anderen ausgeführt. Das verlangt extra Buchführung um die Veränderung zwischen ihnen um Auge zu behalten, jedoch wird man nur wenige kleine Verzögerungen haben, anstatt eine große.
-- **Sammlung zur Leerlaufzeit** -- die Müllsammlung versucht nur zu laufen, wenn die CPU inaktiv ist, um den möglichen Effekt auf die Ausführung zu vermindern. 
+- **Leerlauf Garbage Collection** -- der Garbage Collector versucht, nur bei Leerlauf der CPU zu laufen, um  mögliche Auswirkungen auf die Programmausführung zu reduzieren.
 
 Es existieren andere Optimierungen und Sorten von Algorithmen der Müllsammlung. So gern ich diese hier beschreiben würde, so muss ich mich zurückhalten, da verschiedene Engines verschiedene Kniffe und Techniken mit sich bringen. Und, was noch weit wichtiger ist, Dinge verändern  sich wie Engines sich weiterentwickeln, weshalb ein vertieftes Studium "vorab", ohne einen triftigen Grund, es das nicht wert ist. Außer natürlich, wenn es eine Sache reinen Interesses ist. Dann gibt es dafür, unten stehend, ein paar Links.
 
