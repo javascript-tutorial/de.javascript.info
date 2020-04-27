@@ -18,7 +18,7 @@ Als JavaScript entwickelt wurde, hatte es zunächst einen anderen Namen: "LiveSc
 In der weiteren Entwicklung wurde JavaScript zu einer völlig unabhängigen Sprache mit einer eigenen Spezifikation, [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), und hat darum überhaupt keinen Bezug mehr zu Java.
 ```
 
-Heute kann JavaScript nicht nur im Browser ausgeführt werden. Es ist möglich JavaScript auch auf Servern oder einem anderen beliebigen Geräte auszuführen, welches über eine sogenannte [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
+Heute kann JavaScript nicht nur im Browser ausgeführt werden, sondern auch auf dem Server oder auf jedem Gerät, das über ein spezielles Programm namens [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) verfügt.
 
 Der Browser verfügt über eine eingebettete Engine, die manchmal auch als "JavaScript Virtual Machine" bezeichnet wird.
 
