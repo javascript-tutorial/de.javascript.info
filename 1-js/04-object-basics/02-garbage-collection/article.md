@@ -204,7 +204,7 @@ Die wesentlichsten Dinge:
 
 Moderne Engines implementieren fortgeschrittenere Algroithmen der Müllsammlung. 
 
-Das Buch "The Garbage Collection Handbook: The Art of Automatic Memory Management" (R. Jones et al) geht mehrere von dieses an. 
+Ein allgemeines Buch "The Garbage Collection Handbook: The Art of Automatic Memory Management" (R. Jones et al.) behandelt einige von ihnen.
 
 Wenn du vertraut bist mit low-level programming, dann findest du detailierte Informationen über die V8 Müllsammlung in dem Artikel [A tour of V8: Garbage Collection](http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection).
 
