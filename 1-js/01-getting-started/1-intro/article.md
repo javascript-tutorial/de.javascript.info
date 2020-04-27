@@ -101,7 +101,7 @@ Die Syntax von JavaScript entspricht nicht jedem. Verschiedene Individuen bevorz
 
 Das ist zu erwarten, denn Projekte und Anforderungen sind für jeden anders.
 
-So haben sich vor kurzem eine Fülle neuer Sprachen entwickelt, die in JavaScript *transpiled* (konvertiert) werden, bevor sie im Browser laufen.
+So sind in letzter Zeit eine Fülle neuer Sprachen erschienen, die in JavaScript *transponiert* (konvertiert) werden, bevor sie im Browser laufen.
 
 Moderne Werkzeuge erledigen die Konvertierung sehr schnell und transparent was es Entwicklern erlaubt in einer anderen Sprache zu programmieren und diese automatisch zu konvertieren – ohne unbedingt ein genaueres Verständnis davon zu haben wie JavaScript im Kern funktioniert.
 
