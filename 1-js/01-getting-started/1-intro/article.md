@@ -55,7 +55,7 @@ So ist beispielsweise im Browser laufendes JavaScript in der Lage:
 - Auf Benutzeraktionen zu reagieren, zum Beispiel Mausklicks, Mauszeigerbewegungen oder Tastenanschläge.
 - Anfragen über das Netzwerk an Remote-Server senden, Herunter- und Hochladen von Dateien (sogenannte [AJAX](https://de.wikipedia.org/wiki/Ajax_(Programmierung))- und [COMET](https://en.wikipedia.org/wiki/Comet_(programming))- Technologien).
 - Cookies auslesen und setzen, Fragen an den Besucher stellen, Nachrichten anzeigen.
-- Daten auf der *client-side* zu speichern ("lokaler Speicher"). Also im Browser des Benutzers.
+- Daten auf der Client-Seite zu speichern ("lokale Speicherung").
 
 ## Was kann JavaScript im Browser nicht tun?
 
