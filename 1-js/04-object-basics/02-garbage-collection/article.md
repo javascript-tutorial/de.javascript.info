@@ -16,7 +16,7 @@ Einfach ausgedrückt, "erreichbare" Werte sind diejenigen, die irgendwie zugäng
     Zum Beispiel:
 
     - Lokale Variablen und Parameter der aktuellen Funktion. 
-    - Variablen und Parameter für andere Funktionen innerhalb der derzeitigen Kette an eingebetteten Aufrufe.  
+    - Variablen und Parameter für andere Funktionen in der aktuellen Kette von verschachtelten Aufrufen.
     - Globale Variablen. 
     - (es gibt weitere, auch interne)
 
