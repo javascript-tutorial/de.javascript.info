@@ -65,7 +65,7 @@ Beispiele für solche Beschränkungen sind:
 
 - JavaScript auf einer Webseite darf keine willkürlichen Dateien auf der Festplatte lesen, schreiben oder kopieren, oder Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems.
 
-    Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z. B. eine Datei in den Browser per "drag and drop" lädt oder sie via ein `<input>` tag auswählt.
+    Moderne Browser erlauben es, mit Dateien zu arbeiten, aber der Zugriff ist begrenzt und nur möglich, wenn der Benutzer bestimmte Aktionen ausführt, wie z. B. eine Datei in ein Browserfenster "zu ziehen" oder sie über ein <input>-Tag auszuwählen.
 
     Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren, aber sie erfordern die ausdrückliche Genehmigung des Benutzers. JavaScript auf einer Webseite darf also nicht heimlich eine Webcam aktivieren, die Umgebung beobachten und die Informationen an die [NSA](https://de.wikipedia.org/wiki/National_Security_Agency) senden.
 - Verschiedene Tabs/Fenster wissen im Allgemeinen nichts voneinander. Manchmal tun sie es doch, z. B. wenn ein Fenster das andere mit JavaScript öffnet. Aber selbst in diesem Fall kann es vorkommen, dass JavaScript von einer Seite aus nicht auf die andere Seite zugreift, wenn ihr Ursprung verschieden ist (von einer anderen Domäne, einem anderen Protokoll oder Port).
