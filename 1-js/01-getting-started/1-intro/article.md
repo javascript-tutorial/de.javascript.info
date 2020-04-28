@@ -72,7 +72,7 @@ Beispiele für solche Beschränkungen sind:
 
     Dies wird die "Same-Origin-Policy" genannt. Um dies zu umgehen, müssen *beide Seiten* dem Datenaustausch zustimmen und einen speziellen JavaScript-Code enthalten, der dies ermöglicht. Wir werden das im Tutorial behandeln.
 
-    Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein auf ein anderes Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
+    Diese Einschränkung dient wiederum der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen, um von dort Informationen zu stehlen.
 - JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite abgerufen wurde. Aber die Möglichkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt. Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (in HTTP-Headern angegeben) von der entfernten Seite. Noch einmal, das ist eine Sicherheitseinschränkung.
 Auch wenn es möglich ist erfordert es eine ausdrückliche Zustimmung (ausgedrückt in *HTTP-Headern*) von der anderen Seite. Auch dies ist eine sicherheitsbedingte Einschränkung.
 
