@@ -107,7 +107,7 @@ Moderne Werkzeuge erledigen die Konvertierung sehr schnell und transparent was e
 
 Beispiele für solche Sprachen sind:
 
-- [CoffeeScript](http://coffeescript.org/): Es verfügt über eine kürzere Syntax was einen erlaubt klareren und präziseren Code zu schreiben. *Ruby devs* fungiert auf ähnliche Art und Weiße.
+- [CoffeeScript](http://coffeescript.org/) ist eine vereinfachte Schreibweise für JavaScript. Es führt eine kürzere Syntax ein, die es uns erlaubt, eindeutigeren und präziseren Code zu schreiben. Normalerweise mögen es Ruby-Entwickler.
 - [TypeScript](http://www.typescriptlang.org/) konzentriert sich auf das Hinzufügen einer "strengen Datentypisierung", um die Entwicklung und Unterstützung komplexer Systeme zu vereinfachen. Es wird von Microsoft entwickelt.
 - [Flow](http://flow.org/) fügt auch die Datentypisierung hinzu, jedoch auf andere Art und Weise. Entwickelt von Facebook.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine besitzt, die in Nicht-Browser-Umgebungen (wie mobilen Anwendungen) läuft, aber auch in JavaScript transponiert werden kann. Entwickelt von Google.
