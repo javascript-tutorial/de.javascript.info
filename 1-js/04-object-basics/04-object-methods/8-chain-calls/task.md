@@ -2,9 +2,9 @@ importance: 2
 
 ---
 
-# Chaining
+# Verketten 
 
-There's a `ladder` object that allows to go up and down:
+Es gibt ein Objekt `ladder`, dass es erlaubt auf un ab zu gehen: 
 
 ```js
 let ladder = {
@@ -15,13 +15,13 @@ let ladder = {
   down() { 
     this.step--;
   },
-  showStep: function() { // shows the current step
+  showStep: function() { // zeigt die derzeitige Stufe an
     alert( this.step );
   }
 };
 ```
 
-Now, if we need to make several calls in sequence, can do it like this:
+Wenn wir nun mehrere Aufrufe hintereinander möchten, können wir das wie folgt tun: 
 
 ```js
 ladder.up();
@@ -30,10 +30,10 @@ ladder.down();
 ladder.showStep(); // 1
 ```
 
-Modify the code of `up`, `down` and `showStep` to make the calls chainable, like this:
+Man modifiziere den Code von `up`, `down` und `showStep` so, dass man die Aufrufe wie folgt verketten kann: 
 
 ```js
 ladder.up().up().down().showStep(); // 1
 ```
 
-Such approach is widely used across JavaScript libraries.
+Solch eine Herangehensweise ist bei JavaScript Libraries weit verbreitet. 
