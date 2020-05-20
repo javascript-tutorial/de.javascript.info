@@ -18,7 +18,7 @@ Dort ist ein Fehler im JavaScript-Code. Er ist aus Sicht eines normalen Besucher
 
 Drücke `key:F12` oder wenn du auf einem Mac bist `key:Cmd+Opt+J`.
 
-Die Entwicklertools öffnen sich standardmäßig auf dem Konsolen-Reiter.
+Die Entwicklerwerkzeuge öffnen sich standardmäßig auf dem Konsolen-Reiter.
 
 Es sieht ungefähr so aus:
 
