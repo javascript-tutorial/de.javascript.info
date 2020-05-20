@@ -41,7 +41,7 @@ Um mehrere Zeilen einzufügen, drücke `key:Shift+Enter`. Auf diese Weise kann m
 
 ## Firefox, Edge, und andere
 
-Die meisten Browser benutzen `key:F12` um die Entwicklertools zu öffnen.
+Die meisten Browser benutzen `key:F12` um die Entwicklerwerkzeuge zu öffnen.
 
 Das Aussehen ist meist sehr ähnlich. Sobald du weißt wie man eins dieser Tools benutzt (du kannst mit Chrome anfangen), kannst du einfach zu einem anderen wechseln.
 
