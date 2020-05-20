@@ -24,7 +24,7 @@ Es sieht in etwa so aus:
 
 ![chrome](chrome.png)
 
-Wie genau die Entwicklertools aussehen, hängt von der Chrome-Version ab. Sie ändern sich von Zeit zu Zeit, aber sollten ähnlich aussehen.
+Das genaue Aussehen der Entwicklerwerkzeuge hängt von deiner Chrome-Version ab. Es ändert sich von Zeit zu Zeit, sollte aber ähnlich aussehen.
 
 - Hier sehen wir die rot markierte Fehlermeldung. In diesem Fall beinhaltet das Skript einen unbekannten Befehl "lalala".
 - Auf der rechten Seite ist ein anklickbarer Link zur Quelle `bug.html:12` mit der Zeilennummer, wo der Fehler aufgetreten ist.
