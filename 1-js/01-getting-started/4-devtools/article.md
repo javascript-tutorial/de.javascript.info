@@ -2,7 +2,7 @@
 
 Code ist anfällig für Fehler. Du wirst sehr wahrscheinlich Fehler machen... Oh, was rede ich da? Du wirst *auf jeden Fall* Fehler machen, zumindest wenn du ein Mensch bist und kein [Roboter](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-Aber in Browsern sehen Benutzer standardmäßig keine Fehler. Also, wenn etwas im Skript schief läuft, sehen wir nicht was falsch ist und können es nicht beheben.
+Aber im Browser sehen die Benutzer standardmäßig keine Fehler. Wenn also im Skript etwas schief geht, sehen wir nicht, was fehlerhaft ist und können es nicht beheben.
 
 Um Fehler zu sehen und weitere nützliche Informationen über Skripts zu bekommen, wurden "Entwicklertools" in Browser eingebaut.
 
