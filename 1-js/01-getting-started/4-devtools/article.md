@@ -34,7 +34,7 @@ Unter der Fehlermeldung befindet sich ein blaues `>` Symbol. Es markiert eine "B
 Jetzt können wir Fehler erkennen, und das reicht für den Anfang. Wir werden später noch einmal auf die Entwicklerwerkzeuge zurückkommen und das Debugging ausführlicher im Kapitel <info:debugging-chrome> behandeln.
 
 ```smart header="Multi-line input"
-Normalerweise, wenn wir eine Zeile Code in die Konsole eingeben und dann `key:Enter` drücken, wird er ausgeführt.
+Wenn wir eine Codezeile in die Konsole eingeben und dann `key:Enter` drücken, wird sie normalerweise ausgeführt.
 
 Um mehrere Zeilen einzugeben, drücke `key:Shift+Enter`. Auf diese Weise können längere Fragmente JavaScript-Code eingegeben werden.
 ```
