@@ -6,7 +6,7 @@ Aber im Browser sehen die Benutzer standardmäßig keine Fehler. Wenn also im Sk
 
 Um Fehler zu sehen und weitere nützliche Informationen über Skripte zu erhalten, wurden "Entwicklerwerkzeuge" in die Browser eingebettet.
 
-Die meisten Entwickler tendieren zu Chrome oder Firefox für die Entwicklung, weil diese Browser die besten Entwicklertools haben. Andere Browser stellen ebenfalls Entwicklertools bereit, manchmal mit besonderen Eigenschaften aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler einen "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
+Die meisten Entwickler tendieren bei der Entwicklung zu Chrome oder Firefox, da diese Browser über die besten Entwicklerwerkzeuge verfügen. Andere Browser bieten ebenfalls Entwicklerwerkzeuge an, manchmal mit speziellen Funktionen, aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler einen "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
 
 Entwicklertools sind leistungsstark; sie haben viele Features. Zuerst lernen wir, wie man sie öffnet, sich Fehler ansieht und JavaScript-Befehle ausführt.
 
