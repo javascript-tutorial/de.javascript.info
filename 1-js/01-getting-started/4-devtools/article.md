@@ -4,7 +4,7 @@ Code ist anfällig für Fehler. Du wirst sehr wahrscheinlich Fehler machen... Oh
 
 Aber im Browser sehen die Benutzer standardmäßig keine Fehler. Wenn also im Skript etwas schief geht, sehen wir nicht, was fehlerhaft ist und können es nicht beheben.
 
-Um Fehler zu sehen und weitere nützliche Informationen über Skripts zu bekommen, wurden "Entwicklertools" in Browser eingebaut.
+Um Fehler zu sehen und weitere nützliche Informationen über Skripte zu erhalten, wurden "Entwicklerwerkzeuge" in die Browser eingebettet.
 
 Die meisten Entwickler tendieren zu Chrome oder Firefox für die Entwicklung, weil diese Browser die besten Entwicklertools haben. Andere Browser stellen ebenfalls Entwicklertools bereit, manchmal mit besonderen Eigenschaften aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler einen "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
 
