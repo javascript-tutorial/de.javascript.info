@@ -20,7 +20,7 @@ Drücke `key:F12` oder wenn du auf einem Mac bist `key:Cmd+Opt+J`.
 
 Die Entwicklerwerkzeuge öffnen sich standardmäßig auf dem Konsolen-Reiter.
 
-Es sieht ungefähr so aus:
+Es sieht in etwa so aus:
 
 ![chrome](chrome.png)
 
