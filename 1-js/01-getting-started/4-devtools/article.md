@@ -36,7 +36,7 @@ Jetzt können wir Fehler erkennen, und das reicht für den Anfang. Wir werden sp
 ```smart header="Multi-line input"
 Wenn wir eine Codezeile in die Konsole eingeben und dann `key:Enter` drücken, wird sie normalerweise ausgeführt.
 
-Um mehrere Zeilen einzugeben, drücke `key:Shift+Enter`. Auf diese Weise können längere Fragmente JavaScript-Code eingegeben werden.
+Um mehrere Zeilen einzufügen, drücke `key:Shift+Enter`. Auf diese Weise kann man lange Fragmente von JavaScript-Code eingeben.
 ```
 
 ## Firefox, Edge, und andere
