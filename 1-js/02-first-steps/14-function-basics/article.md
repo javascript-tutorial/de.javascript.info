@@ -1,18 +1,18 @@
-# Functions
+# Funktionen (*Functions*)
 
-Quite often we need to perform a similar action in many places of the script.
+Des öfteren kommt es vor, dass wir eine (ähnliche) Aktion an mehreren Stellen im *script* ausführen möchten. 
 
-For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
+Wenn sich der Benutzer einloggt, ausloggt oder sonstige Aktinen ausübt, möchten wir Ihm eine Nachricht anzeigen. 
 
-Functions are the main "building blocks" of the program. They allow the code to be called many times without repetition.
+Funktionen kann man auch als das "Bausteine" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
 
-We've already seen examples of built-in functions, like `alert(message)`, `prompt(message, default)` and `confirm(question)`. But we can create functions of our own as well.
+Wir wurden bereits Zeugen von eingebauten (*built-in*) Funktionen (*functions*) wie `alert(message)`, `prompt(message, default)` und `confirm(question)`. Es ist uns aber auch möglich selbst Funktionen zu kreieren.
 
-## Function Declaration
+## Funktionsdeklarierung (*Function Declaration*)
 
-To create a function we can use a *function declaration*.
+Funktionen können wir m. H. von Funktionsdeklarierungen (*function declaration*) erstellen.
 
-It looks like this:
+Das sieht wie folgt aus:
 
 ```js
 function showMessage() {
@@ -20,7 +20,7 @@ function showMessage() {
 }
 ```
 
-The `function` keyword goes first, then goes the *name of the function*, then a list of *parameters* between the parentheses (comma-separated, empty in the example above) and finally the code of the function, also named "the function body", between curly braces.
+Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Parenthesen (mit einem "," voneinander getrennt; im obigen Beispiel leer) und letztlich der Code der Funktion, der auch als "Körper der Funktion" (*the function body*) genannt wird, der zwischen den Akkoladen (*curly braces*) steht.
 
 ```js
 function name(parameters) {
@@ -28,121 +28,114 @@ function name(parameters) {
 }
 ```
 
-Our new function can be called by its name: `showMessage()`.
+Unsere neue Funktion kann mit ihrem Namen abgerufen werden: `showMessage()`.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 function showMessage() {
   alert( 'Hello everyone!' );
 }
-
 *!*
-showMessage();
 showMessage();
 */!*
 ```
 
-The call `showMessage()` executes the code of the function. Here we will see the message two times.
+Der Abruf (*call*) `showMessage()` führt den Code der Funktion aus. Darum sehen wir die Nachricht hier zwei Mal.
 
-This example clearly demonstrates one of the main purposes of functions: to avoid code duplication.
+Dieses Beispeil zeigt perfekt was der hauptsächliche Zweck von Funktionen ist: sie verhindern die Duplikation von Code.
 
-If we ever need to change the message or the way it is shown, it's enough to modify the code in one place: the function which outputs it.
+Falls wir jemals die Nachricht ändern müssten, oder die Art auf die sie angezeigt wird, genügt es den Code einmalig umzuschreiben: der innerhalb der Funktion der ihn ausführt.
 
-## Local variables
+## Lokale (*local*) Variablen
 
-A variable declared inside a function is only visible inside that function.
+Eine Variable, die innerhalb einer Funktion deklariert wird, ist ausschließlich innerhalb dieser sichtbar. 
 
-For example:
+Ein Beispiel:
 
 ```js run
 function showMessage() {
 *!*
-  let message = "Hello, I'm JavaScript!"; // local variable
+  let message = "Hallo, ich bin JavaScript!"; // Lokale (*local*) Variable
 */!*
-
   alert( message );
 }
-
-showMessage(); // Hello, I'm JavaScript!
-
-alert( message ); // <-- Error! The variable is local to the function
+showMessage(); // Hallo, ich bin JavaScript!
+alert( message ); // <-- Fehler! Die Variabel ist lokal zur Funktion
 ```
 
-## Outer variables
+## Außenstehende (*outer*) Variablen
 
-A function can access an outer variable as well, for example:
+Eine Funktion kann auch auf außenstehende Variablen zugreifen, wie folgendes Beispiel zeigt:
 
 ```js run no-beautify
 let *!*userName*/!* = 'John';
-
 function showMessage() {
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hallo, ' + *!*userName*/!*;
   alert(message);
 }
-
-showMessage(); // Hello, John
+showMessage(); // Hallo, John
 ```
 
-The function has full access to the outer variable. It can modify it as well.
+Die Funktion hat vollständigen Zugriff auf außenstehende Variablen. Und kann diese auch modifieren.
 
-For instance:
+Hier zu sehen:
 
 ```js run
 let *!*userName*/!* = 'John';
 
 function showMessage() {
-  *!*userName*/!* = "Bob"; // (1) changed the outer variable
+  *!*userName*/!* = "Bob"; // (1) Ändert die außenstehende (*outer*) Variable
 
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hallo, ' + *!*userName*/!*;
   alert(message);
 }
 
-alert( userName ); // *!*John*/!* before the function call
+alert( userName ); // *!*John*/!* Vor dem Funktionsabruf
 
 showMessage();
 
-alert( userName ); // *!*Bob*/!*, the value was modified by the function
+alert( userName ); // *!*Bob*/!*, Der Wert wurde von der Funktion modifiziert
 ```
 
-The outer variable is only used if there's no local one.
+Die außenstehende Variable wird nur genutzt, wenn es keine lokale gibt.
 
-If a same-named variable is declared inside the function then it *shadows* the outer one. For instance, in the code below the function uses the local `userName`. The outer one is ignored:
+Falls innerhalb der Funktion eine gleichnamige Variable deklariert wird, wird die außenstehende von dieser überschattet (*shadowed*). Im folgenden Beispiel greift die Funktion auf die lokale Variable `userName` zu. Die außenstehende wird schlicht ignoriert: 
 
 ```js run
 let userName = 'John';
 
 function showMessage() {
 *!*
-  let userName = "Bob"; // declare a local variable
+  let userName = "Bob"; // deklariert eine lokale Variable
 */!*
 
-  let message = 'Hello, ' + userName; // *!*Bob*/!*
+  let message = 'Hallo, ' + userName; // *!*Bob*/!*
   alert(message);
 }
 
-// the function will create and use its own userName
+// die Funktion wird ihre eigene Variable erstellen und nutzen
 showMessage();
 
-alert( userName ); // *!*John*/!*, unchanged, the function did not access the outer variable
+alert( userName ); // *!*John*/!*, bleibt unverändert, die Funktion greift nicht auf die außenstehende Variable zu
 ```
 
-```smart header="Global variables"
-Variables declared outside of any function, such as the outer `userName` in the code above, are called *global*.
+```smart header="*Global* variables"
+Variablen, die außerhalb jeglicher Funktionen deklariert werden, wie das äußere `userName` im oben stehenden Code, nennt man *global*.
 
-Global variables are visible from any function (unless shadowed by locals).
+Auf globale Variablen kann von jeder Funktion aus zugegriffen werden (sofern diese nicht von Lokalen "überschattet" werden).
 
-It's a good practice to minimize the use of global variables. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
+Es hat sich als gute und moderne Praxis entwickelt, so wenig globale Variablen wie möglich zu verwenden. Moderner Code hat wenige bis keine dieser globalen Variablen. Die meisten Variablen verbleiben innerhalb ihrer Funktionen. Manchmal sind Globale Variabeln aber doch praktisch, wenn man z.B. Daten des Projektstands speichern möchte.
 ```
 
-## Parameters
+## Parameter
 
-We can pass arbitrary data to functions using parameters (also called *function arguments*) .
+Wir können Funktionen jedliche Art von Daten zukommen lassen (auch Funktionsargumente [*function arguments*] genannt).
 
-In the example below, the function has two parameters: `from` and `text`.
+Im unten stehenden Beispiel hat die Funktion zwei Parameter: `from` und `text`.
 
 ```js run
-function showMessage(*!*from, text*/!*) { // arguments: from, text
+function showMessage(*!*from, text*/!*) { // Argumente: from, text
   alert(from + ': ' + text);
 }
 
@@ -152,16 +145,16 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 */!*
 ```
 
-When the function is called in lines `(*)` and `(**)`, the given values are copied to local variables `from` and `text`. Then the function uses them.
+Wenn die Funktion in den Zeilen `(*)` und `(**)`abgerufen wird, werden die gegebenen Werte in die lokalen Variablen `from` und `text` kopiert, woraufhin die Funktion diese nutzt. 
 
-Here's one more example: we have a variable `from` and pass it to the function. Please note: the function changes `from`, but the change is not seen outside, because a function always gets a copy of the value:
+Hier ist ein weiteres Beispiel: wir haben eine Variable `from` und spielen diese der Funktion zu. Beachte, dass die Funktion `from` ändert, jedoch diese Änderung außen nicht sichtbar wird, weil die Funktion stets eine Kopie des Werts annimmt:
 
 
 ```js run
 function showMessage(from, text) {
 
 *!*
-  from = '*' + from + '*'; // make "from" look nicer
+  from = '*' + from + '*'; // hübscht "from" auf
 */!*
 
   alert( from + ': ' + text );
@@ -169,55 +162,54 @@ function showMessage(from, text) {
 
 let from = "Ann";
 
-showMessage(from, "Hello"); // *Ann*: Hello
+showMessage(from, "Hallo"); // *Ann*: Hallo
 
-// the value of "from" is the same, the function modified a local copy
+// der Wert von "from" bleibt der selbe, die Funktion hat nur eine lokale Kopie modifiziert
 alert( from ); // Ann
 ```
 
-## Default values
+## Default-Werte
 
-If a parameter is not provided, then its value becomes `undefined`.
+Wenn ein Parameter nicht gegeben ist, wird dessen Wert zu `undefined`.
 
-For instance, the aforementioned function `showMessage(from, text)` can be called with a single argument:
+Bspw. kann die zuvor genannte Funktion `showMessage(from, text)` mit Hilfe eines einzelen Arguments abgerufen werden:
 
 ```js
 showMessage("Ann");
 ```
 
-That's not an error. Such a call would output `"Ann: undefined"`. There's no `text`, so it's assumed that `text === undefined`.
+Das ist kein Fehler. Ein solcher Abruf würde `"Ann: undefined"` ausgeben, da es kein `text` gibt und daher davon ausgegangen wird das `text === undefined` ist.
 
-If we want to use a "default" `text` in this case, then we can specify it after `=`:
+Falls wir in diesem Fall ein "default" für `text` festlegen wollen, können wir diesen hinter `=` definieren:
 
 ```js run
-function showMessage(from, *!*text = "no text given"*/!*) {
+function showMessage(from, *!*text = "kein Text übergeben"*/!*) {
   alert( from + ": " + text );
 }
 
-showMessage("Ann"); // Ann: no text given
+showMessage("Ann"); // Ann: kein Text übergeben
 ```
+Wenn der `text` Parameter jetzt nicht gegeben wird, erhält er den Wert `"no text given"`
 
-Now if the `text` parameter is not passed, it will get the value `"no text given"`
-
-Here `"no text given"` is a string, but it can be a more complex expression, which is only evaluated and assigned if the parameter is missing. So, this is also possible:
+Hier ist `"no text given"` nur ein String, kann aber auch ein viel komplexerer Ausdruck (*expression*) sein, der nur evaluiert und zugewiesen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
 
 ```js run
 function showMessage(from, text = anotherFunction()) {
-  // anotherFunction() only executed if no text given
-  // its result becomes the value of text
+  // anotherFunction() wird nur ausgeführt wenn kein Text gegeben ist
+  // dessen Resultat wird der Wert von *text* sein
 }
 ```
 
-```smart header="Evaluation of default parameters"
-In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+```smart header="Evaluierung von Default-Parametern"
+In JavaScript wird ein Default-Parameter immer dann evaluiert, wenn die Funktion ohne den respektiven Parameter abgerufen wird.
 
-In the example above, `anotherFunction()` is called every time `showMessage()` is called without the `text` parameter.
+Im oberen Beispiel wird `anotherFunction()` jedes Mal abgerufen, wenn `showMessage()` ohne den `text` Parameter abgerufen wird.
 ```
 
-````smart header="Default parameters old-style"
-Old editions of JavaScript did not support default parameters. So there are alternative ways to support them, that you can find mostly in the old scripts.
+````smart header="Old-style Default-Parameter"
+In älteren JavaScript-Versionen waren Default-Parameter nicht unterstützt, weshalb sich alternative Wege entwickelt haben. Diese sind meist in alten *scripts* aufzufinden.
 
-For instance, an explicit check for being `undefined`:
+Beispielhaft ist eine strikte Prüfung auf `undefined`:
 
 ```js
 function showMessage(from, text) {
@@ -231,11 +223,11 @@ function showMessage(from, text) {
 }
 ```
 
-...Or the `||` operator:
+...Oder der `||` Operator:
 
 ```js
 function showMessage(from, text) {
-  // if text is falsy then text gets the "default" value
+  // falls text nicht gegeben ist erhält es den "default" Wert
   text = text || 'no text given';
   ...
 }
