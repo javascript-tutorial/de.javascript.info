@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Check for emptiness
+# Auf Leerstand prüfen 
 
-Write the function `isEmpty(obj)` which returns `true` if the object has no properties, `false` otherwise.
+Es ist die Funktion `isEmpty(obj)` zu schreiben, die `true` ausgibt wenn das Objekt keine Proerties hat und `false` andernfalls. 
 
-Should work like that:
+Es sollt wie folgt funktionieren: 
 
 ```js
 let schedule = {};
