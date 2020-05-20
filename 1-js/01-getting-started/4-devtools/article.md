@@ -26,7 +26,7 @@ Es sieht in etwa so aus:
 
 Das genaue Aussehen der Entwicklerwerkzeuge hängt von deiner Chrome-Version ab. Es ändert sich von Zeit zu Zeit, sollte aber ähnlich aussehen.
 
-- Hier sehen wir die rot markierte Fehlermeldung. In diesem Fall beinhaltet das Skript einen unbekannten Befehl "lalala".
+- Hier sehen wir die rot eingefärbte Fehlermeldung. In diesem Fall enthält das Skript einen unbekannten "lalala"-Befehl.
 - Auf der rechten Seite ist ein anklickbarer Link zur Quelle `bug.html:12` mit der Zeilennummer, wo der Fehler aufgetreten ist.
 
 Unter der Fehlermeldung befindet sich ein blaues `>` Symbol. Es markiert eine "Befehlszeile" wo wir JavaScript-Befehle eingeben können. Drücke `key:Enter` um sie auszuführen.
