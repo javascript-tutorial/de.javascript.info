@@ -31,7 +31,7 @@ Wie genau die Entwicklertools aussehen, hängt von der Chrome-Version ab. Sie ä
 
 Unter der Fehlermeldung befindet sich ein blaues `>` Symbol. Es markiert eine "Befehlszeile" wo wir JavaScript-Befehle eingeben können. Drücke `key:Enter` um sie auszuführen.
 
-Nun können wir Fehler sehen und das ist genug für den Anfang. Wir kehren späte zu den Entwicklertoos zurück und behandeln das Debugging im Kapitel <info:debugging-chrome> tiefer.
+Jetzt können wir Fehler erkennen, und das reicht für den Anfang. Wir werden später noch einmal auf die Entwicklerwerkzeuge zurückkommen und das Debugging ausführlicher im Kapitel <info:debugging-chrome> behandeln.
 
 ```smart header="Multi-line input"
 Normalerweise, wenn wir eine Zeile Code in die Konsole eingeben und dann `key:Enter` drücken, wird er ausgeführt.
