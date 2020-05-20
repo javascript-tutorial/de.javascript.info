@@ -14,7 +14,7 @@ Entwicklerwerkzeuge sind leistungsstark; sie haben viele Funktionen. Zu Beginn w
 
 Öffne die Seite [bug.html](bug.html).
 
-Dort ist ein Fehler im JavaScript-Code. Er ist aus Sicht eines normalen Besuchers nicht zu sehen, also öffnen wird die Entwicklertools um ihn zu sehen.
+Dort ist ein Fehler im JavaScript-Code. Er ist aus Sicht eines normalen Besuchers nicht zu sehen, also öffnen wird die Entwicklerwerkzeuge um ihn zu sehen.
 
 Drücke `key:F12` oder wenn du auf einem Mac bist `key:Cmd+Opt+J`.
 
