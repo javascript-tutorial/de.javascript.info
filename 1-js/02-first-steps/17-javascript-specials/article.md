@@ -103,7 +103,7 @@ Mehr in: <info:variables> und <info:types>.
 Wir benutzen einen Browser als Arbeitsumgebung, also sind grundlegende UI-Funktionen:
 
 [`prompt(question, [default])`](mdn:api/Window/prompt)
-: Stell eine `Frage` und gib zurück was der Besucher eingegeben hat oder `null` wenn sie auf "Abbrechen" geklickt haben.
+: Stell eine `Frage` und gib zurück was die Besucher eingegeben haben oder `null` wenn sie auf "Abbrechen" geklickt haben.
 
 [`confirm(question)`](mdn:api/Window/confirm)
 : Stell eine `Frage` und schlag die Auswahlt zwischen OK und Abbrechen vor. Die Auswahl wird als `true/false` zurückgegeben.
