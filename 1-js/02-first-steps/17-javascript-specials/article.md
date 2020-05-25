@@ -276,4 +276,4 @@ Details: siehe <info:function-basics>, <info:arrow-functions-basics>.
 
 ## Da kommt noch mehr
 
-Das war eine kurze Liste von JavaScript-Features. Ab hier haben wir nur die Grundlagen gelernt. Weiter im Tutorial wirst du mehr besonderheiten und fortgeschrittene Features von JavaScript finden.
+Das war eine kurze Liste von JavaScript-Features. Ab hier haben wir nur die Grundlagen gelernt. Weiter im Tutorial wirst du mehr Besonderheiten und fortgeschrittene Features von JavaScript finden.
