@@ -53,11 +53,10 @@ Um alle Features des modernen JavaScript zu ermöglichen, sollten wir ein ein Sk
 ...
 ```
 
-Die Direktive muss am Anfang eines SKripts oder am Anfang eines Funktionsrumpfes stehen.
+Die Direktive muss am Anfang eines Skripts oder am Anfang eines Funktionsrumpfes stehen.
 
-Ohne `"use strict"`, funktionier alles weiterhin, aber einige Features verhalten sich nach dem altmodischen, "kompatiblen" Weg. Wir würden im allgemeinen das moderne Verhalten bevorzugen.
+Ohne `"use strict"`, funktioniert alles weiterhin, aber einige Features verhalten sich nach dem altmodischen, "kompatiblen" Weg. Wir würden im allgemeinen das moderne Verhalten bevorzugen.
 
-Some modern features of the language (like classes that we'll study in the future) enable strict mode implicitly.
 Einige moderne Features der Sprache (wie Klassen, die wir in der Zukunft behandeln) aktivieren den strikten Modus implizit.
 
 Mehr in: <info:strict-mode>.
@@ -89,7 +88,7 @@ Es gibt 7 Datentypen:
 - `boolean` Für logische Werte: `true/false`,
 - `null` -- ein Typ mit einem einzigen Wert `null`, der "leer" oder "existiert nicht" bedeutet,
 - `undefined` -- ein Typ mit einem einzigen Wert `undefined`, der "nicht zugewiesen" bedeutet,
-- `object` und `symbol` -- für komplexe Datenstrukturen and eindeutige Bezeichner, die wir noch nicht erlernt haben.
+- `object` und `symbol` -- für komplexe Datenstrukturen und eindeutige Bezeichner, die wir noch nicht erlernt haben.
 
 Der `typeof`-Operator gibt den Typ eines Wertes zurück, mit zwei Ausnahmen:
 ```js
@@ -101,7 +100,7 @@ Mehr in: <info:variables> und <info:types>.
 
 ## Interaktion
 
-Wir benutzen einen Browser als Arbeitsumgebung, also werden grundlegende UI-Funktionen:
+Wir benutzen einen Browser als Arbeitsumgebung, also sind grundlegende UI-Funktionen:
 
 [`prompt(question, [default])`](mdn:api/Window/prompt)
 : Stell eine `Frage` und gib zurück was der Besucher eingegeben hat oder `null` wenn sie auf "Abbrechen" geklickt haben.
@@ -144,16 +143,16 @@ Zuweisungen
 : Es gibt eine einfache Zuweisung: `a = b` und kombinierte `a *= 2`.
 
 Bitweise
-: Bitweise Operatoren arbeiten mit 32-bit Ganzzaheln am niedrigsten, bit-level: siehe die [docs](mdn:/JavaScript/Reference/Operators/Bitwise_Operators) wenn sie erforderlich sind.
+: Bitweise Operatoren arbeiten mit 32-bit Ganzzaheln am niedrigsten bit-level: siehe die [docs](mdn:/JavaScript/Reference/Operators/Bitwise_Operators) wenn sie erforderlich sind.
 
 Bedingt
 : Der einzige Operator mit drei Parametern: `cond ? resultA : resultB`. Wenn `cond` wahr ist, gib `resultA` zurück, andernfalls `resultB`.
 
 Logische Operatoren
-: Logisches UND `&&` und ODER `||` führen Kurzzschlussauswertungen aus und dann geben sie den Wert zurück so sie angehalten sind (nicht unbedingt `true`/`false`). Logisches NICHT `!` Konvertiert den Operand in einen bool'schen Typ und gibt den umgekehrten Wert zurück.
+: Logisches UND `&&` und ODER `||` führen Kurzzschlussauswertungen aus und dann geben sie den Wert zurück wo sie angehalten sind (nicht unbedingt `true`/`false`). Logisches NICHT `!` Konvertiert den Operand in einen bool'schen Typ und gibt den umgekehrten Wert zurück.
 
 Vergleiche
-: Gleichheitsprüfung `==` für Werte unterschiedlichen Tpys werden diese in eine Zahl umgewandelt (außer `null` und `undefined` die sich selber gleich sind aber nichts anderem), sodass diese gleich sind:
+: Gleichheitsprüfung `==` für Werte unterschiedlichen Typs werden diese in eine Zahl umgewandelt (außer `null` und `undefined` die sich selber gleich sind aber zu nichts anderem), sodass diese gleich sind:
 
     ```js run
     alert( 0 == false ); // true
@@ -194,12 +193,12 @@ Mehr in: <info:operators>, <info:comparison>, <info:logical-operators>.
     }
     ```
 
-- Die Variable die in der `for(let...)`-Schleife deklariert wurde, ist nur in der Schleife sichtbar. Aber wir können `let` aus weglassen und eine vorhandene Variable widerverwenden.
+- Die Variable die in der `for(let...)`-Schleife deklariert wurde, ist nur in der Schleife sichtbar. Aber wir können `let` auch weglassen und eine vorhandene Variable wiederverwenden.
 - Direktiven `break/continue` ermöglichen es die ganze Schleife/aktuelle Iteration zu verlassen. Benutze Labels um verschachtelte Schleifen abzubrechen.
 
 Details in: <info:while-for>.
 
-Später lernen wir weitere Typen von Schleifen um Objekte zu behandeln.
+Später lernen wir weitere Typen von Schleifen kennen, um Objekte zu behandeln.
 
 ## Das "switch" Konstrukt
 
