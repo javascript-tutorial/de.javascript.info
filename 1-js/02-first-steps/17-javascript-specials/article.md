@@ -81,9 +81,10 @@ let x = 5;
 x = "John";
 ```
 
-Es gibt 7 Datentypen:
+Es gibt 8 Datentypen:
 
 - `number` für Gleitkommazahlen und Ganzzahlen,
+- `bigint` für Ganzzahlen beliebiger Länge,
 - `string` für Zeichenfolgen,
 - `boolean` Für logische Werte: `true/false`,
 - `null` -- ein Typ mit einem einzigen Wert `null`, der "leer" oder "existiert nicht" bedeutet,

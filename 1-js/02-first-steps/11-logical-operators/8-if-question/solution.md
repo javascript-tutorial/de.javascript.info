@@ -1,20 +1,19 @@
-The answer: the first and the third will execute.
+Antwort: Erster und dritter Aufruf werden ausgeführt.
 
 Details:
 
 ```js run
-// Runs.
-// The result of -1 || 0 = -1, truthy
-if (-1 || 0) alert( 'first' );
+// Ausgeführt.
+// Das Resultat von -1 || 0 = -1, effektiv wahr
+if (-1 || 0) alert( 'Erster' );
 
-// Doesn't run
-// -1 && 0 = 0, falsy
-if (-1 && 0) alert( 'second' );
+// Nicht ausgeführt
+// -1 && 0 = 0, effektiv nicht wahr
+if (-1 && 0) alert( 'Zweiter' );
 
-// Executes
-// Operator && has a higher precedence than ||
-// so -1 && 1 executes first, giving us the chain:
+// Ausgeführt
+// Operator && hat höhere Präzedenz als ||,
+// damit wird -1 && 1 zuerst ausgewertet, mit der Auswertereihung:
 // null || -1 && 1  ->  null || 1  ->  1
-if (null || -1 && 1) alert( 'third' );
+if (null || -1 && 1) alert( 'Dritter' );
 ```
-

@@ -1,16 +1,16 @@
-# Arrow functions, the basics
+# Pfeilfunktionen, die Grundlagen
 
-There's another very simple and concise syntax for creating functions, that's often better than Function Expressions.
+Es gibt eine weitere sehr einfache und prägnante Syntax für die Erstellung von Funktionen, die oft besser ist als der Funktionsausdruck.
 
-It's called "arrow functions", because it looks like this:
+Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
 let func = (arg1, arg2, ...argN) => expression
 ```
 
-...This creates a function `func` that accepts arguments `arg1..argN`, then evaluates the `expression` on the right side with their use and returns its result.
+...Dies erzeugt eine Funktion `func`, welche die Argumente `arg1..argN` akzeptiert, dann den Ausdruck `expression` auf der rechten Seite auswertet und ihr Ergebnis zurückgibt.
 
-In other words, it's the shorter version of:
+In anderen Worten, es ist die verkürzte Version von:
 
 ```js
 let func = function(arg1, arg2, ...argN) {
@@ -18,12 +18,12 @@ let func = function(arg1, arg2, ...argN) {
 };
 ```
 
-Let's see a concrete example:
+Sehen wir uns ein konkretes Beispiel an:
 
 ```js run
 let sum = (a, b) => a + b;
 
-/* This arrow function is a shorter form of:
+/* Diese Pfeilfunktion ist eine kürzere Form von:
 
 let sum = function(a, b) {
   return a + b;
@@ -33,79 +33,79 @@ let sum = function(a, b) {
 alert( sum(1, 2) ); // 3
 ```
 
-As you can, see `(a, b) => a + b` means a function that accepts two arguments named `a` and `b`. Upon the execution, it evaluates the expression `a + b` and returns the result.
+Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei Argumente `a` and `b` akzeptiert. Bei der Ausführung wird der Wert `a + b` ausgewertet und das Ergebnis zurückgegegeben.
 
-- If we have only one argument, then parentheses around parameters can be omitted, making that even shorter.
+- Wenn nur ein Argument vorhanden ist, können die Klammern um den Parameter wegelassen werden, was den Ausdruck noch weiter verkürzt.
 
-    For example:
+    Zum Beispiel:
 
     ```js run
     *!*
     let double = n => n * 2;
-    // roughly the same as: let double = function(n) { return n * 2 }
+    // ungefähr dasselbe wie: let double = function(n) { return n * 2 }
     */!*
 
     alert( double(3) ); // 6
     ```
 
-- If there are no arguments, parentheses will be empty (but they should be present):
+- Wenn es keine Argument gibt, sind die Klammern leer (aber sie sollte vorhanden sein):
 
     ```js run
-    let sayHi = () => alert("Hello!");
+    let sayHi = () => alert("Hallo!");
 
     sayHi();
     ```
 
-Arrow functions can be used in the same way as Function Expressions.
+Pfeilfunktionen können auf die gleiche Weise wie Funktionsausdrücke verwendet werden.
 
-For instance, to dynamically create a function:
+Zum Beispiel, um eine Funktion dynamisch zu erstellen:
 
 ```js run
-let age = prompt("What is your age?", 18);
+let age = prompt("Wie alt bist Du?", 18);
 
 let welcome = (age < 18) ?
-  () => alert('Hello') :
-  () => alert("Greetings!");
+  () => alert('Hallo') :
+  () => alert("Grüße!");
 
-welcome(); // ok now
+welcome();
 ```
 
-Arrow functions may appear unfamiliar and not very readable at first, but that quickly changes as the eyes get used to the structure.
+Pfeilfunktion mögen auf den ersten Blick ungewohnt und nicht sehr lesbar erscheinen, aber das ändert sich schnell, wenn sich die Augen an die Struktur gewöhnen.
 
-They are very convenient for simple one-line actions, when we're just too lazy to write many words.
+Sie sind sehr praktisch für einfache einzeilige Aktionen, wenn wir einfach zu faul sind, viele Worte zu schreiben.
 
-## Multiline arrow functions
+## Mehrzeilige Pfeilfunktionen
 
-The examples above took arguments from the left of `=>` and evaluated the right-side expression with them.
+Die Beispiele oben nahmen Argumente von der linken Seite `=>` und bewerteten damit den Ausdruck auf der rechten Seite.
 
-Sometimes we need something a little bit more complex, like multiple expressions or statements. It is also possible, but we should enclose them in curly braces. Then use a normal `return` within them.
+Manchmal brauchen wir etwas Komplexeres, wie mehrfache Ausdrücke oder Anweisungen. Das ist auch möglich, aber wir sollten sie in geschweifte Klammern einschließen. Dann verwende ein normales `return` innerhalb dieser Klammern.
 
-Like this:
+Etwa so:
 
 ```js run
-let sum = (a, b) => {  // the curly brace opens a multiline function
+let sum = (a, b) => {  // die geschweifte Klammer öffnet eine mehrzeilige Funktion
   let result = a + b;
 *!*
-  return result; // if we use curly braces, then we need an explicit "return" 
+  return result; // wenn wir geschweifte Klammern verwenden, dann brauchen wir ein explizites "return"
 */!*
 };
 
 alert( sum(1, 2) ); // 3
 ```
 
-```smart header="More to come"
-Here we praised arrow functions for brevity. But that's not all!
+```smart header="Noch mehr später"
+Wir haben Pfeilfunktionen für ihre Kürze gelobt. Aber das ist nicht alles!
 
-Arrow functions have other interesting features.
+Pfeilfunktionen haben weitere interessante Eigenschaften.
 
-To study them in-depth, we first need to get to know some other aspects of JavaScript, so we'll return to arrow functions later in the chapter <info:arrow-functions>.
+Um diese zu verstehen, müssen wir erst einige weitere Aspekte von JavaScript kennenlernen. Wir werden im Kapitel <info:arrow-functions> zu Pfeilfunktion zurückkehren.
 
-For now, we can already use arrow functions for one-line actions and callbacks.
+Für den Moment können wir Pfeilfunktionen für einzeilige Aktionen und Callback-Funktionen verwenden.
 ```
 
-## Summary
+## Zusammenfassung
 
-Arrow functions are handy for one-liners. They come in two flavors:
+Pfeilfunktionen sind praktische Einzeiler. Es gibt sie in zwei Varianten:
 
-1. Without curly braces: `(...args) => expression` -- the right side is an expression: the function evaluates it and returns the result.
-2. With curly braces: `(...args) => { body }` -- brackets allow us to write multiple statements inside the function, but we need an explicit `return` to return something.
+1. Ohne geschweifte Klammern: `(...args) => expression` -- die rechte Seite ist ein Ausdruck: die Funktion wertet diesen aus und gibt das Ergebnis zurück.
+2. Mit geschweiften Klammern: `(...args) => { body }` -- Klammern erlauben es mehrere Anweisungen zu schreiben, aber es braucht ein explizites `return` um etwas zurückzugeben.

@@ -1,44 +1,44 @@
-# Code structure
+# Code-Struktur
 
-The first thing we'll study is the building blocks of code.
+Das Erste, was wir untersuchen werden, sind die Bausteine des Codes.
 
-## Statements
+## Anweisungen
 
-Statements are syntax constructs and commands that perform actions.
+Anweisungen sind Syntaxkonstrukte und Befehle, die Aktionen ausführen.
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+Wir haben bereits eine Anweisung `alert('Hallo, Welt!')` gesehen, welche die Meldung "Hallo, Welt!" zeigt.
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+Wir können so viele Anweisungen in unserem Code haben, wie wir wollen. Anweisungen können durch ein Semikolon getrennt werden.
 
-For example, here we split "Hello World" into two alerts:
-
-```js run no-beautify
-alert('Hello'); alert('World');
-```
-
-Usually, statements are written on separate lines to make the code more readable:
+Zum Beispiel teilen wir hier "Hallo Welt" in zwei Warnungen:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('Hallo'); alert('Welt');
 ```
 
-## Semicolons [#semicolon]
-
-A semicolon may be omitted in most cases when a line break exists.
-
-This would also work:
+Normalerweise werden Anweisungen in separate Zeilen geschrieben, um den Code besser lesbar zu machen:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('Hallo');
+alert('Welt');
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+## Semikolons [#semicolon]
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+Ein Semikolon kann in den meisten Fällen weggelassen werden, wenn ein Zeilenumbruch vorliegt.
 
-There are cases when a newline does not mean a semicolon. For example:
+Das würde auch funktionieren:
+
+```js run no-beautify
+alert('Hallo')
+alert('Welt')
+```
+
+Hier interpretiert JavaScript den Zeilenumbruch als "implizites" Semikolon. Dies wird als [automatische Semikoloneinfügung](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) bezeichnet.
+
+**In den meisten Fällen bedeutet ein Zeilenumbruch ein Semikolon. "Meistens" heißt aber nicht "immer"!**
+
+Es gibt Fälle, in denen ein Zeilenumbruch kein Semikolon bedeutet. Beispielsweise:
 
 ```js run no-beautify
 alert(3 +
@@ -46,114 +46,119 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+Der Code gibt `6` aus, da JavaScript hier keine Semikolons einfügt. Es ist intuitiv klar, dass, wenn die Zeile mit einem Pluszeichen `"+"` endet, es sich um einen "unvollständigen Ausdruck" handelt, sodass das Semikolon nicht erforderlich ist. Und in diesem Fall funktioniert das wie vorgesehen.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**Es gibt jedoch Situationen, in denen JavaScript ein Semikolon nicht annimmt, wenn es wirklich benötigt wird.**
 
-Errors which occur in such cases are quite hard to find and fix.
+Fehler, die in solchen Fällen auftreten, sind schwer zu finden und zu beheben.
 
-````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+````smart header="Ein Beispiel für einen Fehler"
+Wenn du ein konkretes Beispiel für einen solchen Fehler sehen möchten, lies den folgenden Code:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of the code: it shows `1` then `2`.
+Über die Bedeutung der Klammern `[]` und `forEach` muss noch nicht nachgedacht werden. Wir werden sie später studieren. Denk vorerst nur an das Ergebnis des Codes: Es zeigt `1`, dann `2`.
 
-Now, let's add an `alert` before the code and *not* finish it with a semicolon:
+Fügen wir nun vor dem Code einen `alert` ein und beenden ihn *nicht* mit einem Semikolon:
 
 ```js run no-beautify
-alert("There will be an error")
+alert("Es wird ein Fehler auftreten")
 
 [1, 2].forEach(alert)
 ```
 
-Now if we run the code, only the first `alert` is shown and then we have an error!
+Wenn wir nun den Code ausführen, wird nur der erste `alert` angezeigt und dann haben wir einen Fehler!
 
-But everything is fine again if we add a semicolon after `alert`:
+Aber alles ist wieder in Ordnung, wenn wir nach `alert` ein Semikolon einfügen:
 ```js run
-alert("All fine now");
+alert("Jetzt ist alles in Ordnung");
 
-[1, 2].forEach(alert)  
+[1, 2].forEach(alert)
 ```
 
-Now we have the "All fine now" message followed by `1` and `2`.
+Jetzt haben wir die Nachricht "Jetzt ist alles in Ordnung" gefolgt von `1` und `2`.
 
 
-The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets `[...]`.
+Der Fehler in der Variante ohne Semikolon tritt auf, weil JavaScript kein Semikolon vor eckigen Klammern `[...]` annimmt.
 
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
+Da das Semikolon nicht automatisch eingefügt wird, wird der Code im ersten Beispiel als einzelne Anweisung behandelt. So sieht es die Engine:
 
 ```js run no-beautify
-alert("There will be an error")[1, 2].forEach(alert)
+alert("Es wird ein Fehler auftreten")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+Aber es sollten zwei getrennte Anweisungen sein, nicht eine. Eine solche Verschmelzung ist in diesem Fall einfach falsch, daher der Fehler. Dies kann auch in anderen Situationen auftreten.
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Es wird empfohlen, Semikolons zwischen Anweisungen zu setzen, auch wenn diese durch Zeilenumbrüche getrennt sind. Diese Regel wird von der Community weitgehend übernommen. Lass uns noch einmal festhalten -- es ist möglich, Semikolons die meiste Zeit wegzulassen. Aber es ist sicherer -- besonders für Anfänger -- sie zu benutzen.
 
-## Comments
+## Kommentare [#code-comments]
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+Mit der Zeit werden Programme immer komplexer. Es müssen *Kommentare* hinzugefügt werden, die beschreiben, was der Code macht und warum.
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Kommentare können an jeder Stelle eines Skripts eingefügt werden. Sie haben keinen Einfluss auf die Ausführung, da die Engine sie einfach ignoriert.
 
-**One-line comments start with two forward slash characters `//`.**
+**Einzeilige Kommentare beginnen mit zwei Schrägstrichen `//`.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Der Rest der Zeile ist ein Kommentar. Er kann eine ganze eigene Zeile belegen oder einer Anweisung folgen.
 
-Like here:
+Wie hier:
 ```js run
-// This comment occupies a line of its own
-alert('Hello');
+// Dieser Kommentar belegt eine eigene Zeile
+alert('Hallo');
 
-alert('World'); // This comment follows the statement
+alert('Welt'); // Dieser Kommentar folgt der Anweisung
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Mehrzeilige Kommentare beginnen mit einem Schrägstrich und einem Sternchen <code>/&#42;</code> und enden mit einem Sternchen und einem Schrägstrich <code>&#42;/</code>.**
 
-Like this:
+So wie hier:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* Ein Beispiel mit zwei Nachrichten.
+Dies ist ein mehrzeiliger Kommentar.
 */
-alert('Hello');
-alert('World');
+alert('Hallo');
+alert('Welt');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+Der Inhalt von Kommentaren wird ignoriert. Wenn wir also Code innerhalb <code>/&#42; ... &#42;/</code> einfügen, wird er nicht ausgeführt.
 
-Sometimes it can be handy to temporarily disable a part of code:
+Manchmal kann es nützlich sein, einen Teil des Codes vorübergehend zu deaktivieren:
 
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* Code auskommentieren
+alert('Hallo');
 */
-alert('World');
+alert('Welt');
 ```
 
+<<<<<<< HEAD
+```smart header="Benutze Tastenkombination!"
+In den meisten Editoren kannst du eine Codezeile auskommentieren, indem du die Tastenkombination `key:Strg+/` für einen einzeiligen Kommentar und die Tastenkombination `key:Strg+Umschalt+/` für mehrzeilige Kommentare drückst (wähle ein Stück Code aus und drücke die Tastenkombination). Für Mac versuche "key:Cmd" anstelle von "key:Strg" und `key:Option` statt `key:Umschalt`.
+=======
 ```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
+In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+>>>>>>> 23ffde780605b3418101850a61d9496c3d7f927c
 ```
 
-````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+````warn header="Verschachtelte Kommentare werden nicht unterstützt!"
+Es ist nicht möglich `/*...*/` innerhalb eines anderen `/*...*/` zu setzen.
 
-Such code will die with an error:
+Solcher Code resultiert in einem Fehler:
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* verschachtelter Kommentar ?!? */
 */
-alert( 'World' );
+alert( 'Welt' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Bitte zögere nicht, deinen Code zu kommentieren.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+Kommentare vergrößern den gesamten Code-Fussabdruck, aber das ist überhaupt kein Problem. Es gibt viele Werkzeuge, die den Code vor dem Veröffentlichen auf einem Produktionsserver minimieren. Sie entfernen Kommentare, sodass sie nicht in den Arbeitsskripten angezeigt werden. Kommentare wirken sich daher überhaupt nicht negativ auf die Produktion aus.
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Später im Tutorial wird es ein Kapitel <info:code-quality> geben, in dem auch erklärt wird, wie man bessere Kommentare schreibt.
