@@ -1,5 +1,6 @@
 # Interaktion: alert, prompt, confirm
 
+<<<<<<< HEAD:1-js/02-first-steps/09-alert-prompt-confirm/article.md
 In diesem Teil des Tutorials behandeln wir die JavaScript-Sprache "als solche", ohne umgebungsspezifische Anpassungen.
 
 Aber wir verwenden immer noch den Browser als Demoumgebung, also sollten wir zumindest einige seiner Funktionen der Benutzeroberfläche kennen. In diesem Kapitel machen wir uns mit den Browser-Funktionen `alert` (hinweisen), `prompt` (anfragen) und `confirm` (bestätigen) vertraut.
@@ -13,6 +14,13 @@ alert(message);
 ```
 
 Dies zeigt eine Meldung `message` an und hält die Ausführung des Skripts an, bis der Benutzer auf "OK" klickt. 
+=======
+As we'll be using the browser as our demo environment, let's see a couple of functions to interact with the user: `alert`, `prompt` and `confirm`.
+
+## alert
+
+This one we've seen already. It shows a message and waits for the user to presses "OK".
+>>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31:1-js/02-first-steps/06-alert-prompt-confirm/article.md
 
 Zum Beispiel:
 
@@ -20,7 +28,11 @@ Zum Beispiel:
 alert("Hello");
 ```
 
+<<<<<<< HEAD:1-js/02-first-steps/09-alert-prompt-confirm/article.md
 Das Minifenster mit der Meldung wird als *modales Fenster* bezeichnet. Das Wort "modal" bedeutet, dass der Besucher nicht mit dem Rest der Seite interagieren kann, keine anderen Knöpfe drücken kann, usw., bis er sich mit dem Fenster beschäftigt hat. In diesem Fall -- bis er auf "OK" drückt.
+=======
+The mini-window with the message is called a *modal window*. The word "modal" means that the visitor can't interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case -- until they press "OK".
+>>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31:1-js/02-first-steps/06-alert-prompt-confirm/article.md
 
 ## prompt
 
@@ -38,7 +50,15 @@ Es wir ein modales Fenster mit einer Meldung angezeigt, ein Eingabefeld für den
 `default`
 : Ein optionaler zweiter Parameter, der vor-befüllte Wert für das Eingabefeld.
 
+<<<<<<< HEAD:1-js/02-first-steps/09-alert-prompt-confirm/article.md
 Der Besucher kann etwas in das Feld tippen und dann auf OK klicken. Oder er beendet die Eingabe, indem er auf Abbrechen klickt oder die `key:Esc` Taste drückt.
+=======
+```smart header="The square brackets in syntax `[...]`"
+The square brackets around `default` in the syntax above denote that the parameter as optional, not required.
+```
+
+The visitor can type something in the prompt input field and press OK. Then we get that text in the `result`. Or they can cancel the input by pressing Cancel or hitting the `key:Esc` key, then we get `null` as the `result`.
+>>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31:1-js/02-first-steps/06-alert-prompt-confirm/article.md
 
 Der Aufruf von `prompt` gibt den Text des Eingabefelds zurück. Wenn die Eingabe abgebrochen wurde, so ist der Rückgabewert `null`.
 

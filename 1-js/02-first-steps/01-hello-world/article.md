@@ -78,7 +78,7 @@ Hier ist `/pfad/zum/script.js` ein absoluter Pfad zu dem Skript, aus dem Wurzelv
 Außerdem können wir auch eine komplette URL angeben. Beispielsweise:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
 Um mehrere Skripte einzufügen, nutze Mehrfach-Tags:
