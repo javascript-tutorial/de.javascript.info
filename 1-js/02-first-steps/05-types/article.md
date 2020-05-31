@@ -170,7 +170,6 @@ Es ist nur ein spezieller Wert, der "nichts", "leer" oder "Wert unbekannt" darst
 Der oben genannte Code besagt, dass das `age` unbekannt ist.
 
 ## Der Wert "undefined"
-`
 Der spezielle Wert `undefined` steht ebenfalls abseits. Er bildet einen eigenen Typ, genau wie `null`.
 
 Die Bedeutung von `undefined` ist "Wert ist nicht zugewiesen".
