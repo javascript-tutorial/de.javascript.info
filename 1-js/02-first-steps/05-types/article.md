@@ -167,7 +167,7 @@ In JavaScript ist `null` kein "Verweis auf ein nicht vorhandenes Objekt" oder ei
 
 Es ist nur ein spezieller Wert, der "nichts", "leer" oder "Wert unbekannt" darstellt.
 
-Der oben genannte Code besagt, dass das `age` unbekannt ist.
+Der oben genannte Code besagt, dass `age` unbekannt ist.
 
 ## Der Wert "undefined"
 Der spezielle Wert `undefined` steht ebenfalls abseits. Er bildet einen eigenen Typ, genau wie `null`.
