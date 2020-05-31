@@ -89,35 +89,21 @@ Mit anderen Worten, eine Folge von ODER `"||"` gibt den ersten effektiv wahren W
 Beispiel:
 
 ```js run
-alert( 1 || 0 ); // 1 (1 is truthy)
-<<<<<<< HEAD
-alert( true || 'egal was' ); // (true ist effektiv wahr)
+alert( 1 || 0 ); // 1 (1 ist wahr)
 
-alert( null || 1 ); // 1 (1 ist der erste effektiv wahre Wert)
-alert( null || 0 || 1 ); // 1 (der erste effektiv wahre Wert)
-alert( undefined || null || 0 ); // 0 (alle effektiv nicht wahr, gibt letzten Wert zurück)
-=======
+alert( null || 1 ); // 1 (1 ist der erste wahre Wert)
+alert( null || 0 || 1 ); // 1 (der erste wahre Wert)
 
-alert( null || 1 ); // 1 (1 is the first truthy value)
-alert( null || 0 || 1 ); // 1 (the first truthy value)
-
-alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+alert( undefined || null || 0 ); // 0 (alle falsch, gibt den letzten Wert zurück)
 ```
 
 Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu einigen interessanten Anwendungen:
 
 1. **Bestimme den ersten effektiv wahren Wert aus einer Liste von Variablen bzw. Ausdrücken.**
 
-<<<<<<< HEAD
-    Nehmen wir an wir hätten eine Liste von Variablen, die entweder Daten beinhalten oder `null/undefined` sind. Wie finden wir die erste Variable mit Inhalt ?
+    Haben wir zum Beispiel die Variablen `firstName`, `lastName` und `nickName`, die alle optional sind.
 
-    Wir können ODER `||` nutzen:
-=======
-    For instance, we have `firstName`, `lastName` and `nickName` variables, all optional.
-
-    Let's use OR `||` to choose the one that has the data and show it (or `anonymous` if nothing set):
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+    Benutzen wir ODER `||`, um denjenigen auszuwählen, der Daten enthält und geben sie aus (oder `Anonym` wenn nichts gesetzt ist):
 
     ```js run
     let firstName = "";
@@ -125,62 +111,30 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
     let nickName = "SuperCoder";
 
     *!*
-<<<<<<< HEAD
-    let name = currentUser || defaultUser || "unbenannt";
-    */!*
-
-    alert( name ); // Gibt "John" aus – den ersten effektiv wahren Wert
-    ```
-
-    Wären sowohl `currentUser` als auch `defaultUser` effektiv nicht wahr, lautete das Ergebnis `"unbenannt"`.
-2. **Partielle Auswertung ( Short-circuit evaluation ).**
-
-    Operanden können nicht nur Werte sondern beliebige Ausdrücke sein. ODER führt deren Auswertung und Test in der Reihenfolge von links nach rechts aus. Die Auswertung endet, wenn ein effektiv wahrer Wert erreicht wird, und dieser Wert wird zurückgegeben. Dieses Prinzip nennt man "partielle Auswertung" ( "short-circuit evaluation" ), da sie von links nach rechts fortschreitend frühestmöglich abbricht und ggf. nicht alle Operanden berücksichtigt.
-    
-    Das kann man klar erkennen, wenn der als zweites Argument gegebene Ausdruck einen Seiteneffekt produziert, wie etwa eine Variablenzuweisung.
-    
-    Im folgenden Beispiel wird `x` nicht zugewiesen:
-=======
-    alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+    alert( firstName || lastName || nickName || "Anonym"); // SuperCoder
     */!*
     ```
 
-    If all variables were falsy, `Anonymous` would show up.
+    Wenn alle Variablen falsch sind, würde `Anonym` herauskommen.
 
 2. **Short-circuit evaluation.**
 
-    Another feature of OR `||` operator is the so-called "short-circuit" evaluation.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+    Ein weiteres Merkmal des ODER-Operators `||` ist die sogenannte "Kurzschluss"-Auswertung.
 
-    It means that `||` processes its arguments until the first truthy value is reached, and then the value is returned immediately, without even touching the other argument.
+    Das bedeutet, dass `||` die Argumente so lange verarbeitet, bis der erste wahrheitsgemäße Wert erreicht ist, und dann wird der Wert sofort zurückgegeben, ohne andere Argument zu berühren.
 
-    That importance of this feature becomes obvious if an operand isn't just a value, but an expression with a side effect, such as a variable assignment or a function call.
+    Die Bedeutung dieses Merkmals wird deutlich, wenn ein Operand nicht nur ein Wert, sondern ein Ausdruck mit Nebeneffekt ist, wie z.B. eine Variablenzuweisung oder ein Funktionsaufruf.
 
-<<<<<<< HEAD
-    alert(x); // undefined, denn (x = 1) wird nicht ausgewertet
-    ```
-
-    Ist hingegen das erste Argument `false`, wertet `||` das Zweite aus und führt die Zuweisung durch:
-=======
-    In the example below, only the second message is printed:
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+    Im folgenden Beispiel wird nur die zweite Nachricht gedruckt:
 
     ```js run no-beautify
-    *!*true*/!* || alert("not printed");
-    *!*false*/!* || alert("printed");
+    *!*true*/!* || alert("nicht gedruckt");
+    *!*false*/!* || alert("gedruckt");
     ```
 
-<<<<<<< HEAD
-    Eine Zuweisung ist ein einfacher Fall. Es kann Seiteneffekte geben, deren Ausbleiben sich nicht unmittelbar manifestiert, wenn die Auswertung sie nicht erreicht.
+    In der ersten Zeile stoppt der Operator ODER `||` die Auswertung sofort, wenn er `true` sieht, so dass der `alert` nicht ausgeführt wird.
 
-    Wie wir erkennen ist ein solcher Anwendungsfall eine verkürzte Fallunterschiedung mit `if`. Der erste Operand wird in einen Booleschen Wert konvertiert. Ist er `false`, wird der zweite Operand ausgewertet.
-    
-    Meistens ist ein "normales" `if` vorzuziehen, um den Code möglichst verständlich zu halten, manchmal kann die Kurzvariante aber ganz praktisch sein.
-=======
-    In the first line, the OR `||` operator stops the evaluation immediately upon seeing `true`, so the `alert` isn't run.
-
-    Sometimes, people use this feature to execute commands only if the condition on the left part is falsy.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+    Manchmal verwenden Leute diese Funktion, um Befehle nur dann auszuführen, wenn die Bedingung im linken Teil falsch ist.
 
 ## && (UND)
 
@@ -269,12 +223,8 @@ Die Präzedenz der Operators UND  `&&` ist höher als die von ODER `||`.
 Der Code `a && b || c && d` verhält sich daher i.w. so, als ob die Ausdrücke mit `&&` in Klammern gesetzt würden: `(a && b) || (c && d)`.
 ````
 
-<<<<<<< HEAD
-So wie ODER kann auch der Operator UND `&&` manchmal eine Fallunterscheidung (`if`) ersetzen.
-=======
-````warn header="Don't replace `if` with || or &&"
-Sometimes, people use the AND `&&` operator as a "shorter to write `if`".
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+````warn header="Ersetze `if` nicht durch || oder &&"
+Manchmal wird der Operator UND `&&` als "Kürzel zum Schreiben von `if`" verwendet.
 
 Beispiel:
 
@@ -291,27 +241,16 @@ Damit haben wir im Prinzip ein Pendant zu:
 ```js run
 let x = 1;
 
-<<<<<<< HEAD
-if (x > 0) {
-  alert( 'Größer 0!' );
-}
+if (x > 0) alert( 'Größer als Null!' );
 ```
 
-Die Variante mit `&&` wirkt knapper. Aber `if` ist leichter zu identifizieren und tendenziell eines kleines bisschen verständlicher.
-
-Daher empfehlen wir, jedes Konstrukt gemäß seinem Zweck einzusetzen: `if` nutzen, wenn wir eine Fallunterscheidung haben wollen, `&&` für die logische Operation UND.
-=======
-if (x > 0) alert( 'Greater than zero!' );
-```
-
-Although, the variant with `&&` appears shorter, `if` is more obvious and tends to be a little bit more readable. So we recommend using every construct for its purpose: use `if` if we want if and use `&&` if we want AND.
+Obwohl die Variante mit `&&` kürzer erscheint, ist `if` offensichtlicher und tendenziell etwas lesbarer. Daher empfehlen wir, jedes Konstrukt für seinen Zweck zu verwenden: Verwende `if`, wenn wir eine Bedingung wollen, und verwende `&&`, wenn wir UND wollen.
 ````
 
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
 
 ## ! (NICHT)
 
-Der Boolsche Operator NICHT wird durch ein Ausrufezeichen `!` repräsentiert 
+Der Boolsche Operator NICHT wird durch ein Ausrufezeichen `!` repräsentiert
 
 Die Syntax ist einfach genug:
 

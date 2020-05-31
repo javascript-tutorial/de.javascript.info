@@ -1,14 +1,10 @@
 # Datentypen
 
-<<<<<<< HEAD
-Eine Variable in JavaScript kann beliebige Daten enthalten. Eine Variable kann in einem Moment eine Zeichenkette und in einem anderen eine Zahl sein:
-=======
-A value in JavaScript is always of a certain type. For example, a string or a number.
+Ein Wert in JavaScript ist immer von einem bestimmten Typ. Zum Beispiel eine Zeichenfolge oder eine Zahl.
 
-There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+Es gibt acht grundlegende Datentypen in JavaScript. Hier werden wir sie allgemein behandeln, und in den nächsten Kapiteln werden wir auf jeden von ihnen im Detail eingehen.
 
-We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Wir können jeden beliebigen Typ in eine Variable setzen. Zum Beispiel kann eine Variable in einem Moment eine Zeichenfolge sein und dann eine Zahl speichern:
 
 ```js
 // kein Fehler
@@ -16,13 +12,7 @@ let message = "Hallo";
 message = 123456;
 ```
 
-<<<<<<< HEAD
-Programmiersprachen, die solche Dinge erlauben, werden als "dynamisch typisiert" bezeichnet, was bedeutet, dass es Datentypen gibt, aber Variablen an keine von ihnen gebunden sind.
-
-Es gibt acht grundlegende Datentypen in JavaScript. Hier werden wir sie allgemein behandeln und in den nächsten Kapiteln detailliert auf sie eingehen.
-=======
-Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Programmiersprachen, die solche Eigenschaften ermöglichen, wie z.B. JavaScript, werden als "dynamisch typisiert" bezeichnet, d.h. es gibt zwar Datentypen, aber die Variablen sind nicht an einen dieser Typen gebunden.
 
 ## Number
 
@@ -76,38 +66,23 @@ Mehr über das Arbeiten mit Zahlen erfahren wir in diesem Kapitel <info:number>.
 
 ## BigInt
 
-<<<<<<< HEAD
-In JavaScript kann der Typ "number" keine Ganzzahlwerte darstellen, die größer als <code>2<sup>53</sup></code> (oder kleiner als <code>-2<sup>53</sup></code> für Negative), sind. Das ist eine technische Einschränkung, die durch ihre interne Darstellung verursacht wird. Das sind ungefähr 16 Dezimalstellen, daher ist die Beschränkung für die meisten Zwecke kein Problem, aber manchmal benötigen wir wirklich große Zahlen, z.B. für Verschlüsselungen oder Zeitstempel mit Mikrosekundengenauigkeit.
-=======
-In JavaScript, the "number" type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(-2<sup>53</sup>-1)</code> for negatives. It's a technical limitation caused by their internal representation.
+In JavaScript kann der Typ "Zahl" keine ganzzahligen Werte darstellen, die größer als <code>(2<sup>53</sup>-1)</code> (das ist `9007199254740991`) oder kleiner als <code>-(-2<sup>53</sup>-1)</code> für Negative sind. Es handelt sich um eine technische Einschränkung, die durch ihre interne Darstellung bedingt ist.
 
-For most purposes that's quite enough, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Für die meisten Zwecke reicht das völlig aus, aber manchmal brauchen wir wirklich große Zahlen, z.B. für die Kryptographie oder Zeitstempel mit Mikrosekunden-Genauigkeit.
 
 Der Typ `BigInt` wurde kürzlich der Sprache hinzugefügt, um Ganzzahlen beliebiger Länge darzustellen.
 
-<<<<<<< HEAD
-Ein `BigInt` wird durch Anhängen von `n` an das Ende einer Ganzzahl erstellt:
-=======
-A `BigInt` value is created by appending `n` to the end of an integer:
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Ein `BigInt`-Wert wird durch Anhängen von `n` an das Ende einer Ganzzahl erzeugt:
 
 ```js
 // Das "n" am Ende bedeutet, dass es ein BigInt ist
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
-<<<<<<< HEAD
-Da `BigInt`-Zahlen selten benötigt werden, haben wir ihnen ein eigenes Kapitel gewidmet <info:bigint>.
-
-```smart header="Kompatibilitätsprobleme"
-Derzeit wird `BigInt` in Firefox und Chrome unterstützt, nicht jedoch in Safari/IE/Edge.
-=======
-As `BigInt` numbers are rarely needed, we don't cover them here, but devoted them a separate chapter <info:bigint>. Read it when you need such big numbers.
+Da `BigInt`-Zahlen selten benötigt werden, behandeln wir sie hier nicht, sondern widmen ihnen ein eigenes Kapitel <info:bigint>. Lies es, wenn du so große Zahlen brauchst.
 
 ```smart header="Compatability issues"
-Right now `BigInt` is supported in Firefox/Chrome/Edge, but not in Safari/IE.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Im Moment wird `BigInt` in Firefox/Chrome/Edge unterstützt, aber nicht in Safari/IE.
 ```
 
 ## String
@@ -192,14 +167,10 @@ In JavaScript ist `null` kein "Verweis auf ein nicht vorhandenes Objekt" oder ei
 
 Es ist nur ein spezieller Wert, der "nichts", "leer" oder "Wert unbekannt" darstellt.
 
-<<<<<<< HEAD
-Der obige Code besagt, dass `age` aus irgendeinem Grund unbekannt oder leer ist.
-=======
-The code above states that `age` is unknown.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Der oben genannte Code besagt, dass das `age` unbekannt ist.
 
 ## Der Wert "undefined"
-
+`
 Der spezielle Wert `undefined` steht ebenfalls abseits. Er bildet einen eigenen Typ, genau wie `null`.
 
 Die Bedeutung von `undefined` ist "Wert ist nicht zugewiesen".
@@ -209,17 +180,10 @@ Wenn eine Variable deklariert, aber nicht zugewiesen ist, ist ihr Wert `undefine
 ```js run
 let age;
 
-<<<<<<< HEAD
-alert(x); // zeigt "undefined"
+alert(age); // zeigt "undefined"
 ```
 
 Technisch gesehen ist es möglich, jeder Variablen ein `undefined` zuzuweisen:
-=======
-alert(age); // shows "undefined"
-```
-
-Technically, it is possible to explicitly assign `undefined` to a variable:
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
 
 ```js run
 let age = 100;
@@ -230,27 +194,17 @@ age = undefined;
 alert(age); // "undefined"
 ```
 
-<<<<<<< HEAD
-...Aber wir empfehlen das nicht. Normalerweise verwenden wir `null`, um einer Variablen einen "leeren" oder "unbekannten" Wert zuzuweisen, und `undefined`, um zu überprüfen, ob eine Variable zugewiesen wurde.
-=======
-...But we don't recommend doing that. Normally, one uses `null` to assign an "empty" or "unknown" value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+...Aber wir raten davon ab, das zu tun. Normalerweise verwendet man `null`, um einer Variablen einen "leeren" oder "unbekannten" Wert zuzuweisen, während `undefined` als Standard-Anfangswert für nicht zugewiesene Werte reserviert ist.
 
 ## Objekte und Symbole
 
 Der Typ `object` ist etwas Besonderes.
 
-<<<<<<< HEAD
-Alle anderen Typen werden als "primitive" (skalare) Datentypen bezeichnet, da ihre Werte nur ein einzelnes Element enthalten können (sei es eine Zeichenfolge oder eine Zahl oder was auch immer). Im Gegensatz dazu werden Objekte zum Speichern von Datensammlungen und komplexeren Einheiten verwendet. Wir werden später im Kapitel <info:object> darauf eingehen, nachdem wir mehr über skalare Datentypen erfahren haben.
+Alle anderen Typen werden als "primitiv" bezeichnet, weil ihre Werte nur eine einzige Sache enthalten können (sei es eine Zeichenfolge oder eine Zahl oder was auch immer). Im Gegensatz dazu werden Objekte zur Speicherung von Datensammlungen und komplexeren Entitäten verwendet.
 
-Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstellen. Der Vollständigkeit halber erwähnen wir es hier, aber wir werden ihn nach den Objekten untersuchen.
-=======
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+Da Objekte so wichtig sind, verdienen sie besondere Aufmerksamkeit. Wir werden sie später im Kapitel <info:object> behandeln, nachdem wir mehr über Primitive erfahren haben.
 
-Being that important, objects deserve a special treatment. We'll deal with them later in the chapter <info:object>, after we learn more about primitives.
-
-The `symbol` type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstellen. Wir müssen es hier der Vollständigkeit halber erwähnen, aber auch die Details aufschieben, bis wir Objekte kennen.
 
 ## Der Operator typeof [#type-typeof]
 
@@ -293,39 +247,22 @@ typeof alert // "function"  (3)
 
 Die letzten drei Zeilen bedürfen möglicherweise einer zusätzlichen Erläuterung:
 
-<<<<<<< HEAD
 1. `Math` ist ein eingebautes Objekt, das mathematische Operationen liefert. Wir werden es im Kapitel <info:number> lernen. Hier dient es nur als Beispiel für ein Objekt.
-2. Das Ergebnis von `typeof null` ist `"object"`. Das ist falsch. Es ist ein offiziell anerkannter Fehler, der aus Kompatibilitätsgründen erhalten wurde. Natürlich ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ. Also, nochmal, es ist ein Fehler der Sprache.
-3. Das Ergebnis von `typeof alert` ist `"function"`, da `alert` eine Funktion ist. Wir werden Funktionen in den nächsten Kapiteln untersuchen, in denen wir auch feststellen werden, dass es in JavaScript keinen speziellen "Funktionstyp" gibt. Funktionen gehören zum Objekttyp. Aber `typeof` behandelt sie anders und gibt `"function"` zurück. Das ist nicht ganz richtig, aber in der Praxis sehr nützlich.
-=======
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's an officially recognized error in `typeof` behavior, coming from the early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
+2. Das Ergebnis von `typeof null` ist `"object"`. Das ist ein offiziell anerkannter Fehler im `typeof`-Verhalten, der aus den frühen Tagen von JavaScript stammt und aus Kompatibilitätsgründen beibehalten wurde. Definitiv ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ.
+3. Das Ergebnis von `typeof alert` ist `"function"`, denn `alert` ist eine Funktion. Wir werden Funktionen in den nächsten Kapiteln untersuchen, wo wir auch sehen werden, dass es keinen speziellen "Funktionstyp" in JavaScript gibt. Funktionen gehören zum Objekttyp. Aber `typeof` behandelt sie anders und gibt `"function"` zurück. Auch das stammt aus den frühen Tagen von JavaScript. Technisch gesehen ist ein solches Verhalten nicht korrekt, kann aber in der Praxis bequem sein.
 
 ## Zusammenfassung
 
 Es gibt 8 grundlegende Datentypen in JavaScript.
 
-<<<<<<< HEAD
-- `number` für Zahlen jeglicher Art: Ganzzahl oder Gleitkommazahl, ganze Zahlen werden begrenzt durch ±2<sup>53</sup>.
-- `bigint` steht für ganzzahlige Zahlen beliebiger Länge.
-- `string` für Zeichenketten. Eine String kann aus einem oder mehreren Zeichen bestehen. Es gibt keine separaten Einzelzeichen.
+- `number` für Zahlen jeglicher Art: Ganzzahl oder Gleitkommazahl, ganze Zahlen sind auf ±2<sup>53</sup> begrenzt.
+- `bigint` steht für ganze Zahlen beliebiger Länge.
+- `string` für Zeichenketten. Eine String kann aus null oder mehreren Zeichen bestehen. Es gibt keine separaten Einzelzeichentyp.
 - `boolean` für `true`/`false`.
 - `null` für unbekannte Werte -- ein eigenständiger Typ mit einem einzelnen Wert `null`.
 - `undefined` für nicht zugewiesene Werte -- ein eigenständiger Typ mit einem einzelnen Wert `undefined`.
 - `object` für komplexere Datenstrukturen.
 - `symbol` für eindeutige Kennungen.
-=======
-- `number` for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup>.
-- `bigint` is for integer numbers of arbitrary length.
-- `string` for strings. A string may have zero or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
->>>>>>> cd2c7ce3c8f033e6f7861ed1b126552e41ba3e31
 
 Mit dem Operator `typeof` können wir sehen, welcher Typ in einer Variablen gespeichert ist.
 
