@@ -6,8 +6,10 @@ Zum Beispiel wandelt `alert` automatisch jeden Wert in den Datentyp "String" um 
 
 Es gibt auch Fälle, in denen wir einen Wert explizit in den erwarteten Datentyp umwandeln müssen.
 
-```smart header="Wir sprechen noch nicht über Objekte"
-In diesem Kapitel werden wir keine Objekte behandeln. Stattdessen werden wir uns zuerst die primitiven Datentypen ansehen. Später, nachdem wir mehr über Objekte gelernt haben, werden wir im Kapitel <info:object-toprimitive> sehen, wie die Objektumwandlung funktioniert.
+```smart header="Noch nicht von Objekten sprechen"
+In diesem Kapitel werden wir keine Objekte behandeln. Im Moment werden wir nur über Primitive sprechen.
+
+Später, nachdem wir etwas über Objekte gelernt haben, werden wir im Kapitel <info:objekt-toprimitive> sehen, wie Objekte hineinpassen.
 ```
 
 ## String Umwandlung

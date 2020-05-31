@@ -1,26 +1,18 @@
 # Interaktion: alert, prompt, confirm
 
-In diesem Teil des Tutorials behandeln wir die JavaScript-Sprache "als solche", ohne umgebungsspezifische Anpassungen.
-
-Aber wir verwenden immer noch den Browser als Demoumgebung, also sollten wir zumindest einige seiner Funktionen der Benutzeroberfläche kennen. In diesem Kapitel machen wir uns mit den Browser-Funktionen `alert` (hinweisen), `prompt` (anfragen) und `confirm` (bestätigen) vertraut.
+Da wir den Browser als unsere Demo-Umgebung verwenden, wollen wir einige Funktionen zur Interaktion mit dem Benutzer betrachten: `alert`, `prompt` und `confirm`.
 
 ## alert
 
-Syntax:
-
-```js
-alert(message);
-```
-
-Dies zeigt eine Meldung `message` an und hält die Ausführung des Skripts an, bis der Benutzer auf "OK" klickt. 
+Diese haben wir bereits gesehen. Es zeigt eine Meldung an und wartet darauf, dass der Benutzer "OK" drückt.
 
 Zum Beispiel:
 
 ```js run
-alert("Hello");
+alert("Hallo");
 ```
 
-Das Minifenster mit der Meldung wird als *modales Fenster* bezeichnet. Das Wort "modal" bedeutet, dass der Besucher nicht mit dem Rest der Seite interagieren kann, keine anderen Knöpfe drücken kann, usw., bis er sich mit dem Fenster beschäftigt hat. In diesem Fall -- bis er auf "OK" drückt.
+Das Mini-Fenster mit der Nachricht wird als *Dialog-Fenster* bezeichnet. Das Wort "Dialog" bedeutet, dass der Besucher erst dann mit dem Rest der Seite interagieren, andere Knöpfe drücken usw. kann, wenn er sich mit dem Fenster beschäftigt hat. In diesem Fall -- bis er "OK" drückt.
 
 ## prompt
 
@@ -38,7 +30,11 @@ Es wir ein modales Fenster mit einer Meldung angezeigt, ein Eingabefeld für den
 `default`
 : Ein optionaler zweiter Parameter, der vor-befüllte Wert für das Eingabefeld.
 
-Der Besucher kann etwas in das Feld tippen und dann auf OK klicken. Oder er beendet die Eingabe, indem er auf Abbrechen klickt oder die `key:Esc` Taste drückt.
+```smart header="Eckige Klammer in der Syntax `[...]`"
+Die eckigen Klammern um `default` in der obigen Syntax bedeuten, dass der Parameter optional, nicht erforderlich ist.
+```
+
+Der Besucher kann etwas in das Eingabefeld eingeben und OK drücken. Dann erhalten wir diesen Text im `Ergebnis`. Oder er kann die Eingabe beenden, indem er Abbrechen drückt oder `key:Esc` drückt, dann erhalten wir `Null` als `Ergebnis`.
 
 Der Aufruf von `prompt` gibt den Text des Eingabefelds zurück. Wenn die Eingabe abgebrochen wurde, so ist der Rückgabewert `null`.
 
@@ -51,7 +47,7 @@ alert(`Du bist ${age} Jahre alt!`); // Du bist 100 Jahre alt!
 ```
 
 ````warn header="Im IE: stelle immer einen `default` Wert bereit"
-Der zweite Parameter ist optional, aber wenn wir ihn nicht angeben, wird Internet Explorer den Text `"undefined"` in die Eingabeaufforderung einfügen. 
+Der zweite Parameter ist optional, aber wenn wir ihn nicht angeben, wird Internet Explorer den Text `"undefined"` in die Eingabeaufforderung einfügen.
 
 Führe diesen Code im Internet Explorer aus, um es zu sehen:
 

@@ -1,8 +1,8 @@
-# Operatoren
+# Grundlegende Operatoren, Mathematik
 
 Wir kennen viele Operatoren aus der Schule. Es sind Dinge wie Addition `+`, Multiplikation `*`, Subtraktion `-` und so weiter.
 
-In diesem Kapitel konzentrieren wir uns auf Aspekte von Operatoren, die nicht durch Schularithmetik abgedeckt sind.
+In diesem Kapitel beginnen wir mit einfachen Operatoren und konzentrieren uns dann auf JavaScript-spezifische Aspekte, die von der Schularithmetik nicht abgedeckt werden.
 
 ## Begriffe: "unär", "binär", "Operand"
 
@@ -28,9 +28,55 @@ Bevor wir weitermachen, wollen wir uns mit einigen gängigen Begriffen befassen.
 
 Formal haben wir in den obigen Beispielen zwei verschiedene Operatoren, die dasselbe Symbol verwenden: den Negationsoperator, einen unären Operator, der das Vorzeichen umkehrt, und den Subtraktionsoperator, einen binären Operator, der eine Zahl von einer anderen subtrahiert.
 
-## String-Verkettung, binär +
+## Rechnn
 
-Sehen wir uns nun die Besonderheiten von JavaScript-Operatoren an, die über das Rechnen in der Schule hinausgehen.
+Die folgenden mathematischen Operationen werden unterstützt:
+
+- Addition `+`,
+- Subtraktion `-`,
+- Multiplikation `*`,
+- Division `/`,
+- Rest `%`,
+- Potenzierung `**`.
+
+Die ersten vier sind eindeutig, zu`%` und `**` müssen wir aber ein paar Worte sagen.
+
+### Remainder %
+
+Der Restoperator `%` ist, trotz seiner Erscheinung, nicht auf die Prozentangabe bezogen.
+
+Das Ergebnis von `a % b` ist der [Rest](https://en.wikipedia.org/wiki/Remainder) der ganzzahligen Division von `a` durch `b`.
+
+Zum Beispiel:
+
+```js run
+alert( 5 % 2 ); // 1, der Rest von 5 geteilt durch 2
+alert( 8 % 3 ); // 2, der Rest von 8 geteilt durch 3
+```
+
+### Potenzierung **
+
+Der Exponentiationsoperator `a ** b` multipliziert `a` mit sich selbst `b` mal.
+
+Zum Beispiel:
+
+```js run
+alert( 2 ** 2 ); // 4  (2 mit sich selbst 2 mal multipliziert)
+alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 mal)
+alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 mal)
+```
+
+Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+
+```js run
+alert( 4 ** (1/2) ); // 2 (Die Potenz von 1/2 ist gleich der Quadratwurzel)
+alert( 8 ** (1/3) ); // 2 (Die Potenz von 1/3 ist gleich der dritten Wurzel)
+```
+
+
+## Binäre String-Verkettung +
+
+Lernen wir Funktionen von JavaScript-Operatoren kennen, die über das schulische Rechnen hinausgehen.
 
 Normalerweise summiert der Plus-Operator `+` Zahlen.
 
@@ -41,7 +87,7 @@ let s = "mein" + "String";
 alert(s); // meinString
 ```
 
-Beachten Sie, dass wenn einer der Operanden ein String ist, die andere ebenfalls in einen String konvertiert wird.
+Beachte, wenn einer der Operanden eine Zeichenkette ist, dann wird der andere ebenfalls in eine Zeichenkette konvertiert.
 
 Beispielsweise:
 
@@ -50,22 +96,23 @@ alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-Es spielt keine Rolle, ob der erste oder zweite Operand ein String ist. Die Regel ist einfach: Wenn einer der Operanden ein String ist, wird der andere ebenfalls in einen String umgewandelt.
+Es spielt dabei keine Rolle, ob der erste Operand eine Zeichenkette ist, oder der Zweite.
 
-Beachte jedoch, dass die Operationen von links nach rechts ausgeführt werden. Wenn zwei Zahlen gefolgt von einen String vorhanden sind, werden die Zahlen hinzugefügt, bevor sie in eine Zeichenfolge konvertiert werden:
-
+Hier ist ein komplexeres Beispiel:
 
 ```js run
 alert(2 + 2 + '1' ); // "41" und nicht "221"
 ```
 
-Die Verkettung und Konvertierung von Strings ist eine Besonderheit des binären Pluszeichens `+`. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
+Dabei arbeiten die Operatoren einer nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass es `4` zurückgibt, dann fügt das nächste `+` die Zeichenkette `1` hinzu, so dass es `4 + '1' = 41` ergibt.
 
-Zum Beispiel Subtraktion und Division:
+Das binäre `+` ist der einzige Operator, der Zeichenketten auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
+
+Hier ist die Darstellung für Subtraktion und Division:
 
 ```js run
-alert( 2 - '1' ); // 1
-alert( '6' / '2' ); // 3
+alert( 6 - '2' ); // 4, wandelt '2' in eine Zahl um
+alert( '6' / '2' ); // 3, wandelt beide Operanden in Zahlen um
 ```
 
 ## Numerische Umwandlung, unär +
@@ -140,6 +187,7 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | ... | ... | ... |
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
+| 16 | Potenzierung | `**` |
 | 15 | Multiplikation | `*` |
 | 15 | Division | `/` |
 | 13 | Addition | `+` |
@@ -162,24 +210,11 @@ let x = 2 * 2 + 1;
 alert( x ); // 5
 ```
 
-Es ist möglich, Zuordnungen zu verketten:
+### Zuweisung = gibt einen Wert zurück
 
-```js run
-let a, b, c;
+Die Tatsache, dass `=` ein Operator und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
 
-*!*
-a = b = c = 2 + 2;
-*/!*
-
-alert( a ); // 4
-alert( b ); // 4
-alert( c ); // 4
-```
-
-Verkettete Zuordnungen werden von rechts nach links ausgewertet. Zuerst wird der äußerste rechte Ausdruck `2 + 2` ausgewertet und dann den Variablen auf der linken Seite zugewiesen: `c`, `b` und `a`. Am Ende teilen sich alle Variablen einen einzigen Wert.
-
-````smart header="Der Zuweisungsoperator `\"=\"` gibt einen Wert zurück"
-Ein Operator gibt immer einen Wert zurück. Das ist für die meisten von ihnen offensichtlich, wie Addition `+` oder Multiplikation `*`. Der Zuweisungsoperator folgt auch dieser Regel.
+Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, gilt aber auch für `=`.
 
 Der Aufruf `x = Wert` schreibt den `Wert` in `x` *und gibt ihn dann zurück*.
 
@@ -199,49 +234,74 @@ alert( c ); // 0
 
 Im obigen Beispiel ist das Ergebnis des Ausdrucks `(a = b + 1)` der Wert, der `a` zugewiesen wurde (d.h. `3`). Es wird dann für weitere Auswertungen verwendet.
 
-Lustiger Code, nicht wahr? Wir sollten verstehen, wie es funktioniert, weil wir es manchmal in JavaScript-Bibliotheken sehen, aber nicht selbst so etwas schreiben sollten. Solche Tricks machen Code definitiv nicht klarer oder lesbarer.
-````
+Seltsamer Code, nicht wahr? Wir sollten verstehen, wie er funktioniert, denn manchmal sehen wir ihn in JavaScript-Bibliotheken.
 
-## Divisionsrest %
+Trotzdem, bitte schreibe Code nicht so. Solche Tricks machen Code bestimmt nicht klarer oder leserlicher.
 
-Der Divisionsrestoperator `%` ist trotz seines Erscheinungsbilds nicht prozentual verknüpft.
+### Verkettung von Zuweisungen
 
-Das Ergebnis von `a % b` ist der Rest der ganzzahligen Division von `a` durch `b`.
-
-Zum Beispiel:
+Ein weiteres interessantes Merkmal ist die Möglichkeit, Zuweisungen zu verketten:
 
 ```js run
-alert( 5 % 2 ); // 1 ist ein Rest von 5 geteilt durch 2
-alert( 8 % 3 ); // 2 ist ein Rest von 8 geteilt durch 3
-alert( 6 % 3 ); // 0 ist ein Rest von 6 geteilt durch 3
+let a, b, c;
+
+*!*
+a = b = c = 2 + 2;
+*/!*
+
+alert( a ); // 4
+alert( b ); // 4
+alert( c ); // 4
 ```
 
-## Potenzierung **
+Verkettete Zuweisungen werden von rechts nach links ausgewertet. Zuerst wird der ganz rechte Ausdruck `2 + 2` ausgewertet und dann den Variablen auf der linken Seite zugewiesen: `c`, `b` und `a`. Am Ende teilen sich alle Variablen einen einzigen Wert.
 
-Der Potenzierungsoperator `**` ist eine neue Erweiterung der Sprache.
+Noch einmal: Aus Gründen der Lesbarkeit ist es besser, solchen Code in wenige Zeilen aufzuteilen:
 
-Für eine natürliche Zahl `b` ist das Ergebnis von `a ** b`, `a` `b`-Mal mit sich selbst multipliziert.
+```js
+c = 2 + 2;
+b = c;
+a = c;
+```
+Das ist leichter zu lesen, besonders wenn man den Code mit den Augen schnell scannt.
+
+## An Ort und Stelle modifizieren
+
+Wir müssen oft einen Operator auf eine Variable anwenden und das neue Ergebnis in derselben Variable speichern.
 
 Zum Beispiel:
 
-```js run
-alert( 2 ** 2 ); // 4  (2 * 2)
-alert( 2 ** 3 ); // 8  (2 * 2 * 2)
-alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2)
+```js
+let n = 2;
+n = n + 5;
+n = n * 2;
 ```
 
-Der Operator funktioniert auch für nicht ganzzahlige Zahlen.
-
-Zum Beispiel:
+Diese Notation kann mit den Operatoren `+=` und `*=` gekürzt werden:
 
 ```js run
-alert( 4 ** (1/2) ); // 2 (Potenz von 1/2 ist das Gleiche wie eine Quadratwurzel, das ist Mathematik)
-alert( 8 ** (1/3) ); // 2 (Potenz von 1/3 entspricht der dritten Wurzel)
+let n = 2;
+n += 5; // jetzt ist n = 7 (dasselbe wie n = n + 5)
+n *= 2; // jetzt ist n = 14 (dasselbe wie n = n * 2)
+
+alert( n ); // 14
+```
+
+Für alle arithmetischen und bitweisen Operatoren gibt es kurze "modifizieren-und-zuweisen"-Operatoren: `/=`, `-=`, usw.
+
+Solche Operatoren haben den gleichen Stellenwert wie eine normale Zuweisung, so dass sie nach den anderen Berechnungen durchgeführt werden:
+
+```js run
+let n = 2;
+
+n *= 3 + 5;
+
+alert( n ); // 16  (der rechte Teil wird zuerst ausgewertet, wie n *= 8)
 ```
 
 ## Inkrementieren/Dekrementieren
 
-<!-- Can't use -- in title, because built-in parse turns it into – -->
+<!-- Can't use -- in title, because the built-in parser turns it into a 'long dash' – -->
 
 Das Erhöhen oder Verringern einer Zahl um eins gehört zu den häufigsten numerischen Operationen.
 
@@ -368,41 +428,7 @@ Die Liste der Operatoren:
 - Rechtsverschiebung ( `>>` )
 - Null füllende Rechtsverschiebung ( `>>>` )
 
-Diese Operatoren werden sehr selten verwendet. Um sie zu verstehen, müssen wir uns mit der Darstellung von Zahlen auf niedriger Ebene befassen, und es wäre nicht optimal, dies jetzt zu tun, zumal wir sie nicht so schnell brauchen. Wenn du neugierig bist, kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen. Es wäre praktischer, dies zu tun, wenn ein wirklicher Bedarf entsteht.
-
-## An Ort und Stelle ändern
-
-Wir müssen oft einen Operator auf eine Variable anwenden und das neue Ergebnis in derselben Variablen speichern.
-
-Zum Beispiel:
-
-```js
-let n = 2;
-n = n + 5;
-n = n * 2;
-```
-
-Diese Notation kann mit den Operatoren `+=` und `*=` gekürzt werden:
-
-```js run
-let n = 2;
-n += 5; // jetzt ist n = 7 (gleich wie n = n + 5)
-n *= 2; // jetzt ist n = 14 (gleich wien = n * 2)
-
-alert( n ); // 14
-```
-
-Kurz, Operatoren für "ändern und zuweisen" gibt es für alle arithmetischen und bitweisen Operatoren: `/=`, `-=`, usw.
-
-Solche Operatoren haben die gleiche Priorität wie eine normale Zuweisung und werden daher nach den meisten anderen Berechnungen ausgeführt:
-
-```js run
-let n = 2;
-
-n *= 3 + 5;
-
-alert( n ); // 16  (rechter Teil wird zuerst ausgewertet, gleich wie n *= 8)
-```
+Diese Operatoren werden sehr selten verwendet, wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da die Webentwicklung kaum Gebrauch von ihnen macht, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
 
 ## Komma
 
