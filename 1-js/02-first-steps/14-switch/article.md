@@ -1,14 +1,14 @@
-# The "switch" statement
+# Die "switch" Anweisung
 
-A `switch` statement can replace multiple `if` checks.
+Eine `switch` Anweisung kann mehrere `if` Prüfungen ersetzen.
 
-It gives a more descriptive way to compare a value with multiple variants.
+Es bietet eine anschaulichere Möglichkeit, einen Wert mit mehreren Varianten zu vergleichen.
 
-## The syntax
+## Der Syntax
 
-The `switch` has one or more `case` blocks and an optional default.
+Die `switch` Anweisung hat eine oder mehrere `case` Blöcke und einen optionalen default-Block.
 
-It looks like this:
+Es sieht wie folgt aus:
 
 ```js no-beautify
 switch(x) {
@@ -26,71 +26,71 @@ switch(x) {
 }
 ```
 
-- The value of `x` is checked for a strict equality to the value from the first `case` (that is, `value1`) then to the second (`value2`) and so on.
-- If the equality is found, `switch` starts to execute the code starting from the corresponding `case`, until the nearest `break` (or until the end of `switch`).
-- If no case is matched then the `default` code is executed (if it exists).
+- Der Wert von `x` wird auf eine strikte Gleichheit mit dem Wert aus dem ersten `case` geprüft. (das ist, `value1`) dann mit dem zweiten (`value2`) und so weiter.
+- Wenn eine Übereinstimmung gefunden wurde, führt `switch` den Code, ausgehend vom entsprechenden `case`, bis zum nächsten  `break` aus (oder bis zum Ende der `switch` Anweisung).
+- Wenn kein `case` zutrifft, wird der Code im `default` Block ausgeführt (falls dieser existiert).
 
-## An example
+## Ein Beispiel
 
-An example of `switch` (the executed code is highlighted):
-
-```js run
-let a = 2 + 2;
-
-switch (a) {
-  case 3:
-    alert( 'Too small' );
-    break;
-*!*
-  case 4:
-    alert( 'Exactly!' );
-    break;
-*/!*
-  case 5:
-    alert( 'Too large' );
-    break;
-  default:
-    alert( "I don't know such values" );
-}
-```
-
-Here the `switch` starts to compare `a` from the first `case` variant that is `3`. The match fails.
-
-Then `4`. That's a match, so the execution starts from `case 4` until the nearest `break`.
-
-**If there is no `break` then the execution continues with the next `case` without any checks.**
-
-An example without `break`:
+Ein Beispiel der `switch` Anweisung (der ausgeführte Code ist hervorgehoben):
 
 ```js run
 let a = 2 + 2;
 
 switch (a) {
   case 3:
-    alert( 'Too small' );
+    alert( 'Zu klein' );
+    break;
 *!*
   case 4:
-    alert( 'Exactly!' );
+    alert( 'Exakt!' );
+    break;
+*/!*
   case 5:
-    alert( 'Too big' );
+    alert( 'Zu gross' );
+    break;
   default:
-    alert( "I don't know such values" );
+    alert( "Ich kenne keine solchen Werte" );
+}
+```
+
+`switch` beginnt `a` mit der ersten `case` Alternative, welche `3` ist, zu vergleichen. Der Vergleich schlägt fehl.
+
+Dann wird mit `4` verglichen. Übereinstimmung. Der Code zwischen `case 4` bis zum nächsten `break` wird ausgeführt.
+
+**Wenn es keinen `break` gibt, wird die Ausführung mit dem nächsten `case`, ohne jegliche Überprüfung, fortgesetzt.**
+
+Ein Beispiel ohne `break`:
+
+```js run
+let a = 2 + 2;
+
+switch (a) {
+  case 3:
+    alert( 'Zu klein' );
+*!*
+  case 4:
+    alert( 'Exakt!' );
+  case 5:
+    alert( 'Zu gross' );
+  default:
+    alert( "Ich kenne keine solchen Werte" );
 */!*
 }
 ```
 
-In the example above we'll see sequential execution of three `alert`s:
+Im obigen Beispiel sehen wir die sequentielle Ausführung von drei `alert`s:
 
 ```js
-alert( 'Exactly!' );
-alert( 'Too big' );
-alert( "I don't know such values" );
+alert( 'Exakt!' );
+alert( 'Zu gross' );
+alert( "Ich kenne keine solchen Werte" );
 ```
 
-````smart header="Any expression can be a `switch/case` argument"
-Both `switch` and `case` allow arbitrary expressions.
+````smart header="Jeder Ausdruck kann ein `switch/case` Argument sein"
+`switch` und `case` erlauben willkürliche Ausdrücke.
 
-For example:
+Zum Beispiel:
 
 ```js run
 let a = "1";
@@ -99,41 +99,41 @@ let b = 0;
 switch (+a) {
 *!*
   case b + 1:
-    alert("this runs, because +a is 1, exactly equals b+1");
+    alert("Das funktioniert, weil +a entspricht 1, und darum genau gleich wie b+1 ist");
     break;
 */!*
 
   default:
-    alert("this doesn't run");
+    alert("Wird nicht durchlaufen");
 }
 ```
-Here `+a` gives `1`, that's compared with `b + 1` in `case`, and the corresponding code is executed.
+Hier ergibt `+a` den Wert `1`, welcher im `case` mit `b + 1` verglichen wird, und der entsprechende Code ausgeführt wird.
 ````
 
-## Grouping of "case"
+## Grupieren von "case"
 
-Several variants of `case` which share the same code can be grouped.
+Mehrere Varianten von `case`, die den gleichen Code teilen, können gruppiert werden.
 
-For example, if we want the same code to run for `case 3` and `case 5`:
+Wenn wir zum Beispiel denselben Code für `case 3` und `case 5` ausführen wollen:
 
 ```js run no-beautify
 let a = 3;
 
 switch (a) {
   case 4:
-    alert('Right!');
+    alert('Richtig!');
     break;
 
 *!*
   case 3: // (*) grouped two cases
   case 5:
-    alert('Wrong!');
-    alert("Why don't you take a math class?");
+    alert('Falsch!');
+    alert("Warum besuchst du nicht einen Mathekurs?");
     break;
 */!*
 
   default:
-    alert('The result is strange. Really.');
+    alert('Das Result ist komisch. Wirklich.');
 }
 ```
 
