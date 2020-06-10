@@ -1,14 +1,14 @@
 # Die "switch" Anweisung
 
-Eine `switch` Anweisung kann mehrere `if` Prüfungen ersetzen.
+Eine `switch` Anweisung kann mehrere `if` Anweisungen ersetzen.
 
-Es bietet eine anschaulichere Möglichkeit, einen Wert mit mehreren Varianten zu vergleichen.
+Sie bietet eine anschauliche Möglichkeit, einen Wert mit mehreren Varianten zu vergleichen.
 
-## Der Syntax
+## Die Syntax
 
-Die `switch` Anweisung hat eine oder mehrere `case` Blöcke und einen optionalen default-Block.
+Die `switch` Anweisung hat eine oder mehrere `case` Marken und eine optionale default Marke.
 
-Es sieht wie folgt aus:
+Das sieht wie folgt aus:
 
 ```js no-beautify
 switch(x) {
@@ -26,7 +26,7 @@ switch(x) {
 }
 ```
 
-- Der Wert von `x` wird auf eine strikte Gleichheit mit dem Wert aus dem ersten `case` geprüft. (das ist, `value1`) dann mit dem zweiten (`value2`) und so weiter.
+- Der Wert von `x` wird auf strikte Gleichheit mit dem Wert aus dem ersten `case` verglichen, (das ist `value1`) dann mit dem zweiten (`value2`) und so weiter.
 - Wenn eine Übereinstimmung gefunden wurde, führt `switch` den Code, ausgehend vom entsprechenden `case`, bis zum nächsten  `break` aus (oder bis zum Ende der `switch` Anweisung).
 - Wenn kein `case` zutrifft, wird der Code im `default` Block ausgeführt (falls dieser existiert).
 
@@ -88,7 +88,7 @@ alert( "Ich kenne keine solchen Werte" );
 ```
 
 ````smart header="Jeder Ausdruck kann ein `switch/case` Argument sein"
-`switch` und `case` erlauben willkürliche Ausdrücke.
+`switch` und `case` erlauben beliebige Ausdrücke.
 
 Zum Beispiel:
 
@@ -99,7 +99,7 @@ let b = 0;
 switch (+a) {
 *!*
   case b + 1:
-    alert("Das funktioniert, weil +a entspricht 1, und darum genau gleich wie b+1 ist");
+    alert("Das funktioniert, weil +a gleich 1 ist, und damit genau gleich wie b+1");
     break;
 */!*
 
@@ -107,7 +107,7 @@ switch (+a) {
     alert("Wird nicht durchlaufen");
 }
 ```
-Hier ergibt `+a` den Wert `1`, welcher im `case` mit `b + 1` verglichen wird, und der entsprechende Code ausgeführt wird.
+Hier ergibt `+a` den Wert `1`, welcher im `case` mit `b + 1` verglichen wird, worauf der entsprechende Code ausgeführt wird.
 ````
 
 ## Grupieren von "case"
@@ -125,7 +125,7 @@ switch (a) {
     break;
 
 *!*
-  case 3: // (*) grouped two cases
+  case 3: // (*) zwei Fälle gruppiert
   case 5:
     alert('Falsch!');
     alert("Warum besuchst du nicht einen Mathekurs?");
@@ -137,22 +137,22 @@ switch (a) {
 }
 ```
 
-Now both `3` and `5` show the same message.
+Nun zeigen `3` und `5` die selbe Nachricht.
 
-The ability to "group" cases is a side-effect of how `switch/case` works without `break`. Here the execution of `case 3` starts from the line `(*)` and goes through `case 5`, because there's no `break`.
+Die Fähigkeit cases zu "grupieren" ist ein Seiteneffekt davon, wie `switch/case` ohne `break` funktioniert. Hier beginnt die Ausführung von `case 3` in der Zeile `(*)` und durchläuft `case 5`, weil dosich dort kein `break` befindet.
 
-## Type matters
+## Der Typ spielt eine Rolle
 
-Let's emphasize that the equality check is always strict. The values must be of the same type to match.
+Wichtig ist, dass die Gleichheitsprüfung immer streng ist. Die Werte müssen vom gleichen Typ sein, damit sie übereinstimmen.
 
-For example, let's consider the code:
+Betrachten wir zum Beispiel folgenden Code:
 
 ```js run
-let arg = prompt("Enter a value?");
+let arg = prompt("Wert eingeben?");
 switch (arg) {
   case '0':
   case '1':
-    alert( 'One or zero' );
+    alert( 'Eins oder null' );
     break;
 
   case '2':
@@ -160,13 +160,13 @@ switch (arg) {
     break;
 
   case 3:
-    alert( 'Never executes!' );
+    alert( 'Wird niemals ausgeführt!' );
     break;
   default:
-    alert( 'An unknown value' );
+    alert( 'Ein unbekannter Wert' );
 }
 ```
 
-1. For `0`, `1`, the first `alert` runs.
-2. For `2` the second `alert` runs.
-3. But for `3`, the result of the `prompt` is a string `"3"`, which is not strictly equal `===` to the number `3`. So we've got a dead code in `case 3`! The `default` variant will execute.
+1. Für `0`, `1`, wird der erste `alert` ausgeführt.
+2. Für `2` wird der zweite `alert` ausgeführt.
+3. Aber für `3`, ist das Resultat des `prompt` ein String `"3"`, welcher nicht streng gleich `===` der Zahl `3` entspricht. Also haben wir toten Code in `case 3`! Die `default` Variante wird ausgeführt.
