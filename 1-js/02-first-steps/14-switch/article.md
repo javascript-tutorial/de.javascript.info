@@ -169,4 +169,4 @@ switch (arg) {
 
 1. Für `0`, `1`, wird der erste `alert` ausgeführt.
 2. Für `2` wird der zweite `alert` ausgeführt.
-3. Aber für `3`, ist das Resultat des `prompt` ein String `"3"`, welcher nicht streng gleich `===` der Zahl `3` entspricht. Also haben wir toten Code in `case 3`! Die `default` Variante wird ausgeführt.
+3. Aber für `3`, ist das Resultat des `prompt` ein String `"3"`, welcher nicht streng gleich `===` der Zahl `3` ist. Also haben wir ungenutzten Code in `case 3`! Die `default` Variante wird ausgeführt.
