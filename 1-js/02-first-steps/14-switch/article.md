@@ -133,7 +133,7 @@ switch (a) {
 */!*
 
   default:
-    alert('Das Result ist komisch. Wirklich.');
+    alert('Das Resultat ist komisch. Wirklich.');
 }
 ```
 
