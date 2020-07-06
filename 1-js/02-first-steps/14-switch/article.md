@@ -110,7 +110,7 @@ switch (+a) {
 Hier ergibt `+a` den Wert `1`, welcher im `case` mit `b + 1` verglichen wird, worauf der entsprechende Code ausgeführt wird.
 ````
 
-## Grupieren von "case"
+## Gruppieren von "case"
 
 Mehrere Varianten von `case`, die den gleichen Code teilen, können gruppiert werden.
 
