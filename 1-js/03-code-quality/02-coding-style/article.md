@@ -6,7 +6,7 @@ That is actually the art of programming -- to take a complex task and code it in
 
 ## Syntax
 
-Here is a cheat sheet with some suggested rules (see below for more details):
+Here is a cheat sheet with some suggested rules (siehe unten für mehr Details):
 
 ![](code-style.svg)
 <!--
