@@ -1,12 +1,12 @@
 # Coding Style
 
-Our code must be as clean and easy to read as possible.
+Unser Code muss so sauber und einfach zu lesen sein wie möglich.
 
-That is actually the art of programming -- to take a complex task and code it in a way that is both correct and human-readable. A good code style greatly assists in that.  
+Das ist eigentlich die Kunst des Programierens -- eine komplexe Aufgabe übernehmen, und sie so in Code umzusetzen, dass sie sowohl richtig, als auch menschlich-lesbar ist. Einen guten Codestil kann sehr viel dazu beitragen.  
 
 ## Syntax
 
-Here is a cheat sheet with some suggested rules (siehe unten für mehr Details):
+Hier ist ein Spickzettel mit einge Regeln (siehe unten für mehr Details):
 
 ![](code-style.svg)
 <!--
@@ -34,21 +34,21 @@ if (n < 0) {
 
 -->
 
-Now let's discuss the rules and reasons for them in detail.
+Nun lasst uns die Regeln ins Detail diskutieren.
 
-```warn header="There are no \"you must\" rules"
-Nothing is set in stone here. These are style preferences, not religious dogmas.
+```warn header="Es gibt keine \"du musst\" Regeln"
+Hier ist nichts in Stein gemeißelt. Diese sind nur Stilvorlieben, keine religiösen Vorschriften.
 ```
 
-### Curly Braces
+### Geschweifte Klammern
 
 In most JavaScript projects curly braces are written in "Egyptian" style with the opening brace on the same line as the corresponding keyword -- not on a new line. There should also be a space before the opening bracket, like this:
 
 ```js
-if (condition) {
-  // do this
-  // ...and that
-  // ...and that
+if (bedingung) {
+  // mach dies
+  // ...und das
+  // ...und das
 }
 ```
 
@@ -56,33 +56,33 @@ A single-line construct, such as `if (condition) doSomething()`, is an important
 
 Here are the annotated variants so you can judge their readability for yourself:
 
-1. 😠 Beginners sometimes do that. Bad! Curly braces are not needed:
+1. 😠 Das machen die Anfänger manchmal. Schlecht! Geschweifte Klammern werden nicht benötigt:
     ```js
     if (n < 0) *!*{*/!*alert(`Power ${n} is not supported`);*!*}*/!*
     ```
-2. 😠 Split to a separate line without braces. Never do that, easy to make an error when adding new lines:
+2. 😠 Aufteilen auf eine weitere Zeile ohne Klammern. Sollte niemals gemacht werden. Beim Hinzufügen neuer Zeilen können sehr einfach Fehler passieren:
     ```js
     if (n < 0)
       alert(`Power ${n} is not supported`);
     ```
-3. 😏 One line without braces - acceptable, if it's short:
+3. 😏 Eine Zeile ohne Klammern - akzeptabel, wenn es kurz ist:
     ```js
     if (n < 0) alert(`Power ${n} is not supported`);
     ```
-4. 😃 The best variant:
+4. 😃 Die beste Variante:
     ```js
     if (n < 0) {
       alert(`Power ${n} is not supported`);
     }
     ```
 
-For a very brief code, one line is allowed, e.g. `if (cond) return null`. But a code block (the last variant) is usually more readable.
+Eine Zeile ist erlaubt, wenn es sich um eine kurze Codezeile handelt, z. B. `if (bedingung) return null`. Aber einen Codeblock (die letzte Variante) ist meistens besser lesbar.
 
-### Line Length
+### Zeilenlänge
 
-No one likes to read a long horizontal line of code. It's best practice to split them.
+Niemand liest gern lange, wagerechte Codezeilen. Die bewährte Vorgehensweise ist sie aufzuteilen.
 
-For example:
+Zum Beispiel:
 ```js
 // backtick quotes ` allow to split the string into multiple lines
 let str = `
@@ -92,7 +92,7 @@ let str = `
 `;
 ```
 
-And, for `if` statements:
+Und, für `if` -Anweisungen:
 
 ```js
 if (
@@ -104,13 +104,13 @@ if (
 }
 ```
 
-The maximum line length should be agreed upon at the team-level. It's usually 80 or 120 characters.
+Man sollte sich im Team auf eine maximale Zeilenlänge einigen. Sie beträgt normalerweise 80 oder 120 Zeichen.
 
-### Indents
+### Einrückungen
 
-There are two types of indents:
+Es gibt zwei Arten von Einrückungen:
 
-- **Horizontal indents: 2 or 4 spaces.**
+- **Waagerechte Einrückungen: 2 oder 4 Leerzeichen.**
 
     A horizontal indentation is made using either 2 or 4 spaces or the horizontal tab symbol (key `key:Tab`). Which one to choose is an old holy war. Spaces are more common nowadays.
 
