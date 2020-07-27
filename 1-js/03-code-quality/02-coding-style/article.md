@@ -65,7 +65,7 @@ Here are the annotated variants so you can judge their readability for yourself:
     if (n < 0)
       alert(`Power ${n} is not supported`);
     ```
-3. 😏 Eine Zeile ohne Klammern - akzeptabel, wenn es kurz ist:
+3. 😏 Eine Zeile ohne Klammern - akzeptabel, wenn sie kurz ist:
     ```js
     if (n < 0) alert(`Power ${n} is not supported`);
     ```
