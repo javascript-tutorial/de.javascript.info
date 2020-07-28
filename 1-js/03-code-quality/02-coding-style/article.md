@@ -341,7 +341,7 @@ Also certain IDEs have built-in linting, which is convenient but not as customiz
 
 ## Zusammenfassung
 
-Alle Syntaxregeln die in diesem Kapitel beschrieben wurden (und in den verlinkten Kapiteln), haben das Ziel, die Lesbarkeit deines Codes zu verbessern. Sie sind alle umstritten.
+Alle Syntaxregeln die in diesem Kapitel (und in den verlinkten Kapiteln) beschrieben wurden, haben das Ziel, die Lesbarkeit deines Codes zu verbessern. Sie sind alle umstritten.
 
 Wenn wir über "besseren" Code nachdenken, sollten wir uns folgende Fragen stellen: "Wie machen wir unser Code besser lesbar und leichter zu verstehen?" und "Was hilft uns, Fehler zu vermeiden?" Das sind die wichtigsten Sachen die man im Hinterkopf behalten muss wenn man sich für einen Codestil entscheidet.
 
