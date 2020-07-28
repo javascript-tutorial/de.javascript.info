@@ -159,7 +159,7 @@ Wenn du ein Erfahrener JavaScript Programierer bist, kannst du einen "no-semicol
 
 Versuche es zu vermeiden, Code auf zu viele Ebenen zu verschachteln.
 
-Zum Beispiel: in eine Schleife ist es manchmal besser die [`continue`](info:while-for#continue) Anweisung zu verwenden, um weitere Verschachtelung zu vermeiden.
+Zum Beispiel ist es in einer Schleife manchmal besser die [`continue`](info:while-for#continue) Anweisung zu verwenden, um weitere Verschachtelung zu vermeiden.
 
 Zum Beispiel: anstatt einer verschachtelten `if` Anweisung wie hier:
 
