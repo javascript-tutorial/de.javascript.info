@@ -58,21 +58,21 @@ Here are the annotated variants so you can judge their readability for yourself:
 
 1. 😠 Das machen die Anfänger manchmal. Schlecht! Geschweifte Klammern werden nicht benötigt:
     ```js
-    if (n < 0) *!*{*/!*alert(`Power ${n} is not supported`);*!*}*/!*
+    if (n < 0) *!*{*/!*alert(`Exponent ${n} wird nicht unterstützt`);*!*}*/!*
     ```
 2. 😠 Aufteilen auf eine weitere Zeile ohne Klammern. Sollte niemals gemacht werden. Beim Hinzufügen neuer Zeilen können sehr einfach Fehler passieren:
     ```js
     if (n < 0)
-      alert(`Power ${n} is not supported`);
+      alert(`Exponent ${n} wird nicht unterstützt`);
     ```
 3. 😏 Eine Zeile ohne Klammern - akzeptabel, wenn sie kurz ist:
     ```js
-    if (n < 0) alert(`Power ${n} is not supported`);
+    if (n < 0) alert(`Exponent ${n} wird nicht unterstützt`);
     ```
 4. 😃 Die beste Variante:
     ```js
     if (n < 0) {
-      alert(`Power ${n} is not supported`);
+      alert(`Exponent ${n} wird nicht unterstützt`);
     }
     ```
 
@@ -147,11 +147,11 @@ Es gibt zwei Arten von Einrückungen:
 
     Insert an extra newline where it helps to make the code more readable. There should not be more than nine lines of code without a vertical indentation.
 
-### Semicolons
+### Semikolons
 
-A semicolon should be present after each statement, even if it could possibly be skipped.
+Ein Semikolon sollte nach jeder Anweisung gesetzt werden, auch wenn es nicht unbedingt notwendig ist.
 
-There are languages where a semicolon is truly optional and it is rarely used. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors. See more about that in the chapter <info:structure#semicolon>.
+Es gibt Programiersprachen wo Semikonolns nicht zwingend erforderlich sind und deswegen kaum genutzt werden. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors. See more about that in the chapter <info:structure#semicolon>.
 
 If you're an experienced JavaScript programmer, you may choose a no-semicolon code style like [StandardJS](https://standardjs.com/). Otherwise, it's best to use semicolons to avoid possible pitfalls. The majority of developers put semicolons.
 
@@ -189,7 +189,7 @@ Option 1:
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
+    alert("Negatives 'n' nicht unterstützt");
   } else {
     let result = 1;
 
@@ -207,7 +207,7 @@ Option 2:
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
+    alert("Negatives 'n' nicht unterstützt");
     return;
   }
 
@@ -223,14 +223,14 @@ function pow(x, n) {
 
 The second one is more readable because the "special case" of `n < 0` is handled early on. Once the check is done we can move on to the "main" code flow without the need for additional nesting.
 
-## Function Placement
+## Methodenplatzierung
 
-If you are writing several "helper" functions and the code that uses them, there are three ways to organize the functions.
+Wenn du mehrere "Hilfsmethoden" schreibst und auch weiterer Code der diese Methoden benutzt, dann gibt es drei Möglichkeiten, diese Mehtoden zu gliedern.
 
-1. Declare the functions *above* the code that uses them:
+1. Methoden werden *über* dem Code deklariert, der sie benutzt:
 
     ```js
-    // *!*function declarations*/!*
+    // *!*Methodendeklarationen*/!*
     function createElement() {
       ...
     }
@@ -243,20 +243,20 @@ If you are writing several "helper" functions and the code that uses them, there
       ...
     }
 
-    // *!*the code which uses them*/!*
+    // *!*der Code der die Methoden benutzt*/!*
     let elem = createElement();
     setHandler(elem);
     walkAround();
     ```
-2. Code first, then functions
+2. Code zuerst, danach die Methoden
 
     ```js
-    // *!*the code which uses the functions*/!*
+    // *!*der Code der die Methoden benutzt*/!*
     let elem = createElement();
     setHandler(elem);
     walkAround();
 
-    // --- *!*helper functions*/!* ---
+    // --- *!*Hilfsmethoden*/!* ---
     function createElement() {
       ...
     }
@@ -269,11 +269,11 @@ If you are writing several "helper" functions and the code that uses them, there
       ...
     }
     ```
-3. Mixed: a function is declared where it's first used.
+3. Gemischt: eine Methode wird dort deklariert, wo sie zuerst benutzt wird.
 
-Most of time, the second variant is preferred.
+Meistens wird die zweite Variante bevorzugt.
 
-That's because when reading code, we first want to know *what it does*. If the code goes first, then it becomes clear from the start. Then, maybe we won't need to read the functions at all, especially if their names are descriptive of what they actually do.
+Das liegt daran, dass man beim Lesen von Code zuerst wissen möchte *was er tut*. Wenn der Code zuerst kommt, dann ist es von vornherein klar. Vor allem wenn die Namen der Methoden sehr aussagekräftig sind, kann es vielleicht sein, dass wir die Methoden gar nicht mehr lesen müssen.
 
 ## Style Guides
 
@@ -283,15 +283,15 @@ When all members of a team use the same style guide, the code looks uniform, reg
 
 Of course, a team can always write their own style guide, but usually there's no need to. There are many existing guides to choose from.
 
-Some popular choices:
+Ein paar bekannte Beispiele:
 
 - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [Idiomatic.JS](https://github.com/rwaldron/idiomatic.js)
 - [StandardJS](https://standardjs.com/)
-- (plus many more)
+- (und viele andere)
 
-If you're a novice developer, start with the cheat sheet at the beginning of this chapter. Then you can browse other style guides to pick up more ideas and decide which one you like best.
+Wenn du ein Neuling bist, starte mit dem Spickzettel am Anfang dieses Kapitels. Danach kannst du dich in andere Style Guides einlesen um weitere Ideen zu sammeln und selbst entscheiden welches du am besten findest.
 
 ## Automated Linters
 
@@ -316,7 +316,7 @@ For instance, for ESLint you should do the following:
 3. Create a config file named `.eslintrc` in the root of your JavaScript project (in the folder that contains all your files).
 4. Install/enable the plugin for your editor that integrates with ESLint. The majority of editors have one.
 
-Here's an example of an `.eslintrc` file:
+Hier ist ein Beispiel einer `.eslintrc` Datei:
 
 ```js
 {
@@ -339,10 +339,10 @@ It is also possible to download style rule sets from the web and extend them ins
 
 Also certain IDEs have built-in linting, which is convenient but not as customizable as ESLint.
 
-## Summary
+## Zusammenfassung
 
-All syntax rules described in this chapter (and in the style guides referenced) aim to increase the readability of your code. All of them are debatable.
+Alle Syntaxregeln die in diesem Kapitel beschrieben wurden (und in den verlinkten Kapiteln), haben das Ziel, die Lesbarkeit deines Codes zu verbessern. Sie sind alle umstritten.
 
-When we think about writing "better" code, the questions we should ask ourselves are: "What makes the code more readable and easier to understand?" and "What can help us avoid errors?" These are the main things to keep in mind when choosing and debating code styles.
+Wenn wir über "besseren" Code nachdenken, sollten wir uns folgende Fragen stellen: "Wie machen wir unser Code besser lesbar und leichter zu verstehen?" und "Was hilft uns, Fehler zu vermeiden?" Das sind die wichtigsten Sachen die man im Hinterkopf behalten muss wenn man sich für einen Codestil entscheidet.
 
-Reading popular style guides will allow you to keep up to date with the latest ideas about code style trends and best practices.
+Das Lesen von bekannten Style Guides hilft uns auf den neusten Stand zu bleiben, was Trends und bewährte Vorgehensweisen angeht.
