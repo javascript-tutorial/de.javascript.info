@@ -112,15 +112,15 @@ Es gibt zwei Arten von Einrückungen:
 
 - **Waagerechte Einrückungen: 2 oder 4 Leerzeichen.**
 
-    A horizontal indentation is made using either 2 or 4 spaces or the horizontal tab symbol (key `key:Tab`). Which one to choose is an old holy war. Spaces are more common nowadays.
+    Eine waagerechte Einrückung besteht aus entweder 2 oder 4 Leerzeichen oder das waagerechte Tabsymbol (`key:Tab` Taste). Welches man benutzten soll ist eine alte Debatte. Leerzeichen werden heutzutage häufiger benutzt.
 
-    One advantage of spaces over tabs is that spaces allow more flexible configurations of indents than the tab symbol.
+    Ein Vorteil von Leerzeichen ist, dass sie eine flexiblere Benutzung von Einrückungen zulassen, als die Tab-Taste.
 
-    For instance, we can align the arguments with the opening bracket, like this:
+    Zum Beispiel, können wir die Parametern untereinander, an dem "Klammer-auf-Symbol" ausrichten:
 
     ```js no-beautify
     show(parameters,
-         aligned, // 5 spaces padding at the left  
+         aligned, // 5 Leerzeichen links
          one,
          after,
          another
@@ -129,9 +129,9 @@ Es gibt zwei Arten von Einrückungen:
     }
     ```
 
-- **Vertical indents: empty lines for splitting code into logical blocks.**
+- **Senkrechte Einrückungen: leere Zeilen um den Code in logisch zusammenhängende Blöcke zu unterteilen.**
 
-    Even a single function can often be divided into logical blocks. In the example below, the initialization of variables, the main loop and returning the result are split vertically:
+    Sogar eine einzige Methode kann in mehrere logische Blöcke unterteilt werden. In dem unten stehenden Beispiel werden die Initialisierung der Variable, die for-Schleife und das return-Statement durch leere Zeilen senkrecht voneinander getrennt.
 
     ```js
     function pow(x, n) {
@@ -145,7 +145,7 @@ Es gibt zwei Arten von Einrückungen:
     }
     ```
 
-    Insert an extra newline where it helps to make the code more readable. There should not be more than nine lines of code without a vertical indentation.
+    Füge eine leere Zeile dort hinzu, wo es hilft, die Lesbarkeit des Codes zu verbessern. Es sollten nicht mehr als neun Zeilen Code, ohne senkrechte Einrückung, geschrieben werden.
 
 ### Semikolons
 
@@ -153,13 +153,13 @@ Ein Semikolon sollte nach jeder Anweisung gesetzt werden, auch wenn es nicht unb
 
 Es gibt Programiersprachen wo Semikonolns nicht zwingend erforderlich sind und deswegen kaum genutzt werden. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors. See more about that in the chapter <info:structure#semicolon>.
 
-If you're an experienced JavaScript programmer, you may choose a no-semicolon code style like [StandardJS](https://standardjs.com/). Otherwise, it's best to use semicolons to avoid possible pitfalls. The majority of developers put semicolons.
+Wenn du ein Erfahrener JavaScript Programierer bist, kannst du einen "no-semicolon-style" wie [StandardJS](https://standardjs.com/) verwenden. Ansonsten ist es besser Semikolons zu benutzen, um mögliche Fallen zu vermeiden. Die meisten Entwickler benutzen Semikolons.
 
-### Nesting Levels
+### Verschachtelungsebenen
 
-Try to avoid nesting code too many levels deep.
+Versuche es zu vermeiden, Code auf zu viele Ebenen zu verschachteln.
 
-For example, in the loop, it's sometimes a good idea to use the [`continue`](info:while-for#continue) directive to avoid extra nesting.
+Zum Beispiel: in eine Schleife ist es manchmal besser die [`continue`](info:while-for#continue) Anweisung zu verwenden, um weitere Verschachtelung zu vermeiden.
 
 For example, instead of adding a nested `if` conditional like this:
 
