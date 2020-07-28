@@ -161,28 +161,28 @@ Versuche es zu vermeiden, Code auf zu viele Ebenen zu verschachteln.
 
 Zum Beispiel: in eine Schleife ist es manchmal besser die [`continue`](info:while-for#continue) Anweisung zu verwenden, um weitere Verschachtelung zu vermeiden.
 
-For example, instead of adding a nested `if` conditional like this:
+Zum Beispiel: anstatt einer verschachtelten `if` Anweisung wie hier:
 
 ```js
 for (let i = 0; i < 10; i++) {
   if (cond) {
-    ... // <- one more nesting level
+    ... // <- eine weitere Verschachtelungsebene
   }
 }
 ```
 
-We can write:
+Können wir lieber das machen:
 
 ```js
 for (let i = 0; i < 10; i++) {
   if (!cond) *!*continue*/!*;
-  ...  // <- no extra nesting level
+  ...  // <- keine Weitere Verschachtelungsebene
 }
 ```
 
-A similar thing can be done with `if/else` and `return`.
+Änliches kann man mit `if/else` und `return` machen.
 
-For example, two constructs below are identical.
+Zum Beispiel: die zwei Konstrukte unten sind identisch.
 
 Option 1:
 
@@ -221,7 +221,7 @@ function pow(x, n) {
 }
 ```
 
-The second one is more readable because the "special case" of `n < 0` is handled early on. Once the check is done we can move on to the "main" code flow without the need for additional nesting.
+Die zweite Variante ist besser lesbar, denn der "Spezialfall" `n < 0` wird gleich am Anfang behandelt. Sobald die Überprüfung fertig ist, können wir mit dem "Hauptteil" des Codes weitermachen.
 
 ## Methodenplatzierung
 
