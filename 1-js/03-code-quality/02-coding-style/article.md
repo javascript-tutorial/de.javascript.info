@@ -84,11 +84,11 @@ Niemand liest gern lange, wagerechte Codezeilen. Die bewährte Vorgehensweise is
 
 Zum Beispiel:
 ```js
-// backtick quotes ` allow to split the string into multiple lines
+// Die Verwendung von Backticks ` erlauben uns die Aufteilung eines Strings auf mehrere Zeilen
 let str = `
-  ECMA International's TC39 is a group of JavaScript developers,
-  implementers, academics, and more, collaborating with the community
-  to maintain and evolve the definition of JavaScript.
+  ECMA International's TC39 ist eine Gruppe von JavaScript Entwickler,
+  Implementierer, Akademiker, und mehr, die mit der Community zusammenarbeitet, 
+  um die Definition von JavaScript aufrecht zu halten und weiterzuentwickeln.
 `;
 ```
 
