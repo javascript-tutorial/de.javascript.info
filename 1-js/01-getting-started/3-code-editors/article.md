@@ -1,46 +1,46 @@
-# Code editors
+# Code-Editoren
 
-A code editor is the place where programmers spend most of their time.
+Der Code-Editor ist das Werkzeug, mit dem Programmierer die meiste Zeit verbringen. 
 
-There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+Es gibt zwei Arten von Code-Editoren: IDEs und Quelltext-Editoren. Viele Programmierer nutzen je ein Exemplar jedes Typs.
 
 ## IDE
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a "whole project." As the name suggests, it's not just an editor, but a full-scale "development environment."
+Der Begriff [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) bezieht sich auf einen mächtigen Editor mit vielen Nutzungsmöglichkeiten, der im Normalfall alle Arbeitsbereiche des Projekts abdeckt. Wie der Name schon andeutet, handelt es sich bei IDEs nicht nur um einen reinen Editor, sondern um eine komplette Entwicklungsumgebung-
 
-An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like [git](https://git-scm.com/)), a testing environment, and other "project-level" stuff.
+Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), erlaubt die Navigation zwischen Dateien, stellt eine Autovervollständigung für das gesamte Projekt (und nicht nur für die geöffnete Datei) bereit und ist mit einem Versionsverwaltungssystem (wie z.B.: [git](https://git-scm.com/)), einer Test-Umgebung und anderen Projektrelevanten Bereichen verknüpft.
 
-If you haven't selected an IDE yet, consider the following options:
+Falls du für dich noch keine IDE ausgesucht hast, sind die nachfolgenden Optionen empfehlenswert:
 
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [WebStorm](http://www.jetbrains.com/webstorm/) (cross-platform, paid).
+- [Visual Studio Code](https://code.visualstudio.com/) (Cross-Plattform, kostenlos).
+- [WebStorm](http://www.jetbrains.com/webstorm/) (Cross-Plattform, ksotenpflichtig).
 
-For Windows, there's also "Visual Studio", not to be confused with "Visual Studio Code". "Visual Studio" is a paid and mighty Windows-only editor, well-suited for the .NET platform. It's also good at JavaScript. There's also a free version [Visual Studio Community](https://www.visualstudio.com/vs/community/).
+Für Windows steht außerdem "Visual Studio" zur Verfügung, diese IDE sollte nicht mit "Visual Studio Code" verwechselt werden. "Visual Studio" ist ein kostenpflichtiger und umfangreicher Editor, der insbesondere für die Arbeit mit der .Net-Plattform geeignet ist. "Visual Studio" ist außerdem gut für Javascript geeignet. Eine kostenlose Version ist unter folgender Adresse verfügbar: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
-Many IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+Viele IDEs sind kostenpflichtig, stellen aber kostenlose Test-Versionen zur Verfügung. Die Kosten sind im Verhältnis zum Gehalt eines qualifizierten Programmierers vernachlässigbar, also such einfach die Plattform aus, die dir am besten passt.
 
-## Lightweight editors
+## Quelltext-Editoren
 
-"Lightweight editors" are not as powerful as IDEs, but they're fast, elegant and simple.
+Quelltext-Editoren, im englischen auch "lightweight editors", also leichtgewichtige Editoren genannt, sind nicht so mächtig wie IDEs, aber dafür sind sie schnell, eleganz und einfach in der Nutzung.
 
-They are mainly used to open and edit a file instantly.
+Sie werden hauptsächlich dafür genutzt, Dateien schnell zu öffnen und zu bearbeiten.
 
-The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.
+Der hauptsächliche Unterschied zwischen einem Quelltext-Editor und einer IDE liegt darin, dass die IDE auf der Projekt-Ebene arbeitet, sie lädt also viele relevante Dateien zu Programmstart, analysiert die Projektstruktur und so weiter. Ein Quelltext-Editor arbeitet weitaus schneller, wenn wir nur eine Datei brauchen.  
 
-In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there's no strict border between a lightweight editor and an IDE.
+In der Praxis verfügen auch viele Quelltext-Editoren über eine breite Auswahl an Plugins, darunter etwa Analyse-Werkzeuge für die Code-Syntax und Unterstützung zur Autovervollständigung, so dass sich eine klare Grenze zwischen IDEs und Quelltext-Editoren gar nicht ziehen lässt.    
 
-The following options deserve your attention:
+Die nachfolgenden Optionen sind gute Beispiele für Quelltext-Editoren
 
 - [Atom](https://atom.io/) (cross-platform, free).
 - [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
-- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) können ebenfalls sehr gut sein, wenn man damit umgehen kann.
 
-## Let's not argue
+## ABER: Die Auswahl des Editors ist keinen Streit wert.
 
-The editors in the lists above are those that either I or my friends whom I consider good developers have been using for a long time and are happy with.
+Die Editoren in der Liste wurden entweder von mir oder von Freunden ausgewählt, die ich für gute Entwickler halte und die seit langer Zeit erfolgreich mit den aufgeführten Editoren gearbeitet haben. 
 
-There are other great editors in our big world. Please choose the one you like the most.
+Aber es gibt natürlich auch andere Editoren in der großen Welt des Internets. Such dir einfach den Editor aus, mit dem du arbeiten möchtest. 
 
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+Die Wahl des Editors ist, wie bei jedem anderen Werkzeug, eine persönliche Vorliebe und hängt von deinem Projekt, deinen Arbeitsgewohnheiten und persönlichen Vorlieben ab.
