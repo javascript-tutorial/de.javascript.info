@@ -66,7 +66,11 @@ Mehr über das Arbeiten mit Zahlen erfahren wir in diesem Kapitel <info:number>.
 
 ## BigInt
 
+<<<<<<< HEAD
 In JavaScript kann der Typ "Zahl" keine ganzzahligen Werte darstellen, die größer als <code>(2<sup>53</sup>-1)</code> (das ist `9007199254740991`) oder kleiner als <code>-(-2<sup>53</sup>-1)</code> für Negative sind. Es handelt sich um eine technische Einschränkung, die durch ihre interne Darstellung bedingt ist.
+=======
+In JavaScript, the "number" type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives. It's a technical limitation caused by their internal representation.
+>>>>>>> fbf443e414097e5a3a41dd1273ef9a4a3230e72c
 
 Für die meisten Zwecke reicht das völlig aus, aber manchmal brauchen wir wirklich große Zahlen, z.B. für die Kryptographie oder Zeitstempel mit Mikrosekunden-Genauigkeit.
 

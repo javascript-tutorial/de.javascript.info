@@ -4,7 +4,11 @@ Da wir den Browser als unsere Demo-Umgebung verwenden, wollen wir einige Funktio
 
 ## alert
 
+<<<<<<< HEAD
 Diese haben wir bereits gesehen. Es zeigt eine Meldung an und wartet darauf, dass der Benutzer "OK" drückt.
+=======
+This one we've seen already. It shows a message and waits for the user to press "OK".
+>>>>>>> fbf443e414097e5a3a41dd1273ef9a4a3230e72c
 
 Zum Beispiel:
 
