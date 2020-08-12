@@ -281,7 +281,7 @@ Einen Gestaltungsleitfaden enthält allgemeine Regeln über die Art "wie man Cod
 
 Wenn alle Teammitglieder denselben Leitfaden folgen, dann ist der Code einheitlich, egal von wem er geschrieben wurde.
 
-Natürlich kann ein Team ein eigenes Leitfaden aufstelle, aber normalerweise ist das nicht nötig. Es gibt schon viele die man benutzen kann.
+Natürlich kann ein Team ein eigenes Leitfaden aufstellen, aber normalerweise ist das nicht nötig. Es gibt schon viele die man benutzen kann.
 
 Ein paar bekannte Beispiele:
 
