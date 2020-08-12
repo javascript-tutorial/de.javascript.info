@@ -60,7 +60,7 @@ Hier sind die kommentierten Varianten, sodass du die Lesbarkeit selbst beurteile
     ```js
     if (n < 0) *!*{*/!*alert(`Exponent ${n} wird nicht unterstützt`);*!*}*/!*
     ```
-2. 😠 Aufteilen auf eine weitere Zeile ohne Klammern. Sollte niemals gemacht werden. Beim Hinzufügen neuer Zeilen können sehr einfach Fehler passieren:
+2. 😠 Aufteilen auf zwei Zeilen ohne Klammern. Sollte niemals gemacht werden. Beim Hinzufügen neuer Zeilen können sehr schnell Fehler passieren:
     ```js
     if (n < 0)
       alert(`Exponent ${n} wird nicht unterstützt`);
@@ -76,7 +76,7 @@ Hier sind die kommentierten Varianten, sodass du die Lesbarkeit selbst beurteile
     }
     ```
 
-Eine Zeile ist erlaubt, wenn es sich um eine kurze Codezeile handelt, z. B. `if (bedingung) return null`. Aber einen Codeblock (die letzte Variante) ist meistens besser lesbar.
+Eine Zeile ist erlaubt, wenn es sich um eine kurze Codezeile handelt, z. B. `if (bedingung) return null`. Aber einen Codeblock (die letzte Variante), ist meistens besser lesbar.
 
 ### Zeilenlänge
 
@@ -151,7 +151,7 @@ Es gibt zwei Arten von Einrückungen:
 
 Ein Semikolon sollte nach jeder Anweisung gesetzt werden, auch wenn es nicht unbedingt notwendig ist.
 
-Es gibt Programiersprachen wo Semikonolns nicht zwingend erforderlich sind und deswegen kaum genutzt werden. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors. See more about that in the chapter <info:structure#semicolon>.
+Es gibt Programiersprachen wo Semikonolns nicht zwingend erforderlich sind und deswegen kaum genutzt werden. In JavaScript gibt es aber Fälle, wo einen Zeilenumbruch nicht automatisch wie einen Semikolon interpretiert wird. Dadurch ist unser Code Fehleranfällig. Siehe mehr dazu in dem Kapitel <info:structure#semicolon>.
 
 Wenn du ein Erfahrener JavaScript Programierer bist, kannst du einen "no-semicolon-style" wie [StandardJS](https://standardjs.com/) verwenden. Ansonsten ist es besser Semikolons zu benutzen, um mögliche Fallen zu vermeiden. Die meisten Entwickler benutzen Semikolons.
 
