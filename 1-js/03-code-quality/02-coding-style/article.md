@@ -42,7 +42,7 @@ Hier ist nichts in Stein gemeißelt. Diese sind nur Stilvorlieben, keine religi�
 
 ### Geschweifte Klammern
 
-In most JavaScript projects curly braces are written in "Egyptian" style with the opening brace on the same line as the corresponding keyword -- not on a new line. There should also be a space before the opening bracket, like this:
+In den meisten JavaScript Projekten wird der "Egyptian"-Stil benutzt. Hierbei wird die geschweifte "Klammer auf" in derselben Zeile geschrieben wie der dazugehörige Schlüsselwort -- nicht in einer neuen Zeile. Vor der Klammer sollte auch ein Leerzeichen sein, so wie hier:
 
 ```js
 if (bedingung) {
@@ -52,9 +52,9 @@ if (bedingung) {
 }
 ```
 
-A single-line construct, such as `if (condition) doSomething()`, is an important edge case. Should we use braces at all?
+Ein Konstrukt aus einer einzigen Zeile wie `if (condition) doSomething()`, ist ein wichtiger Grenzfall. Sollten wir überhaupt geschweifte Klammern benutzen?
 
-Here are the annotated variants so you can judge their readability for yourself:
+Hier sind die kommentierten Varianten, sodass du die Lesbarkeit selbst beurteilen kannst:
 
 1. 😠 Das machen die Anfänger manchmal. Schlecht! Geschweifte Klammern werden nicht benötigt:
     ```js
@@ -275,13 +275,13 @@ Meistens wird die zweite Variante bevorzugt.
 
 Das liegt daran, dass man beim Lesen von Code zuerst wissen möchte *was er tut*. Wenn der Code zuerst kommt, dann ist es von vornherein klar. Vor allem wenn die Namen der Methoden sehr aussagekräftig sind, kann es vielleicht sein, dass wir die Methoden gar nicht mehr lesen müssen.
 
-## Style Guides
+## Style Guides (Gestaltungsleitfaden)
 
-A style guide contains general rules about "how to write" code, e.g. which quotes to use, how many spaces to indent, the maximal line length, etc. A lot of minor things.
+Einen Gestaltungsleitfaden enthält allgemeine Regeln über die Art "wie man Code schreibt", z. B.  welche Anfürungszeichen zu benutzen, wie viele Leerzeichen einzurücken, die maximale Zeilenlänge, etc. Sehr viele Kleinigkeiten.
 
-When all members of a team use the same style guide, the code looks uniform, regardless of which team member wrote it.
+Wenn alle Teammitglieder denselben Leitfaden folgen, dann ist der Code einheitlich, egal von wem er geschrieben wurde.
 
-Of course, a team can always write their own style guide, but usually there's no need to. There are many existing guides to choose from.
+Natürlich kann ein Team ein eigenes Leitfaden aufstelle, aber normalerweise ist das nicht nötig. Es gibt schon viele die man benutzen kann.
 
 Ein paar bekannte Beispiele:
 
@@ -293,28 +293,28 @@ Ein paar bekannte Beispiele:
 
 Wenn du ein Neuling bist, starte mit dem Spickzettel am Anfang dieses Kapitels. Danach kannst du dich in andere Style Guides einlesen um weitere Ideen zu sammeln und selbst entscheiden welches du am besten findest.
 
-## Automated Linters
+## Automatische Linters
 
-Linters are tools that can automatically check the style of your code and make improving suggestions.
+Linters sind Tools die automatisch die Gestaltung deines Codes prüfen und Verbesserungsvorschläge machen.
 
-The great thing about them is that style-checking can also find some bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you don't want to stick to one particular "code style".
+Das großartige daran ist, beim Prüfen können sie auch Bugs finden, wie zum Beispiel Schreibfehler in Variablen- oder Methodennamen. Aus diesem Grund ist die Benutzung eines Linters empfohlen, auch wenn man sich nicht an einem bestimmten Leitfaden halten möchte.
 
-Here are some well-known linting tools:
+Hier sind ein paar bekannte Beispiele:
 
-- [JSLint](http://www.jslint.com/) -- one of the first linters.
-- [JSHint](http://www.jshint.com/) -- more settings than JSLint.
-- [ESLint](http://eslint.org/) -- probably the newest one.
+- [JSLint](http://www.jslint.com/) -- einer der ersten Linters.
+- [JSHint](http://www.jshint.com/) -- mehr Einstellungen als JSLint.
+- [ESLint](http://eslint.org/) -- wahrscheinlich das Neuste.
 
-All of them can do the job. The author uses [ESLint](http://eslint.org/).
+Alle erfüllen die Anforderungen. Der Autor benutzt [ESLint](http://eslint.org/).
 
-Most linters are integrated with many popular editors: just enable the plugin in the editor and configure the style.
+Die meisten Linters sind in vielen Editoren integriert. Man muss lediglich in dem Editor den Plugin aktivieren und den Stil konfigurieren.
 
-For instance, for ESLint you should do the following:
+Zum Beispiel, für ESLint muss man Folgendes machen:
 
-1. Install [Node.js](https://nodejs.org/).
-2. Install ESLint with the command `npm install -g eslint` (npm is a JavaScript package installer).
-3. Create a config file named `.eslintrc` in the root of your JavaScript project (in the folder that contains all your files).
-4. Install/enable the plugin for your editor that integrates with ESLint. The majority of editors have one.
+1. Installiere [Node.js](https://nodejs.org/).
+2. Installiere ESLint mit dem Befehl `npm install -g eslint` (npm ist ein Befehl zum Installieren von Packages in JavaScript).
+3. Erstelle eine Konfigurationsdatei `.eslintrc` in dem Root-Verzeichnis deines JavaScript Projekts (der Ordner der alle Dateien enthält).
+4. Installiere/aktiviere den Plugin für dein Editor der ESLint integriert hat. Die Mehrheit haben ihn.
 
 Hier ist ein Beispiel einer `.eslintrc` Datei:
 
@@ -333,11 +333,11 @@ Hier ist ein Beispiel einer `.eslintrc` Datei:
 }
 ```
 
-Here the directive `"extends"` denotes that the configuration is based on the "eslint:recommended" set of settings. After that, we specify our own.
+Hier bedeutet die `"extends"`-Anweisung, dass die Konfiguration auf die "eslint:recommended" Einstellungen beruht. Danach geben wir unsere Einstellungen an.
 
-It is also possible to download style rule sets from the web and extend them instead. See <http://eslint.org/docs/user-guide/getting-started> for more details about installation.
+Es ist auch möglich einen "style rule set" aus dem Internet herunterzuladen und zu erweitern. Schaue dir <http://eslint.org/docs/user-guide/getting-started> an, für mehr Details über die Einrichtung.
 
-Also certain IDEs have built-in linting, which is convenient but not as customizable as ESLint.
+Manche Entwicklungsumgebungen haben installierte Linters. Das ist zwar praktisch, aber sie sind nicht so anpassbar wie ESLint
 
 ## Zusammenfassung
 
