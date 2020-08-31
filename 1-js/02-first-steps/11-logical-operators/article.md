@@ -223,8 +223,13 @@ Die Präzedenz der Operators UND  `&&` ist höher als die von ODER `||`.
 Der Code `a && b || c && d` verhält sich daher i.w. so, als ob die Ausdrücke mit `&&` in Klammern gesetzt würden: `(a && b) || (c && d)`.
 ````
 
+<<<<<<< HEAD
 ````warn header="Ersetze `if` nicht durch || oder &&"
 Manchmal wird der Operator UND `&&` als "Kürzel zum Schreiben von `if`" verwendet.
+=======
+````warn header="Don't replace `if` with || or &&"
+Sometimes, people use the AND `&&` operator as a "shorter way to write `if`".
+>>>>>>> f830bc5d9454d85829e011d914f215eb5896579a
 
 Beispiel:
 
