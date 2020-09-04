@@ -1,5 +1,5 @@
 
-Die Antwort ist:
+The answer is:
 
 - `a = 2`
 - `b = 2`
