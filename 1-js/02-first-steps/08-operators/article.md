@@ -1,6 +1,6 @@
 # Grundlegende Operatoren, Mathematik
 
-Wir kennen viele Operatoren aus der Schule. Es sind Dinge wie Addition `+`, Multiplikation `*`, Subtraktion `-` und so weiter.
+Wir kennen viele Operatoren aus der Schule. Beispiele hierfür sind Addition `+`, Multiplikation `*`, Subtraktion `-` und so weiter.
 
 In diesem Kapitel beginnen wir mit einfachen Operatoren und konzentrieren uns dann auf JavaScript-spezifische Aspekte, die von der Schularithmetik nicht abgedeckt werden.
 
@@ -8,7 +8,7 @@ In diesem Kapitel beginnen wir mit einfachen Operatoren und konzentrieren uns da
 
 Bevor wir weitermachen, wollen wir uns mit einigen gängigen Begriffen befassen.
 
-- *Ein Operand* -- ist das, worauf Operatoren angewendet werden. Zum Beispiel gibt es bei der Multiplikation von `5 * 2` zwei Operanden: Der linke Operand ist `5` und der rechte Operand ist `2`. Manchmal nennen die Leute diese "Argumente" anstelle von "Operanden".
+- *Ein Operand* -- ist das, worauf Operatoren angewendet werden. Zum Beispiel gibt es bei der Multiplikation von `5 * 2` zwei Operanden: Der linke Operand ist `5` und der rechte Operand ist `2`. Manchmal nennt man sie auch "Argumente" anstelle von "Operanden".
 - Ein Operator ist *unär*, wenn er einen einzelnen Operanden hat. Zum Beispiel kehrt die unäre Negation `-` das Vorzeichen einer Zahl um:
 
     ```js run
@@ -28,7 +28,7 @@ Bevor wir weitermachen, wollen wir uns mit einigen gängigen Begriffen befassen.
 
 Formal haben wir in den obigen Beispielen zwei verschiedene Operatoren, die dasselbe Symbol verwenden: den Negationsoperator, einen unären Operator, der das Vorzeichen umkehrt, und den Subtraktionsoperator, einen binären Operator, der eine Zahl von einer anderen subtrahiert.
 
-## Rechnn
+## Mathe
 
 Die folgenden mathematischen Operationen werden unterstützt:
 
@@ -39,9 +39,9 @@ Die folgenden mathematischen Operationen werden unterstützt:
 - Rest `%`,
 - Potenzierung `**`.
 
-Die ersten vier sind eindeutig, zu`%` und `**` müssen wir aber ein paar Worte sagen.
+Die ersten vier sind eindeutig, zu `%` und `**` müssen wir aber ein paar Worte sagen.
 
-### Remainder %
+### Rest %
 
 Der Restoperator `%` ist, trotz seiner Erscheinung, nicht auf die Prozentangabe bezogen.
 
@@ -66,7 +66,7 @@ alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 mal)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 mal)
 ```
 
-Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+In der mathematischen Definiton ist Exponentation auch mit negativen Ganzzahlen erlaubt. Zum Beispiel: Wurzelziehen ist eine Exponentation von `1/2`:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (Die Potenz von 1/2 ist gleich der Quadratwurzel)
@@ -78,25 +78,25 @@ alert( 8 ** (1/3) ); // 2 (Die Potenz von 1/3 ist gleich der dritten Wurzel)
 
 Lernen wir Funktionen von JavaScript-Operatoren kennen, die über das schulische Rechnen hinausgehen.
 
-Normalerweise summiert der Plus-Operator `+` Zahlen.
+Normalerweise summiert der Plus-Operator "`+`" Zahlen.
 
-Wenn das binäre `+` jedoch auf Strings angewendet wird, werden diese zusammengeführt (verkettet):
+Wenn das binäre `+` jedoch auf Strings angewandt wird, werden diese zusammengeführt (verkettet):
 
 ```js
 let s = "mein" + "String";
 alert(s); // meinString
 ```
 
-Beachte, wenn einer der Operanden eine Zeichenkette ist, dann wird der andere ebenfalls in eine Zeichenkette konvertiert.
+Beachte, wenn einer der Operanden ein String ist, dann wird der andere Operand ebenfalls in ein String konvertiert.
 
-Beispielsweise:
+Zum Beispiel:
 
 ```js run
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-Es spielt dabei keine Rolle, ob der erste Operand eine Zeichenkette ist, oder der Zweite.
+Es spielt dabei keine Rolle, ob der erste Operand ein String ist, oder der zweite.
 
 Hier ist ein komplexeres Beispiel:
 
@@ -104,20 +104,20 @@ Hier ist ein komplexeres Beispiel:
 alert(2 + 2 + '1' ); // "41" und nicht "221"
 ```
 
-Dabei arbeiten die Operatoren einer nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass es `4` zurückgibt, dann fügt das nächste `+` die Zeichenkette `1` hinzu, so dass es `4 + '1' = 41` ergibt.
+Dabei arbeitet ein Operator nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass `4` zurückgegeben wird, dann fügt das nächste `+` den String `'1'` hinzu, so dass es `4 + '1' = 41` ergibt.
 
-Das binäre `+` ist der einzige Operator, der Zeichenketten auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
+Das binäre `+` ist der einzige Operator, der Strings auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen um.
 
-Hier ist die Darstellung für Subtraktion und Division:
+Hier ist eine Darstellung für Subtraktion und Division:
 
 ```js run
 alert( 6 - '2' ); // 4, wandelt '2' in eine Zahl um
 alert( '6' / '2' ); // 3, wandelt beide Operanden in Zahlen um
 ```
 
-## Numerische Umwandlung, unär +
+## Numerische Umwandlung, unäres +
 
-Das Pluszeichen `+` gibt es in zwei Formen: der oben verwendeten binären Form und der unären Form.
+Das Pluszeichen "`+`" gibt es in zwei Formen: die oben verwendete binäre Form und die unäre Form.
 
 Das unäre Plus oder mit anderen Worten der Plus-Operator `+`, der auf einen einzelnen Wert angewendet wird, hat keine Auswirkung auf Zahlen. Wenn der Operand jedoch keine Zahl ist, konvertiert das unäre Plus ihn in eine Zahl.
 
@@ -166,19 +166,19 @@ alert( +apples + +oranges ); // 5
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
-Aus der Sicht eines Mathematikers mag die Fülle an Pluspunkten merkwürdig erscheinen. Vom Standpunkt eines Programmierers aus gibt es jedoch nichts Besonderes: Unäre Pluszeichen werden zuerst angewendet, sie konvertieren Strings in Zahlen und das binäre Plus summiert sie dann.
+Aus der Sicht eines Mathematikers mag die große Menge an Pluszeichen merkwürdig erscheinen. Vom Standpunkt eines Programmierers aus ist dies nichts Besonderes: Unäre Pluszeichen werden zuerst angewendet, sie konvertieren Strings in Zahlen um und das binäre Plus summiert sie dann.
 
-Warum werden unäre Pluszeichen auf Werte vor den binären angewendet? Wie wir sehen werden, liegt das an ihrer *höheren Priorität*.
+Warum werden unäre Pluszeichen vor den binären auf Werte angewendet? Wie wir sehen werden, liegt dies an ihrer *höheren Priorität*.
 
 ## Operator-Vorrang
 
 Wenn ein Ausdruck mehr als einen Operator hat, wird die Ausführungsreihenfolge durch ihre *Priorität* oder, mit anderen Worten, die Standardprioritätsreihenfolge von Operatoren definiert.
 
-Aus der Schule wissen wir alle, dass die Multiplikation im Ausdruck `1 + 2 * 2` vor der Addition berechnet werden sollte. Das ist genau das, was Vorrang hat. Die Multiplikation soll *eine höhere Priorität* haben als die Addition.
+Aus der Schule wissen wir alle, dass die Multiplikation im Ausdruck `'1 + 2 * 2'` vor der Addition berechnet werden sollte. Das ist genau das, was Vorrang bedeutet. Die Multiplikation soll *eine höhere Priorität* haben als die Addition.
 
-Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge nicht zufrieden sind, können wir sie zum Ändern verwenden. Schreib beispielsweise `(1 + 2) * 2`.
+Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge nicht zufrieden sind, können wir Klammern zum Ändern dieser Reihenfolge verwenden, zum Beispiel: `'(1 + 2) * 2'`
 
-In JavaScript gibt es viele Operatoren. Jeder Operator hat eine entsprechende Vorrangsnummer. Der mit der größeren Nummer wird zuerst ausgeführt. Bei gleicher Rangfolge erfolgt die Ausführung von links nach rechts.
+In JavaScript gibt es einige Operatoren. Jeder Operator hat eine entsprechende Piroritätsnummer. Der Operator mit der höheren Nummer wird zuerst ausgeführt. Bei gleicher Nummer erfolgt die Ausführung von links nach rechts.
 
 Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (Du musst dir das nicht merken, aber beachte, dass unäre Operatoren höher sind als entsprechende binäre):
 
@@ -196,7 +196,7 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | 3 | Zuweisung | `=` |
 | ... | ... | ... |
 
-Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
+Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb gelten in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition (binäre Pluszeichen).
 
 ## Zuweisung
 
