@@ -2,13 +2,13 @@ importance: 5
 
 ---
 
-# Fix the addition
+# Korrigere die Addition
 
-Here's a code that asks the user for two numbers and shows their sum.
+Hier ist ein Code, der den Nutzer nach zwei Zahlen frägt und deren Summe anzeigt.
 
-It works incorrectly. The output in the example below is `12` (for default prompt values).
+Der Code hat einen Fehler. Die Ausgabe des Beispiels unten ist `12` (für default promt Werte).
 
-Why? Fix it. The result should be `3`.
+Warum ist das so? Korrigiere den Code, sodass das Ergebnis `3` ist.
 
 ```js run
 let a = prompt("First number?", 1);
