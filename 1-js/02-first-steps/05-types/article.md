@@ -66,7 +66,11 @@ Mehr über das Arbeiten mit Zahlen erfahren wir in diesem Kapitel <info:number>.
 
 ## BigInt
 
+<<<<<<< HEAD
 In JavaScript kann der Typ "Zahl" keine ganzzahligen Werte darstellen, die größer als <code>(2<sup>53</sup>-1)</code> (das ist `9007199254740991`) oder kleiner als <code>-(-2<sup>53</sup>-1)</code> für Negative sind. Es handelt sich um eine technische Einschränkung, die durch ihre interne Darstellung bedingt ist.
+=======
+In JavaScript, the "number" type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives. It's a technical limitation caused by their internal representation.
+>>>>>>> 58f6599df71b8d50417bb0a52b1ebdc995614017
 
 Für die meisten Zwecke reicht das völlig aus, aber manchmal brauchen wir wirklich große Zahlen, z.B. für die Kryptographie oder Zeitstempel mit Mikrosekunden-Genauigkeit.
 
@@ -81,8 +85,13 @@ const bigInt = 1234567890123456789012345678901234567890n;
 
 Da `BigInt`-Zahlen selten benötigt werden, behandeln wir sie hier nicht, sondern widmen ihnen ein eigenes Kapitel <info:bigint>. Lies es, wenn du so große Zahlen brauchst.
 
+<<<<<<< HEAD
 ```smart header="Compatability issues"
 Im Moment wird `BigInt` in Firefox/Chrome/Edge unterstützt, aber nicht in Safari/IE.
+=======
+```smart header="Compatibility issues"
+Right now `BigInt` is supported in Firefox/Chrome/Edge, but not in Safari/IE.
+>>>>>>> 58f6599df71b8d50417bb0a52b1ebdc995614017
 ```
 
 ## String
@@ -127,7 +136,11 @@ In diesem Kapitel werden wir uns eingehender mit Strings befassen <info:string>.
 ```smart header="Es gibt keinen *Zeichen*-Typ."
 In einigen Sprachen gibt es einen speziellen "Zeichen"-Typ für ein einzelnes Zeichen. In der C-Sprache und in Java heißt er beispielsweise "char".
 
+<<<<<<< HEAD
 In JavaScript gibt es so einen Typ nicht. Es gibt nur einen Typ: `string`. Eine Zeichenfolge kann aus nur einem oder mehreren Zeichen bestehen.
+=======
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+>>>>>>> 58f6599df71b8d50417bb0a52b1ebdc995614017
 ```
 
 ## Boolean (logische Werte)
