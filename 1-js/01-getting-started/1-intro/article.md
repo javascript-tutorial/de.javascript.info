@@ -1,6 +1,10 @@
 # Eine Einführung in JavaScript
 
+<<<<<<< HEAD
 Mal sehen, was das Besondere an JavaScript ist, was wir damit erreichen können und welche anderen Technologien gut damit umgehen.
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 ## Was ist JavaScript?
 
@@ -26,7 +30,11 @@ Verschiedene Engines haben unterschiedliche "Kodnamen". Zum Beispiel:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+<<<<<<< HEAD
 - ...Es existieren auch noch andere Kodnamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
+=======
+- ...There are other codenames like "Chakra" for IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet verwendet werden. Wir werden sie auch benutzen. Wenn zum Beispiel "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
@@ -67,8 +75,13 @@ Beispiele für solche Beschränkungen sind:
 
     Moderne Browsers erlauben es mit Dateien zu arbeiten. Der Zugriff ist jedoch beschränkt und nur möglich wenn der Benutzer bestimmte Aktionen ausführt, z.B. die Datei in den Browser per "drag and drop" lädt oder sie via `<input>` tag auswählt.
 
+<<<<<<< HEAD
     Es gibt auch Möglichkeiten mit der Kamera oder dem Mikrofon des Geräts zu interagieren. Dies benötigt aber die explizite Zustimmung des Benutzers. Deshalb kann eine JavaScript-enabled Website nicht heimlich die Webcam aktivieren, die Umgebung beobachten und die Informationen and die [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) übermitteln.
 - Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren, wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
+=======
+    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+- Different tabs/windows generally do not know about each other. Sometimes they do; for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
     Dies wird die "Same Origin Policy" genannt. Um das zu umgehen, müssen *beide Seiten* für den Datenaustausch übereinstimmen und einen speziellen JavaScript-Code enthalten, der dies behandelt. Wir werden das im Tutorial behandeln.
 
@@ -107,15 +120,29 @@ Moderne Werkzeuge machen die Transpilation sehr schnell und transparent und erla
 
 Beispiele für solche Sprachen sind:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) ist ein "syntactic sugar" für JavaScript. Es führt eine kürzere Syntax ein, was uns erlaubt, klareren und präziseren Code zu schreiben. Usually, Ruby devs like it.
 - [TypeScript](http://www.typescriptlang.org/) ist darauf konzentriert "strict data typing" hinzuzufügen. TypeScript verfolg das Ziel den Entwicklungsprozess und den Support für komplexe Systeme zu vereinfachen. Die Sprache wurde von Microsoft entwickelt.
 - [Flow](http://flow.org/) fügt auch "data typing" hinzu, aber auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine hat, die in Nicht-Browser-Umgebungen (wie z.B. mobilen Anwendungen) läuft, aber auch in JavaScript umgesetzt werden kann. Sie wurde von Google entwickelt.
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that allow to write application in pure Python without JavaScript.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 Es gibt noch mehr. Auch wenn wir eine der transpilierten Sprachen verwenden sollten wir auch JavaScript trozdem kennen. Es ist wichtig zu verstehen, was im Hintergrund passiert und was wir eigentlich tun.
 
 ## Zusammenfassung
 
+<<<<<<< HEAD
 - JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
 - Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
 - Es gibt viele Sprachen, die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem man JavaScript beherrscht.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
