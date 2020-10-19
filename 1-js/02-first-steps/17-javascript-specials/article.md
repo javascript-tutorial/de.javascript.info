@@ -10,7 +10,7 @@ Anweisungen werden mit einem Semikolon getrennt:
 alert('Hallo'); alert('Welt');
 ```
 
-Normalerweise wird ein Zeilenumbruch ebenfalls als Trennzeichen behandelt, so würde das ebenfalls funktionieren:
+Normalerweise wird ein Zeilenumbruch ebenfalls als Trennzeichen behandelt, so dass auch das funktioniert:
 
 ```js run no-beautify
 alert('Hallo')
@@ -27,7 +27,7 @@ alert("Es wird einen Fehler nach dieser Nachricht geben")
 
 Die Meisten Codestil-Leitfäden stimmen darin überein, dass wir ein Semikolon nach jeder Anweisung setzen sollten.
 
-Semikolons sind nicht erforderlich nach Codeblöcken `{...}` und Syntaxgebilde mit ihnen wie Schleifen:
+Semikolons sind nach Codeblöcken und Syntaxkonstrukten mit geschweiften Klammern `{...}`, wie z.B. Schleifen, nicht erforderlich:
 
 ```js
 function f() {
@@ -39,13 +39,13 @@ for(;;) {
 }
 ```
 
-...Aber selbst wenn wir ein "extra" Semikolon irgendwo setzen können, ist das kein Fehler. Es wird ignoriert.
+...Aber selbst wenn wir irgendwo ein "zusätzliches" Semikolon setzen, ist das kein Fehler. Es wird ignoriert.
 
 Mehr in: <info:structure>.
 
 ## Strikter Modus
 
-Um alle Features des modernen JavaScript zu ermöglichen, sollten wir ein ein Skript mit `"use strict"` beginnen.
+Um alle Funktionen des modernen JavaScripts zu ermöglichen, sollten wir Skripte mit `"use strict"` beginnen.
 
 ```js
 'use strict';
@@ -55,7 +55,7 @@ Um alle Features des modernen JavaScript zu ermöglichen, sollten wir ein ein Sk
 
 Die Direktive muss am Anfang eines Skripts oder am Anfang eines Funktionsrumpfes stehen.
 
-Ohne `"use strict"`, funktioniert alles weiterhin, aber einige Features verhalten sich nach dem altmodischen, "kompatiblen" Weg. Wir würden im allgemeinen das moderne Verhalten bevorzugen.
+Ohne `"use strict"` funktioniert alles weiterhin, aber einige Funktionen verhalten sich in der alten, "kompatiblen" Weise. Wir würden im Allgemeinen das moderne Verhalten bevorzugen.
 
 Einige moderne Features der Sprache (wie Klassen, die wir in der Zukunft behandeln) aktivieren den strikten Modus implizit.
 
@@ -195,11 +195,11 @@ Mehr in: <info:operators>, <info:comparison>, <info:logical-operators>.
     ```
 
 - Die Variable die in der `for(let...)`-Schleife deklariert wurde, ist nur in der Schleife sichtbar. Aber wir können `let` auch weglassen und eine vorhandene Variable wiederverwenden.
-- Direktiven `break/continue` ermöglichen es die ganze Schleife/aktuelle Iteration zu verlassen. Benutze Labels um verschachtelte Schleifen abzubrechen.
+- Direktiven `break/continue` ermöglichen es die ganze Schleife/aktuelle Iteration zu verlassen. Benutze Labels, um verschachtelte Schleifen abzubrechen.
 
 Details in: <info:while-for>.
 
-Später lernen wir weitere Typen von Schleifen kennen, um Objekte zu behandeln.
+Später werden wir weitere Arten von Schleifen untersuchen, um mit Objekten zu arbeiten.
 
 ## Das "switch" Konstrukt
 
@@ -227,7 +227,7 @@ Details in: <info:switch>.
 
 ## Funktionen
 
-Wir haben drei Wege behandelt um Funktionen in JavaScript anzulegen:
+Wir betrachteten drei Möglichkeiten zum Erstellen einer Funktion in JavaScript:
 
 1. Funktionsdeklaration: die Funktion im Hauptcodeablauf
 
@@ -269,7 +269,7 @@ Wir haben drei Wege behandelt um Funktionen in JavaScript anzulegen:
     ```
 
 
-- Funktionen können lokale Variablen haben: die innerhalb des Rumpfes deklariert wurden. Solche Variablen sind nur innerhalb der Funktion sichtbar.
+- Funktionen können lokale Variablen haben: diejenigen, die innerhalb ihres Körpers deklariert sind. Solche Variablen sind nur innerhalb der Funktion sichtbar.
 - Parameter können Standardwerte haben: `function sum(a = 1, b = 2) {...}`.
 - Funktionen geben immer etwas zurück. Wenn es keine `return` Anweisung gibt, dann ist das Ergebnis `undefined`.
 
@@ -277,4 +277,4 @@ Details: siehe <info:function-basics>, <info:arrow-functions-basics>.
 
 ## Da kommt noch mehr
 
-Das war eine kurze Liste von JavaScript-Features. Ab hier haben wir nur die Grundlagen gelernt. Weiter im Tutorial wirst du mehr Besonderheiten und fortgeschrittene Features von JavaScript finden.
+Das war eine kurze Zusammenfassung von JavaScript-Funktionen. Bis jetzt haben wir nur die Grundlagen kennengelernt. Im weiteren Verlauf des Tutorials findest du weitere Besonderheiten und fortgeschrittene Funktionen von JavaScript.
