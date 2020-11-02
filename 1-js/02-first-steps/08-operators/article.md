@@ -180,7 +180,11 @@ Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge 
 
 In JavaScript gibt es viele Operatoren. Jeder Operator hat eine entsprechende Vorrangsnummer. Der mit der größeren Nummer wird zuerst ausgeführt. Bei gleicher Rangfolge erfolgt die Ausführung von links nach rechts.
 
+<<<<<<< HEAD
 Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (Du musst dir das nicht merken, aber beachte, dass unäre Operatoren höher sind als entsprechende binäre):
+=======
+Here's an extract from the [precedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+>>>>>>> dccca58f268ad6d5a6f2160613a8ea3c5cd53a2d
 
 | Vorrang | Name | Zeichen |
 |------------|------|------|
@@ -428,7 +432,11 @@ Die Liste der Operatoren:
 - Rechtsverschiebung ( `>>` )
 - Null füllende Rechtsverschiebung ( `>>>` )
 
+<<<<<<< HEAD
 Diese Operatoren werden sehr selten verwendet, wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da die Webentwicklung kaum Gebrauch von ihnen macht, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
+=======
+These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise) chapter on MDN when a need arises.
+>>>>>>> dccca58f268ad6d5a6f2160613a8ea3c5cd53a2d
 
 ## Komma
 
