@@ -1,6 +1,10 @@
 # Eine Einführung in JavaScript
 
+<<<<<<< HEAD
 Mal sehen, was das Besondere an JavaScript ist, was wir damit erreichen können und welche anderen Technologien gut damit umgehen.
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 ## Was ist JavaScript?
 
@@ -26,7 +30,11 @@ Verschiedene Engines haben unterschiedliche "Kodnamen". Zum Beispiel:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome und Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+<<<<<<< HEAD
 - ...Es existieren auch noch andere Kodnamen wie "Trident" und "Chakra" für verschiedene Versionen von IE, "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
+=======
+- ...There are other codenames like "Chakra" for IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 Die obigen Begriffe sind gut zu merken, da sie in Entwicklerartikeln im Internet verwendet werden. Wir werden sie auch benutzen. Wenn zum Beispiel "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
@@ -107,15 +115,29 @@ Moderne Werkzeuge machen die Transpilation sehr schnell und transparent und erla
 
 Beispiele für solche Sprachen sind:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) ist ein "syntactic sugar" für JavaScript. Es führt eine kürzere Syntax ein, was uns erlaubt, klareren und präziseren Code zu schreiben. Usually, Ruby devs like it.
 - [TypeScript](http://www.typescriptlang.org/) ist darauf konzentriert "strict data typing" hinzuzufügen. TypeScript verfolg das Ziel den Entwicklungsprozess und den Support für komplexe Systeme zu vereinfachen. Die Sprache wurde von Microsoft entwickelt.
 - [Flow](http://flow.org/) fügt auch "data typing" hinzu, aber auf eine andere Art und Weise. Sie wurde von Facebook entwickelt.
 - [Dart](https://www.dartlang.org/) ist eine eigenständige Sprache, die eine eigene Engine hat, die in Nicht-Browser-Umgebungen (wie z.B. mobilen Anwendungen) läuft, aber auch in JavaScript umgesetzt werden kann. Sie wurde von Google entwickelt.
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that allow to write application in pure Python without JavaScript.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 Es gibt noch mehr. Auch wenn wir eine der transpilierten Sprachen verwenden sollten wir auch JavaScript trozdem kennen. Es ist wichtig zu verstehen, was im Hintergrund passiert und was wir eigentlich tun.
 
 ## Zusammenfassung
 
+<<<<<<< HEAD
 - JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
 - Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
 - Es gibt viele Sprachen, die auf JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem man JavaScript beherrscht.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
