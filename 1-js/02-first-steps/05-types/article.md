@@ -66,7 +66,11 @@ Mehr über das Arbeiten mit Zahlen erfahren wir in diesem Kapitel <info:number>.
 
 ## BigInt
 
+<<<<<<< HEAD
 In JavaScript kann der Typ "Zahl" keine ganzzahligen Werte darstellen, die größer als <code>(2<sup>53</sup>-1)</code> (das ist `9007199254740991`) oder kleiner als <code>-(-2<sup>53</sup>-1)</code> für Negative sind. Es handelt sich um eine technische Einschränkung, die durch ihre interne Darstellung bedingt ist.
+=======
+In JavaScript, the "number" type cannot represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives. It's a technical limitation caused by their internal representation.
+>>>>>>> e1a3f634a47c119cf1ec7420c49fc0fc7172c0b5
 
 Für die meisten Zwecke reicht das völlig aus, aber manchmal brauchen wir wirklich große Zahlen, z.B. für die Kryptographie oder Zeitstempel mit Mikrosekunden-Genauigkeit.
 
@@ -81,9 +85,17 @@ const bigInt = 1234567890123456789012345678901234567890n;
 
 Da `BigInt`-Zahlen selten benötigt werden, behandeln wir sie hier nicht, sondern widmen ihnen ein eigenes Kapitel <info:bigint>. Lies es, wenn du so große Zahlen brauchst.
 
+<<<<<<< HEAD
 ```smart header="Compatability issues"
 Im Moment wird `BigInt` in Firefox/Chrome/Edge unterstützt, aber nicht in Safari/IE.
+=======
+
+```smart header="Compatibility issues"
+Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
+>>>>>>> e1a3f634a47c119cf1ec7420c49fc0fc7172c0b5
 ```
+
+You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) to know which versions of a browser are supported.
 
 ## String
 
@@ -127,7 +139,11 @@ In diesem Kapitel werden wir uns eingehender mit Strings befassen <info:string>.
 ```smart header="Es gibt keinen *Zeichen*-Typ."
 In einigen Sprachen gibt es einen speziellen "Zeichen"-Typ für ein einzelnes Zeichen. In der C-Sprache und in Java heißt er beispielsweise "char".
 
+<<<<<<< HEAD
 In JavaScript gibt es so einen Typ nicht. Es gibt nur einen Typ: `string`. Eine Zeichenfolge kann aus nur einem oder mehreren Zeichen bestehen.
+=======
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+>>>>>>> e1a3f634a47c119cf1ec7420c49fc0fc7172c0b5
 ```
 
 ## Boolean (logische Werte)
@@ -254,6 +270,7 @@ Die letzten drei Zeilen bedürfen möglicherweise einer zusätzlichen Erläuteru
 
 Es gibt 8 grundlegende Datentypen in JavaScript.
 
+<<<<<<< HEAD
 - `number` für Zahlen jeglicher Art: Ganzzahl oder Gleitkommazahl, ganze Zahlen sind auf ±2<sup>53</sup> begrenzt.
 - `bigint` steht für ganze Zahlen beliebiger Länge.
 - `string` für Zeichenketten. Eine String kann aus null oder mehreren Zeichen bestehen. Es gibt keine separaten Einzelzeichentyp.
@@ -262,6 +279,16 @@ Es gibt 8 grundlegende Datentypen in JavaScript.
 - `undefined` für nicht zugewiesene Werte -- ein eigenständiger Typ mit einem einzelnen Wert `undefined`.
 - `object` für komplexere Datenstrukturen.
 - `symbol` für eindeutige Kennungen.
+=======
+- `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
+- `bigint` is for integer numbers of arbitrary length.
+- `string` for strings. A string may have zero or more characters, there's no separate single-character type.
+- `boolean` for `true`/`false`.
+- `null` for unknown values -- a standalone type that has a single value `null`.
+- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
+- `object` for more complex data structures.
+- `symbol` for unique identifiers.
+>>>>>>> e1a3f634a47c119cf1ec7420c49fc0fc7172c0b5
 
 Mit dem Operator `typeof` können wir sehen, welcher Typ in einer Variablen gespeichert ist.
 
