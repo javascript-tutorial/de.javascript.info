@@ -1,18 +1,14 @@
 importance: 5
 
 ---
+# Auswählbare Liste
+Erstelle eine Liste mit auswählbaren Elementen, wie in Datei-Managern.
+- Ein Klick auf einen Unterpunkt wählt nur ein Element aus (erstellt die Klasse `.selected`) und wählt alle anderen ab.
+- Wenn ein Klick mit `key:Ctrl` (`key:Cmd` für Mac) gemacht wird, dann wird die Auswahl auf das Element geschaltet, aber die anderen Elemente werden nicht verändert.
 
-# Selectable list
-
-Create a list where elements are selectable, like in file-managers.
-
-- A click on a list element selects only that element (adds the class `.selected`), deselects all others.
-- If a click is made with `key:Ctrl` (`key:Cmd` for Mac), then the selection is toggled on the element, but other elements are not modified.
-
-The demo:
+Die Demo:
 
 [iframe border="1" src="solution" height=180]
 
-P.S. For this task we can assume that list items are text-only. No nested tags.
-
-P.P.S. Prevent the native browser selection of the text on clicks.
+P.S. Für diese Aufgabe können wir annehmen, dass die Unterpunkte nur aus Text bestehen. Keine eingenisteten tags.
+P.P.S. Verhindere bei den Klicks die voreingestellte Browser Auswahl vom Text.
