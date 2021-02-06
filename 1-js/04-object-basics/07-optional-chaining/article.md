@@ -4,7 +4,7 @@
 [recent browser="new"]
 
 Der Optionale-Verkettungs-Operator `?.` ermöglicht es, auf einen Wert einer verschachtelten
-Objekt-Eigenschaft zuzugreifen, ohne dass jede Eigenschaft existieren muss.
+Objekteigenschaft zuzugreifen, ohne dass jede Eigenschaft existieren muss.
 
 ## Das Problem
 
@@ -40,7 +40,7 @@ alert( user && user.address && user.address.street ); // undefined (kein Fehler)
 ```
 
 Den gesamten Pfad und die Eigenschaft mit UND zu verknüpfen stellt sicher, dass alle Komponenten
-existieren, ist allerdings sehr umständlich.
+existieren. Allerdings ist dies sehr umständlich.
 
 ## Optionale Verkettung
 
@@ -131,8 +131,6 @@ user2.admin?.();
 */!*
 ```
 
-Here, in both lines we first use the dot `.` to get `admin` property, because the user object must exist, so it's safe read from it.
-
 In beiden Zeilen verwenden wir zuerst die Punktnotation `.` um die Eigenschaft `admin` abzurufen. Da es das Objekt `user` geben muss, ist es sicher darauf zuzugreifen.
 
 Dann prüft `?.()` die linke Seite: wenn die admin Funktion existiert, dann wird diese ausgeführt (für `user1`). Sonst (für `user2`) stoppt die Ausführung ohne Fehler.
@@ -144,7 +142,7 @@ let user1 = {
   firstName: "Johannes"
 };
 
-let user2 = null; // Benutzer könnte vielleicht nicht authorisiert werden
+let user2 = null; // Benutzer konnte möglicherweise nicht authorisiert werden
 
 let key = "firstName";
 
@@ -160,8 +158,8 @@ Wir können `?.` auch mit `delete` verwenden:
 delete user?.name; // lösche user.name wenn der Benutzer existiert
 ```
 
-```warn header="Wir können `?.` für sicheres Lesen und Löschen verwenden, aber nicht zum Schreiben"
-Der Optionale-Verkettungs-Operator `?.` findet keine Anwendung auf der linken Seite einer Zuweisung:
+```warn header="Wir können `?.` für sicheres Lesen und Löschen verwenden, aber nicht bei Zuweisungen"
+Der Optionale-Verkettungs-Operator `?.` findet keine Anwendung auf der linken Seite eines Statements:
 
 ```js run
 // der Name soll an user.name zugewiesen werden, wenn der Benutzer existiert
