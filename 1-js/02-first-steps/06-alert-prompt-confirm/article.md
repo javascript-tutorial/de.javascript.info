@@ -4,7 +4,11 @@ Da wir den Browser als unsere Demo-Umgebung verwenden, wollen wir einige Funktio
 
 ## alert
 
+<<<<<<< HEAD
 Diese haben wir bereits gesehen. Es zeigt eine Meldung an und wartet darauf, dass der Benutzer "OK" drückt.
+=======
+This one we've seen already. It shows a message and waits for the user to press "OK".
+>>>>>>> f6ae0b5a5f3e48074312ca3e47c17c92a5a52328
 
 Zum Beispiel:
 
@@ -30,8 +34,13 @@ Es wir ein modales Fenster mit einer Meldung angezeigt, ein Eingabefeld für den
 `default`
 : Ein optionaler zweiter Parameter, der vor-befüllte Wert für das Eingabefeld.
 
+<<<<<<< HEAD
 ```smart header="Eckige Klammer in der Syntax `[...]`"
 Die eckigen Klammern um `default` in der obigen Syntax bedeuten, dass der Parameter optional, nicht erforderlich ist.
+=======
+```smart header="The square brackets in syntax `[...]`"
+The square brackets around `default` in the syntax above denote that the parameter is optional, not required.
+>>>>>>> f6ae0b5a5f3e48074312ca3e47c17c92a5a52328
 ```
 
 Der Besucher kann etwas in das Eingabefeld eingeben und OK drücken. Dann erhalten wir diesen Text im `Ergebnis`. Oder er kann die Eingabe beenden, indem er Abbrechen drückt oder `key:Esc` drückt, dann erhalten wir `Null` als `Ergebnis`.
