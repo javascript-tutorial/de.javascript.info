@@ -8,7 +8,11 @@ Um Fehler zu sehen und weitere nützliche Informationen über Skripte zu erhalte
 
 Die meisten Entwickler tendieren bei der Entwicklung zu Chrome oder Firefox, da diese Browser über die besten Entwicklerwerkzeuge verfügen. Andere Browser bieten ebenfalls Entwicklerwerkzeuge an, manchmal mit speziellen Funktionen, aber in der Regel lassen Chrome oder Firefox diese hinter sich. So haben die meisten Entwickler einen "Lieblingsbrowser" und wechseln zu einen anderen, wenn es ein browserspezifisches Problem gibt.
 
+<<<<<<< HEAD
 Entwicklerwerkzeuge sind leistungsstark; sie haben viele Funktionen. Zu Beginn werden wir lernen, wie man sie öffnet, Fehler betrachtet und JavaScript-Befehle ausführt.
+=======
+Developer tools are potent, they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+>>>>>>> 7b76185892aa9798c3f058256aed44a9fb413cc3
 
 ## Google Chrome
 

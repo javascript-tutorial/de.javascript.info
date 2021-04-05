@@ -13,20 +13,32 @@ Eine neue Spezifikationsversion wird jedes Jahr veröffentlicht. In der Zwischen
 
 Um mehr über die neuen bleeding-edge features, einschliesslich derjendigen, die "fast Standard" sind ("stage 3" genannt), siehe Vorschläge unter <https://github.com/tc39/proposals>.
 
+<<<<<<< HEAD
 Wenn du für den Browser entwickeln, dann gibt es noch weitere Spezifikationen, die im [zweiten Teil](info:browser-environment) des Tutorials behandelt werden.
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 7b76185892aa9798c3f058256aed44a9fb413cc3
 
 ## Handbücher
 
+<<<<<<< HEAD
 - **MDN (Mozilla) JavaScript Reference** ist ein Handbuch mit Beispielen und anderen Informationen. Es ist grossartig, sich über einzelne Sprachfunktionen, Methoden etc. ausführlich zu informieren.
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+>>>>>>> 7b76185892aa9798c3f058256aed44a9fb413cc3
 
     Man kann es unter <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> finden.
 
+<<<<<<< HEAD
     Obwohl es oft am besten ist, stattdessen eine Internetsuche zu verwenden. Benutze einfach "MDN [Begriff]" in der Anfrage, z.B. <https://google.com/search?q=MDN+parseInt> um nach der `parseInt` Funktion zu suchen.
 
 
 - **MSDN** – Microsoft Handbuch mit vielen Informationen, einschließlich JavaScript (oft als JScript bezeichnet). Wenn man etwas speziell für den Internet Explorer benötigt, sollte man besser dorthin gehen: <http://msdn.microsoft.com/>.
 
     Wir können auch eine Internetsuche mit Phrasen wie "RegExp MSDN" oder "RegExp MSDN jscript" verwenden.
+=======
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+>>>>>>> 7b76185892aa9798c3f058256aed44a9fb413cc3
 
 ## Kompatibilitäts-Tabellen
 
