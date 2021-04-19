@@ -185,7 +185,7 @@ For instance, the aforementioned function `showMessage(from, text)` can be calle
 showMessage("Ann");
 ```
 
-That's not an error. Such a call would output `"Ann: undefined"`. There's no `text`, so it's assumed that `text === undefined`.
+That's not an error. Such a call would output `"*Ann*: undefined"`. There's no `text`, so it's assumed that `text === undefined`.
 
 If we want to use a "default" `text` in this case, then we can specify it after `=`:
 
@@ -411,7 +411,7 @@ Functions that are used *very often* sometimes have ultrashort names.
 
 For example, the [jQuery](http://jquery.com) framework defines a function with `$`. The [Lodash](http://lodash.com/) library has its core function named `_`.
 
-These are exceptions. Generally functions names should be concise and descriptive.
+These are exceptions. Generally function names should be concise and descriptive.
 ```
 
 ## Functions == Comments

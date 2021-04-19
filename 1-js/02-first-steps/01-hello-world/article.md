@@ -9,7 +9,11 @@ Als erstes, lass uns sehen wie wir ein Skript einer Webseite hinzufügen. Für e
 
 ## Der "script"-Tag
 
+<<<<<<< HEAD
 JavaScript-Programme können an jeder beliebigen Stelle eines HTML-Dokuments mit Hilfe des `<script>`-Tag eingefügt werden.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> 6ab384f2512902d74e4b0ff5a6be60e48ab52e96
 
 Beispielsweise:
 
