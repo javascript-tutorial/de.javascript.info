@@ -1,0 +1,18 @@
+ifelse_task2.svg:
+  "Begin":
+    text: "Start"
+    position: "center"
+  "Other":
+    text: "Andere"
+    position: "center"
+  "You don't know?":
+    text: "Weißt du nicht?"
+    position: "center"
+  "Right!":
+    text: "Richtig!"
+    position: "center"
+  "What's the ":
+    text: "Wie lautet der"
+    position: "center"
+  "“official” name of":
+    text: "\"offizielle\" Name von"
