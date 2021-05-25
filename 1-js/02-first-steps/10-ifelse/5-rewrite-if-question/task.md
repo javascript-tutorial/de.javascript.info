@@ -10,8 +10,8 @@ Schreibe dieses `if` unter Verwendung des bedingten Operators `'?'` um:
 let result;
 
 if (a + b < 4) {
-  result = 'Darunter';
+  result = 'Niedriger';
 } else {
-  result = 'Darüber';
+  result = 'Höher';
 }
 ```
