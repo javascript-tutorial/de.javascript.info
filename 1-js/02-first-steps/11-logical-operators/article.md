@@ -1,6 +1,10 @@
 # Logische Operatoren
 
+<<<<<<< HEAD
 Es gibt drei logische Operatoren in JavaScript: `||` (ODER), `&&` (UND), `!` (NICHT).
+=======
+There are four logical operators in JavaScript: `||` (OR), `&&` (AND), `!` (NOT), `??` (Nullish Coalescing). Here we cover the first three, the `??` operator is in the next article.
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
 Obgleich sie "logisch" genannt werden, lassen sie sich auf Werte eines beliebigen Typs anwenden, nicht nur 'boolean'. Genauso kann ihr Ergebnis jedweden Typ haben.
 
@@ -64,7 +68,11 @@ if (hour < 10 || hour > 18 || isWeekend) {
 }
 ```
 
+<<<<<<< HEAD
 ## ODER "||" findet den ersten effektiv wahren Wert
+=======
+## OR "||" finds the first truthy value [#or-finds-the-first-truthy-value]
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
 Die oben beschriebene Logik ist sozusagen die klassische Variante. Nehmen wir jetzt die "speziellen" Features von JavaScript hinzu.
 
@@ -84,7 +92,11 @@ arbeitet der Operator ODER `||` wie folgt:
 
 Ein Wert wird in seiner ursprünglichen Form zurückgegeben, ohne die Konvertierung.
 
+<<<<<<< HEAD
 Mit anderen Worten, eine Folge von ODER `"||"` gibt den ersten effektiv wahren Wert zurück oder - sofern kein solcher gefunden wird - den letzten Wert.
+=======
+In other words, a chain of OR `||` returns the first truthy value or the last one if no truthy value is found.
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
 Beispiel:
 
@@ -101,9 +113,15 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
 
 1. **Bestimme den ersten effektiv wahren Wert aus einer Liste von Variablen bzw. Ausdrücken.**
 
+<<<<<<< HEAD
     Haben wir zum Beispiel die Variablen `firstName`, `lastName` und `nickName`, die alle optional sind.
 
     Benutzen wir ODER `||`, um denjenigen auszuwählen, der Daten enthält und geben sie aus (oder `Anonym` wenn nichts gesetzt ist):
+=======
+    For instance, we have `firstName`, `lastName` and `nickName` variables, all optional (i.e. can be undefined or have falsy values).
+
+    Let's use OR `||` to choose the one that has the data and show it (or `"Anonymous"` if nothing set):
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
     ```js run
     let firstName = "";
@@ -115,7 +133,11 @@ Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu e
     */!*
     ```
 
+<<<<<<< HEAD
     Wenn alle Variablen falsch sind, würde `Anonym` herauskommen.
+=======
+    If all variables were falsy, `"Anonymous"` would show up.
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
 2. **Short-circuit evaluation.**
 
@@ -223,8 +245,13 @@ Die Präzedenz der Operators UND  `&&` ist höher als die von ODER `||`.
 Der Code `a && b || c && d` verhält sich daher i.w. so, als ob die Ausdrücke mit `&&` in Klammern gesetzt würden: `(a && b) || (c && d)`.
 ````
 
+<<<<<<< HEAD
 ````warn header="Ersetze `if` nicht durch || oder &&"
 Manchmal wird der Operator UND `&&` als "Kürzel zum Schreiben von `if`" verwendet.
+=======
+````warn header="Don't replace `if` with `||` or `&&`"
+Sometimes, people use the AND `&&` operator as a "shorter way to write `if`".
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 
 Beispiel:
 
@@ -244,7 +271,11 @@ let x = 1;
 if (x > 0) alert( 'Größer als Null!' );
 ```
 
+<<<<<<< HEAD
 Obwohl die Variante mit `&&` kürzer erscheint, ist `if` offensichtlicher und tendenziell etwas lesbarer. Daher empfehlen wir, jedes Konstrukt für seinen Zweck zu verwenden: Verwende `if`, wenn wir eine Bedingung wollen, und verwende `&&`, wenn wir UND wollen.
+=======
+Although, the variant with `&&` appears shorter, `if` is more obvious and tends to be a little bit more readable. So we recommend using every construct for its purpose: use `if` if we want `if` and use `&&` if we want AND.
+>>>>>>> 8558fa8f5cfb16ef62aa537d323e34d9bef6b4de
 ````
 
 
