@@ -5,7 +5,7 @@ Ersetze im folgenden Code Funktionen innerhalb eines Ausdrucks durch Pfeilfunkti
 
 ```js run
 function ask(question, yes, no) {
-  if (confirm(question)) yes()
+  if (confirm(question)) yes();
   else no();
 }
 
