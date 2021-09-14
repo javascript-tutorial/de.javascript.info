@@ -1,10 +1,10 @@
-# Iteriebare
+# Aufzählbare
 
-_Iteriebare_ Objekte sind eine Verallgemeinerung von Arrays. Das Konzept ermöglicht es uns, jedes Objekt in einer `for..of` -Schleife zu verwenden.
+_Aufzählbare_ Objekte sind eine Verallgemeinerung von Arrays. Das Konzept ermöglicht es uns, jedes Objekt in einer `for..of` -Schleife zu verwenden.
 
-Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable.
+Gewiss, Arrays sind aufzählbar. Aber es gibt auch viele weitere integrierte Objekte, die aufzählbar sind. Zum Beispiel sind auch Strings aufzählbar.
 
-If an object isn't technically an array, but represents a collection (list, set) of something, then `for..of` is a great syntax to loop over it, so let's see how to make it work.
+Wenn ein Objekt technisch gesehen kein Array ist, sondern eine Sammlung (Liste, Menge) repräsentiert, dann ist "for..of" eine hervorragende Syntax, um sie zudurchlaufen. Sehen wir uns an, wie das funktioniert.
 
 ## Symbol.iterator
 
