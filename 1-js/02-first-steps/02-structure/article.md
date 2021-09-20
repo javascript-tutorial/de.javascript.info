@@ -46,7 +46,11 @@ alert(3 +
 + 2);
 ```
 
+<<<<<<< HEAD
 Der Code gibt `6` aus, da JavaScript hier keine Semikolons einfügt. Es ist intuitiv klar, dass, wenn die Zeile mit einem Pluszeichen `"+"` endet, es sich um einen "unvollständigen Ausdruck" handelt, sodass das Semikolon nicht erforderlich ist. Und in diesem Fall funktioniert das wie vorgesehen.
+=======
+The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 
 **Es gibt jedoch Situationen, in denen JavaScript ein Semikolon nicht annimmt, wenn es wirklich benötigt wird.**
 
@@ -56,19 +60,31 @@ Fehler, die in solchen Fällen auftreten, sind schwer zu finden und zu beheben.
 Wenn du ein konkretes Beispiel für einen solchen Fehler sehen möchten, lies den folgenden Code:
 
 ```js run
-[1, 2].forEach(alert)
+alert("Hello");
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Über die Bedeutung der Klammern `[]` und `forEach` muss noch nicht nachgedacht werden. Wir werden sie später studieren. Denk vorerst nur an das Ergebnis des Codes: Es zeigt `1`, dann `2`.
 
 Fügen wir nun vor dem Code einen `alert` ein und beenden ihn *nicht* mit einem Semikolon:
 
 ```js run no-beautify
 alert("Es wird ein Fehler auftreten")
+=======
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
 
-[1, 2].forEach(alert)
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert("Hello")
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Wenn wir nun den Code ausführen, wird nur der erste `alert` angezeigt und dann haben wir einen Fehler!
 
 Aber alles ist wieder in Ordnung, wenn wir nach `alert` ein Semikolon einfügen:
@@ -90,6 +106,23 @@ alert("Es wird ein Fehler auftreten")[1, 2].forEach(alert)
 ```
 
 Aber es sollten zwei getrennte Anweisungen sein, nicht eine. Eine solche Verschmelzung ist in diesem Fall einfach falsch, daher der Fehler. Dies kann auch in anderen Situationen auftreten.
+=======
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
+
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+Here's how the engine sees it:
+
+```js run no-beautify
+alert("Hello")[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 ````
 
 Es wird empfohlen, Semikolons zwischen Anweisungen zu setzen, auch wenn diese durch Zeilenumbrüche getrennt sind. Diese Regel wird von der Community weitgehend übernommen. Lass uns noch einmal festhalten -- es ist möglich, Semikolons die meiste Zeit wegzulassen. Aber es ist sicherer -- besonders für Anfänger -- sie zu benutzen.
