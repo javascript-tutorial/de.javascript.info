@@ -24,7 +24,11 @@ Nun können wir sie mit Daten befüllen, indem wir den Zuweisungsoperator `=` ve
 let message;
 
 *!*
+<<<<<<< HEAD
 message = 'Hello'; // speichere diese Zeichenkette
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> eda333d423db8ade41f75d2e2d30ea06c7d997ef
 */!*
 ```
 
