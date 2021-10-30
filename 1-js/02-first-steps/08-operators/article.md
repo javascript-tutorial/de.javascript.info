@@ -232,7 +232,7 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-Im obigen Beispiel ist das Ergebnis des Ausdrucks `(a = b + 1)` der Wert, der `a` zugewiesen wurde (d.h. `3`). Der Wert wird dann für weitere Auswertungen verwendet.
+Im obigen Beispiel ist das Ergebnis des Ausdrucks `(a = b + 1)` der Wert, der `a` zugewiesen wurde (d.h. `3`). Dieser Wert wird dann für weitere Auswertungen verwendet.
 
 Seltsamer Code, nicht wahr? Wir sollten uns über seine Funktionalität klar machen, denn Code wie dieser kommt in JavaScript-Bibliotheken vor.
 
@@ -323,7 +323,7 @@ Es gibt also spezielle Operatoren dafür:
     ```
 
 ```warn
-Inkrementieren/Dekrementieren kann nur auf Variablen angewendet werden. Der Versuch, es bei einen  Wert wie `5++` anzuwenden, führt zu einem Fehler.
+Inkrementieren/Dekrementieren kann nur auf Variablen angewendet werden. Der Versuch, es bei einen Wert wie `5++` anzuwenden, führt zu einem Fehler.
 ```
 
 Die Operatoren `++` und `--` können entweder vor oder nach einer Variablen stehen.
@@ -399,7 +399,7 @@ let counter = 1;
 alert( 2 * counter++ ); // 2, weil counter ++ den "alten" Wert zurückgibt
 ```
 
-Obwohl dies technisch in Ordnung ist, macht eine solche Notation Code normalerweise unlesbarer. Eine Zeile die mehrere Dinge macht -- nicht gut.
+Obwohl dies technisch in Ordnung ist, macht eine solche Notation Code normalerweise unlesbarer. Eine Zeile in der mehrere Operationen ausgeführt werden -- nicht gut.
 
 Beim Lesen von Code kann ein schneller "vertikaler" Augenscan leicht etwas wie `counter++` übersehen, und es ist nicht offensichtlich, dass die Variable größer wird.
 
