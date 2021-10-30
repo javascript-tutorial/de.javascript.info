@@ -212,7 +212,7 @@ alert( x ); // 5
 
 ### Zuweisung = gibt einen Wert zurück
 
-Die Tatsache, dass `=` ein Operator, und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
+Die Tatsache, dass `=` ein Operator und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
 
 Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, dies gilt aber auch für `=`.
 
