@@ -9,7 +9,11 @@ Als erstes, lass uns sehen wie wir ein Skript einer Webseite hinzufügen. Für e
 
 ## Der "script"-Tag
 
+<<<<<<< HEAD
 JavaScript-Programme können an jeder beliebigen Stelle eines HTML-Dokuments mit Hilfe des `<script>`-Tag eingefügt werden.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 Beispielsweise:
 
@@ -73,7 +77,11 @@ Skript-Dateien werden zu HTML mit dem `src`-Attribute hinzugefügt:
 <script src="/pfad/zum/script.js"></script>
 ```
 
+<<<<<<< HEAD
 Hier ist `/pfad/zum/script.js` ein absoluter Pfad zu dem Skript, aus dem Wurzelverzeichnis der Seite. Auch ein relativer Pfad der aktuellen Seite kann angeben werden. Beispielsweise, `src="script.js"` würde eine Datei `"script.js"` im aktuellen Verzeichnis bedeuten.
+=======
+Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 Außerdem können wir auch eine komplette URL angeben. Beispielsweise:
 
