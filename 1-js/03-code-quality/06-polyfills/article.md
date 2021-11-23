@@ -32,7 +32,7 @@ Tatsächlich gibt es in Babel zwei Teile:
      - [core js](https://github.com/zloirock/core-js), der vieles unterstützt, ermöglicht es, nur benötigte Funktionen einzubinden.
      - [polyfill.io](http://polyfill.io) Dienst, der ein Skript mit Polyfills bereitstellt, abhängig von den Funktionen und dem Browser des Benutzers.
 
-Wenn wir also moderne Sprachfunktionen verwenden möchten, sind ein Transpiler und ein Polyfill erforderlich.
+Wenn wir moderne Sprachfunktionen verwenden möchten, sind ein Transpiler und ein Polyfill erforderlich.
 
 ## Beispiele im Tutorial
 
