@@ -19,7 +19,7 @@ Hier kommt Babel zur Rettung.
 
 Tatsächlich gibt es in Babel zwei Teile:
 
-1. Zuerst das Transpiler-Programm, das den Code umschreibt. Der Entwickler führt es auf seinem eigenen Computer aus. Es schreibt den Code in den älteren Standard um. Und dann wird der Code für die Benutzer an die Website geliefert. Moderne Projekt-Build-Systeme wie [webpack](http://webpack.github.io/) bieten die Möglichkeit, den Transpiler bei jeder Codeänderung automatisch auszuführen, sodass er sehr einfach in den Entwicklungsprozess integriert werden kann.
+1. Erstens das Transpiler-Programm, das den Code umschreibt. Der Entwickler führt es auf seinem eigenen Computer aus. Es schreibt den Code in den älteren Standard um. Und dann wird der Code für die Benutzer an die Website geliefert. Moderne Projekt-Build-Systeme wie [webpack](http://webpack.github.io/) bieten die Möglichkeit, den Transpiler bei jeder Codeänderung automatisch auszuführen, sodass er sehr einfach in den Entwicklungsprozess integriert werden kann.
 
 2. Zweitens, der polyfill.
 
