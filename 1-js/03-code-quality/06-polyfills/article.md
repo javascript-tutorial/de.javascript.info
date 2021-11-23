@@ -1,54 +1,54 @@
 
 # Polyfills
 
-The JavaScript language steadily evolves. New proposals to the language appear regularly, they are analyzed and, if considered worthy, are appended to the list at <https://tc39.github.io/ecma262/> and then progress to the [specification](http://www.ecma-international.org/publications/standards/Ecma-262.htm).
+JavaScript entwickelt sich stetig weiter. Neue Vorschläge für die Sprache erscheinen regelmäßig, sie werden analysiert und, wenn sie als würdig erachtet werden, an die Liste unter <https://tc39.github.io/ecma262/> angehängt und dann zur [Spezifikation](http:// www.ecma-international.org/publications/standards/Ecma-262.htm) freigegeben.
 
-Teams behind JavaScript engines have their own ideas about what to implement first. They may decide to implement proposals that are in draft and postpone things that are already in the spec, because they are less interesting or just harder to do.
+Teams hinter JavaScript-Engines haben ihre eigenen Vorstellungen davon, was zuerst implementiert werden soll. Sie können beschließen, Vorschläge zu implementieren, die sich im Entwurf befinden, und Dinge, die bereits in der Spezifikation enthalten sind, verschieben, weil sie weniger interessant oder einfach schwieriger zu machen sind.
 
-So it's quite common for an engine to implement only the part of the standard.
+Es ist also durchaus üblich, dass eine Engine nur einen Teil des Standards implementiert.
 
-A good page to see the current state of support for language features is <https://kangax.github.io/compat-table/es6/> (it's big, we have a lot to study yet).
+Eine gute Seite, um den aktuellen Stand der Unterstützung für Sprachfunktionen zu sehen, ist <https://kangax.github.io/compat-table/es6/> (es ist groß, wir haben noch viel zu lernen).
 
 ## Babel
 
-When we use modern features of the language, some engines may fail to support such code. Just as said, not all features are implemented everywhere.
+Wenn wir moderne Funktionen der Sprache verwenden, können einige Engines diesen Code möglicherweise nicht unterstützen. Wie gesagt, nicht alle Funktionen sind überall implementiert.
 
-Here Babel comes to the rescue.
+Hier kommt Babel zur Rettung.
 
-[Babel](https://babeljs.io) is a [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler). It rewrites modern JavaScript code into the previous standard.
+[Babel](https://babeljs.io) ist ein [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler). Es schreibt modernen JavaScript-Code in den vorherigen Standard um.
 
-Actually, there are two parts in Babel:
+Tatsächlich gibt es in Babel zwei Teile:
 
-1. First, the transpiler program, which rewrites the code. The developer runs it on their own computer. It rewrites the code into the older standard. And then the code is delivered to the website for users. Modern project build systems like [webpack](http://webpack.github.io/) provide means to run transpiler automatically on every code change, so that it's very easy to integrate into development process.
+1. Erstens das Transpiler-Programm, das den Code umschreibt. Der Entwickler führt es auf seinem eigenen Computer aus. Es schreibt den Code in den älteren Standard um. Und dann wird der Code für die Benutzer an die Website geliefert. Moderne Projekt-Build-Systeme wie [webpack](http://webpack.github.io/) bieten die Möglichkeit, den Transpiler bei jeder Codeänderung automatisch auszuführen, sodass er sehr einfach in den Entwicklungsprozess integriert werden kann.
 
-2. Second, the polyfill.
+2. Zweitens, der polyfill.
 
-    New language features may include new built-in functions and syntax constructs.
-    The transpiler rewrites the code, transforming syntax constructs into older ones. But as for new built-in functions, we need to implement them. JavaScript is a highly dynamic language, scripts may add/modify any functions, so that they behave according to the modern standard.
+    Neue Sprachfeatures können neue integrierte Funktionen und Syntaxkonstrukte umfassen.
+     Der Transpiler schreibt den Code neu und wandelt Syntaxkonstrukte in ältere um. Aber was neue eingebaute Funktionen betrifft, müssen wir sie implementieren. JavaScript ist eine hochdynamische Sprache, Skripte können beliebige Funktionen hinzufügen/ändern, damit sie sich dem modernen Standard entsprechend verhalten.
 
-    A script that updates/adds new functions is called "polyfill". It "fills in" the gap and adds missing implementations.
+    Ein Skript, das neue Funktionen aktualisiert/hinzufügt, wird "Polyfill" genannt. Es "füllt" die Lücke und fügt fehlende Implementierungen hinzu.
 
-    Two interesting polyfills are:
-    - [core js](https://github.com/zloirock/core-js) that supports a lot, allows to include only needed features.
-    - [polyfill.io](http://polyfill.io) service that provides a script with polyfills, depending on the features and user's browser.
+    Zwei interessante Polyfills sind:
+     - [core js](https://github.com/zloirock/core-js), der vieles unterstützt, ermöglicht es, nur benötigte Funktionen einzubinden.
+     - [polyfill.io](http://polyfill.io) Dienst, der ein Skript mit Polyfills bereitstellt, abhängig von den Funktionen und dem Browser des Benutzers.
 
-So, if we're going to use modern language features, a transpiler and a polyfill are necessary.
+Wenn wir moderne Sprachfunktionen verwenden möchten, sind ein Transpiler und ein Polyfill erforderlich.
 
-## Examples in the tutorial
+## Beispiele im Tutorial
 
 
 ````online
-Most examples are runnable at-place, like this:
+Die meisten Beispiele sind direkt lauffähig, wie folgt:
 
 ```js run
-alert('Press the "Play" button in the upper-right corner to run');
+alert('Drücken Sie die Schaltfläche "Starten" in der oberen rechten Ecke, um zu starten');
 ```
 
-Examples that use modern JS will work only if your browser supports it.
+Beispiele, die modernes JS verwenden, funktionieren nur, wenn Ihr Browser dies unterstützt.
 ````
 
 ```offline
-As you're reading the offline version, in PDF examples are not runnable. In EPUB some of them can run.
+Während Sie die Offline-Version lesen, sind PDF-Beispiele nicht lauffähig. In EPUB können einige von ihnen ausgeführt werden.
 ```
 
-Google Chrome is usually the most up-to-date with language features, good to run bleeding-edge demos without any transpilers, but other modern browsers also work fine.
+Google Chrome ist in der Regel mit Sprachfunktionen auf dem neuesten Stand und eignet sich gut, um topaktuelle Demos ohne Transpiler auszuführen, aber auch andere moderne Browser funktionieren einwandfrei.
