@@ -5,7 +5,11 @@ Das globale Objekt stellt Variablen und Funktionen bereit, die überall verfügb
 
 In einem Browser heißt es `window`, für Node.js ist es `global`, für andere Umgebungen kann es einen anderen Namen haben.
 
+<<<<<<< HEAD
 Vor kurzem wurde der Sprache `globalThis` als standardisierter Name für ein globales Objekt hinzugefügt, das in allen Umgebungen unterstützt werden soll. In einigen Browsern, insbesondere Nicht-Chromium Edge, wird `globalThis` noch nicht unterstützt, kann aber leicht mit Polyfills umgangen werden.
+=======
+Recently, `globalThis` was added to the language, as a standardized name for a global object, that should be supported across all environments. It's supported in all major browsers.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Wir verwenden hier `window`, vorausgesetzt, unsere Umgebung ist ein Browser. Wenn dein Skript in anderen Umgebungen ausgeführt werden kann, ist es besser, stattdessen `globalThis` zu verwenden.
 
@@ -25,7 +29,13 @@ var gVar = 5;
 alert(window.gVar); // 5 (wurde Eigentum des globalen Objekts)
 ```
 
+<<<<<<< HEAD
 Bitte nicht darauf verlassen! Dieses Verhalten existiert aus Kompatibilitätsgründen. Moderne Skripte verwenden [JavaScript-Module](info:modules), wo so etwas nicht passiert.
+=======
+The same effect have function declarations (statements with `function` keyword in the main code flow, not function expressions).
+
+Please don't rely on that! This behavior exists for compatibility reasons. Modern scripts use [JavaScript modules](info:modules) where such a thing doesn't happen.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Wenn wir stattdessen `let` verwenden, würde so etwas nicht passieren:
 
@@ -81,7 +91,14 @@ if (!window.Promise) {
     Dazu gehören JavaScript-Einbauten wie "Array" und umgebungsspezifische Werte wie `window.innerHeight` -- die Fensterhöhe im Browser.
 - Das globale Objekt hat einen universellen Namen `globalThis`.
 
+<<<<<<< HEAD
     ...Aber häufiger wird mit umgebungsspezifischen Namen der "alten Schule" wie `window` (Browser) und `global` (Node.js) bezeichnet. Da `globalThis` ein neuer Vorschlag ist, wird es in Nicht-Chromium Edge nicht unterstützt (kann aber mit Polyfills umgangen werden).
 - Wir sollten Werte im globalen Objekt nur speichern, wenn sie wirklich global für unser Projekt sind. Und halten Sie ihre Anzahl auf ein Minimum.
 - Im Browser werden globale Funktionen und Variablen, die mit `var` deklariert sind, zu einer Eigenschaft des globalen Objekts, es sei denn, wir verwenden [modules](info:modules).
 - Um unseren Code zukunftssicher und verständlicher zu machen, sollten wir direkt auf die Eigenschaften des globalen Objekts zugreifen, als `window.x`.
+=======
+    ...But more often is referred by "old-school" environment-specific names, such as `window` (browser) and `global` (Node.js).
+- We should store values in the global object only if they're truly global for our project. And keep their number at minimum.
+- In-browser, unless we're using [modules](info:modules), global functions and variables declared with `var` become a property of the global object.
+- To make our code future-proof and easier to understand, we should access properties of the global object directly, as `window.x`.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
