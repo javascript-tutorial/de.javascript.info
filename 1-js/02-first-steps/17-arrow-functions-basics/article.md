@@ -5,7 +5,7 @@ Es gibt eine weitere sehr einfache und prägnante Syntax für die Erstellung von
 Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
-let func = (arg1, arg2, ...argN) => expression
+let func = (arg1, arg2, ..., argN) => expression
 ```
 
 ...Dies erzeugt eine Funktion `func`, welche die Argumente `arg1..argN` akzeptiert, dann den Ausdruck `expression` auf der rechten Seite auswertet und ihr Ergebnis zurückgibt.
@@ -13,7 +13,7 @@ let func = (arg1, arg2, ...argN) => expression
 In anderen Worten, es ist die verkürzte Version von:
 
 ```js
-let func = function(arg1, arg2, ...argN) {
+let func = function(arg1, arg2, ..., argN) {
   return expression;
 };
 ```
