@@ -1,177 +1,176 @@
-# Patterns and flags
+# Muster und Kennzeichen
 
-Regular expressions are patterns that provide a powerful way to search and replace in text.
+Reguläre Ausdrücke sind Muster, die eine leistungsfähige Möglichkeit zum Suchen und Ersetzen im Text bieten.
 
-In JavaScript, they are available via the [RegExp](mdn:js/RegExp) object, as well as being integrated in methods of strings.
+In JavaScript sind sie sowohl über das Objekt [RegExp](mdn:js/RegExp) verfügbar als auch in Methoden von Zeichenketten integriert.
 
-## Regular Expressions
+## Reguläre Ausdrücke
 
-A regular expression (also "regexp", or just "reg") consists of a *pattern* and optional *flags*.
+Ein regulärer Ausdruck (auch "regexp", oder einfach "reg") besteht aus einem *Muster* und optionalen *Kennzeichen*.
 
-There are two syntaxes that can be used to create a regular expression object.
+Es gibt zwei Syntaxen, die verwendet werden können, um ein Objekt für reguläre Ausdrücke zu erzeugen.
 
-The "long" syntax:
+Die "lange" Syntax:
 
-```js
-regexp = new RegExp("pattern", "flags");
-```
+````js
+regexp = new RegExp ("Muster", "Kennzeichen");
+````
 
-And the "short" one, using slashes `"/"`:
-
-```js
-regexp = /pattern/; // no flags
-regexp = /pattern/gmi; // with flags g,m and i (to be covered soon)
-```
-
-Slashes `pattern:/.../` tell JavaScript that we are creating a regular expression. They play the same role as quotes for strings.
-
-In both cases `regexp` becomes an instance of the built-in `RegExp` class.
-
-The main difference between these two syntaxes is that pattern using slashes `/.../` does not allow for expressions to be inserted (like string template literals with `${...}`). They are fully static.
-
-Slashes are used when we know the regular expression at the code writing time -- and that's the most common situation. While `new RegExp`, is more often used when we need to create a regexp "on the fly" from a dynamically generated string. For instance:
+Und das "kurze", mit Schrägstrichen `"/"/"`":
 
 ```js
-let tag = prompt("What tag do you want to find?", "h2");
-
-let regexp = new RegExp(`<${tag}>`); // same as /<h2>/ if answered "h2" in the prompt above
+regexp = /muster/; // keine Kennzeichen
+regexp = /muster/gmi; // mit den Kennzeichen g,m und i (wird demnächst behandelt)
 ```
 
-## Flags
+Schrägstriche `muster:/.../` teilen JavaScript mit, dass wir einen regulären Ausdruck erstellen. Sie spielen die gleiche Rolle wie Anführungszeichen für Zeichenketten.
 
-Regular expressions may have flags that affect the search.
+In beiden Fällen wird `regexp` eine Instanz der eingebauten Klasse `RegExp`.
 
-There are only 6 of them in JavaScript:
+Der Hauptunterschied zwischen diesen beiden Syntaxen besteht darin, dass Muster mit Schrägstrichen `/.../` es nicht erlauben, Ausdrücke einzufügen (wie String-Template-Literale mit `${...}`). Sie sind vollständig statisch.
 
-`pattern:i`
-: With this flag the search is case-insensitive: no difference between `A` and `a` (see the example below).
+Schrägstriche werden verwendet, wenn wir den regulären Ausdruck zum Zeitpunkt des Schreibens des Codes kennen -- und das ist die häufigste Situation. Während `neue RegExp` häufiger verwendet wird, wenn wir "on the fly" einen regulären Ausdruck aus einer dynamisch generierten Zeichenkette erzeugen müssen. Zum Beispiel:
 
-`pattern:g`
-: With this flag the search looks for all matches, without it -- only the first match is returned.
+```js
+let tag = prompt ("Welchen Tag möchten Sie finden?", "h2");
 
-`pattern:m`
-: Multiline mode (covered in the chapter <info:regexp-multiline-mode>).
+let regexp = new RegExp(`<${tag}>`); // wie /<h2>/, wenn in der obigen Eingabeaufforderung mit "h2" geantwortet wurde
+```
 
-`pattern:s`
-: Enables "dotall" mode, that allows a dot `pattern:.` to match newline character `\n` (covered in the chapter <info:regexp-character-classes>).
+## Kennzeichen
 
-`pattern:u`
-: Enables full unicode support. The flag enables correct processing of surrogate pairs. More about that in the chapter <info:regexp-unicode>.
+Reguläre Ausdrücke können Flags haben, die die Suche beeinflussen.
 
-`pattern:y`
-: "Sticky" mode: searching at the exact position in the text  (covered in the chapter <info:regexp-sticky>)
+Es gibt nur 6 davon in JavaScript:
+
+`muster:i`
+: Mit diesem Flag ist die Suche unabhängig von Groß- und Kleinschreibung: kein Unterschied zwischen `A` und `a` (siehe das Beispiel unten).
+
+`muster:g`
+: Mit diesem Flag sucht die Suche nach allen Übereinstimmungen, ohne dieses Flag -- nur die erste Übereinstimmung wird zurückgegeben.
+
+`muster:m` 
+: Mehrzeilenmodus (behandelt im Kapitel <info:regexp-mehrzeilenmodus>).
+
+`muster:s` : Mehrzeilenmodus
+: Aktiviert den "dotall"-Modus, der es einem Punkt `muster:.` erlaubt, mit einem Zeilenumbruchzeichen `\n` übereinzustimmen (behandelt im Kapitel <info:regexp-character-classes>).
+
+`muster:u`
+: Aktiviert volle Unicode-Unterstützung. Das Flag ermöglicht die korrekte Verarbeitung von Surrogatpaaren. Mehr dazu im Kapitel <info:regexp-unicode>.
+
+`muster:y`
+: "Sticky"-Modus: Suche an der genauen Position im Text (mehr dazu im Kapitel <info:regexp-sticky>)
 
 ```smart header="Colors"
-From here on the color scheme is:
+Von hier an ist das Farbschema:
 
-- regexp -- `pattern:red`
-- string (where we search) -- `subject:blue`
-- result -- `match:green`
+- regexp -- `muster:rot`
+- Zeichenkette (wo wir suchen) -- `betreff:blau`
+- Ergebnis -- `Übereinstimmung:grün`
 ```
 
-## Searching: str.match
+## Suche: str.match
 
-As mentioned previously, regular expressions are integrated with string methods.
+Wie bereits erwähnt, sind reguläre Ausdrücke in String-Methoden integriert.
 
-The method `str.match(regexp)` finds all matches of `regexp` in the string `str`.
+Die Methode `str.match(regexp)` findet alle Übereinstimmungen von `regexp` in der Zeichenkette `str`.
 
-It has 3 working modes:
+Sie hat 3 Arbeitsmodi:
 
-1. If the regular expression has flag `pattern:g`, it returns an array of all matches:
+1. Wenn der reguläre Ausdruck das Flag `muster:g` hat, gibt sie ein Array mit allen Übereinstimmungen zurück:
     ```js run
-    let str = "We will, we will rock you";
+    let str = "Wir werden, wir werden Sie schaukeln";
 
-    alert( str.match(/we/gi) ); // We,we (an array of 2 substrings that match)
+    alert( str.match(/we/gi) ); // We,we (ein Array aus 2 Teilzeichenketten, die übereinstimmen)
     ```
-    Please note that both `match:We` and `match:we` are found, because flag `pattern:i` makes the regular expression case-insensitive.
+    Bitte beachten Sie, dass sowohl `Übereinstimmung:Wir` als auch `Übereinstimmung:wir` gefunden werden, da das Kennzeichen `muster:i` den regulären Ausdruck case-insensitive macht.
 
-2. If there's no such flag it returns only the first match in the form of an array, with the full match at index `0` and some additional details in properties:
+2. Wenn es kein solches Kennzeichen gibt, gibt es nur die erste Übereinstimmung in der Form eines Arrays zurück, mit der vollständigen Übereinstimmung bei Index `0` und einigen zusätzlichen Details in den Eigenschaften:
     ```js run
-    let str = "We will, we will rock you";
+    let str = "Wir werden, wir werden Sie schaukeln";
 
-    let result = str.match(/we/i); // without flag g
+    let ergebnis = str.match(/we/i); // ohne Kennzeichen g
 
-    alert( result[0] );     // We (1st match)
-    alert( result.length ); // 1
+    alert( ergebnis[0] ); // Wir (1. Spiel)
+    alert( ergebnis.länge ); // 1
 
-    // Details:
-    alert( result.index );  // 0 (position of the match)
-    alert( result.input );  // We will, we will rock you (source string)
+    // Einzelheiten:
+    alert( ergebnis.index ); // 0 (Position des Spiels)
+    alert( ergebnis.input ); // Wir werden, wir werden Sie schaukeln (source string)
     ```
-    The array may have other indexes, besides `0` if a part of the regular expression is enclosed in parentheses. We'll cover that in the chapter  <info:regexp-groups>.
+    Das Array kann neben `0` noch andere Indizes haben, wenn ein Teil des regulären Ausdrucks in Klammern eingeschlossen ist. Wir werden das im Kapitel <info:regexp-groups> behandeln.
 
-3. And, finally, if there are no matches, `null` is returned (doesn't matter if there's flag `pattern:g` or not).
 
-    This a very important nuance. If there are no matches, we don't receive an empty array, but instead receive `null`. Forgetting about that may lead to errors, e.g.:
+3. Und schließlich, wenn es keine Übereinstimmungen gibt, wird `null` zurückgegeben (es spielt keine Rolle, ob es eine Kennzeichen `muster:g` gibt oder nicht).
+    Dies ist eine sehr wichtige Nuance. Wenn es keine Übereinstimmungen gibt, erhalten wir kein leeres Array, sondern stattdessen `null`. Das zu vergessen, kann zu Fehlern führen, z.B:
 
     ```js run
-    let matches = "JavaScript".match(/HTML/); // = null
+    let übereinstimmungen = "JavaScript".match(/HTML/); // = null
 
-    if (!matches.length) { // Error: Cannot read property 'length' of null
-      alert("Error in the line above");
+    if (! übereinstimmungen.length) { // Fehler: Die Eigenschaft 'length' von null kann nicht gelesen werden
+      alert ("Fehler in der obigen Zeile");
     }
     ```
 
-    If we'd like the result to always be an array, we can write it this way:
+    Wenn wir möchten, dass das Ergebnis immer ein Array ist, können wir es so schreiben:
 
     ```js run
-    let matches = "JavaScript".match(/HTML/)*!* || []*/!*;
+    let übereinstimmungen = "JavaScript".match(/HTML/)*!* || []*/!*;
 
-    if (!matches.length) {
-      alert("No matches"); // now it works
+    if (!übereinstimmungen.length) {
+      alert ("Keine Übereinstimmungen"); // jetzt funktioniert es
     }
     ```
 
-## Replacing: str.replace
+## Ersetzung: str.replace
 
-The method `str.replace(regexp, replacement)` replaces matches found using `regexp` in string `str` with `replacement` (all matches if there's flag `pattern:g`, otherwise, only the first one).
+Die Methode `str.replace(RegAusdrk, Ersetzung)` ersetzt Übereinstimmungen, die mit `RegAusdrk` in der Zeichenkette `str` gefunden wurden, durch `Ersetzung` (alle Übereinstimmungen, wenn es das Kennzeichen `muster:g` gibt, ansonsten nur die erste).
 
-For instance:
+Zum Beispiel:
 
 ```js run
-// no flag g
-alert( "We will, we will".replace(/we/i, "I") ); // I will, we will
+// keine Kennzeichen g
+alert( "Wir werden, wir werden".replace(/we/i, "Sie") ); // Sie werden, sie werden
 
-// with flag g
-alert( "We will, we will".replace(/we/ig, "I") ); // I will, I will
+// mit Kennziechen g
+alert( "Wir werden, wir werden".replace(/we/ig, "Sie") ); // Sie werden, sie werden
 ```
 
-The second argument is the `replacement` string. We can use special character combinations in it to insert fragments of the match:
+Das zweite Argument ist die Zeichenkette `Ersatz`. Wir können darin spezielle Zeichenkombinationen verwenden, um Fragmente der Übereinstimmung einzufügen:
 
-| Symbols | Action in the replacement string |
+| Symbole | Aktion in der `Ersetzungszeichenkette |
 |--------|--------|
-|`$&`|inserts the whole match|
-|<code>$&#096;</code>|inserts a part of the string before the match|
-|`$'`|inserts a part of the string after the match|
-|`$n`|if `n` is a 1-2 digit number, then it inserts the contents of n-th parentheses, more about it in the chapter <info:regexp-groups>|
-|`$<name>`|inserts the contents of the parentheses with the given `name`, more about it in the chapter <info:regexp-groups>|
-|`$$`|inserts character `$` |
+|`$&`| fügt die ganze Übereinstimmung ein
+|<<code>$&#096;</code>| fügt einen Teil der Zeichenkette vor der Übereinstimmung ein|
+|`$'`| fügt einen Teil der Zeichenkette nach der Übereinstimmung ein
+|`$n`||wenn `n` eine 1-2-stellige Zahl ist, dann fügt sie den Inhalt der n-ten Klammer ein, mehr dazu im Kapitel <info:regexp-groups>|
+|`$<name>`| fügt den Inhalt der Klammern mit dem angegebenen `Namen` ein, mehr dazu im Kapitel <info:regexp-groups>|
+|`$$`| fügt das Zeichen `$` | ein
 
-An example with `pattern:$&`:
-
-```js run
-alert( "I love HTML".replace(/HTML/, "$& and JavaScript") ); // I love HTML and JavaScript
-```
-
-## Testing: regexp.test
-
-The method `regexp.test(str)` looks for at least one match, if found, returns `true`, otherwise `false`.
+Ein Beispiel mit `Muster:$&`:
 
 ```js run
-let str = "I love JavaScript";
-let regexp = /LOVE/i;
-
-alert( regexp.test(str) ); // true
+alert( "Ich liebe HTML".replace(/HTML/, "$& und JavaScript") ); // Ich liebe HTML und JavaScript
 ```
 
-Later in this chapter we'll study more regular expressions, walk through more examples, and also meet other methods.
+## Testen: regexp.test
 
-Full information about the methods is given in the article <info:regexp-methods>.
+Die Methode `regexp.test(str)` sucht nach mindestens einer Übereinstimmung, wenn sie gefunden wird, liefert `true` (wahr), andernfalls `false` (falsch).
 
-## Summary
+```js run
+let str = "Ich liebe JavaScript";
+let regexp = /LIEBE/i;
 
-- A regular expression consists of a pattern and optional flags: `pattern:g`, `pattern:i`, `pattern:m`, `pattern:u`, `pattern:s`, `pattern:y`.
-- Without flags and special symbols  (that we'll study later), the search by a regexp is the same as a substring search.
-- The method `str.match(regexp)` looks for matches: all of them if there's `pattern:g` flag, otherwise, only the first one.
-- The method `str.replace(regexp, replacement)` replaces matches found using `regexp` with `replacement`: all of them if there's `pattern:g` flag, otherwise only the first one.
-- The method `regexp.test(str)` returns `true` if there's at least one match, otherwise, it returns `false`.
+alert( regexp.test(str) ); // true (wahr)
+```
+
+Später in diesem Kapitel werden wir mehr reguläre Ausdrücke studieren, durch weitere Beispiele gehen und auch andere Methoden kennen lernen.
+
+Vollständige Informationen über die Methoden finden Sie im Artikel <info:regexp-methods>.
+
+## Zusammenfassung
+
+- Ein regulärer Ausdruck besteht aus einem Muster und optionalen Kennzeichen: muster:g", "muster:i", "muster:m", "muster:u", "muster:s", "muster:y".
+- Ohne Kennzeichen und Sonderzeichen (die wir später untersuchen werden) ist die Suche mit einem Regexp dasselbe wie eine Teilzeichenfolgesuche.- Die Methode `str.match(regexp)` sucht nach übereinstimmenden Zeichenfolgen: alle, wenn es das Kennzeichen `pattern:g` gibt, andernfalls nur das erste.
+- Die Methode `str.replace(regexp, replacement)` ersetzt gefundene Treffer, die mit `regexp` gefunden wurden, durch `replacement`: alle, wenn das Kennzeichen `pattern:g` vorhanden ist, andernfalls nur die erste.
+- Die Methode `regexp.test(str)` ergibt `true`, wenn es mindestens eine Übereinstimmung gibt, andernfalls wird `false` ausgegeben.
