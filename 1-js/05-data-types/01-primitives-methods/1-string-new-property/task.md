@@ -2,17 +2,16 @@ importance: 5
 
 ---
 
-# Can I add a string property?
+# Kann ich eine Zeichenketten-Eigenschaft hinzufügen?
 
-
-Consider the following code:
+Betrachte folgenden Code:
 
 ```js
-let str = "Hello";
+let str = 'Hallo';
 
 str.test = 5;
 
 alert(str.test);
 ```
 
-How do you think, will it work? What will be shown?
+Was glaubst du, wird es funktionieren? Was wird gezeigt werden?
