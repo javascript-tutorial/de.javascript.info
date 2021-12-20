@@ -225,6 +225,7 @@ Der Typ `symbol` wird verwendet, um eindeutige Bezeichner für Objekte zu erstel
 
 Der Operator `typeof` gibt den Typ des Arguments zurück. Dies ist nützlich, wenn wir Werte verschiedener Typen unterschiedlich verarbeiten oder nur eine schnelle Überprüfung durchführen möchten.
 
+<<<<<<< HEAD
 Es werden zwei Syntaxformen unterstützt:
 
 1. Als Operator: `typeof x`.
@@ -233,6 +234,9 @@ Es werden zwei Syntaxformen unterstützt:
 Mit anderen Worten, es funktioniert mit oder ohne Klammern. Das Ergebnis ist das Gleiche.
 
 Der Aufruf von `typeof x` gibt einen String mit dem Typ zurück:
+=======
+A call to `typeof x` returns a string with the type name:
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 ```js
 typeof undefined // "undefined"
@@ -262,11 +266,29 @@ typeof alert // "function"  (3)
 
 Die letzten drei Zeilen bedürfen möglicherweise einer zusätzlichen Erläuterung:
 
+<<<<<<< HEAD
 1. `Math` ist ein eingebautes Objekt, das mathematische Operationen liefert. Wir werden es im Kapitel <info:number> lernen. Hier dient es nur als Beispiel für ein Objekt.
 2. Das Ergebnis von `typeof null` ist `"object"`. Das ist ein offiziell anerkannter Fehler im `typeof`-Verhalten, der aus den frühen Tagen von JavaScript stammt und aus Kompatibilitätsgründen beibehalten wurde. Definitiv ist `null` kein Objekt. Es ist ein besonderer Wert mit einem eigenen Typ.
 3. Das Ergebnis von `typeof alert` ist `"function"`, denn `alert` ist eine Funktion. Wir werden Funktionen in den nächsten Kapiteln untersuchen, wo wir auch sehen werden, dass es keinen speziellen "Funktionstyp" in JavaScript gibt. Funktionen gehören zum Objekttyp. Aber `typeof` behandelt sie anders und gibt `"function"` zurück. Auch das stammt aus den frühen Tagen von JavaScript. Technisch gesehen ist ein solches Verhalten nicht korrekt, kann aber in der Praxis bequem sein.
 
 ## Zusammenfassung
+=======
+1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
+2. The result of `typeof null` is `"object"`. That's an officially recognized error in `typeof`, coming from very early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own. The behavior of `typeof` is wrong here.
+3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
+
+```smart header="The `typeof(x)` syntax"
+You may also come across another syntax: `typeof(x)`. It's the same as `typeof x`.
+
+To put it clear: `typeof` is an operator, not a function. The parentheses here aren't a part of `typeof`. It's the kind of parentheses used for mathematical grouping.
+
+Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, but here they contain only one argument `(x)`. Syntactically, they allow to avoid a space between the `typeof` operator and its argument, and some people like it.
+
+Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
+```
+
+## Summary
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 Es gibt 8 grundlegende Datentypen in JavaScript.
 
@@ -292,8 +314,14 @@ Es gibt 8 grundlegende Datentypen in JavaScript.
 
 Mit dem Operator `typeof` können wir sehen, welcher Typ in einer Variablen gespeichert ist.
 
+<<<<<<< HEAD
 - Zwei Formen: `typeof x` oder `typeof(x)`.
 - Gibt einen String mit dem Namen des Typs zurück, wie `"string"`.
 - Für `null` gibt es `"object"` zurück -- dies ist ein Fehler in der Sprache, es ist eigentlich kein Objekt.
+=======
+- Usually used as `typeof x`, but `typeof(x)` is also possible.
+- Returns a string with the name of the type, like `"string"`.
+- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 In den nächsten Kapiteln werden wir uns auf skalare Datentypen konzentrieren und, sobald wir mit ihnen vertraut sind, zu Objekten übergehen.

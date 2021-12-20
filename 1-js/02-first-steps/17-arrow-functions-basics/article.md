@@ -5,10 +5,14 @@ Es gibt eine weitere sehr einfache und prägnante Syntax für die Erstellung von
 Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
-let func = (arg1, arg2, ..., argN) => expression
+let func = (arg1, arg2, ..., argN) => expression;
 ```
 
+<<<<<<< HEAD
 ...Dies erzeugt eine Funktion `func`, welche die Argumente `arg1..argN` akzeptiert, dann den Ausdruck `expression` auf der rechten Seite auswertet und ihr Ergebnis zurückgibt.
+=======
+This creates a function `func` that accepts arguments `arg1..argN`, then evaluates the `expression` on the right side with their use and returns its result.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 In anderen Worten, es ist die verkürzte Version von:
 
