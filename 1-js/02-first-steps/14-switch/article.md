@@ -47,7 +47,9 @@ switch (a) {
     break;
 */!*
   case 5:
+
     alert( 'Zu gross' );
+
     break;
   default:
     alert( "Ich kenne keine solchen Werte" );

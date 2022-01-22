@@ -160,7 +160,7 @@ button.onclick = sayThanks;
 button.onclick = sayThanks();
 ```
 
-If we add parentheses, then `sayThanks()` becomes is a function call. So the last line actually takes the *result* of the function execution, that is `undefined` (as the function returns nothing), and assigns it to `onclick`. That doesn't work.
+If we add parentheses, then `sayThanks()` becomes a function call. So the last line actually takes the *result* of the function execution, that is `undefined` (as the function returns nothing), and assigns it to `onclick`. That doesn't work.
 
 ...On the other hand, in the markup we do need the parentheses:
 
@@ -236,7 +236,7 @@ element.removeEventListener(event, handler, [options]);
 ````warn header="Removal requires the same function"
 To remove a handler we should pass exactly the same function as was assigned.
 
-That doesn't work:
+This doesn't work:
 
 ```js no-beautify
 elem.addEventListener( "click" , () => alert('Thanks!'));

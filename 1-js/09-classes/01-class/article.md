@@ -51,7 +51,7 @@ user.sayHi();
 
 When `new User("John")` is called:
 1. A new object is created.
-2. The `constructor` runs with the given argument and assigns `this.name` to it.
+2. The `constructor` runs with the given argument and assigns it to `this.name`.
 
 ...Then we can call object methods, such as `user.sayHi()`.
 
@@ -110,7 +110,7 @@ alert(typeof User); // function
 alert(User === User.prototype.constructor); // true
 
 // The methods are in User.prototype, e.g:
-alert(User.prototype.sayHi); // alert(this.name);
+alert(User.prototype.sayHi); // the code of the sayHi method
 
 // there are exactly two methods in the prototype
 alert(Object.getOwnPropertyNames(User.prototype)); // constructor, sayHi
@@ -144,7 +144,7 @@ The result of this definition is about the same. So, there are indeed reasons wh
 
 Still, there are important differences.
 
-1. First, a function created by `class` is labelled by a special internal property `[[FunctionKind]]:"classConstructor"`. So it's not entirely the same as creating it manually.
+1. First, a function created by `class` is labelled by a special internal property `[[IsClassConstructor]]: true`. So it's not entirely the same as creating it manually.
 
     The language checks for that property in a variety of places. For example, unlike a regular function, it must be called with `new`:
 
@@ -218,7 +218,7 @@ function makeClass(phrase) {
   return class {
     sayHi() {
       alert(phrase);
-    };
+    }
   };
 }
 
@@ -331,7 +331,7 @@ alert(user.name); // John
 alert(User.prototype.name); // undefined
 ```
 
-Technically, they are processed after the constructor has done it's job, and we can use for them complex expressions and function calls:
+We can also assign values using more complex expressions and function calls:
 
 ```js run
 class User {
@@ -343,6 +343,7 @@ class User {
 let user = new User();
 alert(user.name); // John
 ```
+
 
 ### Making bound methods with class fields
 
@@ -375,30 +376,9 @@ The problem is called "losing `this`".
 There are two approaches to fixing it, as discussed in the chapter <info:bind>:
 
 1. Pass a wrapper-function, such as `setTimeout(() => button.click(), 1000)`.
-2. Bind the method to object, e.g. in the constructor:
+2. Bind the method to object, e.g. in the constructor.
 
-```js run
-class Button {
-  constructor(value) {
-    this.value = value;
-*!*
-    this.click = this.click.bind(this);
-*/!*
-  }
-
-  click() {
-    alert(this.value);
-  }
-}
-
-let button = new Button("hello");
-
-*!*
-setTimeout(button.click, 1000); // hello
-*/!*
-```
-
-Class fields provide a more elegant syntax for the latter solution:
+Class fields provide another, quite elegant syntax:
 
 ```js run
 class Button {
@@ -417,9 +397,9 @@ let button = new Button("hello");
 setTimeout(button.click, 1000); // hello
 ```
 
-The class field `click = () => {...}` creates an independent function on each `Button` object, with `this` bound to the object. Then we can pass `button.click` around anywhere, and it will be called with the right `this`.
+The class field `click = () => {...}` is created on a per-object basis, there's a separate function for each `Button` object, with `this` inside it referencing that object. We can pass `button.click` around anywhere, and the value of `this` will always be correct.
 
-That's especially useful in browser environment, when we need to setup a method as an event listener.
+That's especially useful in browser environment, for event listeners.
 
 ## Summary
 

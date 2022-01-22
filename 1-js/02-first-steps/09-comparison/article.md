@@ -6,10 +6,12 @@ In JavaScript they are written like this:
 
 - Greater/less than: <code>a &gt; b</code>, <code>a &lt; b</code>.
 - Greater/less than or equals: <code>a &gt;= b</code>, <code>a &lt;= b</code>.
-- Equals: `a == b`, please note the double equality sign `=` means the equality test, while a single one `a = b` means an assignment.
-- Not equals. In maths the notation is <code>&ne;</code>, but in JavaScript it's written as <code>a != b</code>.
+- Equals: `a == b`, please note the double equality sign `==` means the equality test, while a single one `a = b` means an assignment.
+- Not equals: In maths the notation is <code>&ne;</code>, but in JavaScript it's written as <code>a != b</code>.
 
 In this article we'll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.
+
+At the end you'll find a good recipe to avoid "JavaScript quirks"-related issues.
 
 ## Boolean is the result
 
@@ -55,7 +57,9 @@ The algorithm to compare two strings is simple:
 4. Repeat until the end of either string.
 5. If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
 
-In the examples above, the comparison `'Z' > 'A'` gets to a result at the first step while the strings `"Glow"` and `"Glee"` are compared character-by-character:
+In the first example above, the comparison `'Z' > 'A'` gets to a result at the first step.
+
+The second comparison `'Glow'` and `'Glee'` needs more steps as strings are compared character-by-character:
 
 1. `G` is the same as `G`.
 2. `l` is the same as `l`.
@@ -196,13 +200,12 @@ We get these results because:
 - Comparisons `(1)` and `(2)` return `false` because `undefined` gets converted to `NaN` and `NaN` is a special numeric value which returns `false` for all comparisons.
 - The equality check `(3)` returns `false` because `undefined` only equals `null`, `undefined`, and no other value.
 
-### Evade problems
+### Avoid problems
 
-Why did we go over these examples? Should we remember these peculiarities all the time? Well, not really. Actually, these tricky things will gradually become familiar over time, but there's a solid way to evade problems with them:
+Why did we go over these examples? Should we remember these peculiarities all the time? Well, not really. Actually, these tricky things will gradually become familiar over time, but there's a solid way to avoid problems with them:
 
-Just treat any comparison with `undefined/null` except the strict equality `===` with exceptional care.
-
-Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`, unless you're really sure of what you're doing. If a variable can have these values, check for them separately.
+- Treat any comparison with `undefined/null` except the strict equality `===` with exceptional care.
+- Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`, unless you're really sure of what you're doing. If a variable can have these values, check for them separately.
 
 ## Summary
 
