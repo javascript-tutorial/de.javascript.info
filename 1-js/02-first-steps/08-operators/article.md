@@ -212,6 +212,7 @@ Here's an extract from the [precedence table](https://developer.mozilla.org/en-U
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+<<<<<<< HEAD
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
 | 16 | Potenzierung | `**` |
@@ -224,10 +225,28 @@ Here's an extract from the [precedence table](https://developer.mozilla.org/en-U
 | ... | ... | ... |
 
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
+=======
+| 15 | unary plus | `+` |
+| 15 | unary negation | `-` |
+| 14 | exponentiation | `**` |
+| 13 | multiplication | `*` |
+| 13 | division | `/` |
+| 12 | addition | `+` |
+| 12 | subtraction | `-` |
+| ... | ... | ... |
+| 2 | assignment | `=` |
+| ... | ... | ... |
+
+As we can see, the "unary plus" has a priority of `15` which is higher than the `13` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 
 ## Zuweisung
 
+<<<<<<< HEAD
 Beachten wir, dass eine Zuweisung `=` auch ein Operator ist. Es ist in der Ranglistentabelle mit der sehr niedrigen Priorität `3` aufgeführt.
+=======
+Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `2`.
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 
 Wenn wir also eine Variable wie `x = 2 * 2 + 1` zuweisen, werden zuerst die Berechnungen durchgeführt und dann das `=` ausgewertet, wobei das Ergebnis in `x` gespeichert wird.
 

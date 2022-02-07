@@ -5,10 +5,14 @@ Es gibt eine weitere sehr einfache und prägnante Syntax für die Erstellung von
 Sie werden Pfeilfunktionen genannt, weil sie so aussehen:
 
 ```js
-let func = (arg1, arg2, ..., argN) => expression
+let func = (arg1, arg2, ..., argN) => expression;
 ```
 
+<<<<<<< HEAD
 ...Dies erzeugt eine Funktion `func`, welche die Argumente `arg1..argN` akzeptiert, dann den Ausdruck `expression` auf der rechten Seite auswertet und ihr Ergebnis zurückgibt.
+=======
+This creates a function `func` that accepts arguments `arg1..argN`, then evaluates the `expression` on the right side with their use and returns its result.
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 
 In anderen Worten, es ist die verkürzte Version von:
 
@@ -33,7 +37,11 @@ let sum = function(a, b) {
 alert( sum(1, 2) ); // 3
 ```
 
+<<<<<<< HEAD
 Wie man sehen kann, hat `(a, b) => a + b` die Bedeutung einer Funktion, die zwei Argumente `a` and `b` akzeptiert. Bei der Ausführung wird der Wert `a + b` ausgewertet und das Ergebnis zurückgegegeben.
+=======
+As you can see, `(a, b) => a + b` means a function that accepts two arguments named `a` and `b`. Upon the execution, it evaluates the expression `a + b` and returns the result.
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 
 - Wenn nur ein Argument vorhanden ist, können die Klammern um den Parameter wegelassen werden, was den Ausdruck noch weiter verkürzt.
 
@@ -86,7 +94,11 @@ Etwa so:
 let sum = (a, b) => {  // die geschweifte Klammer öffnet eine mehrzeilige Funktion
   let result = a + b;
 *!*
+<<<<<<< HEAD
   return result; // wenn wir geschweifte Klammern verwenden, dann brauchen wir ein explizites "return"
+=======
+  return result; // if we use curly braces, then we need an explicit "return"
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 */!*
 };
 
