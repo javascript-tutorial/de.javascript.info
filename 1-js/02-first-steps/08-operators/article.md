@@ -56,17 +56,31 @@ alert( 8 % 3 ); // 2, der Rest von 8 geteilt durch 3
 
 ### Potenzierung **
 
+<<<<<<< HEAD
 Der Exponentiationsoperator `a ** b` multipliziert `a` mit sich selbst `b` mal.
+=======
+The exponentiation operator `a ** b` raises `a` to the power of `b`.
+
+In school maths, we write that as a<sup>b</sup>.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Zum Beispiel:
 
 ```js run
+<<<<<<< HEAD
 alert( 2 ** 2 ); // 4  (2 mit sich selbst 2 mal multipliziert)
 alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 mal)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 mal)
+=======
+alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+alert( 2 ** 4 ); // 2⁴ = 16
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 ```
 
-Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+Just like in maths, the exponentiation operator is defined for non-integer numbers as well. 
+
+For example, a square root is an exponentiation by ½:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (Die Potenz von 1/2 ist gleich der Quadratwurzel)
@@ -104,7 +118,16 @@ Hier ist ein komplexeres Beispiel:
 alert(2 + 2 + '1' ); // "41" und nicht "221"
 ```
 
+<<<<<<< HEAD
 Dabei arbeiten die Operatoren einer nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass es `4` zurückgibt, dann fügt das nächste `+` die Zeichenkette `1` hinzu, so dass es `4 + '1' = 41` ergibt.
+=======
+Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = '41'`.
+
+```js run
+alert('1' + 2 + 2); // "122" and not "14"
+```
+Here, the first operand is a string, the compiler treats the other two operands as strings too. The `2` gets concatenated to `'1'`, so it's like `'1' + 2 = "12"` and `"12" + 2 = "122"`.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Das binäre `+` ist der einzige Operator, der Zeichenketten auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
 
@@ -180,11 +203,16 @@ Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge 
 
 In JavaScript gibt es viele Operatoren. Jeder Operator hat eine entsprechende Vorrangsnummer. Der mit der größeren Nummer wird zuerst ausgeführt. Bei gleicher Rangfolge erfolgt die Ausführung von links nach rechts.
 
+<<<<<<< HEAD
 Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (Du musst dir das nicht merken, aber beachte, dass unäre Operatoren höher sind als entsprechende binäre):
+=======
+Here's an extract from the [precedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+<<<<<<< HEAD
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
 | 16 | Potenzierung | `**` |
@@ -197,10 +225,28 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | ... | ... | ... |
 
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
+=======
+| 15 | unary plus | `+` |
+| 15 | unary negation | `-` |
+| 14 | exponentiation | `**` |
+| 13 | multiplication | `*` |
+| 13 | division | `/` |
+| 12 | addition | `+` |
+| 12 | subtraction | `-` |
+| ... | ... | ... |
+| 2 | assignment | `=` |
+| ... | ... | ... |
+
+As we can see, the "unary plus" has a priority of `15` which is higher than the `12` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+>>>>>>> 29216730a877be28d0a75a459676db6e7f5c4834
 
 ## Zuweisung
 
+<<<<<<< HEAD
 Beachten wir, dass eine Zuweisung `=` auch ein Operator ist. Es ist in der Ranglistentabelle mit der sehr niedrigen Priorität `3` aufgeführt.
+=======
+Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `2`.
+>>>>>>> 29216730a877be28d0a75a459676db6e7f5c4834
 
 Wenn wir also eine Variable wie `x = 2 * 2 + 1` zuweisen, werden zuerst die Berechnungen durchgeführt und dann das `=` ausgewertet, wobei das Ergebnis in `x` gespeichert wird.
 
@@ -214,7 +260,11 @@ alert( x ); // 5
 
 Die Tatsache, dass `=` ein Operator und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
 
+<<<<<<< HEAD
 Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, gilt aber auch für `=`.
+=======
+All operators in JavaScript return a value. That's obvious for `+` and `-`, but also true for `=`.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Der Aufruf `x = Wert` schreibt den `Wert` in `x` *und gibt ihn dann zurück*.
 
@@ -428,7 +478,11 @@ Die Liste der Operatoren:
 - Rechtsverschiebung ( `>>` )
 - Null füllende Rechtsverschiebung ( `>>>` )
 
+<<<<<<< HEAD
 Diese Operatoren werden sehr selten verwendet, wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da die Webentwicklung kaum Gebrauch von ihnen macht, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
+=======
+These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise) chapter on MDN when a need arises.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 ## Komma
 

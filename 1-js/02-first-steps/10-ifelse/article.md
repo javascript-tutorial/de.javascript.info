@@ -1,4 +1,6 @@
+
 # Bedingte Operatoren: if, '?'
+
 
 Manchmal müssen wir verschiedene Aktionen auf Grundlage unterschiedlicher Bedingungen durchführen.
 
@@ -68,7 +70,9 @@ if (cond) {
 
 ## Der "else"-Block
 
+
 Die `if`-Anweisung kann einen optionalen "else"-Block enthalten. Er wird ausgeführt, wenn die Bedingung falsch ist.
+
 
 Beispiel:
 ```js run
