@@ -56,17 +56,24 @@ alert( 8 % 3 ); // 2, der Rest von 8 geteilt durch 3
 
 ### Potenzierung **
 
+
 Der Exponentiationsoperator `a ** b` multipliziert `a` mit sich selbst `b` mal.
+
+
 
 Zum Beispiel:
 
 ```js run
+
 alert( 2 ** 2 ); // 4  (2 mit sich selbst 2 mal multipliziert)
 alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 mal)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 mal)
+
 ```
 
-Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+Genau wie in der Mathematik ist der Potenzierungsoperator auch für nicht-ganzzahlige Zahlen definiert. 
+
+Zum Beispiel ist eine Quadratwurzel eine Potenzierung durch ½:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (Die Potenz von 1/2 ist gleich der Quadratwurzel)
@@ -104,7 +111,14 @@ Hier ist ein komplexeres Beispiel:
 alert(2 + 2 + '1' ); // "41" und nicht "221"
 ```
 
+
 Dabei arbeiten die Operatoren einer nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass es `4` zurückgibt, dann fügt das nächste `+` die Zeichenkette `1` hinzu, so dass es `4 + '1' = 41` ergibt.
+
+
+```js run
+alert('1' + 2 + 2); // "122" and not "14"
+```
+
 
 Das binäre `+` ist der einzige Operator, der Zeichenketten auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
 
@@ -180,11 +194,14 @@ Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge 
 
 In JavaScript gibt es viele Operatoren. Jeder Operator hat eine entsprechende Vorrangsnummer. Der mit der größeren Nummer wird zuerst ausgeführt. Bei gleicher Rangfolge erfolgt die Ausführung von links nach rechts.
 
+
 Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (Du musst dir das nicht merken, aber beachte, dass unäre Operatoren höher sind als entsprechende binäre):
+
 
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
 | 16 | Potenzierung | `**` |
@@ -198,9 +215,15 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
 
+
+
+
 ## Zuweisung
 
+
 Beachten wir, dass eine Zuweisung `=` auch ein Operator ist. Sie ist in der Ranglistentabelle mit der sehr niedrigen Priorität `3` aufgeführt.
+
+
 
 Wenn wir also eine Variable wie `x = 2 * 2 + 1` zuweisen, werden zuerst die Berechnungen durchgeführt und dann das `=` ausgewertet, wobei das Ergebnis in `x` gespeichert wird.
 
@@ -214,7 +237,11 @@ alert( x ); // 5
 
 Die Tatsache, dass `=` ein Operator und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
 
+
 Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, dies gilt aber auch für `=`.
+
+
+
 
 Der Aufruf `x = Wert` schreibt den `Wert` in `x` *und gibt ihn dann zurück*.
 
@@ -428,7 +455,10 @@ Die Liste der Operatoren:
 - Rechtsverschiebung ( `>>` )
 - Null füllende Rechtsverschiebung ( `>>>` )
 
+
 Diese Operatoren werden sehr selten verwendet, z.B. wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da in der Webentwicklung kaum Gebrauch von ihnen gemacht wird, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
+
+
 
 ## Komma
 
