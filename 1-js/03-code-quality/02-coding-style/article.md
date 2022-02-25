@@ -116,7 +116,9 @@ Es gibt zwei Arten von Einrückungen:
 
     Ein Vorteil von Leerzeichen ist, dass sie eine flexiblere Benutzung von Einrückungen zulassen, als die Tab-Taste.
 
+
     Zum Beispiel, können wir die Parametern untereinander, an dem "Klammer-auf-Symbol" ausrichten:
+
 
     ```js no-beautify
     show(parameters,
@@ -301,11 +303,13 @@ Das großartige daran ist, beim Prüfen können sie auch Bugs finden, wie zum Be
 
 Hier sind ein paar bekannte Beispiele:
 
+
 - [JSLint](http://www.jslint.com/) -- einer der ersten Linters.
 - [JSHint](http://www.jshint.com/) -- mehr Einstellungen als JSLint.
 - [ESLint](http://eslint.org/) -- wahrscheinlich das Neuste.
 
 Alle erfüllen die Anforderungen. Der Autor benutzt [ESLint](http://eslint.org/).
+
 
 Die meisten Linters sind in vielen Editoren integriert. Man muss lediglich in dem Editor den Plugin aktivieren und den Stil konfigurieren.
 
@@ -328,7 +332,7 @@ Hier ist ein Beispiel einer `.eslintrc` Datei:
   },
   "rules": {
     "no-console": 0,
-    "indent": ["warning", 2]
+    "indent": 2
   }
 }
 ```
@@ -336,6 +340,7 @@ Hier ist ein Beispiel einer `.eslintrc` Datei:
 Hier bedeutet die `"extends"`-Anweisung, dass die Konfiguration auf die "eslint:recommended" Einstellungen beruht. Danach geben wir unsere Einstellungen an.
 
 Es ist auch möglich einen "style rule set" aus dem Internet herunterzuladen und zu erweitern. Schaue dir <http://eslint.org/docs/user-guide/getting-started> an, für mehr Details über die Einrichtung.
+
 
 Manche Entwicklungsumgebungen haben installierte Linters. Das ist zwar praktisch, aber sie sind nicht so anpassbar wie ESLint
 

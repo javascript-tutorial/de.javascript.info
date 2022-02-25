@@ -109,7 +109,7 @@ There will be no conflict between our and their identifiers, because symbols are
 
 ...But if we used a string `"id"` instead of a symbol for the same purpose, then there *would* be a conflict:
 
-```js run
+```js
 let user = { name: "John" };
 
 // Our script uses "id" property
@@ -121,7 +121,7 @@ user.id = "Their id value"
 // Boom! overwritten by another script!
 ```
 
-### Symbols in a literal
+### Symbols in an object literal
 
 If we want to use a symbol in an object literal `{...}`, we need square brackets around it.
 
@@ -133,7 +133,7 @@ let id = Symbol("id");
 let user = {
   name: "John",
 *!*
-  [id]: 123 // not "id: 123"
+  [id]: 123 // not "id": 123
 */!*
 };
 ```
@@ -161,7 +161,7 @@ for (let key in user) alert(key); // name, age (no symbols)
 alert( "Direct: " + user[id] );
 ```
 
-`Object.keys(user)` also ignores them. That's a part of the general "hiding symbolic properties" principle. If another script or a library loops over our object, it won't unexpectedly access a symbolic property.
+[Object.keys(user)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) also ignores them. That's a part of the general "hiding symbolic properties" principle. If another script or a library loops over our object, it won't unexpectedly access a symbolic property.
 
 In contrast, [Object.assign](mdn:js/Object/assign) copies both string and symbol properties:
 

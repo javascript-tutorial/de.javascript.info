@@ -56,17 +56,24 @@ alert( 8 % 3 ); // 2, der Rest von 8 geteilt durch 3
 
 ### Potenzierung **
 
+
 Der Exponentiationsoperator `a ** b` multipliziert `a` mit sich selbst `b` mal.
+
+
 
 Zum Beispiel:
 
 ```js run
+
 alert( 2 ** 2 ); // 4  (2 mit sich selbst 2 mal multipliziert)
 alert( 2 ** 3 ); // 8  (2 * 2 * 2, 3 mal)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2, 4 mal)
+
 ```
 
-Mathematically, the exponentiation is defined for non-integer numbers as well. For example, a square root is an exponentiation by `1/2`:
+Genau wie in der Mathematik ist der Potenzierungsoperator auch für nicht-ganzzahlige Zahlen definiert. 
+
+Zum Beispiel ist eine Quadratwurzel eine Potenzierung durch ½:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (Die Potenz von 1/2 ist gleich der Quadratwurzel)
@@ -104,7 +111,14 @@ Hier ist ein komplexeres Beispiel:
 alert(2 + 2 + '1' ); // "41" und nicht "221"
 ```
 
+
 Dabei arbeiten die Operatoren einer nach dem anderen. Das erste `+` summiert zwei Zahlen, so dass es `4` zurückgibt, dann fügt das nächste `+` die Zeichenkette `1` hinzu, so dass es `4 + '1' = 41` ergibt.
+
+
+```js run
+alert('1' + 2 + 2); // "122" and not "14"
+```
+
 
 Das binäre `+` ist der einzige Operator, der Zeichenketten auf diese Weise unterstützt. Andere arithmetische Operatoren arbeiten nur mit Zahlen und konvertieren ihre Operanden immer in Zahlen.
 
@@ -180,11 +194,14 @@ Klammern überschreiben alle Prioritäten. Wenn wir mit der Standardreihenfolge 
 
 In JavaScript gibt es viele Operatoren. Jeder Operator hat eine entsprechende Vorrangsnummer. Der mit der größeren Nummer wird zuerst ausgeführt. Bei gleicher Rangfolge erfolgt die Ausführung von links nach rechts.
 
+
 Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (Du musst dir das nicht merken, aber beachte, dass unäre Operatoren höher sind als entsprechende binäre):
+
 
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
 | 16 | Potenzierung | `**` |
@@ -198,9 +215,15 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
 
+
+
+
 ## Zuweisung
 
-Beachten wir, dass eine Zuweisung `=` auch ein Operator ist. Es ist in der Ranglistentabelle mit der sehr niedrigen Priorität `3` aufgeführt.
+
+Beachten wir, dass eine Zuweisung `=` auch ein Operator ist. Sie ist in der Ranglistentabelle mit der sehr niedrigen Priorität `3` aufgeführt.
+
+
 
 Wenn wir also eine Variable wie `x = 2 * 2 + 1` zuweisen, werden zuerst die Berechnungen durchgeführt und dann das `=` ausgewertet, wobei das Ergebnis in `x` gespeichert wird.
 
@@ -214,7 +237,11 @@ alert( x ); // 5
 
 Die Tatsache, dass `=` ein Operator und kein "magisches" Sprachkonstrukt ist, hat eine interessante Implikation.
 
-Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, gilt aber auch für `=`.
+
+Die meisten Operatoren in JavaScript geben einen Wert zurück. Das ist bei `+` und `-` offensichtlich, dies gilt aber auch für `=`.
+
+
+
 
 Der Aufruf `x = Wert` schreibt den `Wert` in `x` *und gibt ihn dann zurück*.
 
@@ -232,11 +259,11 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-Im obigen Beispiel ist das Ergebnis des Ausdrucks `(a = b + 1)` der Wert, der `a` zugewiesen wurde (d.h. `3`). Es wird dann für weitere Auswertungen verwendet.
+Im obigen Beispiel ist das Ergebnis des Ausdrucks `(a = b + 1)` der Wert, der `a` zugewiesen wurde (d.h. `3`). Dieser Wert wird dann für weitere Auswertungen verwendet.
 
-Seltsamer Code, nicht wahr? Wir sollten verstehen, wie er funktioniert, denn manchmal sehen wir ihn in JavaScript-Bibliotheken.
+Seltsamer Code, nicht wahr? Wir sollten uns über seine Funktionalität klar machen, denn Code wie dieser kommt in JavaScript-Bibliotheken vor.
 
-Trotzdem, bitte schreibe Code nicht so. Solche Tricks machen Code bestimmt nicht klarer oder leserlicher.
+Dennoch, bitte schreibe keinen Code auf diese Weise. Tricks wie diese machen Code weder klarer noch leserlicher.
 
 ### Verkettung von Zuweisungen
 
@@ -256,7 +283,7 @@ alert( c ); // 4
 
 Verkettete Zuweisungen werden von rechts nach links ausgewertet. Zuerst wird der ganz rechte Ausdruck `2 + 2` ausgewertet und dann den Variablen auf der linken Seite zugewiesen: `c`, `b` und `a`. Am Ende teilen sich alle Variablen einen einzigen Wert.
 
-Noch einmal: Aus Gründen der Lesbarkeit ist es besser, solchen Code in wenige Zeilen aufzuteilen:
+Auch hier gilt: Aufgrund der Lesbarkeit ist es besser, solchen Code in wenige Zeilen aufzuteilen:
 
 ```js
 c = 2 + 2;
@@ -267,7 +294,7 @@ Das ist leichter zu lesen, besonders wenn man den Code mit den Augen schnell sca
 
 ## An Ort und Stelle modifizieren
 
-Wir müssen oft einen Operator auf eine Variable anwenden und das neue Ergebnis in derselben Variable speichern.
+Häufig müssen wir einen Operator auf eine Variable anwenden und das neue Ergebnis in derselben Variable speichern.
 
 Zum Beispiel:
 
@@ -277,7 +304,7 @@ n = n + 5;
 n = n * 2;
 ```
 
-Diese Notation kann mit den Operatoren `+=` und `*=` gekürzt werden:
+Diese Notation kann man mit den Operatoren `+=` und `*=` abkürzen:
 
 ```js run
 let n = 2;
@@ -289,7 +316,7 @@ alert( n ); // 14
 
 Für alle arithmetischen und bitweisen Operatoren gibt es kurze "modifizieren-und-zuweisen"-Operatoren: `/=`, `-=`, usw.
 
-Solche Operatoren haben den gleichen Stellenwert wie eine normale Zuweisung, so dass sie nach den anderen Berechnungen durchgeführt werden:
+Solche Operatoren haben den gleichen Stellenwert wie eine normale Zuweisung, sodass sie nach den anderen Berechnungen durchgeführt werden:
 
 ```js run
 let n = 2;
@@ -335,18 +362,18 @@ Beide Anweisungen tun dasselbe: erhöhen `counter` um `1`.
 
 Gibt es da einen Unterschied? Ja, aber wir können es nur sehen, wenn wir den zurückgegebenen Wert von `++/-` verwenden.
 
-Lass uns klären. Wie wir wissen, geben alle Operatoren einen Wert zurück. Inkrementieren/Dekrementieren ist keine Ausnahme. Die Präfix-Form gibt den neuen Wert zurück, während die Postfix-Form den alten Wert zurück gibt (vor dem Inkrementieren/Dekrementieren).
+Lass es uns aufklären. Wie wir wissen, geben alle Operatoren einen Wert zurück. Inkrementieren/Dekrementieren ist keine Ausnahme. Die Präfix-Form gibt den neuen Wert zurück, während die Postfix-Form den alten Wert zurück gibt (vor dem Inkrementieren/Dekrementieren).
 
-Um den Unterschied zu sehen, hier ein Beispiel:
+Um den Unterschied zu erkennen, hier ein Beispiel:
 
 ```js run
 let counter = 1;
 let a = ++counter; // (*)
 
-alert(a); // *!*2*/!*
+alert(a); // 2
 ```
 
-In der Zeile `(*)` erhöht die *Präfix*-Form von `++counter` den Wert von `counter` und gibt den neuen Wert `2` zurück. Der `alert` zeigt also `2`.
+In der Zeile `(*)` erhöht die *Präfix*-Form von `++counter` den Wert von `counter` und gibt den neuen Wert `2` zurück. Der `alert` gibt also `2` zurück.
 
 Verwenden wir nun die Postfix-Form:
 
@@ -354,10 +381,10 @@ Verwenden wir nun die Postfix-Form:
 let counter = 1;
 let a = counter++; // (*) ++counter zu counter++ geändert
 
-alert(a); // *!*1*/!*
+alert(a); // 1
 ```
 
-In der Zeile `(*)` erhöht die *Postfix*-Form `counter++` ebenfalls `counter`, gibt aber den *alten* Wert (vor dem Inkrementieren) zurück. Der `alert` zeigt also `1`.
+In der Zeile `(*)` erhöht die *Postfix*-Form `counter++` ebenfalls den Wert von `counter`, gibt aber den *alten* Wert (vor dem Inkrementieren) zurück. Der `alert` gibt also `1` zurück.
 
 Zusammenfassend:
 
@@ -369,13 +396,13 @@ Zusammenfassend:
     ++counter;
     alert( counter ); // 2, die obigen Zeilen haben dasselbe getan
     ```
-- Wenn wir einen Wert erhöhen *und* sofort das Ergebnis des Operators verwenden möchten, benötigen wir die Präfix-Formu:
+- Wenn wir einen Wert erhöhen *und* sofort das Ergebnis des Operators verwenden möchten, benötigen wir die Präfix-Form:
 
     ```js run
     let counter = 0;
     alert( ++counter ); // 1
     ```
-- Wenn wir einen Wert erhöhen, aber seinen vorherigen Wert verwenden möchten, benötigen wir die Postfix-Form:
+- Wenn wir einen Wert erhöhen, aber seinen vorherigen Wert noch verwenden möchten, benötigen wir die Postfix-Form:
 
     ```js run
     let counter = 0;
@@ -399,7 +426,7 @@ let counter = 1;
 alert( 2 * counter++ ); // 2, weil counter ++ den "alten" Wert zurückgibt
 ```
 
-Obwohl technisch in Ordnung, macht eine solche Notation Code normalerweise weniger lesbar. Eine Zeile macht mehrere Dinge -- nicht gut.
+Obwohl dies technisch in Ordnung ist, macht eine solche Notation Code normalerweise unlesbarer. Eine Zeile in der mehrere Operationen ausgeführt werden -- nicht gut.
 
 Beim Lesen von Code kann ein schneller "vertikaler" Augenscan leicht etwas wie `counter++` übersehen, und es ist nicht offensichtlich, dass die Variable größer wird.
 
@@ -428,13 +455,16 @@ Die Liste der Operatoren:
 - Rechtsverschiebung ( `>>` )
 - Null füllende Rechtsverschiebung ( `>>>` )
 
-Diese Operatoren werden sehr selten verwendet, wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da die Webentwicklung kaum Gebrauch von ihnen macht, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
+
+Diese Operatoren werden sehr selten verwendet, z.B. wenn wir mit Zahlen auf der untersten (bitweisen) Ebene herumspielen müssen. Wir werden diese Operatoren in absehbarer Zeit nicht brauchen, da in der Webentwicklung kaum Gebrauch von ihnen gemacht wird, aber in einigen speziellen Bereichen, wie der Kryptographie, sind sie nützlich. Bei bedarf kannst du den Artikel [Bitweise Operatoren](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Bitwise_Operatoren) auf MDN lesen.
+
+
 
 ## Komma
 
 Der Komma-Operator `,` ist einer der seltensten und ungewöhnlichsten Operatoren. Manchmal wird damit kürzerer Code geschrieben, sodass wir ihn kennen müssen, um zu verstehen, was vor sich geht.
 
-Mit dem Komma-Operator können wir mehrere Ausdrücke auswerten und durch ein Komma `,` trennen. Jeder von ihnen wird ausgewertet, aber nur das Ergebnis des letzten wird zurückgegeben.
+Mit dem Komma-Operator können wir mehrere Ausdrücke auswerten und sie durch ein Komma `,` trennen. Jeder von ihnen wird ausgewertet, aber nur das Ergebnis des letzten Ausdrucks wird zurückgegeben.
 
 Zum Beispiel:
 
@@ -449,14 +479,14 @@ alert( a ); // 7 (das Ergebnis von 3 + 4)
 Hier wird der erste Ausdruck `1 + 2` ausgewertet und sein Ergebnis verworfen. Dann wird `3 + 4` ausgewertet und als Ergebnis zurückgegeben.
 
 ```smart header="Komma hat eine sehr geringe Priorität"
-Bitte beachten Sie, dass der Komma-Operator eine sehr niedrige Priorität hat, niedriger als `=`, daher sind Klammern im obigen Beispiel wichtig.
+Bitte beachte, dass der Komma-Operator eine sehr niedrige Priorität hat, niedriger als `=`, daher sind Klammern im obigen Beispiel wichtig.
 
-Ohne sie: `a = 1 + 2, 3 + 4` wertet zuerst `+` aus, summiert die Zahlen zu `a = 3, 7`, dann weist der Zuweisungsoperator `=` `a = 3` zu, und der Rest ist ignoriert. Es ist wie `(a = 1 + 2), 3 + 4`.
+Ohne Klammern: `a = 1 + 2, 3 + 4` wertet zuerst `+` aus, summiert die Zahlen zu `a = 3, 7`, dann weist der Zuweisungsoperator `=` `a = 3` zu, der Rest wird ignoriert. Es ist wie `(a = 1 + 2), 3 + 4`.
 ```
 
-Warum brauchen wir einen Operator, der alles außer dem letzten Ausdruck wegwirft?
+Wozu brauchen wir einen Operator, der alles außer dem letzten Ausdruck verwirft?
 
-Manchmal wird es in komplexeren Konstrukten verwendet, um mehrere Aktionen in eine Zeile zu setzen.
+Manchmal wird der Operator in komplexeren Konstrukten verwendet, um mehrere Aktionen in eine Zeile zu setzen.
 
 Zum Beispiel:
 
@@ -467,4 +497,4 @@ for (*!*a = 1, b = 3, c = a * b*/!*; a < 10; a++) {
 }
 ```
 
-Solche Tricks werden in vielen JavaScript-Frameworks verwendet. Deshalb erwähnen wir sie. In der Regel verbessern sie jedoch nicht die Lesbarkeit des Codes, daher sollten wir vor der Verwendung gut überlegen.
+Solche Tricks werden in vielen JavaScript-Frameworks verwendet. Deshalb erwähnen wir sie. In der Regel verbessern sie jedoch nicht die Lesbarkeit des Codes, daher sollten wir uns ihre Verwendung gut überlegen.
