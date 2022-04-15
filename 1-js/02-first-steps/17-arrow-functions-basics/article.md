@@ -56,7 +56,11 @@ As you can see, `(a, b) => a + b` means a function that accepts two arguments na
     alert( double(3) ); // 6
     ```
 
+<<<<<<< HEAD
 - Wenn es keine Argument gibt, sind die Klammern leer (aber sie sollte vorhanden sein):
+=======
+- If there are no arguments, parentheses are empty, but they must be present:
+>>>>>>> ac7daa516fa8e687427eac51186af97154748afa
 
     ```js run
     let sayHi = () => alert("Hallo!");
@@ -84,9 +88,15 @@ Sie sind sehr praktisch für einfache einzeilige Aktionen, wenn wir einfach zu f
 
 ## Mehrzeilige Pfeilfunktionen
 
+<<<<<<< HEAD
 Die Beispiele oben nahmen Argumente von der linken Seite `=>` und bewerteten damit den Ausdruck auf der rechten Seite.
 
 Manchmal brauchen wir etwas Komplexeres, wie mehrfache Ausdrücke oder Anweisungen. Das ist auch möglich, aber wir sollten sie in geschweifte Klammern einschließen. Dann verwende ein normales `return` innerhalb dieser Klammern.
+=======
+The arrow functions that we've seen so far were very simple. They took arguments from the left of `=>`, evaluated and returned the right-side expression with them.
+
+Sometimes we need a more complex function, with multiple expressions and statements. In that case, we can enclose them in curly braces. The major difference is that curly braces require a `return` within them to return a value (just like a regular function does).
+>>>>>>> ac7daa516fa8e687427eac51186af97154748afa
 
 Etwa so:
 
@@ -117,7 +127,14 @@ Für den Moment können wir Pfeilfunktionen für einzeilige Aktionen und Callbac
 
 ## Zusammenfassung
 
+<<<<<<< HEAD
 Pfeilfunktionen sind praktische Einzeiler. Es gibt sie in zwei Varianten:
 
 1. Ohne geschweifte Klammern: `(...args) => expression` -- die rechte Seite ist ein Ausdruck: die Funktion wertet diesen aus und gibt das Ergebnis zurück.
 2. Mit geschweiften Klammern: `(...args) => { body }` -- Klammern erlauben es mehrere Anweisungen zu schreiben, aber es braucht ein explizites `return` um etwas zurückzugeben.
+=======
+Arrow functions are handy for simple actions, especially for one-liners. They come in two flavors:
+
+1. Without curly braces: `(...args) => expression` -- the right side is an expression: the function evaluates it and returns the result. Parentheses can be omitted, if there's only a single argument, e.g. `n => n*2`.
+2. With curly braces: `(...args) => { body }` -- brackets allow us to write multiple statements inside the function, but we need an explicit `return` to return something.
+>>>>>>> ac7daa516fa8e687427eac51186af97154748afa
