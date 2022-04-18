@@ -76,8 +76,13 @@ Zum Beispiel, um eine Funktion dynamisch zu erstellen:
 let age = prompt("Wie alt bist Du?", 18);
 
 let welcome = (age < 18) ?
+<<<<<<< HEAD
   () => alert('Hallo') :
   () => alert("Grüße!");
+=======
+  () => alert('Hello!') :
+  () => alert("Greetings!");
+>>>>>>> 291b5c05b99452cf8a0d32bd32426926dbcc0ce0
 
 welcome();
 ```
