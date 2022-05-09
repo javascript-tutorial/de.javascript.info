@@ -208,8 +208,13 @@ let 1a; // kann nicht mit einer Ziffer beginnen
 let my-name; // Bindestriche '-' sind im Namen nicht erlaubt
 ```
 
+<<<<<<< HEAD
 ```smart header="Groß- und Kleinschreibung"
 Variablen mit den Namen `apple` und `AppLE` sind zwei unterschiedliche Variablen.
+=======
+```smart header="Case matters"
+Variables named `apple` and `APPLE` are two different variables.
+>>>>>>> 206485fc3a5465f961608b6e7303fae2e1a0e0b5
 ```
 
 ````smart header="nicht-lateinische Buchstaben sind erlaubt, aber nicht empfohlen"
@@ -318,7 +323,11 @@ const pageLoadTime = /* Zeit, die eine Website braucht, um geladen zu werden */;
 
 Der Wert von `pageLoadTime` ist vor dem Laden der Seite nicht bekannt, daher wird er normal benannt. Aber es ist immer noch eine Konstante, weil er sich nach der Zuweisung nicht mehr ändert.
 
+<<<<<<< HEAD
 Mit anderen Worten, großgeschriebene Konstanten werden nur als Aliase für "hart kodierte" Werte verwendet.  
+=======
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 206485fc3a5465f961608b6e7303fae2e1a0e0b5
 
 ## Dinge richtig benennen
 
