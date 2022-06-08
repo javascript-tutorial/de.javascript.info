@@ -1,6 +1,10 @@
 # Logische Operatoren
 
+<<<<<<< HEAD
 Es gibt drei logische Operatoren in JavaScript: `||` (ODER), `&&` (UND), `!` (NICHT).
+=======
+There are four logical operators in JavaScript: `||` (OR), `&&` (AND), `!` (NOT), `??` (Nullish Coalescing). Here we cover the first three, the `??` operator is in the next article.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Obgleich sie "logisch" genannt werden, lassen sie sich auf Werte eines beliebigen Typs anwenden, nicht nur 'boolean'. Genauso kann ihr Ergebnis jedweden Typ haben.
 
@@ -64,7 +68,11 @@ if (hour < 10 || hour > 18 || isWeekend) {
 }
 ```
 
+<<<<<<< HEAD
 ## ODER "||" findet den ersten effektiv wahren Wert
+=======
+## OR "||" finds the first truthy value [#or-finds-the-first-truthy-value]
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Die oben beschriebene Logik ist sozusagen die klassische Variante. Nehmen wir jetzt die "speziellen" Features von JavaScript hinzu.
 
@@ -84,70 +92,75 @@ arbeitet der Operator ODER `||` wie folgt:
 
 Ein Wert wird in seiner ursprünglichen Form zurückgegeben, ohne die Konvertierung.
 
+<<<<<<< HEAD
 Mit anderen Worten, eine Folge von ODER `"||"` gibt den ersten effektiv wahren Wert zurück oder - sofern kein solcher gefunden wird - den letzten Wert.
+=======
+In other words, a chain of OR `||` returns the first truthy value or the last one if no truthy value is found.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Beispiel:
 
 ```js run
-alert( 1 || 0 ); // 1 (1 is truthy)
-alert( true || 'egal was' ); // (true ist effektiv wahr)
+alert( 1 || 0 ); // 1 (1 ist wahr)
 
-alert( null || 1 ); // 1 (1 ist der erste effektiv wahre Wert)
-alert( null || 0 || 1 ); // 1 (der erste effektiv wahre Wert)
-alert( undefined || null || 0 ); // 0 (alle effektiv nicht wahr, gibt letzten Wert zurück)
+alert( null || 1 ); // 1 (1 ist der erste wahre Wert)
+alert( null || 0 || 1 ); // 1 (der erste wahre Wert)
+
+alert( undefined || null || 0 ); // 0 (alle falsch, gibt den letzten Wert zurück)
 ```
 
 Das führt im Vergleich zu einem "reinen, klassischen, nur-Booleschen ODER" zu einigen interessanten Anwendungen:
 
 1. **Bestimme den ersten effektiv wahren Wert aus einer Liste von Variablen bzw. Ausdrücken.**
 
-    Nehmen wir an wir hätten eine Liste von Variablen, die entweder Daten beinhalten oder `null/undefined` sind. Wie finden wir die erste Variable mit Inhalt ?
+<<<<<<< HEAD
+    Haben wir zum Beispiel die Variablen `firstName`, `lastName` und `nickName`, die alle optional sind.
 
-    Wir können ODER `||` nutzen:
+    Benutzen wir ODER `||`, um denjenigen auszuwählen, der Daten enthält und geben sie aus (oder `Anonym` wenn nichts gesetzt ist):
+=======
+    For instance, we have `firstName`, `lastName` and `nickName` variables, all optional (i.e. can be undefined or have falsy values).
+
+    Let's use OR `||` to choose the one that has the data and show it (or `"Anonymous"` if nothing set):
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
     ```js run
-    let currentUser = null;
-    let defaultUser = "John";
+    let firstName = "";
+    let lastName = "";
+    let nickName = "SuperCoder";
 
     *!*
-    let name = currentUser || defaultUser || "unbenannt";
+    alert( firstName || lastName || nickName || "Anonym"); // SuperCoder
     */!*
-
-    alert( name ); // Gibt "John" aus – den ersten effektiv wahren Wert
     ```
 
-    Wären sowohl `currentUser` als auch `defaultUser` effektiv nicht wahr, lautete das Ergebnis `"unbenannt"`.
-2. **Partielle Auswertung ( Short-circuit evaluation ).**
+<<<<<<< HEAD
+    Wenn alle Variablen falsch sind, würde `Anonym` herauskommen.
+=======
+    If all variables were falsy, `"Anonymous"` would show up.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
-    Operanden können nicht nur Werte sondern beliebige Ausdrücke sein. ODER führt deren Auswertung und Test in der Reihenfolge von links nach rechts aus. Die Auswertung endet, wenn ein effektiv wahrer Wert erreicht wird, und dieser Wert wird zurückgegeben. Dieses Prinzip nennt man "partielle Auswertung" ( "short-circuit evaluation" ), da sie von links nach rechts fortschreitend frühestmöglich abbricht und ggf. nicht alle Operanden berücksichtigt.
-    
-    Das kann man klar erkennen, wenn der als zweites Argument gegebene Ausdruck einen Seiteneffekt produziert, wie etwa eine Variablenzuweisung.
-    
-    Im folgenden Beispiel wird `x` nicht zugewiesen:
+2. **Short-circuit evaluation.**
+
+    Ein weiteres Merkmal des ODER-Operators `||` ist die sogenannte "Kurzschluss"-Auswertung.
+
+    Das bedeutet, dass `||` die Argumente so lange verarbeitet, bis der erste wahrheitsgemäße Wert erreicht ist, und dann wird der Wert sofort zurückgegeben, ohne andere Argument zu berühren.
+
+<<<<<<< HEAD
+    Die Bedeutung dieses Merkmals wird deutlich, wenn ein Operand nicht nur ein Wert, sondern ein Ausdruck mit Nebeneffekt ist, wie z.B. eine Variablenzuweisung oder ein Funktionsaufruf.
+=======
+    The importance of this feature becomes obvious if an operand isn't just a value, but an expression with a side effect, such as a variable assignment or a function call.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
+
+    Im folgenden Beispiel wird nur die zweite Nachricht gedruckt:
 
     ```js run no-beautify
-    let x;
-
-    *!*true*/!* || (x = 1);
-
-    alert(x); // undefined, denn (x = 1) wird nicht ausgewertet
+    *!*true*/!* || alert("nicht gedruckt");
+    *!*false*/!* || alert("gedruckt");
     ```
 
-    Ist hingegen das erste Argument `false`, wertet `||` das Zweite aus und führt die Zuweisung durch:
+    In der ersten Zeile stoppt der Operator ODER `||` die Auswertung sofort, wenn er `true` sieht, so dass der `alert` nicht ausgeführt wird.
 
-    ```js run no-beautify
-    let x;
-
-    *!*false*/!* || (x = 1);
-
-    alert(x); // 1
-    ```
-
-    Eine Zuweisung ist ein einfacher Fall. Es kann Seiteneffekte geben, deren Ausbleiben sich nicht unmittelbar manifestiert, wenn die Auswertung sie nicht erreicht.
-
-    Wie wir erkennen ist ein solcher Anwendungsfall eine verkürzte Fallunterschiedung mit `if`. Der erste Operand wird in einen Booleschen Wert konvertiert. Ist er `false`, wird der zweite Operand ausgewertet.
-    
-    Meistens ist ein "normales" `if` vorzuziehen, um den Code möglichst verständlich zu halten, manchmal kann die Kurzvariante aber ganz praktisch sein.
+    Manchmal verwenden Leute diese Funktion, um Befehle nur dann auszuführen, wenn die Bedingung im linken Teil falsch ist.
 
 ## && (UND)
 
@@ -236,7 +249,13 @@ Die Präzedenz der Operators UND  `&&` ist höher als die von ODER `||`.
 Der Code `a && b || c && d` verhält sich daher i.w. so, als ob die Ausdrücke mit `&&` in Klammern gesetzt würden: `(a && b) || (c && d)`.
 ````
 
-So wie ODER kann auch der Operator UND `&&` manchmal eine Fallunterscheidung (`if`) ersetzen.
+<<<<<<< HEAD
+````warn header="Ersetze `if` nicht durch || oder &&"
+Manchmal wird der Operator UND `&&` als "Kürzel zum Schreiben von `if`" verwendet.
+=======
+````warn header="Don't replace `if` with `||` or `&&`"
+Sometimes, people use the AND `&&` operator as a "shorter way to write `if`".
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Beispiel:
 
@@ -253,18 +272,20 @@ Damit haben wir im Prinzip ein Pendant zu:
 ```js run
 let x = 1;
 
-if (x > 0) {
-  alert( 'Größer 0!' );
-}
+if (x > 0) alert( 'Größer als Null!' );
 ```
 
-Die Variante mit `&&` wirkt knapper. Aber `if` ist leichter zu identifizieren und tendenziell eines kleines bisschen verständlicher.
+<<<<<<< HEAD
+Obwohl die Variante mit `&&` kürzer erscheint, ist `if` offensichtlicher und tendenziell etwas lesbarer. Daher empfehlen wir, jedes Konstrukt für seinen Zweck zu verwenden: Verwende `if`, wenn wir eine Bedingung wollen, und verwende `&&`, wenn wir UND wollen.
+=======
+Although, the variant with `&&` appears shorter, `if` is more obvious and tends to be a little bit more readable. So we recommend using every construct for its purpose: use `if` if we want `if` and use `&&` if we want AND.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
+````
 
-Daher empfehlen wir, jedes Konstrukt gemäß seinem Zweck einzusetzen: `if` nutzen, wenn wir eine Fallunterscheidung haben wollen, `&&` für die logische Operation UND.
 
 ## ! (NICHT)
 
-Der Boolsche Operator NICHT wird durch ein Ausrufezeichen `!` repräsentiert 
+Der Boolsche Operator NICHT wird durch ein Ausrufezeichen `!` repräsentiert
 
 Die Syntax ist einfach genug:
 
