@@ -67,7 +67,11 @@ let age = 25;
 let message = 'Hello';
 ```
 
+<<<<<<< HEAD
 Einige Leute definieren auch mehrere Variablen in diesem mehrzeiligen Stil:
+=======
+Some people also define multiple variables in this multiline style:
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 ```js no-beautify
 let user = 'John',
@@ -114,7 +118,12 @@ Zum Beispiel kann man sich die Variable `message` als eine Kiste vorstellen mit 
 
 Wir können jeden Wert in die Kiste legen.
 
+<<<<<<< HEAD
 Wir können den Wert auch so oft ändern, wie wir wollen:
+=======
+We can also change it as many times as we want:
+
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 ```js run
 let message;
 
@@ -208,8 +217,13 @@ let 1a; // kann nicht mit einer Ziffer beginnen
 let my-name; // Bindestriche '-' sind im Namen nicht erlaubt
 ```
 
+<<<<<<< HEAD
 ```smart header="Groß- und Kleinschreibung"
 Variablen mit den Namen `apple` und `AppLE` sind zwei unterschiedliche Variablen.
+=======
+```smart header="Case matters"
+Variables named `apple` and `APPLE` are two different variables.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 ```
 
 ````smart header="nicht-lateinische Buchstaben sind erlaubt, aber nicht empfohlen"
@@ -281,8 +295,12 @@ myBirthday = '01.01.2001'; // Fehler, Konstante kann nicht neu zugewiesen werden
 
 Wenn ein Programmierer sicher ist, dass eine Variable sich nie ändern wird, kann er sie mit `const` deklarieren, um diese Tatsache zu garantieren und jedem klar zu kommunizieren.
 
+<<<<<<< HEAD
 
 ### Konstanten in Großbuchstaben
+=======
+### Uppercase constants
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 Es ist eine weit verbreitete Vorgehensweise, Konstanten als Alias für schwer zu merkende Werte zu verwenden, die bereits vor der Ausführung bekannt sind.
 
@@ -311,14 +329,23 @@ Wann sollten wir Großbuchstaben für eine Konstante verwenden und wann sollten 
 
 Eine "Konstante" zu sein bedeutet nur, dass sich der Wert einer Variablen nie ändert. Aber es gibt Konstanten, die vor der Ausführung bekannt sind (wie ein hexadezimaler Wert für die Farbe rot) und es gibt Konstanten, die zur Laufzeit, also während der Ausführung, *berechnet* werden, sich aber nach ihrer anfänglichen Zuweisung nicht mehr ändern.
 
+<<<<<<< HEAD
 Zum Beispiel:
+=======
+For instance:
+
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 ```js
 const pageLoadTime = /* Zeit, die eine Website braucht, um geladen zu werden */;
 ```
 
 Der Wert von `pageLoadTime` ist vor dem Laden der Seite nicht bekannt, daher wird er normal benannt. Aber es ist immer noch eine Konstante, weil er sich nach der Zuweisung nicht mehr ändert.
 
+<<<<<<< HEAD
 Mit anderen Worten, großgeschriebene Konstanten werden nur als Aliase für "hart kodierte" Werte verwendet.  
+=======
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 ## Dinge richtig benennen
 

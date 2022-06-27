@@ -46,8 +46,13 @@ JavaScript ist eine Entwicklungssprache, neue Funktionen werden regelmäßig hin
 
 Um ihre Unterstützung unter den Browser-basierten und anderen Engines zu sehen, siehe:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - pro Feature-Tabellen der Unterstützung, z.B. um zu sehen, welche Engines moderne Kryptographie-Funktionen unterstützen: <http://caniuse.com/#feat=cryptography>.
 - <https://kangax.github.io/compat-table> - eine Tabelle mit Sprachfunktionen und Engines, die diese unterstützen oder nicht unterstützen.
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 All diese Ressourcen sind in der realen Entwicklung nützlich, da sie wertvolle Informationen über sprachliche Details, ihre Unterstützung usw. enthalten.
 

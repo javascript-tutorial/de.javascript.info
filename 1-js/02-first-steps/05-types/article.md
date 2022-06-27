@@ -300,6 +300,7 @@ Some people prefer `typeof(x)`, although the `typeof x` syntax is much more comm
 ```
 
 ## Summary
+<<<<<<< HEAD
 >>>>>>> 29216730a877be28d0a75a459676db6e7f5c4834
 
 Es gibt 8 grundlegende Datentypen in JavaScript.
@@ -323,6 +324,21 @@ Es gibt 8 grundlegende Datentypen in JavaScript.
 - `object` for more complex data structures.
 - `symbol` for unique identifiers.
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425
+=======
+
+There are 8 basic data types in JavaScript.
+
+- Seven primitive data types:
+    - `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
+    - `bigint` for integer numbers of arbitrary length.
+    - `string` for strings. A string may have zero or more characters, there's no separate single-character type.
+    - `boolean` for `true`/`false`.
+    - `null` for unknown values -- a standalone type that has a single value `null`.
+    - `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
+    - `symbol` for unique identifiers.
+- And one non-primitive data type:
+    - `object` for more complex data structures.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 Mit dem Operator `typeof` können wir sehen, welcher Typ in einer Variablen gespeichert ist.
 

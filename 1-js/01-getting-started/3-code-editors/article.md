@@ -12,8 +12,13 @@ Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), erlaubt die N
 
 Falls du für dich noch keine IDE ausgesucht hast, sind die nachfolgenden Optionen empfehlenswert:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (Cross-Plattform, kostenlos).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (Cross-Plattform, ksotenpflichtig).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 Für Windows steht außerdem "Visual Studio" zur Verfügung, diese IDE sollte nicht mit "Visual Studio Code" verwechselt werden. "Visual Studio" ist ein kostenpflichtiger und umfangreicher Editor, der insbesondere für die Arbeit mit der .Net-Plattform geeignet ist. "Visual Studio" ist außerdem gut für Javascript geeignet. Eine kostenlose Version ist unter folgender Adresse verfügbar: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
