@@ -90,7 +90,7 @@ Everything would work the same.
 
 
 ````smart header="Why is there a semicolon at the end?"
-You might wonder, why does Function Expression have a semicolon `;` at the end, but Function Declaration does not:
+You might wonder, why do Function Expressions have a semicolon `;` at the end, but Function Declarations do not:
 
 ```js
 function sayHi() {
@@ -144,13 +144,13 @@ function showCancel() {
 ask("Do you agree?", showOk, showCancel);
 ```
 
-In practice, such functions are quite useful. The major difference between a real-life `ask` and the example above is that real-life functions use more complex ways to interact with the user than a simple `confirm`. In the browser, such function usually draws a nice-looking question window. But that's another story.
+In practice, such functions are quite useful. The major difference between a real-life `ask` and the example above is that real-life functions use more complex ways to interact with the user than a simple `confirm`. In the browser, such functions usually draw a nice-looking question window. But that's another story.
 
 **The arguments `showOk` and `showCancel` of `ask` are called *callback functions* or just *callbacks*.**
 
 The idea is that we pass a function and expect it to be "called back" later if necessary. In our case, `showOk` becomes the callback for "yes" answer, and `showCancel` for "no" answer.
 
-We can use Function Expressions to write the same function much shorter:
+We can use Function Expressions to write an equivalent, shorter function:
 
 ```js run no-beautify
 function ask(question, yes, no) {
@@ -186,7 +186,7 @@ Let's formulate the key differences between Function Declarations and Expression
 
 First, the syntax: how to differentiate between them in the code.
 
-- *Function Declaration:* a function, declared as a separate statement, in the main code flow.
+- *Function Declaration:* a function, declared as a separate statement, in the main code flow:
 
     ```js
     // Function Declaration
@@ -360,7 +360,7 @@ welcome(); // ok now
 
 
 ```smart header="When to choose Function Declaration versus Function Expression?"
-As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+As a rule of thumb, when we need to declare a function, the first thing to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
 
 That's also better for readability, as it's easier to look up `function f(…) {…}` in the code than `let f = function(…) {…};`. Function Declarations are more "eye-catching".
 
