@@ -30,9 +30,13 @@ alert(window.gVar); // 5 (wurde Eigentum des globalen Objekts)
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Bitte nicht darauf verlassen! Dieses Verhalten existiert aus Kompatibilitätsgründen. Moderne Skripte verwenden [JavaScript-Module](info:modules), wo so etwas nicht passiert.
 =======
 The same effect have function declarations (statements with `function` keyword in the main code flow, not function expressions).
+=======
+Function declarations have the same effect (statements with `function` keyword in the main code flow, not function expressions).
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 Please don't rely on that! This behavior exists for compatibility reasons. Modern scripts use [JavaScript modules](info:modules) where such a thing doesn't happen.
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425

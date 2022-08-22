@@ -141,7 +141,11 @@ Solche Kommentare erlauben es uns, den Zweck der Funktion zu verstehen und sie r
 
 Übrigens, viele Entwicklungsumgebungen wie [WebStorm](https://www.jetbrains.com/de-de/webstorm/) können diese auch verstehen und verwenden diese, um Autovervollständigungen und einige automatische Code-Überprüfungen anzubieten.
 
+<<<<<<< HEAD
 Außerdem gibt es Tools wie [JSDoc 3](https://github.com/jsdoc3/jsdoc) die aus den Kommentaren eine HTML-Dokumentation generieren können. Weitere Informationen über JSDoc findest du unter <http://usejsdoc.org/>.
+=======
+Also, there are tools like [JSDoc 3](https://github.com/jsdoc/jsdoc) that can generate HTML-documentation from the comments. You can read more information about JSDoc at <https://jsdoc.app>.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 Warum wird die Aufgabe auf diese Weise gelöst? : Was geschrieben wird, ist wichtig. Aber was *nicht* geschrieben ist, kann noch wichtiger sein, um zu verstehen, was vor sich geht. Warum wird die Aufgabe genau auf diese Weise gelöst? Der Code gibt keine Antwort.
 
