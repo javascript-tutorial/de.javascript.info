@@ -24,7 +24,7 @@ The `function` keyword goes first, then goes the *name of the function*, then a 
 
 ```js
 function name(parameter1, parameter2, ... parameterN) {
-  ...body...
+ // body
 }
 ```
 
@@ -206,7 +206,13 @@ function showMessage(from, *!*text = "no text given"*/!*) {
 showMessage("Ann"); // Ann: no text given
 ```
 
-Now if the `text` parameter is not passed, it will get the value `"no text given"`
+Now if the `text` parameter is not passed, it will get the value `"no text given"`.
+
+The default value also jumps in if the parameter exists, but strictly equals `undefined`, like this:
+
+```js
+showMessage("Ann", undefined); // Ann: no text given
+```
 
 Here `"no text given"` is a string, but it can be a more complex expression, which is only evaluated and assigned if the parameter is missing. So, this is also possible:
 
@@ -259,7 +265,7 @@ function showMessage(from, text) {
 
 ### Alternative default parameters
 
-Sometimes it makes sense to assign default values for parameters not in the function declaration, but at a later stage.
+Sometimes it makes sense to assign default values for parameters at a later stage after the function declaration.
 
 We can check if the parameter is passed during the function execution, by comparing it with `undefined`:
 
@@ -522,7 +528,7 @@ function name(parameters, delimited, by, comma) {
 
 To make the code clean and easy to understand, it's recommended to use mainly local variables and parameters in the function, not outer variables.
 
-It is always easier to understand a function which gets parameters, works with them and returns a result than a function which gets no parameters, but modifies outer variables as a side-effect.
+It is always easier to understand a function which gets parameters, works with them and returns a result than a function which gets no parameters, but modifies outer variables as a side effect.
 
 Function naming:
 
