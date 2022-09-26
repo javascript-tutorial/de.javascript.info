@@ -201,6 +201,7 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+<<<<<<< HEAD
 
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
@@ -209,13 +210,26 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | 15 | Division | `/` |
 | 13 | Addition | `+` |
 | 13 | Subtraktion | `-` |
+=======
+| 14 | unary plus | `+` |
+| 14 | unary negation | `-` |
+| 13 | exponentiation | `**` |
+| 12 | multiplication | `*` |
+| 12 | division | `/` |
+| 11 | addition | `+` |
+| 11 | subtraction | `-` |
+>>>>>>> ff4ef57c8c2fd20f4a6aa9032ad37ddac93aa3c4
 | ... | ... | ... |
 | 3 | Zuweisung | `=` |
 | ... | ... | ... |
 
+<<<<<<< HEAD
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
 
 
+=======
+As we can see, the "unary plus" has a priority of `14` which is higher than the `11` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+>>>>>>> ff4ef57c8c2fd20f4a6aa9032ad37ddac93aa3c4
 
 
 ## Zuweisung
@@ -321,9 +335,13 @@ Solche Operatoren haben den gleichen Stellenwert wie eine normale Zuweisung, sod
 ```js run
 let n = 2;
 
-n *= 3 + 5;
+n *= 3 + 5; // right part evaluated first, same as n *= 8
 
+<<<<<<< HEAD
 alert( n ); // 16  (der rechte Teil wird zuerst ausgewertet, wie n *= 8)
+=======
+alert( n ); // 16  
+>>>>>>> ff4ef57c8c2fd20f4a6aa9032ad37ddac93aa3c4
 ```
 
 ## Inkrementieren/Dekrementieren
