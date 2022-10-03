@@ -1,7 +1,11 @@
 
 # Handbücher und Spezifikationen
 
+<<<<<<< HEAD
 Dieses Buch ist ein *Tutorial*. Es soll dir helfen, die Sprache nach und nach zu erlernen. Aber sobald du mit den Grundlagen vertraut bist, wirst du andere Quellen benötigen.
+=======
+This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other resources.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 ## Spezifikation
 
@@ -9,7 +13,11 @@ Dieses Buch ist ein *Tutorial*. Es soll dir helfen, die Sprache nach und nach zu
 
 Die Tatsache dass es so festgschrieben ist, macht es am Anfgan etwas schwer verständlich. Wenn du also die vertrauenswürdigste Informationsquelle benötigst, dann ist die Spezifikation dir richtige Stelle. Sie ist jedoch nicht für den alltäglichen Gebrauch passend. 
 
+<<<<<<< HEAD
 Eine neue Spezifikationsversion wird jedes Jahr veröffentlicht. In der Zwischenzeit kann der letzte entwurf unter <https://tc39.es/ecma262/> gefunden werden.
+=======
+A new specification version is released every year. Between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 Um mehr über die neuen bleeding-edge features, einschliesslich derjendigen, die "fast Standard" sind ("stage 3" genannt), siehe Vorschläge unter <https://github.com/tc39/proposals>.
 
@@ -27,6 +35,7 @@ Also, if you're developing for the browser, then there are other specifications 
 - **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
+<<<<<<< HEAD
     Man kann es unter <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> finden.
 
 <<<<<<< HEAD
@@ -39,6 +48,11 @@ Also, if you're developing for the browser, then there are other specifications 
 =======
 Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425
+=======
+    You can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for the `parseInt` function.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 ## Kompatibilitäts-Tabellen
 
@@ -46,9 +60,16 @@ JavaScript ist eine Entwicklungssprache, neue Funktionen werden regelmäßig hin
 
 Um ihre Unterstützung unter den Browser-basierten und anderen Engines zu sehen, siehe:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - pro Feature-Tabellen der Unterstützung, z.B. um zu sehen, welche Engines moderne Kryptographie-Funktionen unterstützen: <http://caniuse.com/#feat=cryptography>.
 - <https://kangax.github.io/compat-table> - eine Tabelle mit Sprachfunktionen und Engines, die diese unterstützen oder nicht unterstützen.
 
 All diese Ressourcen sind in der realen Entwicklung nützlich, da sie wertvolle Informationen über sprachliche Details, ihre Unterstützung usw. enthalten.
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <https://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+
+All these resources are useful in real-life development, as they contain valuable information about language details, their support, etc.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 Bitte merke dir diese (oder diese Seite) für die Fälle, in denen du vertiefte Informationen über eine bestimmte Funktion benötigst.
