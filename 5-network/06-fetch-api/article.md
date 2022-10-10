@@ -21,7 +21,7 @@ let promise = fetch(url, {
     // depending on the request body
     "Content-Type": "text/plain;charset=UTF-8"
   },
-  body: undefined // string, FormData, Blob, BufferSource, or URLSearchParams
+  body: undefined, // string, FormData, Blob, BufferSource, or URLSearchParams
   referrer: "about:client", // or "" to send no Referer header,
   // or an url from the current origin
   referrerPolicy: "no-referrer-when-downgrade", // no-referrer, origin, same-origin...
@@ -52,7 +52,7 @@ Usually that header is set automatically and contains the url of the page that m
 
 **The `referrer` option allows to set any `Referer` (within the current origin) or remove it.**
 
-To send no referer, set an empty string:
+To send no referrer, set an empty string:
 ```js
 fetch('/page', {
 *!*
