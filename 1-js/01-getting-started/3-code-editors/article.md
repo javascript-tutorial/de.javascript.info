@@ -12,8 +12,13 @@ Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), erlaubt die N
 
 Falls du für dich noch keine IDE ausgesucht hast, sind die nachfolgenden Optionen empfehlenswert:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (Cross-Plattform, kostenlos).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (Cross-Plattform, ksotenpflichtig).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 Für Windows steht außerdem "Visual Studio" zur Verfügung, diese IDE sollte nicht mit "Visual Studio Code" verwechselt werden. "Visual Studio" ist ein kostenpflichtiger und umfangreicher Editor, der insbesondere für die Arbeit mit der .Net-Plattform geeignet ist. "Visual Studio" ist außerdem gut für Javascript geeignet. Eine kostenlose Version ist unter folgender Adresse verfügbar: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
@@ -31,7 +36,6 @@ In der Praxis verfügen auch viele Quelltext-Editoren über eine breite Auswahl 
 
 Die nachfolgenden Optionen sind gute Beispiele für Quelltext-Editoren
 
-- [Atom](https://atom.io/) (cross-platform, free).
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
 - [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) können ebenfalls sehr gut sein, wenn man damit umgehen kann.
