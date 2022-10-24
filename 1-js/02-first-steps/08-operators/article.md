@@ -83,7 +83,11 @@ alert( 8 ** (1/3) ); // 2 (Die Potenz von 1/3 ist gleich der dritten Wurzel)
 
 ## Binäre String-Verkettung +
 
+<<<<<<< HEAD
 Lernen wir Funktionen von JavaScript-Operatoren kennen, die über das schulische Rechnen hinausgehen.
+=======
+Let's meet the features of JavaScript operators that are beyond school arithmetics.
+>>>>>>> 5dff42ba283bce883428c383c080fa9392b71df8
 
 Normalerweise summiert der Plus-Operator `+` Zahlen.
 
@@ -201,6 +205,7 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | Vorrang | Name | Zeichen |
 |------------|------|------|
 | ... | ... | ... |
+<<<<<<< HEAD
 
 | 17 | Unäres Plus | `+` |
 | 17 | Unäres Minus | `-` |
@@ -209,13 +214,26 @@ Hier ist ein Auszug aus der [Ranglistentabelle](https://developer.mozilla.org/de
 | 15 | Division | `/` |
 | 13 | Addition | `+` |
 | 13 | Subtraktion | `-` |
+=======
+| 14 | unary plus | `+` |
+| 14 | unary negation | `-` |
+| 13 | exponentiation | `**` |
+| 12 | multiplication | `*` |
+| 12 | division | `/` |
+| 11 | addition | `+` |
+| 11 | subtraction | `-` |
+>>>>>>> 5dff42ba283bce883428c383c080fa9392b71df8
 | ... | ... | ... |
 | 3 | Zuweisung | `=` |
 | ... | ... | ... |
 
+<<<<<<< HEAD
 Wie wir sehen können, hat das "unäre Plus" eine Priorität von `17`, die höher ist als die `13` der "Addition" (binäres Plus). Deshalb wirken in dem Ausdruck `"+apples + +oranges"` unäre Pluszeichen vor der Addition.
 
 
+=======
+As we can see, the "unary plus" has a priority of `14` which is higher than the `11` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+>>>>>>> 5dff42ba283bce883428c383c080fa9392b71df8
 
 
 ## Zuweisung
@@ -321,9 +339,13 @@ Solche Operatoren haben den gleichen Stellenwert wie eine normale Zuweisung, sod
 ```js run
 let n = 2;
 
-n *= 3 + 5;
+n *= 3 + 5; // right part evaluated first, same as n *= 8
 
+<<<<<<< HEAD
 alert( n ); // 16  (der rechte Teil wird zuerst ausgewertet, wie n *= 8)
+=======
+alert( n ); // 16  
+>>>>>>> 5dff42ba283bce883428c383c080fa9392b71df8
 ```
 
 ## Inkrementieren/Dekrementieren
