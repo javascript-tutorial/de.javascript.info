@@ -1,10 +1,14 @@
 # The Modern JavaScript Tutorial in German
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 This repository hosts the translation of <https://javascript.info> in German.
 =======
 This repository hosts the English content of the Modern JavaScript Tutorial, published in [https://javascript.info](https://javascript.info).
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425
+=======
+This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+>>>>>>> 746ad803c878e33182e7fab1578c0d15b9b75ca0
 
 
 **That's how you can contribute:**
@@ -25,21 +29,33 @@ If maintainers do not respond, or if you'd like to become a maintainer, write us
 
 🎉 Thank you!
 
+<<<<<<< HEAD
 Your name and the contribution size will appear in the "About project" page when the translation gets published.
 
 <<<<<<< HEAD
 P.S. The full list of languages can be found at <https://javascript.info/translate>.
 =======
 **You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
+=======
+Something's wrong? A topic is missing? Explain it to people, add it as PR 👏
+
+**You can edit the text in any editor.** The tutorial uses an enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
+>>>>>>> 746ad803c878e33182e7fab1578c0d15b9b75ca0
 
 The list of contributors is available at <https://javascript.info/about#contributors>.
 >>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 ## Structure
 
+<<<<<<< HEAD
 Every chapter, an article or a task resides in its own folder.
 
 The folder is named `N-url`, where `N` – is the number for sorting (articles are ordered), and `url` is the URL-slug on the site.
+=======
+Every chapter, article, or task has its folder.
+
+The folder is named like `N-url`, where `N` is a number for the sorting purposes and `URL` is the URL part with the title of the material.
+>>>>>>> 746ad803c878e33182e7fab1578c0d15b9b75ca0
 
 The folder has one of files:
 
