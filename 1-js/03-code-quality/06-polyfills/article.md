@@ -1,11 +1,19 @@
 
 # Polyfills and transpilers
 
+<<<<<<< HEAD
 JavaScript entwickelt sich stetig weiter. Neue Vorschläge für die Sprache erscheinen regelmäßig, sie werden analysiert und, wenn sie als würdig erachtet werden, an die Liste unter <https://tc39.github.io/ecma262/> angehängt und dann zur [Spezifikation](http:// www.ecma-international.org/publications/standards/Ecma-262.htm) freigegeben.
+=======
+The JavaScript language steadily evolves. New proposals to the language appear regularly, they are analyzed and, if considered worthy, are appended to the list at <https://tc39.github.io/ecma262/> and then progress to the [specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/).
+>>>>>>> 1ce5644a15ee141fbe78c0fb79c8f40d870d7043
 
 Teams hinter JavaScript-Engines haben ihre eigenen Vorstellungen davon, was zuerst implementiert werden soll. Sie können beschließen, Vorschläge zu implementieren, die sich im Entwurf befinden, und Dinge, die bereits in der Spezifikation enthalten sind, verschieben, weil sie weniger interessant oder einfach schwieriger zu machen sind.
 
+<<<<<<< HEAD
 Es ist also durchaus üblich, dass eine Engine nur einen Teil des Standards implementiert.
+=======
+So it's quite common for an engine to implement only part of the standard.
+>>>>>>> 1ce5644a15ee141fbe78c0fb79c8f40d870d7043
 
 Eine gute Seite, um den aktuellen Stand der Unterstützung für Sprachfunktionen zu sehen, ist <https://kangax.github.io/compat-table/es6/> (es ist groß, wir haben noch viel zu lernen).
 
@@ -68,6 +76,7 @@ Now the rewritten code is suitable for older JavaScript engines.
 Usually, a developer runs the transpiler on their own computer, and then deploys the transpiled code to the server.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ````online
 Die meisten Beispiele sind direkt lauffähig, wie folgt:
 
@@ -85,8 +94,11 @@ Während Sie die Offline-Version lesen, sind PDF-Beispiele nicht lauffähig. In 
 Google Chrome ist in der Regel mit Sprachfunktionen auf dem neuesten Stand und eignet sich gut, um topaktuelle Demos ohne Transpiler auszuführen, aber auch andere moderne Browser funktionieren einwandfrei.
 =======
 Speaking of names, [Babel](https://babeljs.io) is one of the most prominent transpilers out there. 
+=======
+Speaking of names, [Babel](https://babeljs.io) is one of the most prominent transpilers out there.
+>>>>>>> 1ce5644a15ee141fbe78c0fb79c8f40d870d7043
 
-Modern project build systems, such as [webpack](https://webpack.js.org/), provide means to run transpiler automatically on every code change, so it's very easy to integrate into development process.
+Modern project build systems, such as [webpack](https://webpack.js.org/), provide a means to run a transpiler automatically on every code change, so it's very easy to integrate into the development process.
 
 ## Polyfills
 
@@ -113,20 +125,20 @@ if (!Math.trunc) { // if no such function
 }
 ```
 
-JavaScript is a highly dynamic language, scripts may add/modify any functions, even including built-in ones. 
+JavaScript is a highly dynamic language. Scripts may add/modify any function, even built-in ones.
 
-Two interesting libraries of polyfills are:
+Two interesting polyfill libraries are:
 - [core js](https://github.com/zloirock/core-js) that supports a lot, allows to include only needed features.
-- [polyfill.io](http://polyfill.io) service that provides a script with polyfills, depending on the features and user's browser.
+- [polyfill.io](https://polyfill.io/) service that provides a script with polyfills, depending on the features and user's browser.
 
 
 ## Summary
 
 In this chapter we'd like to motivate you to study modern and even "bleeding-edge" language features, even if they aren't yet well-supported by JavaScript engines.
 
-Just don't forget to use transpiler (if using modern syntax or operators) and polyfills (to add functions that may be missing). And they'll ensure that the code works.
+Just don't forget to use a transpiler (if using modern syntax or operators) and polyfills (to add functions that may be missing). They'll ensure that the code works.
 
-For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](https://webpack.js.org/) with [babel-loader](https://github.com/babel/babel-loader) plugin.
+For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](https://webpack.js.org/) with the [babel-loader](https://github.com/babel/babel-loader) plugin.
 
 Good resources that show the current state of support for various features:
 - <https://kangax.github.io/compat-table/es6/> - for pure JavaScript.
