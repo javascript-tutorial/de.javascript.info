@@ -18,7 +18,7 @@ The basic Drag'n'Drop algorithm looks like this:
 2. Then on `mousemove` move it by changing `left/top` with `position:absolute`.
 3. On `mouseup` - perform all actions related to finishing the drag'n'drop.
 
-These are the basics. Later we'll see how to other features, such as highlighting current underlying elements while we drag over them.
+These are the basics. Later we'll see how to add other features, such as highlighting current underlying elements while we drag over them.
 
 Here's the implementation of dragging a ball:
 
@@ -100,7 +100,7 @@ ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
 ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
 ```
 
-Not bad, but there's a side-effect. To initiate the drag'n'drop, we can `mousedown` anywhere on the ball. But if "take" it from its edge, then the ball suddenly "jumps" to become centered under the mouse pointer.
+Not bad, but there's a side effect. To initiate the drag'n'drop, we can `mousedown` anywhere on the ball. But if "take" it from its edge, then the ball suddenly "jumps" to become centered under the mouse pointer.
 
 It would be better if we keep the initial shift of the element relative to the pointer.
 
