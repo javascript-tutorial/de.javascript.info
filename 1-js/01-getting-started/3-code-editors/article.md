@@ -12,8 +12,13 @@ Eine IDE lädt das Projekt (das aus vielen Dateien bestehen kann), erlaubt die N
 
 Falls du für dich noch keine IDE ausgesucht hast, sind die nachfolgenden Optionen empfehlenswert:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (Cross-Plattform, kostenlos).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (Cross-Plattform, ksotenpflichtig).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
 
 Für Windows steht außerdem "Visual Studio" zur Verfügung, diese IDE sollte nicht mit "Visual Studio Code" verwechselt werden. "Visual Studio" ist ein kostenpflichtiger und umfangreicher Editor, der insbesondere für die Arbeit mit der .Net-Plattform geeignet ist. "Visual Studio" ist außerdem gut für Javascript geeignet. Eine kostenlose Version ist unter folgender Adresse verfügbar: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
@@ -29,12 +34,19 @@ Der hauptsächliche Unterschied zwischen einem Quelltext-Editor und einer IDE li
 
 In der Praxis verfügen auch viele Quelltext-Editoren über eine breite Auswahl an Plugins, darunter etwa Analyse-Werkzeuge für die Code-Syntax und Unterstützung zur Autovervollständigung, so dass sich eine klare Grenze zwischen IDEs und Quelltext-Editoren gar nicht ziehen lässt.    
 
+<<<<<<< HEAD
 Die nachfolgenden Optionen sind gute Beispiele für Quelltext-Editoren
+=======
+There are many options, for instance:
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
 
-- [Atom](https://atom.io/) (cross-platform, free).
-- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Sublime Text](https://www.sublimetext.com/) (cross-platform, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+<<<<<<< HEAD
 - [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) können ebenfalls sehr gut sein, wenn man damit umgehen kann.
+=======
+- [Vim](https://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
 
 ## ABER: Die Auswahl des Editors ist keinen Streit wert.
 
@@ -42,4 +54,13 @@ Die Editoren in der Liste wurden entweder von mir oder von Freunden ausgewählt,
 
 Aber es gibt natürlich auch andere Editoren in der großen Welt des Internets. Such dir einfach den Editor aus, mit dem du arbeiten möchtest. 
 
+<<<<<<< HEAD
 Die Wahl des Editors ist, wie bei jedem anderen Werkzeug, eine persönliche Vorliebe und hängt von deinem Projekt, deinen Arbeitsgewohnheiten und persönlichen Vorlieben ab.
+=======
+The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+
+The author's personal opinion:
+
+- I'd use [Visual Studio Code](https://code.visualstudio.com/) if I develop mostly frontend.
+- Otherwise, if it's mostly another language/platform and partially frontend, then consider other editors, such as XCode (Mac), Visual Studio (Windows) or Jetbrains family (Webstorm, PHPStorm, RubyMine etc, depending on the language).
+>>>>>>> 9e3fa1351f80cfd6353a778a55b2c86bca9e895f
