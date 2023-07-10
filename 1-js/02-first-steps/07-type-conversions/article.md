@@ -39,7 +39,11 @@ Die String Umwandlung ist meist offensichtlich. Ein `false` wird zu `"false"`, `
 
 ## Numerische Umwandlungen
 
+<<<<<<< HEAD
 Numerische Umwandlung passiert automatisch in mathematischen Funktionen und Ausdrücken.
+=======
+Numeric conversion in mathematical functions and expressions happens automatically.
+>>>>>>> 733ff697c6c1101c130e2996f7eca860b2aa7ab9
 
 Zum Beispiel, wenn die Division `/` an Werten angewendet wird, die keine Zahlen ("Number") sind:
 
@@ -74,8 +78,13 @@ Regeln zur numerischen Umwandlung:
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
+<<<<<<< HEAD
 |<code>true&nbsp;und&nbsp;false</code> | `1` und `0` |
 | `string` | Leerzeichen am Anfang und am Ende werden entfernt. Wenn der verbleibende String leer ist, ist das Ergebnis `0`. Andernfalls wird die Zahl aus dem String "gelesen". Ein Fehler ergibt `NaN`. |
+=======
+|<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
+| `string` | Whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from the start and end are removed. If the remaining string is empty, the result is `0`. Otherwise, the number is "read" from the string. An error gives `NaN`. |
+>>>>>>> 733ff697c6c1101c130e2996f7eca860b2aa7ab9
 
 Beispiele:
 
@@ -135,7 +144,11 @@ Die Umwandlung folgt diesen Regeln:
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;/&nbsp;false</code> | `1 / 0` |
+<<<<<<< HEAD
 | `string` | Der String wird  "als solches" gelesen, Leerzeichen auf beiden Seiten werden ignoriert. Ein leerer String wird zu `0`. Ein Fehler ergibt `NaN`. |
+=======
+| `string` | The string is read "as is", whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from both sides are ignored. An empty string becomes `0`. An error gives `NaN`. |
+>>>>>>> 733ff697c6c1101c130e2996f7eca860b2aa7ab9
 
 **`Boolean Umwandlung`** -- Tritt in logischen Operationen auf. Kann mit `Boolean(value)` explizit ausgeführt werden.
 
