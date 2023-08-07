@@ -73,6 +73,10 @@ if (cond) {
 
 Die `if`-Anweisung kann einen optionalen "else"-Block enthalten. Er wird ausgeführt, wenn die Bedingung falsch ist.
 
+<<<<<<< HEAD
+=======
+The `if` statement may contain an optional `else` block. It executes when the condition is falsy.
+>>>>>>> d694e895efe89922a109702085b6ca1efeffea10
 
 Beispiel:
 ```js run
@@ -184,10 +188,17 @@ alert( message );
 
 Es ist vielleicht auf den ersten Blick schwer zu erkennen, was hier eigentlich passiert. Aber bei näherer Betrachtung sehen wir, dass es sich um eine ganz normale Abfolge von Tests handelt:
 
+<<<<<<< HEAD
 1. Das erste Fragezeichen prüft, ob `age < 3`.
 2. Falls wahr, gibt es `Hallo, Kleines!` zurück. Andernfalls fährt es mit dem Ausdruck nach dem Doppelpunkt '":"' fort, und prüft `age < 18`.
 3. Falls das wahr ist, gibt es `'Hallo!'` zurück. Andernfalls fährt es mit dem Ausdruck nach dem Doppelpunkt '":"' fort, und prüft `age < 100`.
 4. Falls das wahr ist, gibt es `'Grüße!'` zurück. Andernfalls fährt es mit dem Ausdruck nach dem letzten Doppelpunkt '":"' fort, und gibt `'Was für ein ungewöhnliches Alter!'` zurück.
+=======
+1. The first question mark checks whether `age < 3`.
+2. If true -- it returns `'Hi, baby!'`. Otherwise, it continues to the expression after the colon ":", checking `age < 18`.
+3. If that's true -- it returns `'Hello!'`. Otherwise, it continues to the expression after the next colon ":", checking `age < 100`.
+4. If that's true -- it returns `'Greetings!'`. Otherwise, it continues to the expression after the last colon ":", returning `'What an unusual age!'`.
+>>>>>>> d694e895efe89922a109702085b6ca1efeffea10
 
 So sieht es mit `if..else` aus:
 
