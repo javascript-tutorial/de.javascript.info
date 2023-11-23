@@ -4,7 +4,7 @@
 Lernen ohne zu denken ist eitel; Denken ohne zu lernen ist gefährlich.
 ```
 
-Programmierninjas aus der Vergangenheit benutzten diese Tricks, um den Geist der Code-Maintainer zu schärfen.
+Programmierninjas aus der Vergangenheit benutzten diese Tricks, um den Geist des Code-Maintainers zu schärfen.
 
 Code-Review-Gurus suchen nach ihnen in Testaufgaben.
 
