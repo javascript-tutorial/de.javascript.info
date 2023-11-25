@@ -10,7 +10,7 @@ Das Ergebnis von `a ?? b` ist:
 - wenn `a` definiert ist, dann `a`,
 - wenn `a` nicht definiert ist, dann `b`.
 
-Mit anderen Worten, `??` gibt das erste Argument zurück, wenn es nicht `null/undefined` ist und andernfalls das zweite.
+Anders gesagt, `??` gibt das erste Argument zurück, wenn es nicht `null/undefined` ist und andernfalls das zweite.
 
 Der Nullish Coalescing Operator ist nichts völlig Neues. Es ist nur eine nette Syntax, um den ersten "definierten" Wert von zweien zu bekommen.
 
@@ -42,7 +42,7 @@ alert(user ?? "Anonymous"); // John (user ist nicht null/undefined)
 
 Wir können auch eine Sequenz von `??` verwenden, um den ersten Wert aus einer Liste auszuwählen, der nicht `null/undefined` ist.
 
-Nehmen wir an, wir haben Daten eines Benutzers in den Variablen `firstName`, `lastName` oder `nickName`. Alle könnten nicht definiert sein, wenn der Benutzer sich entschieden hat, die entsprechenden Informationen nicht auszufüllen.
+Nehmen wir an, wir haben Daten eines Benutzers in den Variablen `firstName`, `lastName` oder `nickName`. Sie müssen nicht alle definiert sein, sollte sich der Benutzer dazu entscheiden, die Information nicht auszufüllen.
 
 Wir möchten den Benutzernamen mit einer dieser Variablen anzeigen oder "Anonymous" zeigen, wenn alle `null/undefined` sind.
 
@@ -78,17 +78,17 @@ alert(firstName || lastName || nickName || "Anonymous"); // Supercoder
 
 Historisch gesehen war der ODER `||` Operator zuerst da. Er ist seit den Anfängen von JavaScript vorhanden, sodass Entwickler ihn seit langem für solche Zwecke verwendet haben.
 
-Andererseits wurde der Nullish Coalescing Operator `??` erst kürzlich zu JavaScript hinzugefügt, und der Grund dafür war, dass die Leute mit `||` nicht ganz zufrieden waren.
+Andererseits wurde der Nullish Coalescing Operator `??` erst kürzlich zu JavaScript hinzugefügt, aufgrund der Unzufriedenheit mit `||` unter Entwicklern.
 
-Der wichtige Unterschied zwischen ihnen ist, dass:
+Der wichtigste Unterschied zwischen den beiden ist, dass:
 - `||` den ersten *wahrheitswerten* Wert zurückgibt.
 - `??` den ersten *definierten* Wert zurückgibt.
 
-Mit anderen Worten, `||` unterscheidet nicht zwischen `false`, `0`, einem leeren String `""` und `null/undefined`. Sie sind alle gleich -- falsy Werte. Wenn einer dieser der erste Argument von `||` ist, dann erhalten wir als Ergebnis das zweite Argument.
+Anders gesagt, unterscheidet der `||`-Operator zwischen `false`, `0`, einer leeren Zeichenkette (`""`) und `null`/`undefined` nicht — sie werden gleichwertig betrachtet (falsy). Wenn einer dieser das erste Argument von `||` ist, dann erhalten wir als Ergebnis das zweite Argument.
 
 In der Praxis jedoch möchten wir vielleicht nur dann einen Standardwert verwenden, wenn die Variable `null/undefined` ist. Das heißt, wenn der Wert wirklich unbekannt/nicht gesetzt ist.
 
-Betrachten wir zum Beispiel dies:
+Nehmen wir zum Beispiel:
 
 ```js run
 let height = 0;
