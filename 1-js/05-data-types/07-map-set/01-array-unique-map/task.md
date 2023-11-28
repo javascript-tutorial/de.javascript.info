@@ -1,3 +1,7 @@
+importance: 5
+
+---
+
 # Filtere eindeutige Array-Elemente
 
 Lass `arr` ein Array sein.
