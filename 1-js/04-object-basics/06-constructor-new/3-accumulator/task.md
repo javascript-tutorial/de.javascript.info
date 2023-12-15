@@ -14,8 +14,8 @@ Hier ist eine Demo des Codes:
 ```js
 let accumulator = new Accumulator(1); // Anfangswert 1
 
-accumulator.read(); // fügt den vom Benutzer eingegebenen Wert hinzu
-accumulator.read(); // fügt den vom Benutzer eingegebenen Wert hinzu
+accumulator.read(); // addiert den vom Benutzer eingegebenen Wert
+accumulator.read(); // addiert den vom Benutzer eingegebenen Wert
 
 alert(accumulator.value); // zeigt die Summe dieser Werte
 ```

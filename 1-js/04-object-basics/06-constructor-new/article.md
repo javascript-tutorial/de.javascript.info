@@ -64,7 +64,7 @@ Wenn wir nun andere Benutzer erstellen wollen, können wir `new User("Ann")`, `n
 
 Das ist der Hauptzweck von Konstruktoren - wiederverwendbaren Code zur Objekterstellung zu implementieren.
 
-Lassen Sie uns noch einmal festhalten - technisch gesehen kann jede Funktion (außer Pfeilfunktionen, da sie kein `this` haben) als Konstruktor verwendet werden. Sie kann mit `new` ausgeführt werden und wird das oben beschriebene Verfahren durchführen. „Beginnt mit Großbuchstaben“ ist eine allgemeine Vereinbarung, um klarzustellen, dass eine Funktion mit `new` ausgeführt werden soll.
+Lass uns noch einmal festhalten - technisch gesehen kann jede Funktion (außer Pfeilfunktionen, da sie kein `this` haben) als Konstruktor verwendet werden. Sie kann mit `new` ausgeführt werden und wird das oben beschriebene Verfahren durchführen. „Beginnt mit Großbuchstaben“ ist eine allgemeine Vereinbarung, um klarzustellen, dass eine Funktion mit `new` ausgeführt werden soll.
 
 ````smart header="new function() { ... }"
 Wenn wir viele Zeilen Code haben, die sich alle um die Erstellung eines einzigen komplexen Objekts drehen, können wir sie in eine sofort aufgerufene Konstruktorfunktion einpacken:
@@ -87,7 +87,7 @@ Dieser Konstruktor kann nicht erneut aufgerufen werden, weil er nirgendwo gespei
 ## Test des Konstruktormodus: new.target
 
 ```smart header="Fortgeschrittenes Thema"
-Die Syntax aus diesem Abschnitt wird selten verwendet, überspringen Sie ihn, es sei denn, Sie wollen alles wissen.
+Die Syntax aus diesem Abschnitt wird selten verwendet. Überspringe ihn, es sei denn, du willst alles wissen.
 ```
 
 Innerhalb einer Funktion können wir überprüfen, ob sie mit `new` oder ohne aufgerufen wurde, indem wir eine spezielle `new.target`-Eigenschaft verwenden.
