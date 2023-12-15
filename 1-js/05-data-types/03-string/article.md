@@ -1,23 +1,23 @@
 # Strings
 
-In JavaScript, the textual data is stored as strings. There is no separate type for a single character.
+In JavaScript werden Textdaten als Zeichenketten (Strings) gespeichert. Es gibt keinen separaten Typ für einzelne Zeichen.
 
-The internal format for strings is always [UTF-16](https://en.wikipedia.org/wiki/UTF-16), it is not tied to the page encoding.
+Das interne Format für Zeichenketten ist immer [UTF-16](https://de.wikipedia.org/wiki/UTF-16), es ist nicht an die Seitenkodierung gebunden.
 
-## Quotes
+## Anführungszeichen
 
-Let's recall the kinds of quotes.
+Erinnern wir uns an die Arten von Anführungszeichen.
 
-Strings can be enclosed within either single quotes, double quotes or backticks:
+Zeichenketten können entweder in einfache Anführungszeichen, doppelte Anführungszeichen oder Backticks eingeschlossen werden:
 
 ```js
-let single = 'single-quoted';
-let double = "double-quoted";
+let single = 'einfach-quotiert';
+let double = "doppelt-quotiert";
 
-let backticks = `backticks`;
+let backticks = `Backticks`;
 ```
 
-Single and double quotes are essentially the same. Backticks, however, allow us to embed any expression into the string, by wrapping it in `${…}`:
+Einfache und doppelte Anführungszeichen sind im Wesentlichen gleich. Backticks erlauben es uns jedoch, jeden Ausdruck in die Zeichenkette einzubetten, indem wir ihn mit `${…}` umgeben:
 
 ```js run
 function sum(a, b) {
@@ -27,238 +27,238 @@ function sum(a, b) {
 alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
 ```
 
-Another advantage of using backticks is that they allow a string to span multiple lines:
+Ein weiterer Vorteil der Verwendung von Backticks besteht darin, dass sie ermöglichen, dass eine Zeichenkette mehrere Zeilen umfasst:
 
 ```js run
-let guestList = `Guests:
+let guestList = `Gäste:
  * John
  * Pete
  * Mary
 `;
 
-alert(guestList); // a list of guests, multiple lines
+alert(guestList); // eine Gästeliste, mehrere Zeilen
 ```
 
-Looks natural, right? But single or double quotes do not work this way.
+Sieht natürlich aus, nicht wahr? Aber einfache oder doppelte Anführungszeichen funktionieren nicht auf diese Weise.
 
-If we use them and try to use multiple lines, there'll be an error:
+Wenn wir sie verwenden und versuchen, mehrere Zeilen zu verwenden, gibt es einen Fehler:
 
 ```js run
-let guestList = "Guests: // Error: Unexpected token ILLEGAL
+let guestList = "Gäste: // Fehler: Unerwartetes Token ILLEGAL
   * John";
 ```
 
-Single and double quotes come from ancient times of language creation, when the need for multiline strings was not taken into account. Backticks appeared much later and thus are more versatile.
+Einfache und doppelte Anführungszeichen stammen aus der alten Zeit der Gestaltung von Programmiersprachen, als die Notwendigkeit für mehrzeilige Zeichenketten nicht berücksichtigt wurde. Backticks erschienen viel später und sind daher vielseitiger.
 
-Backticks also allow us to specify a "template function" before the first backtick. The syntax is: <code>func&#96;string&#96;</code>. The function `func` is called automatically, receives the string and embedded expressions and can process them. This feature is called "tagged templates", it's rarely seen, but you can read about it in the MDN: [Template literals](mdn:/JavaScript/Reference/Template_literals#Tagged_templates).
+Backticks erlauben es uns auch, eine "Template-Funktion" vor dem ersten Backtick anzugeben. Die Syntax lautet: <code>func&#96;string&#96;</code>. Die Funktion `func` wird automatisch aufgerufen, erhält die Zeichenkette `string` und eingebettete Ausdrücke und kann sie verarbeiten. Diese Funktion wird "tagged templates" genannt, sie ist selten zu sehen, aber du kannst darüber auf MDN lesen unter: [Template literals](mdn:/JavaScript/Reference/Template_literals#Tagged_templates).
 
-## Special characters
+## Spezielle Zeichen
 
-It is still possible to create multiline strings with single and double quotes by using a so-called "newline character", written as `\n`, which denotes a line break:
+Es ist immer noch möglich, mehrzeilige Zeichenketten mit einfachen und doppelten Anführungszeichen zu erstellen, indem man ein sogenanntes "neue Zeile-Zeichen", dargestellt als `\n`, verwendet, das einen Zeilenumbruch darstellt:
 
 ```js run
-let guestList = "Guests:\n * John\n * Pete\n * Mary";
+let guestList = "Gäste:\n * John\n * Pete\n * Mary";
 
-alert(guestList); // a multiline list of guests, same as above
+alert(guestList); // eine mehrzeilige Gästeliste, wie oben
 ```
 
-As a simpler example, these two lines are equal, just written differently:
+Als einfacheres Beispiel sind diese beiden Zeilen gleich, nur unterschiedlich geschrieben:
 
 ```js run
-let str1 = "Hello\nWorld"; // two lines using a "newline symbol"
+let str1 = "Hallo\nWelt"; // zwei zeilen mit einem "neue Zeile-Symbol"
 
-// two lines using a normal newline and backticks
-let str2 = `Hello
-World`;
+// zwei zeilen mit einer normalen neuen Zeile und Backticks
+let str2 = `Hallo
+Welt`;
 
 alert(str1 == str2); // true
 ```
 
-There are other, less common special characters:
+Es gibt andere, weniger gebräuchliche spezielle Zeichen:
 
-| Character | Description |
+| Zeichen | Beschreibung |
 |-----------|-------------|
-|`\n`|New line|
-|`\r`|In Windows text files a combination of two characters `\r\n` represents a new break, while on non-Windows OS it's just `\n`. That's for historical reasons, most Windows software also understands `\n`. |
-|`\'`,&nbsp;`\"`,&nbsp;<code>\\`</code>|Quotes|
+|`\n`|Neue Zeile|
+|`\r`|In Windows-Textdateien wird ein Zeilenumbruch durch eine Kombination von zwei Zeichen `\r\n` dargestellt, während es in Nicht-Windows-Betriebssystemen nur `\n` ist. Das ist historisch bedingt, die meisten Windows-Programme verstehen auch `\n`. |
+|`\'`,&nbsp;`\"`,&nbsp;<code>\\`</code>|Anführungszeichen|
 |`\\`|Backslash|
-|`\t`|Tab|
-|`\b`, `\f`, `\v`| Backspace, Form Feed, Vertical Tab -- mentioned for completeness, coming from old times, not used nowadays (you can forget them right now). |
+|`\t`|Tabulator|
+|`\b`, `\f`, `\v`| Backspace, Formularvorschub, Vertikaler Tabulator -- nur der Vollständigkeit halber erwähnt, stammen aus alter Zeit, werden heutzutage nicht genutzt (du kannst sie direkt vergessen). |
 
-As you can see, all special characters start with a backslash character `\`. It is also called an "escape character".
+Wie du siehst, beginnen alle speziellen Zeichen mit dem Backslash-Zeichen `\`. Es wird auch als "Maskierungszeichen" ("escape character") bezeichnet.
 
-Because it's so special, if we need to show an actual backslash `\` within the string, we need to double it:
-
-```js run
-alert( `The backslash: \\` ); // The backslash: \
-```
-
-So-called "escaped" quotes `\'`, `\"`, <code>\\`</code> are used to insert a quote into the same-quoted string.
-
-For instance:
+Weil es so besonders ist, wenn wir einen tatsächlichen Backslash `\` innerhalb der Zeichenkette zeigen müssen, müssen wir ihn verdoppeln:
 
 ```js run
-alert( 'I*!*\'*/!*m the Walrus!' ); // *!*I'm*/!* the Walrus!
+alert( `Der Backslash: \\` ); // Der Backslash: \
 ```
 
-As you can see, we have to prepend the inner quote by the backslash `\'`, because otherwise it would indicate the string end.
+Sogenannte maskierte Anführungszeichen `\'`, `\"`, <code>\\`</code> werden verwendet, um ein Anführungszeichen in eine Zeichenkette mit den gleichen Anführungszeichen einzufügen.
 
-Of course, only the quotes that are the same as the enclosing ones need to be escaped. So, as a more elegant solution, we could switch to double quotes or backticks instead:
+Zum Beispiel:
 
 ```js run
-alert( "I'm the Walrus!" ); // I'm the Walrus!
+alert( 'Ich*!*\'*/!* bin das Walross!' ); // *!*Ich bin*/!* das Walross!
 ```
 
-Besides these special characters, there's also a special notation for Unicode codes `\u…`, it's rarely used and is covered in the optional chapter about [Unicode](info:unicode).
+Wie du sehen kannst, müssen wir dem inneren Anführungszeichen ein Backslash `\'` voranstellen, da es sonst das Ende der Zeichenkette anzeigen würde.
 
-## String length
-
-The `length` property has the string length:
+Natürlich müssen nur jene Anführungszeichen maskiert werden, die gleich wie die umgebenden sind. Also könnten wir als elegantere Lösung stattdessen auf doppelte Anführungszeichen oder Backticks wechseln:
 
 ```js run
-alert( `My\n`.length ); // 3
+alert( "Ich bin das Walross!" ); // Ich bin das Walross!
 ```
 
-Note that `\n` is a single "special" character, so the length is indeed `3`.
+Neben diesen speziellen Zeichen gibt es auch eine spezielle Notation für Unicode-Codes `\u…`, sie wird selten verwendet und ist im optionalem Kapitel über [Unicode](info:unicode) behandelt.
 
-```warn header="`length` is a property"
-People with a background in some other languages sometimes mistype by calling `str.length()` instead of just `str.length`. That doesn't work.
+## Zeichenkettenlänge
 
-Please note that `str.length` is a numeric property, not a function. There is no need to add parenthesis after it. Not `.length()`, but `.length`.
-```
-
-## Accessing characters
-
-To get a character at position `pos`, use square brackets `[pos]` or call the method [str.at(pos)](mdn:js/String/at). The first character starts from the zero position:
+Die Eigenschaft `length` gibt die Länge der Zeichenkette an:
 
 ```js run
-let str = `Hello`;
+alert( `Mein\n`.length ); // 3
+```
 
-// the first character
+Beachte, dass `\n` ein einzelnes "spezielles" Zeichen ist und die Länge tatsächlich `3` ist.
+
+```warn header="`length` ist eine Eigenschaft"
+Personen mit Erfahrung in einigen anderen Sprachen vertippen sich manchmal, indem sie `str.length()` anstelle von einfach `str.length` aufrufen. Das funktioniert nicht.
+
+Bitte beachte, dass `str.length` eine numerische Eigenschaft ist, keine Funktion. Es ist nicht notwendig, Klammern dahinter zu setzen. Nicht `.length()`, sondern `.length`.
+```
+
+## Auf Zeichen zugreifen
+
+Um ein Zeichen an der Position `pos` zu erhalten, verwende eckige Klammern `[pos]` oder rufe die Methode [str.at(pos)](mdn:js/String/at) auf. Das erste Zeichen beginnt bei der Position Null:
+
+```js run
+let str = `Hallo`;
+
+// das erste Zeichen
 alert( str[0] ); // H
 alert( str.at(0) ); // H
 
-// the last character
+// das letzte Zeichen
 alert( str[str.length - 1] ); // o
-alert( str.at(-1) );
+alert( str.at(-1) ); // o
 ```
 
-As you can see, the `.at(pos)` method has a benefit of allowing negative position. If `pos` is negative, then it's counted from the end of the string.
+Wie du sehen kannst, hat die Methode `.at(pos)` den Vorteil, dass sie negative Positionen zulässt. Wenn `pos` negativ ist, wird es vom Ende der Zeichenkette gezählt.
 
-So `.at(-1)` means the last character, and `.at(-2)` is the one before it, etc.
+Also bedeutet `.at(-1)` das letzte Zeichen und `.at(-2)` das davor usw.
 
-The square brackets always return `undefined` for negative indexes, for instance:
+Die eckigen Klammern geben `undefined` für negative Indizes zurück, zum Beispiel:
 
 ```js run
-let str = `Hello`;
+let str = `Hallo`;
 
 alert( str[-2] ); // undefined
 alert( str.at(-2) ); // l
 ```
 
-We can also iterate over characters using `for..of`:
+Wir können auch mit `for..of` über Zeichen iterieren:
 
 ```js run
-for (let char of "Hello") {
-  alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
+for (let char of "Hallo") {
+  alert(char); // H,e,l,l,o (char wird "H", dann "e", dann "l" usw)
 }
 ```
 
-## Strings are immutable
+## Zeichenketten sind unveränderlich
 
-Strings can't be changed in JavaScript. It is impossible to change a character.
+Zeichenketten können in JavaScript nicht verändert werden. Es ist unmöglich, ein Zeichen zu ändern.
 
-Let's try it to show that it doesn't work:
+Versuchen wir es, um zu zeigen, dass es nicht funktioniert:
 
 ```js run
 let str = 'Hi';
 
-str[0] = 'h'; // error
-alert( str[0] ); // doesn't work
+str[0] = 'h'; // Fehler
+alert( str[0] ); // funktioniert nicht
 ```
 
-The usual workaround is to create a whole new string and assign it to `str` instead of the old one.
+Die übliche Vorgehensweise besteht darin, eine ganz neue Zeichenkette zu erstellen und sie anstelle der alten `str` zuzuweisen.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let str = 'Hi';
 
-str = 'h' + str[1]; // replace the string
+str = 'h' + str[1]; // ersetze die Zeichenkette
 
 alert( str ); // hi
 ```
 
-In the following sections we'll see more examples of this.
+In den folgenden Abschnitten werden wir weitere Beispiele dafür sehen.
 
-## Changing the case
+## Die Groß-/Kleinschreibung ändern
 
-Methods [toLowerCase()](mdn:js/String/toLowerCase) and [toUpperCase()](mdn:js/String/toUpperCase) change the case:
-
-```js run
-alert( 'Interface'.toUpperCase() ); // INTERFACE
-alert( 'Interface'.toLowerCase() ); // interface
-```
-
-Or, if we want a single character lowercased:
+Die Methoden [toLowerCase()](mdn:js/String/toLowerCase) und [toUpperCase()](mdn:js/String/toUpperCase) ändern die Groß-/Kleinschreibung:
 
 ```js run
-alert( 'Interface'[0].toLowerCase() ); // 'i'
+alert( 'Schnittstelle'.toUpperCase() ); // SCHNITTSTELLE
+alert( 'Schnittstelle'.toLowerCase() ); // schnittstelle
 ```
 
-## Searching for a substring
+Oder wenn wir nur einen einzelnen Buchstaben kleingeschrieben haben wollen:
 
-There are multiple ways to look for a substring within a string.
+```js run
+alert( 'Schnittstelle'[0].toLowerCase() ); // 's'
+```
+
+## Nach einer Teilzeichenkette suchen
+
+Es gibt mehrere Möglichkeiten, innerhalb einer Zeichenkette nach einer Teilzeichenkette zu suchen.
 
 ### str.indexOf
 
-The first method is [str.indexOf(substr, pos)](mdn:js/String/indexOf).
+Die erste Methode ist [str.indexOf(substr, pos)](mdn:js/String/indexOf).
 
-It looks for the `substr` in `str`, starting from the given position `pos`, and returns the position where the match was found or `-1` if nothing can be found.
+Sie sucht `substr` in `str`, beginnend bei der gegebenen Position `pos`, und gibt die Position zurück, an der die Übereinstimmung gefunden wurde oder `-1`, wenn nichts gefunden werden kann.
 
-For instance:
+Zum Beispiel:
 
 ```js run
-let str = 'Widget with id';
+let str = 'Widget mit id';
 
-alert( str.indexOf('Widget') ); // 0, because 'Widget' is found at the beginning
-alert( str.indexOf('widget') ); // -1, not found, the search is case-sensitive
+alert( str.indexOf('Widget') ); // 0, weil 'Widget' am Anfang gefunden wird
+alert( str.indexOf('widget') ); // -1, nicht gefunden, die Suche ist groß-/kleinschreibungsempfindlich
 
-alert( str.indexOf("id") ); // 1, "id" is found at the position 1 (..idget with id)
+alert( str.indexOf("id") ); // 1, "id" wird an der Position 1 gefunden (..idget mit id)
 ```
 
-The optional second parameter allows us to start searching from a given position.
+Der optionale zweite Parameter ermöglicht es uns, die Suche ab einer bestimmten Position zu starten.
 
-For instance, the first occurrence of `"id"` is at position `1`. To look for the next occurrence, let's start the search from position `2`:
+Zum Beispiel ist das erste Vorkommen von `"id"` an Position `1`. Um nach dem nächsten Vorkommen zu suchen, starten wir die Suche ab Position `2`:
 
 ```js run
-let str = 'Widget with id';
+let str = 'Widget mit id';
 
-alert( str.indexOf('id', 2) ) // 12
+alert( str.indexOf('id', 2) ) // 11
 ```
 
-If we're interested in all occurrences, we can run `indexOf` in a loop. Every new call is made with the position after the previous match:
+Wenn wir an allen Vorkommen interessiert sind, können wir `indexOf` in einer Schleife ausführen. Jeder neue Aufruf erfolgt mit der Position nach dem vorherigen Treffer:
 
 ```js run
-let str = 'As sly as a fox, as strong as an ox';
+let str = 'So listig wie ein Fuchs, so stark wie ein Ochse';
 
-let target = 'as'; // let's look for it
+let target = 'so'; // danach wollen wir suchen
 
 let pos = 0;
 while (true) {
   let foundPos = str.indexOf(target, pos);
   if (foundPos == -1) break;
 
-  alert( `Found at ${foundPos}` );
-  pos = foundPos + 1; // continue the search from the next position
+  alert( `Gefunden bei ${foundPos}` );
+  pos = foundPos + 1; // setze die Suche ab der nächsten Position fort
 }
 ```
 
-The same algorithm can be layed out shorter:
+Der gleiche Algorithmus kann kürzer dargestellt werden:
 
 ```js run
-let str = "As sly as a fox, as strong as an ox";
-let target = "as";
+let str = "So listig wie ein Fuchs, so stark wie ein Ochse";
+let target = "so";
 
 *!*
 let pos = -1;
@@ -269,192 +269,192 @@ while ((pos = str.indexOf(target, pos + 1)) != -1) {
 ```
 
 ```smart header="`str.lastIndexOf(substr, position)`"
-There is also a similar method [str.lastIndexOf(substr, position)](mdn:js/String/lastIndexOf) that searches from the end of a string to its beginning.
+Es gibt auch eine ähnliche Methode [str.lastIndexOf(substr, position)](mdn:js/String/lastIndexOf), die vom Ende eines Strings zum Anfang durchsucht.
 
-It would list the occurrences in the reverse order.
+Sie würde die Vorkommen in umgekehrter Reihenfolge auflisten.
 ```
 
-There is a slight inconvenience with `indexOf` in the `if` test. We can't put it in the `if` like this:
+Ein kleines Problem bei `indexOf` ist die Verwendung im `if`. Wir können es nicht wie folgt in die `if`-Bedingung setzen:
 
 ```js run
-let str = "Widget with id";
+let str = "Widget mit id";
 
 if (str.indexOf("Widget")) {
-    alert("We found it"); // doesn't work!
+    alert("Wir haben es gefunden"); // funktioniert nicht!
 }
 ```
 
-The `alert` in the example above doesn't show because `str.indexOf("Widget")` returns `0` (meaning that it found the match at the starting position). Right, but `if` considers `0` to be `false`.
+Das `alert` im Beispiel oben erscheint nicht, weil `str.indexOf("Widget")` `0` zurückgibt (das bedeutet, dass es die Übereinstimmung am Anfang gefunden hat). Richtig, aber `if` betrachtet `0` als `false`.
 
-So, we should actually check for `-1`, like this:
+Wir sollten also tatsächlich nach `-1` überprüfen, so wie hier:
 
 ```js run
-let str = "Widget with id";
+let str = "Widget mit id";
 
 *!*
 if (str.indexOf("Widget") != -1) {
 */!*
-    alert("We found it"); // works now!
+    alert("Wir haben es gefunden"); // jetzt funktioniert es!
 }
 ```
 
 ### includes, startsWith, endsWith
 
-The more modern method [str.includes(substr, pos)](mdn:js/String/includes) returns `true/false` depending on whether `str` contains `substr` within.
+Die modernere Methode [str.includes(substr, pos)](mdn:js/String/includes) gibt `true/false` zurück, je nachdem, ob `str` `substr` enthält.
 
-It's the right choice if we need to test for the match, but don't need its position:
+Das ist die richtige Wahl, wenn wir auf das Vorhandensein testen müssen, aber dessen Position nicht benötigen:
 
 ```js run
-alert( "Widget with id".includes("Widget") ); // true
+alert( "Widget mit id".includes("Widget") ); // true
 
-alert( "Hello".includes("Bye") ); // false
+alert( "Hallo".includes("Tschüss") ); // false
 ```
 
-The optional second argument of `str.includes` is the position to start searching from:
+Das optionale zweite Argument von `str.includes` ist die Position, ab der gesucht werden soll:
 
 ```js run
 alert( "Widget".includes("id") ); // true
-alert( "Widget".includes("id", 3) ); // false, from position 3 there is no "id"
+alert( "Widget".includes("id", 3) ); // false, ab Position 3 gibt es kein "id"
 ```
 
-The methods [str.startsWith](mdn:js/String/startsWith) and [str.endsWith](mdn:js/String/endsWith) do exactly what they say:
+Die Methoden [str.startsWith](mdn:js/String/startsWith) und [str.endsWith](mdn:js/String/endsWith) tun genau das, was sie ausdrücken:
 
 ```js run
-alert( "*!*Wid*/!*get".startsWith("Wid") ); // true, "Widget" starts with "Wid"
-alert( "Wid*!*get*/!*".endsWith("get") ); // true, "Widget" ends with "get"
+alert( "*!*Wid*/!*get".startsWith("Wid") ); // true, "Widget" beginnt mit "Wid"
+alert( "Wid*!*get*/!*".endsWith("get") ); // true, "Widget" endet mit "get"
 ```
 
-## Getting a substring
+## Einen Teilstring erhalten
 
-There are 3 methods in JavaScript to get a substring: `substring`, `substr` and `slice`.
+Es gibt in JavaScript drei Methoden, um einen Teilstring zu erhalten: `substring`, `substr` und `slice`.
 
 `str.slice(start [, end])`
-: Returns the part of the string from `start` to (but not including) `end`.
+: Gibt den Teil der Zeichenkette von `start` bis (aber nicht einschließlich) `end` zurück.
 
-    For instance:
+    Zum Beispiel:
 
     ```js run
     let str = "stringify";
-    alert( str.slice(0, 5) ); // 'strin', the substring from 0 to 5 (not including 5)
-    alert( str.slice(0, 1) ); // 's', from 0 to 1, but not including 1, so only character at 0
+    alert( str.slice(0, 5) ); // 'strin', der Teilstring von 0 bis 5 (5 nicht eingeschlossen)
+    alert( str.slice(0, 1) ); // 's', von 0 bis 1, aber nicht inklusive 1, also nur das Zeichen bei 0
     ```
 
-    If there is no second argument, then `slice` goes till the end of the string:
+    Wenn es keinen zweiten Argument gibt, dann geht `slice` bis zum Ende der Zeichenkette:
 
     ```js run
     let str = "st*!*ringify*/!*";
-    alert( str.slice(2) ); // 'ringify', from the 2nd position till the end
+    alert( str.slice(2) ); // 'ringify', von der 2. Position bis zum Ende
     ```
 
-    Negative values for `start/end` are also possible. They mean the position is counted from the string end:
+    Negative Werte für `start/end` sind ebenfalls möglich. Sie bedeuten, dass die Position vom Ende des Strings gezählt wird:
 
     ```js run
     let str = "strin*!*gif*/!*y";
 
-    // start at the 4th position from the right, end at the 1st from the right
+    // beginne bei der 4. Position von rechts, endet bei der 1. von rechts
     alert( str.slice(-4, -1) ); // 'gif'
     ```
 
 `str.substring(start [, end])`
-: Returns the part of the string *between* `start` and `end` (not including `end`).
+: Gibt den Teil der Zeichenkette *zwischen* `start` und `end` zurück (end nicht eingeschlossen).
 
-    This is almost the same as `slice`, but it allows `start` to be greater than `end` (in this case it simply swaps `start` and `end` values).
+    Dies ist fast das Gleiche wie `slice`, aber es erlaubt `start`, größer als `end` zu sein (in diesem Fall werden einfach die `start`- und `end`-Werte getauscht).
 
-    For instance:
+    Zum Beispiel:
 
     ```js run
     let str = "st*!*ring*/!*ify";
 
-    // these are same for substring
+    // diese sind gleich für substring
     alert( str.substring(2, 6) ); // "ring"
     alert( str.substring(6, 2) ); // "ring"
 
-    // ...but not for slice:
-    alert( str.slice(2, 6) ); // "ring" (the same)
-    alert( str.slice(6, 2) ); // "" (an empty string)
+    // ...aber nicht für slice:
+    alert( str.slice(2, 6) ); // "ring" (das gleiche)
+    alert( str.slice(6, 2) ); // "" (ein leerer String)
 
     ```
 
-    Negative arguments are (unlike slice) not supported, they are treated as `0`.
+    Negative Argumente werden (im Gegensatz zu slice) nicht unterstützt und als `0` behandelt.
 
 `str.substr(start [, length])`
-: Returns the part of the string from `start`, with the given `length`.
+: Gibt den Teil der Zeichenkette von `start` bis zur gegebenen Länge `length` zurück.
 
-    In contrast with the previous methods, this one allows us to specify the `length` instead of the ending position:
+    Im Gegensatz zu den vorherigen Methoden erlaubt diese, die `length` anstelle der Endposition anzugeben:
 
     ```js run
     let str = "st*!*ring*/!*ify";
-    alert( str.substr(2, 4) ); // 'ring', from the 2nd position get 4 characters
+    alert( str.substr(2, 4) ); // 'ring', ab der 2. Position 4 Zeichen bekommen
     ```
 
-    The first argument may be negative, to count from the end:
+    Das erste Argument kann negativ sein, um vom Ende zu zählen:
 
     ```js run
     let str = "strin*!*gi*/!*fy";
-    alert( str.substr(-4, 2) ); // 'gi', from the 4th position get 2 characters
+    alert( str.substr(-4, 2) ); // 'gi', ab der 4. Position 2 Zeichen bekommen
     ```
 
-    This method resides in the [Annex B](https://tc39.es/ecma262/#sec-string.prototype.substr) of the language specification. It means that only browser-hosted Javascript engines should support it, and it's not recommended to use it. In practice, it's supported everywhere.
+    Diese Methode ist im [Annex B](https://tc39.es/ecma262/#sec-string.prototype.substr) der Sprachspezifikation enthalten. Das bedeutet, dass sie nur von in Browsern gehosteten Javascript-Engines unterstützt werden sollte, und es wird nicht empfohlen, sie zu verwenden. In der Praxis wird sie jedoch überall unterstützt.
 
-Let's recap these methods to avoid any confusion:
+Lass uns diese Methoden rekapitulieren, um jegliche Verwirrung zu vermeiden:
 
-| method | selects... | negatives |
+| Methode | selektiert... | negatives |
 |--------|-----------|-----------|
-| `slice(start, end)` | from `start` to `end` (not including `end`) | allows negatives |
-| `substring(start, end)` | between `start` and `end` (not including `end`)| negative values mean `0` |
-| `substr(start, length)` | from `start` get `length` characters | allows negative `start` |
+| `slice(start, end)` | von `start` bis `end` (ohne `end` einzuschließen) | erlaubt negative Werte |
+| `substring(start, end)` | zwischen `start` und `end` (ohne `end` einzuschließen) | negative Werte bedeuten `0` |
+| `substr(start, length)` | von `start` `length` Zeichen holen | erlaubt negatives `start` |
 
-```smart header="Which one to choose?"
-All of them can do the job. Formally, `substr` has a minor drawback: it is described not in the core JavaScript specification, but in Annex B, which covers browser-only features that exist mainly for historical reasons. So, non-browser environments may fail to support it. But in practice it works everywhere.
+```smart header="Welche soll man wählen?"
+Alle können die Aufgabe erfüllen. Formal hat `substr` einen kleinen Nachteil: Es wird nicht in der Hauptspezifikation von JavaScript beschrieben, sondern in Anhang B, der Browser-spezifische Funktionen umfasst, die hauptsächlich aus historischen Gründen existieren. Daher könnte es sein, dass Nicht-Browser-Umgebungen sie nicht unterstützen. Aber in der Praxis funktioniert sie überall.
 
-Of the other two variants, `slice` is a little bit more flexible, it allows negative arguments and shorter to write.
+Von den anderen beiden Varianten ist `slice` ein bisschen flexibler, es erlaubt negative Argumente und ist kürzer zu schreiben.
 
-So, for practical use it's enough to remember only `slice`.
+Praktisch gesehen ist es also genug, sich nur `slice` zu merken.
 ```
 
-## Comparing strings
+## Strings vergleichen
 
-As we know from the chapter <info:comparison>, strings are compared character-by-character in alphabetical order.
+Wie wir aus dem Kapitel <info:comparison> wissen, werden Strings Zeichen-für-Zeichen in alphabetischer Reihenfolge verglichen.
 
-Although, there are some oddities.
+Allerdings gibt es einige Kuriositäten.
 
-1. A lowercase letter is always greater than the uppercase:
+1. Ein Kleinbuchstabe ist immer größer als ein Großbuchstabe:
 
     ```js run
     alert( 'a' > 'Z' ); // true
     ```
 
-2. Letters with diacritical marks are "out of order":
+2. Buchstaben mit diakritischen Zeichen fallen "aus der Reihe":
 
     ```js run
     alert( 'Österreich' > 'Zealand' ); // true
     ```
 
-    This may lead to strange results if we sort these country names. Usually people would expect `Zealand` to come after `Österreich` in the list.
+    Das kann zu seltsamen Ergebnissen führen, wenn wir diese Ländernamen sortieren. Normalerweise würde man erwarten, dass `Zealand` nach `Österreich` in der Liste kommt.
 
-To understand what happens, we should be aware that strings in Javascript are encoded using [UTF-16](https://en.wikipedia.org/wiki/UTF-16). That is: each character has a corresponding numeric code.
+Um zu verstehen, was passiert, sollten wir uns bewusst sein, dass Zeichenketten in Javascript mit [UTF-16](https://en.wikipedia.org/wiki/UTF-16) kodiert sind. Das heißt: Jeder Buchstabe hat einen entsprechenden numerischen Code.
 
-There are special methods that allow to get the character for the code and back:
+Es gibt spezielle Methoden, die es ermöglichen, den Buchstaben für den Code zu erhalten und umgekehrt:
 
 `str.codePointAt(pos)`
-: Returns a decimal number representing the code for the character at position `pos`:
+: Gibt eine Dezimalzahl zurück, die den Code für das Zeichen an der Position `pos` repräsentiert:
 
     ```js run
-    // different case letters have different codes
+    // Unterschiedliche Groß- und Kleinbuchstaben haben unterschiedliche Codes
     alert( "Z".codePointAt(0) ); // 90
     alert( "z".codePointAt(0) ); // 122
-    alert( "z".codePointAt(0).toString(16) ); // 7a (if we need a hexadecimal value)
+    alert( "z".codePointAt(0).toString(16) ); // 7a (wenn wir einen Hexadezimalwert benötigen)
     ```
 
 `String.fromCodePoint(code)`
-: Creates a character by its numeric `code`
+: Erstellt einen Buchstaben anhand seines numerischen `code`
 
     ```js run
     alert( String.fromCodePoint(90) ); // Z
-    alert( String.fromCodePoint(0x5a) ); // Z (we can also use a hex value as an argument)
+    alert( String.fromCodePoint(0x5a) ); // Z (wir können auch einen Hexwert als Argument verwenden)
     ```
 
-Now let's see the characters with codes `65..220` (the latin alphabet and a little bit extra) by making a string of them:
+Schauen wir uns jetzt die Zeichen mit den Codes `65..220` an (das lateinische Alphabet und ein bisschen extra), indem wir eine Zeichenkette aus ihnen erstellen:
 
 ```js run
 let str = '';
@@ -463,60 +463,60 @@ for (let i = 65; i <= 220; i++) {
   str += String.fromCodePoint(i);
 }
 alert( str );
-// Output:
+// Ausgabe:
 // ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 // ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ
 ```
 
-See? Capital characters go first, then a few special ones, then lowercase characters, and `Ö` near the end of the output.
+Siehst Du? Großbuchstaben kommen zuerst, dann einige Sonderzeichen, dann Kleinbuchstaben, und `Ö` fast am Ende der Ausgabe.
 
-Now it becomes obvious why `a > Z`.
+Jetzt wird klar, warum `a > Z`.
 
-The characters are compared by their numeric code. The greater code means that the character is greater. The code for `a` (97) is greater than the code for `Z` (90).
+Die Zeichen werden anhand ihres numerischen Codes verglichen. Der größere Code bedeutet, dass das Zeichen größer ist. Der Code für `a` (97) ist größer als der Code für `Z` (90).
 
-- All lowercase letters go after uppercase letters because their codes are greater.
-- Some letters like `Ö` stand apart from the main alphabet. Here, its code is greater than anything from `a` to `z`.
+- Alle Kleinbuchstaben folgen nach den Großbuchstaben, weil ihre Codes größer sind.
+- Einige Buchstaben wie `Ö` stehen abseits vom Hauptalphabet. Hier ist sein Code größer als alles von `a` bis `z`.
 
-### Correct comparisons [#correct-comparisons]
+### Korrekte Vergleiche [#correct-comparisons]
 
-The "right" algorithm to do string comparisons is more complex than it may seem, because alphabets are different for different languages.
+Der "richtige" Algorithmus für den Vergleich von Zeichenketten ist komplizierter, als es scheint, weil die Alphabetisierung für verschiedene Sprachen unterschiedlich ist.
 
-So, the browser needs to know the language to compare.
+Daher muss der Browser die Sprache kennen, um zu vergleichen.
 
-Luckily, modern browsers support the internationalization standard [ECMA-402](https://www.ecma-international.org/publications-and-standards/standards/ecma-402/).
+Zum Glück unterstützen moderne Browser den Internationalisierungsstandard [ECMA-402](https://www.ecma-international.org/publications-and-standards/standards/ecma-402/).
 
-It provides a special method to compare strings in different languages, following their rules.
+Er stellt eine spezielle Methode zur Verfügung, um Zeichenketten in verschiedenen Sprachen gemäß ihren Regeln zu vergleichen.
 
-The call [str.localeCompare(str2)](mdn:js/String/localeCompare) returns an integer indicating whether `str` is less, equal or greater than `str2` according to the language rules:
+Der Aufruf von [str.localeCompare(str2)](mdn:js/String/localeCompare) gibt eine Ganzzahl zurück, die angibt, ob `str` kleiner, gleich oder größer als `str2` gemäß den Sprachregeln ist:
 
-- Returns a negative number if `str` is less than `str2`.
-- Returns a positive number if `str` is greater than `str2`.
-- Returns `0` if they are equivalent.
+- Gibt eine negative Nummer zurück, wenn `str` kleiner als `str2` ist.
+- Gibt eine positive Nummer zurück, wenn `str` größer als `str2` ist.
+- Gibt `0` zurück, wenn sie gleichwertig sind.
 
-For instance:
+Beispielsweise:
 
 ```js run
 alert( 'Österreich'.localeCompare('Zealand') ); // -1
 ```
 
-This method actually has two additional arguments specified in [the documentation](mdn:js/String/localeCompare), which allows it to specify the language (by default taken from the environment, letter order depends on the language) and setup additional rules like case sensitivity or should `"a"` and `"á"` be treated as the same etc.
+Diese Methode hat tatsächlich zwei zusätzliche Argumente, die in [der Dokumentation](mdn:js/String/localeCompare) spezifiziert sind und es uns ermöglichen, die Sprache festzulegen (standardmäßig aus der Umgebung abgeleitet, Buchstabenreihenfolge hängt von der Sprache ab) und zusätzliche Regeln einzustellen, wie Empfindlichkeit für Groß-/Kleinschreibung oder ob `"a"` und `"á"` als dasselbe behandelt werden sollen usw.
 
-## Summary
+## Zusammenfassung
 
-- There are 3 types of quotes. Backticks allow a string to span multiple lines and embed expressions `${…}`.
-- We can use special characters, such as a line break `\n`.
-- To get a character, use: `[]` or `at` method.
-- To get a substring, use: `slice` or `substring`.
-- To lowercase/uppercase a string, use: `toLowerCase/toUpperCase`.
-- To look for a substring, use: `indexOf`, or `includes/startsWith/endsWith` for simple checks.
-- To compare strings according to the language, use: `localeCompare`, otherwise they are compared by character codes.
+- Es gibt 3 Arten von Anführungszeichen. Backticks erlauben es, dass eine Zeichenkette mehrere Zeilen umfasst und Ausdrücke `${…}` eingebettet werden können.
+- Wir können Sonderzeichen verwenden, wie z.B. einen Zeilenumbruch `\n`.
+- Um ein Zeichen zu erhalten, benutze: `[]` oder die Methode `at`.
+- Um eine Teilzeichenkette zu erhalten, benutze: `slice` oder `substring`.
+- Um eine Zeichenkette in Klein-/Großbuchstaben umzuwandeln, verwende: `toLowerCase/toUpperCase`.
+- Um nach einer Teilzeichenkette zu suchen, verwende: `indexOf` oder `includes/startsWith/endsWith` für einfache Überprüfungen.
+- Um Zeichenketten entsprechend der Sprache zu vergleichen, verwende: `localeCompare`, sonst werden sie nach Zeichencodes verglichen.
 
-There are several other helpful methods in strings:
+Es gibt mehrere andere hilfreiche Methoden in Zeichenketten:
 
-- `str.trim()` -- removes ("trims") spaces from the beginning and end of the string.
-- `str.repeat(n)` -- repeats the string `n` times.
-- ...and more to be found in the [manual](mdn:js/String).
+- `str.trim()` -- entfernt ("trimmt") Leerzeichen am Anfang und Ende der Zeichenkette.
+- `str.repeat(n)` -- wiederholt die Zeichenkette `n`-mal.
+- ...und mehr, zu finden im [Handbuch](mdn:js/String).
 
-Strings also have methods for doing search/replace with regular expressions. But that's big topic, so it's explained in a separate tutorial section <info:regular-expressions>.
+Zeichenketten haben auch Methoden zur Durchführung von Such-/Ersetzungsvorgängen mit regulären Ausdrücken. Das ist jedoch ein großes Thema, daher wird es in einem separaten Tutorialabschnitt erklärt <info:regular-expressions>.
 
-Also, as of now it's important to know that strings are based on Unicode encoding, and hence there're issues with comparisons. There's more about Unicode in the chapter <info:unicode>.
+Außerdem, wie bisher bekannt, ist es wichtig zu wissen, dass Zeichenketten auf der Unicode-Kodierung basieren und daher Probleme beim Vergleich auftreten können. Es gibt mehr über Unicode im Kapitel <info:unicode>.

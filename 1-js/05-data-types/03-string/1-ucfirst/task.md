@@ -2,11 +2,10 @@ importance: 5
 
 ---
 
-# Uppercase the first character
+# Den ersten Buchstaben großschreiben
 
-Write a function `ucFirst(str)` that returns the string `str` with the uppercased first character, for instance:
+Schreibe eine Funktion `ucFirst(str)`, die den String `str` zurückgibt, wobei der erste Buchstabe großgeschrieben ist, beispielsweise:
 
 ```js
 ucFirst("john") == "John";
 ```
-
