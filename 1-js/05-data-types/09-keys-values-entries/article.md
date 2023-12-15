@@ -1,42 +1,41 @@
-
 # Object.keys, values, entries
 
-Let's step away from the individual data structures and talk about the iterations over them.
+Lass uns einen Schritt zurücktreten von den einzelnen Datenstrukturen und über deren Iteration sprechen.
 
-In the previous chapter we saw methods `map.keys()`, `map.values()`, `map.entries()`.
+Im letzten Kapitel haben wir die Methoden `map.keys()`, `map.values()`, `map.entries()` gesehen.
 
-These methods are generic, there is a common agreement to use them for data structures. If we ever create a data structure of our own, we should implement them too.
+Diese Methoden sind generisch, es ist allgemein üblich, sie für Datenstrukturen zu verwenden. Wenn wir jemals eine eigene Datenstruktur erstellen, sollten wir sie ebenfalls implementieren.
 
-They are supported for:
+Sie werden unterstützt für:
 
 - `Map`
 - `Set`
 - `Array`
 
-Plain objects also support similar methods, but the syntax is a bit different.
+Einfache Objekte unterstützen auch ähnliche Methoden, aber die Syntax ist ein wenig anders.
 
 ## Object.keys, values, entries
 
-For plain objects, the following methods are available:
+Für einfache Objekte sind die folgenden Methoden verfügbar:
 
-- [Object.keys(obj)](mdn:js/Object/keys) -- returns an array of keys.
-- [Object.values(obj)](mdn:js/Object/values) -- returns an array of values.
-- [Object.entries(obj)](mdn:js/Object/entries) -- returns an array of `[key, value]` pairs.
+- [Object.keys(obj)](mdn:js/Object/keys) -- gibt ein Array von Schlüsseln zurück.
+- [Object.values(obj)](mdn:js/Object/values) -- gibt ein Array von Werten zurück.
+- [Object.entries(obj)](mdn:js/Object/entries) -- gibt ein Array von `[key, value]`-Paaren zurück.
 
-Please note the distinctions (compared to map for example):
+Bitte beachte die Unterschiede (zun Beispiel im Vergleich zu Map):
 
 |             | Map              | Object       |
 |-------------|------------------|--------------|
-| Call syntax | `map.keys()`  | `Object.keys(obj)`, but not `obj.keys()` |
-| Returns     | iterable    | "real" Array                     |
+| Aufrufsyntax | `map.keys()`  | `Object.keys(obj)`, aber nicht `obj.keys()` |
+| Rückgabe     | iterable    | "echtes" Array                     |
 
-The first difference is that we have to call `Object.keys(obj)`, and not `obj.keys()`.
+Der erste Unterschied ist, dass wir `Object.keys(obj)` aufrufen müssen, und nicht `obj.keys()`.
 
-Why so? The main reason is flexibility. Remember, objects are a base of all complex structures in JavaScript. So we may have an object of our own like `data` that implements its own `data.values()` method. And we still can call `Object.values(data)` on it.
+Warum ist das so? Der Hauptgrund ist Flexibilität. Erinnere dich, Objekte sind die Basis aller komplexen Strukturen in JavaScript. Wir können also ein eigenes Objekt wie `data` haben, das seine eigene Methode `data.values()` implementiert. Und wir können immer noch `Object.values(data)` darauf anwenden.
 
-The second difference is that `Object.*` methods return "real" array objects, not just an iterable. That's mainly for historical reasons.
+Der zweite Unterschied ist, dass die `Object.*` Methoden "echte" Array-Objekte zurückgeben, nicht nur ein Iterable. Das liegt hauptsächlich an historischen Gründen.
 
-For instance:
+Zum Beispiel:
 
 ```js
 let user = {
@@ -49,7 +48,7 @@ let user = {
 - `Object.values(user) = ["John", 30]`
 - `Object.entries(user) = [ ["name","John"], ["age",30] ]`
 
-Here's an example of using `Object.values` to loop over property values:
+Hier ist ein Beispiel für die Verwendung von `Object.values` zum Durchlaufen von Eigenschaftswerten:
 
 ```js run
 let user = {
@@ -57,30 +56,30 @@ let user = {
   age: 30
 };
 
-// loop over values
+// Schleife über Werte
 for (let value of Object.values(user)) {
-  alert(value); // John, then 30
+  alert(value); // John, dann 30
 }
 ```
 
-```warn header="Object.keys/values/entries ignore symbolic properties"
-Just like a `for..in` loop, these methods ignore properties that use `Symbol(...)` as keys.
+```warn header="Object.keys/values/entries ignorieren symbolische Eigenschaften"
+Wie bei einer `for..in`-Schleife, ignorieren diese Methoden Eigenschaften, die `Symbol(...)` als Schlüssel verwenden.
 
-Usually that's convenient. But if we want symbolic keys too, then there's a separate method [Object.getOwnPropertySymbols](mdn:js/Object/getOwnPropertySymbols) that returns an array of only symbolic keys. Also, there exist a method [Reflect.ownKeys(obj)](mdn:js/Reflect/ownKeys) that returns *all* keys.
+Normalerweise ist das praktisch. Aber wenn wir auch symbolische Schlüssel wollen, dann gibt es eine separate Methode [Object.getOwnPropertySymbols](mdn:js/Object/getOwnPropertySymbols), die ein Array von nur symbolischen Schlüsseln zurückgibt. Außerdem gibt es die Methode [Reflect.ownKeys(obj)](mdn:js/Reflect/ownKeys), die *alle* Schlüssel zurückgibt.
 ```
 
 
-## Transforming objects
+## Transformation von Objekten
 
-Objects lack many methods that exist for arrays, e.g. `map`, `filter` and others.
+Objekten fehlen viele Methoden, die für Arrays existieren, z.B. `map`, `filter` und andere.
 
-If we'd like to apply them, then we can use `Object.entries` followed by `Object.fromEntries`:
+Wenn wir sie anwenden möchten, dann können wir `Object.entries` gefolgt von `Object.fromEntries` verwenden:
 
-1. Use `Object.entries(obj)` to get an array of key/value pairs from `obj`.
-2. Use array methods on that array, e.g. `map`, to transform these key/value pairs.
-3. Use `Object.fromEntries(array)` on the resulting array to turn it back into an object.
+1. Verwende `Object.entries(obj)`, um ein Array von Schlüssel/Wert-Paaren von `obj` zu erhalten.
+2. Verwende Array-Methoden auf diesem Array, z.B. `map`, um diese Schlüssel/Wert-Paare zu transformieren.
+3. Verwende `Object.fromEntries(array)` auf dem resultierenden Array, um es wieder in ein Objekt umzuwandeln.
 
-For example, we have an object with prices, and would like to double them:
+Zum Beispiel könnten wir ein Objekt mit Preisen haben und möchten diese verdoppeln:
 
 ```js run
 let prices = {
@@ -91,8 +90,8 @@ let prices = {
 
 *!*
 let doublePrices = Object.fromEntries(
-  // convert prices to array, map each key/value pair into another pair
-  // and then fromEntries gives back the object
+  // Preise in ein Array konvertieren, jedes Schlüssel/Wert-Paar in ein anderes Paar umwandeln
+  // und dann gibt fromEntries das Objekt zurück
   Object.entries(prices).map(entry => [entry[0], entry[1] * 2])
 );
 */!*
@@ -100,4 +99,4 @@ let doublePrices = Object.fromEntries(
 alert(doublePrices.meat); // 8
 ```
 
-It may look difficult at first sight, but becomes easy to understand after you use it once or twice. We can make powerful chains of transforms this way.
+Es mag auf den ersten Blick schwierig erscheinen, wird aber leicht verständlich, nachdem Du es ein- oder zweimal verwendet hast. Auf diese Weise können wir leistungsstarke Transformationsketten erstellen.
