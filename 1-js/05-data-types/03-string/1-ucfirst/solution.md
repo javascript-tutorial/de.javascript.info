@@ -1,14 +1,14 @@
-We can't "replace" the first character, because strings in JavaScript are immutable.
+Wir können das erste Zeichen nicht "ersetzen", da Strings in JavaScript unveränderlich sind.
 
-But we can make a new string based on the existing one, with the uppercased first character:
+Wir können jedoch einen neuen String basierend auf dem bestehenden erstellen, mit einem großgeschriebenen ersten Buchstaben:
 
 ```js
 let newStr = str[0].toUpperCase() + str.slice(1);
 ```
 
-There's a small problem though. If `str` is empty, then `str[0]` is `undefined`, and as `undefined` doesn't have the `toUpperCase()` method, we'll get an error.
+Es gibt jedoch ein kleines Problem. Wenn `str` leer ist, dann ist `str[0]` `undefined`, und da `undefined` nicht die Methode `toUpperCase()` besitzt, erhalten wir einen Fehler.
 
-The easiest way out is to add a test for an empty string, like this:
+Der einfachste Ausweg ist, eine Überprüfung auf einen leeren String hinzuzufügen, so wie hier:
 
 ```js run demo
 function ucFirst(str) {

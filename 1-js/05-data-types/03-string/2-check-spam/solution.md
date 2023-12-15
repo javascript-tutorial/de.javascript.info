@@ -1,4 +1,4 @@
-To make the search case-insensitive, let's bring the string to lower case and then search:
+Um die Suche unabhängig von Groß- und Kleinschreibung zu gestalten, bringen wir den String in Kleinbuchstaben und suchen dann:
 
 ```js run demo
 function checkSpam(str) {
@@ -11,4 +11,3 @@ alert( checkSpam('buy ViAgRA now') );
 alert( checkSpam('free xxxxx') );
 alert( checkSpam("innocent rabbit") );
 ```
-
