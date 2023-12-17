@@ -14,7 +14,7 @@ let messages = [
 ];
 ```
 
-Die Frage lautet nun: Welche Datenstruktur würdest Du vorschlagen, um die Information zu speichern: „Wann wurde die Nachricht gelesen?“.
+Die Frage lautet nun: Welche Datenstruktur würdest Du vorschlagen, um die Information zu speichern: "Wann wurde die Nachricht gelesen?".
 
 In der vorherigen Aufgabe mussten wir nur die Tatsache "ja/nein" speichern. Jetzt müssen wir das Datum speichern, und es sollte nur so lange im Speicher bleiben, bis die Nachricht vom Garbage Collector gelöscht wird.
 

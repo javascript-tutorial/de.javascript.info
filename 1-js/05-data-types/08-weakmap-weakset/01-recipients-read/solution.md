@@ -27,7 +27,7 @@ messages.shift();
 
 Das `WeakSet` ermöglicht es, eine Menge von Nachrichten zu speichern und einfach zu überprüfen, ob eine Nachricht darin existiert.
 
-Es bereinigt sich automatisch. Der Kompromiss ist, dass wir nicht darüber iterieren können, wir können "alle gelesenen Nachrichten" daraus nicht direkt erhalten. Aber wir können dies erreichen, indem wir über alle Nachrichten iterieren und diejenigen filtern, die in der Menge sind.
+Es bereinigt sich automatisch. Der Kompromiss ist, dass wir nicht darüber iterieren können, d.h. wir können nicht "alle gelesenen Nachrichten" direkt erhalten. Aber wir können dies erreichen, indem wir über alle Nachrichten iterieren und diejenigen aussortieren, die nicht im Set sind.
 
 Eine andere, unterschiedliche Lösung könnte sein, einer Nachricht eine Eigenschaft wie `message.isRead=true` hinzuzufügen, nachdem sie gelesen wurde. Da Nachrichtenobjekte von anderem Code verwaltet werden, ist das allgemein nicht empfohlen, aber wir können eine symbolische Eigenschaft verwenden, um Konflikte zu vermeiden.
 
