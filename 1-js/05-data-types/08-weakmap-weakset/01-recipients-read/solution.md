@@ -1,43 +1,43 @@
-Let's store read messages in `WeakSet`:
+Lass uns gelesene Nachrichten in `WeakSet` speichern:
 
 ```js run
 let messages = [
-  {text: "Hello", from: "John"},
-  {text: "How goes?", from: "John"},
-  {text: "See you soon", from: "Alice"}
+  {text: "Hallo", from: "John"},
+  {text: "Wie läuft's?", from: "John"},
+  {text: "Bis bald", from: "Alice"}
 ];
 
 let readMessages = new WeakSet();
 
-// two messages have been read
+// Zwei Nachrichten wurden gelesen
 readMessages.add(messages[0]);
 readMessages.add(messages[1]);
-// readMessages has 2 elements
+// readMessages hat 2 Elemente
 
-// ...let's read the first message again!
+// ...lass uns die erste Nachricht nochmal lesen!
 readMessages.add(messages[0]);
-// readMessages still has 2 unique elements
+// readMessages hat immer noch 2 einzigartige Elemente
 
-// answer: was the message[0] read?
-alert("Read message 0: " + readMessages.has(messages[0])); // true
+// Antwort: Wurde die Nachricht[0] gelesen?
+alert("Gelesene Nachricht 0: " + readMessages.has(messages[0])); // true
 
 messages.shift();
-// now readMessages has 1 element (technically memory may be cleaned later)
+// jetzt hat readMessages 1 Element (technisch gesehen, könnte der Speicher später bereinigt werden)
 ```
 
-The `WeakSet` allows to store a set of messages and easily check for the existence of a message in it.
+Das `WeakSet` ermöglicht es, eine Menge von Nachrichten zu speichern und einfach zu überprüfen, ob eine Nachricht darin existiert.
 
-It cleans up itself automatically. The tradeoff is that we can't iterate over it,  can't get "all read messages" from it directly. But we can do it by iterating over all messages and filtering those that are in the set.
+Es bereinigt sich automatisch. Der Kompromiss ist, dass wir nicht darüber iterieren können, d.h. wir können nicht "alle gelesenen Nachrichten" direkt erhalten. Aber wir können dies erreichen, indem wir über alle Nachrichten iterieren und diejenigen aussortieren, die nicht im Set sind.
 
-Another, different solution could be to add a property like `message.isRead=true` to a message after it's read. As messages objects are managed by another code, that's generally discouraged, but we can use a symbolic property to avoid conflicts.
+Eine andere, unterschiedliche Lösung könnte sein, einer Nachricht eine Eigenschaft wie `message.isRead=true` hinzuzufügen, nachdem sie gelesen wurde. Da Nachrichtenobjekte von anderem Code verwaltet werden, ist das allgemein nicht empfohlen, aber wir können eine symbolische Eigenschaft verwenden, um Konflikte zu vermeiden.
 
-Like this:
+So wie hier:
 ```js
-// the symbolic property is only known to our code
+// die symbolische Eigenschaft ist nur unserem Code bekannt
 let isRead = Symbol("isRead");
 messages[0][isRead] = true;
 ```
 
-Now third-party code probably won't see our extra property.
+Jetzt wird Code von dritten unsere zusätzliche Eigenschaft wahrscheinlich nicht sehen.
 
-Although symbols allow to lower the probability of problems, using `WeakSet` is better from the architectural point of view.
+Obwohl Symbole die Wahrscheinlichkeit von Problemen verringern, ist die Verwendung von `WeakSet` aus architektonischer Sicht besser.
