@@ -1,49 +1,49 @@
-The test demonstrates one of the temptations a developer meets when writing tests.
+Der Test zeigt eine der Versuchungen, denen ein Entwickler beim Schreiben von Tests begegnet.
 
-What we have here is actually 3 tests, but layed out as a single function with 3 asserts.
+Was wir hier tatsächlich haben, sind eigentlich 3 Tests, aber angeordnet als einzelne Funktion mit 3 Assertions.
 
-Sometimes it's easier to write this way, but if an error occurs, it's much less obvious what went wrong.
+Manchmal ist es einfacher, auf diese Weise zu schreiben, aber wenn ein Fehler auftritt, ist es viel weniger offensichtlich, was schiefgelaufen ist.
 
-If an error happens in the middle of a complex execution flow, then we'll have to figure out the data at that point. We'll actually have to *debug the test*.
+Tritt ein Fehler in der Mitte eines komplexen Programmablaufs auf, dann müssen wir die Daten an diesem Punkt herausfinden. Wir müssen tatsächlich *den Test debuggen*.
 
-It would be much better to break the test into multiple `it` blocks with clearly written inputs and outputs.
+Es wäre viel besser, den Test in mehrere `it` Blöcke aufzubrechen, mit klar geschriebenen Eingaben und Ausgaben.
 
-Like this:
+So zum Beispiel:
 ```js
-describe("Raises x to power n", function() {
-  it("5 in the power of 1 equals 5", function() {
+describe("Erhöht x zur Potenz n", function() {
+  it("5 in der Potenz 1 gleich 5", function() {
     assert.equal(pow(5, 1), 5);
   });
 
-  it("5 in the power of 2 equals 25", function() {
+  it("5 in der Potenz 2 gleich 25", function() {
     assert.equal(pow(5, 2), 25);
   });
 
-  it("5 in the power of 3 equals 125", function() {
+  it("5 in der Potenz 3 gleich 125", function() {
     assert.equal(pow(5, 3), 125);
   });
 });
 ```
 
-We replaced the single `it` with `describe` and a group of `it` blocks. Now if something fails we would see clearly what the data was.
+Wir haben das einzelnen `it` durch `describe` und eine Gruppe von `it` Blöcken ersetzt. Wenn jetzt etwas fehlschlägt, würden wir klar sehen, welche Daten es waren.
 
-Also we can isolate a single test and run it in standalone mode by writing `it.only` instead of `it`:
+Außerdem können wir einen einzelnen Test isolieren und ihn im Standalone-Modus ausführen, indem wir `it.only` statt `it` schreiben:
 
 
 ```js
-describe("Raises x to power n", function() {
-  it("5 in the power of 1 equals 5", function() {
+describe("Erhöht x zur Potenz n", function() {
+  it("5 in der Potenz 1 gleich 5", function() {
     assert.equal(pow(5, 1), 5);
   });
 
 *!*
-  // Mocha will run only this block
-  it.only("5 in the power of 2 equals 25", function() {
+  // Mocha wird nur diesen Block ausführen
+  it.only("5 in der Potenz 2 gleich 25", function() {
     assert.equal(pow(5, 2), 25);
   });
 */!*
 
-  it("5 in the power of 3 equals 125", function() {
+  it("5 in der Potenz 3 gleich 125", function() {
     assert.equal(pow(5, 3), 125);
   });
 });
