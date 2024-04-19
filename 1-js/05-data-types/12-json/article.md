@@ -27,7 +27,7 @@ Glücklicherweise müssen wir den Code nicht schreiben der das alles regelt. Die
 
 ## JSON.stringify
 
-Die [JSON](https://en.wikipedia.org/wiki/JSON) (JavaScript Object Notation) ist ein generelles Format um Werte und Objekte zu repräsentieren. Es ist als [RFC 4627](https://tools.ietf.org/html/rfc4627) Standart beschrieben. Ursprünglich wurde es für JavaScript gemacht, aber andere Sprachen haben auch Bibliotheken um so etwas zu regeln. Also ist es einfach JSON für den Datenaustausch zu benutzen wenn der Klient JavaScript benutzt und der Server in Ruby, PHP, Java oder was auch immer geschrieben ist.
+Die [JSON](https://en.wikipedia.org/wiki/JSON) (JavaScript Object Notation) ist ein generelles Format um Werte und Objekte zu repräsentieren. Es ist als [RFC 4627](https://tools.ietf.org/html/rfc4627) Standard beschrieben. Ursprünglich wurde es für JavaScript gemacht, aber andere Sprachen haben auch Bibliotheken um so etwas zu regeln. Also ist es einfach JSON für den Datenaustausch zu benutzen wenn der Klient JavaScript benutzt und der Server in Ruby, PHP, Java oder was auch immer geschrieben ist.
 
 JavaScript stellt Methoden bereit:
 
