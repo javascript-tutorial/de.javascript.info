@@ -168,33 +168,33 @@ JSON.stringify(meetup); // Fehler: Kreisförmige Referenzen können nicht in JSO
 */!*
 ```
 
-Here, the conversion fails, because of circular reference: `room.occupiedBy` references `meetup`, and `meetup.place` references `room`:
+Here versagt die Umformung, wegen kreisförmigen Referenzen: `room.occupiedBy` referenziert `meetup`, und `meetup.place` referenziert `room`:
 
 ![](json-meetup.svg)
 
 
-## Excluding and transforming: replacer
+## Ausschließen und transformieren: replacer
 
-The full syntax of `JSON.stringify` is:
+Die vollständige Syntax für `JSON.stringify` ist:
 
 ```js
 let json = JSON.stringify(value[, replacer, space])
 ```
 
 value
-: A value to encode.
+: Ein Wert zum codieren.
 
 replacer
-: Array of properties to encode or a mapping function `function(key, value)`.
+: Ein Array an Eigenschaften zum codieren oder einer Funktion zuweisen `function(key, value)`.
 
 space
-: Amount of space to use for formatting
+: Menge des Platzes welcher für das formatieren genutzt wird.
 
-Most of the time, `JSON.stringify` is used with the first argument only. But if we need to fine-tune the replacement process, like to filter out circular references, we can use the second argument of `JSON.stringify`.
+In den meisten Fällen wird `JSON.stringify` nur mit dem ersten Argument verwendet. Aber wenn wir den Austauschprozess verfeinern müssen, z.B. um kreisförmige Referenzen heraus zu filtern, können wir das zweite Argument von `JSON.stringify` nutzen.
 
-If we pass an array of properties to it, only these properties will be encoded.
+Wenn wir ein Array von Eigenschaften übergeben werden nur diese Eigenschaften codiert.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let room = {
@@ -204,18 +204,18 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, *!*['title', 'participants']*/!*) );
 // {"title":"Conference","participants":[{},{}]}
 ```
 
-Here we are probably too strict. The property list is applied to the whole object structure. So the objects in `participants` are empty, because `name` is not in the list.
+Hier sind wir wahrscheinlich zu strikt. Die Eigenschaftsliste wird auf die komplette Objekt Struktur angewendet. Deshalb sind die Objekte in `participants` leer, weil `name` nicht in der Liste ist.
 
-Let's include in the list every property except `room.occupiedBy` that would cause the circular reference:
+Lass uns jede Eigenschaft einbinden außer `room.occupiedBy` welches eine kreisförmige Referenz bilden würde:
 
 ```js run
 let room = {
@@ -225,10 +225,10 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, *!*['title', 'participants', 'place', 'name', 'number']*/!*) );
 /*
@@ -240,13 +240,13 @@ alert( JSON.stringify(meetup, *!*['title', 'participants', 'place', 'name', 'num
 */
 ```
 
-Now everything except `occupiedBy` is serialized. But the list of properties is quite long.
+Jetzt ist alles außer `occupiedBy` serialisiert. Aber die Liste an Eigenschaften ist recht lang.
 
-Fortunately, we can use a function instead of an array as the `replacer`.
+Glücklicherweise können wir eine Funktion als `replacer` anstatt eines Arrays verwenden.
 
-The function will be called for every `(key, value)` pair and should return the "replaced" value, which will be used instead of the original one. Or `undefined` if the value is to be skipped.
+Die Funktion wird für jedes `(key, value)` Paar aufgerufen und sollte den "ersetzten" Wert zurückgeben, welcher anstelle für den originalen genutzt wird. Oder `undefined` wenn der Wert übersprungen werden soll.
 
-In our case, we can return `value` "as is" for everything except `occupiedBy`. To ignore `occupiedBy`, the code below returns `undefined`:
+In unserem Fall können wir `value` wie er ist für alles außer `occupiedBy`. Um `occupiedBy` zu ignorieren gibt der Code stattdessen `undefined` zurück:
 
 ```js run
 let room = {
@@ -256,27 +256,27 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, function replacer(key, value) {
   alert(`${key}: ${value}`);
   return (key == 'occupiedBy') ? undefined : value;
 }));
 
-/* key:value pairs that come to replacer:
-:             [object Object]
+/* key:value Paare die zu replacer kommen:
+:             [objekt Objekt]
 title:        Conference
-participants: [object Object],[object Object]
-0:            [object Object]
+participants: [objekt Objekt],[objekt Objekt]
+0:            [objekt Objekt]
 name:         John
-1:            [object Object]
+1:            [objekt Objekt]
 name:         Alice
-place:        [object Object]
+place:        [objekt Objekt]
 number:       23
-occupiedBy: [object Object]
+occupiedBy: [objekt Objekt]
 */
 ```
 
