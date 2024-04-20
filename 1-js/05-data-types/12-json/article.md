@@ -280,20 +280,20 @@ occupiedBy: [objekt Objekt]
 */
 ```
 
-Please note that `replacer` function gets every key/value pair including nested objects and array items. It is applied recursively. The value of `this` inside `replacer` is the object that contains the current property.
+Bitte beachte, dass das die `replacer` Funktion alle Schlüssel/Wert Paare einschließlich verschaltelter Objekte und Array Einträge kriegt. Es wird rekursiv angewendet. Der Wert von `this` in `replacer` ist das Objekt, das die aktuelle Eigenschaft beinhaltet.
 
-The first call is special. It is made using a special "wrapper object": `{"": meetup}`. In other words, the first `(key, value)` pair has an empty key, and the value is the target object as a whole. That's why the first line is `":[object Object]"` in the example above.
+Der erste Aufruf ist speziell. Er wird mithilfe eines speziellen "Wrapper Objekts" gemacht: `{"": meetup}`. In anderen Worten, das erste `(key, value)` Paar hat einen leeren Schlüssel und der Wert ist das Ziel Objekt als ganzes. Das ist der Grund warum die erste Zeile im Beispiel `":[object Object]"` ist.
 
-The idea is to provide as much power for `replacer` as possible: it has a chance to analyze and replace/skip even the whole object if necessary.
+Die Idee ist es `replacer` soviel Macht wie möglich zu geben: es hat eine Chance auch das ganze Objekt zu analysieren und zu ersetzen/überspringen wenn nötig.
 
 
-## Formatting: space
+## Formatieren: space
 
-The third argument of `JSON.stringify(value, replacer, space)` is the number of spaces to use for pretty formatting.
+Das dritte Argument von `JSON.stringify(value, replacer, space)` ist die Anzahl an Leerzeichen die für schönes Formatieren genutzt werden soll.
 
-Previously, all stringified objects had no indents and extra spaces. That's fine if we want to send an object over a network. The `space` argument is used exclusively for a nice output.
+Vorher hatten alle stringifizierten Objekte keine Einzüge und extra Leerzeichen. Das ist ok wenn wir ein Objekt über ein Netzwerk senden wollen. Das `space` Argument wird ausschließlich für eine schöne Ausgabe verwendet.
 
-Here `space = 2` tells JavaScript to show nested objects on multiple lines, with indentation of 2 spaces inside an object:
+Hier sagt `space = 2` JavaScript verschachtelte Objekte auf mehreren Zeilen anzuzeigen mit einem Einzug von 2 Leerzeichen in einem Objekt:
 
 ```js run
 let user = {
@@ -306,7 +306,7 @@ let user = {
 };
 
 alert(JSON.stringify(user, null, 2));
-/* two-space indents:
+/* Zwei Leerzeichen Einzüge:
 {
   "name": "John",
   "age": 25,
@@ -317,7 +317,7 @@ alert(JSON.stringify(user, null, 2));
 }
 */
 
-/* for JSON.stringify(user, null, 4) the result would be more indented:
+/* für JSON.stringify(user, null, 4) würde das Ergebnis mehr eingerückt sein:
 {
     "name": "John",
     "age": 25,
@@ -329,15 +329,15 @@ alert(JSON.stringify(user, null, 2));
 */
 ```
 
-The third argument can also be a string. In this case, the string is used for indentation instead of a number of spaces.
+Das dritte Argument kann auch eine Zeichenkette sein. In diesem Fall wird die Zeichenkette für als Einzug verwendet anstatt einer Anzahl von Leerzeichen.
 
-The `space` parameter is used solely for logging and nice-output purposes.
+Der `space` Parameter wird ausschließlich für Protokollierung und schöne Ausgaben verwendet.
 
-## Custom "toJSON"
+## Benutzerdefinierte "toJSON"
 
-Like `toString` for string conversion, an object may provide method `toJSON` for to-JSON conversion. `JSON.stringify` automatically calls it if available.
+Wie `toString` für Zeichenketten Umwandlung kann ein Objekt `toJSON` für zu-JSON Umwandlung nutzen. `JSON.stringify` ruft es automatisch auf, wenn verfügbar.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let room = {
@@ -362,9 +362,9 @@ alert( JSON.stringify(meetup) );
 */
 ```
 
-Here we can see that `date` `(1)` became a string. That's because all dates have a built-in `toJSON` method which returns such kind of string.
+Hier können wir sehen, dass `date` `(1)` eine Zeichenkette geworden ist. Das liegt daran, dass alle Daten eine eingebautte `toJSON` Methode haben, die solch eine Zeichenkette zurückgibt.
 
-Now let's add a custom `toJSON` for our object `room` `(2)`:
+Lasst uns nun eine benutzerdefinierte `toJSON` für unser Objekt `room` `(2)` hinzufügen:
 
 ```js run
 let room = {
@@ -396,25 +396,25 @@ alert( JSON.stringify(meetup) );
 */
 ```
 
-As we can see, `toJSON` is used both for the direct call `JSON.stringify(room)` and when `room` is nested in another encoded object.
+Wie wir sehen können wird `toJSON` für den direkten Aufruf von `JSON.stringify(room)` und wenn `room` in einem anderen codierten Objekt verschachtelt ist genutzt.
 
 
 ## JSON.parse
 
-To decode a JSON-string, we need another method named [JSON.parse](mdn:js/JSON/parse).
+Um eine JSON-Zeichenkette zu decodieren brauchen wir eine andere Methode names [JSON.parse](mdn:js/JSON/parse).
 
-The syntax:
+Die Syntax:
 ```js
 let value = JSON.parse(str, [reviver]);
 ```
 
 str
-: JSON-string to parse.
+: Zu übergebende JSON-Zeichenkette.
 
 reviver
-: Optional function(key,value) that will be called for each `(key, value)` pair and can transform the value.
+: Optionale Funktion(Schlüssel, Wert), die für jedes `(key, value)` Paar aufgerufen wird und den Wert verändern kann.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 // stringified array
@@ -425,7 +425,7 @@ numbers = JSON.parse(numbers);
 alert( numbers[1] ); // 1
 ```
 
-Or for nested objects:
+Oder für verschachtelte Objekte:
 
 ```js run
 let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
@@ -435,40 +435,40 @@ let user = JSON.parse(userData);
 alert( user.friends[1] ); // 1
 ```
 
-The JSON may be as complex as necessary, objects and arrays can include other objects and arrays. But they must obey the same JSON format.
+Die JSON kann so komplex wie nötig sein, Objekte und Arrays können andere Objekte und Arrays enthalten. Aber sie müssen sich an das selbe JSON format halten.
 
-Here are typical mistakes in hand-written JSON (sometimes we have to write it for debugging purposes):
+Hier sind typische Fehler in handschriftlichen JSON (manchmal müssen wir es für Fehlersuche schreiben):
 
 ```js
 let json = `{
-  *!*name*/!*: "John",                     // mistake: property name without quotes
-  "surname": *!*'Smith'*/!*,               // mistake: single quotes in value (must be double)
-  *!*'isAdmin'*/!*: false                  // mistake: single quotes in key (must be double)
-  "birthday": *!*new Date(2000, 2, 3)*/!*, // mistake: no "new" is allowed, only bare values
-  "friends": [0,1,2,3]              // here all fine
+  *!*name*/!*: "John",                     // Fehler: Eigenschaftsname ohne Anführungszeichen
+  "surname": *!*'Smith'*/!*,               // Fehler: Einfache Anführungszeichen im Wert (müssen doppelt sein)
+  *!*'isAdmin'*/!*: false                  // Fehler: Einfache Anführungszeichen im Schlüssel (müssen doppelt sein)
+  "birthday": *!*new Date(2000, 2, 3)*/!*, // Fehler: Kein "new" ist erlaubt, nur nackte Werte
+  "friends": [0,1,2,3]              // Hier ist alles gut
 }`;
 ```
 
-Besides, JSON does not support comments. Adding a comment to JSON makes it invalid.
+Außerdem unterstützt JSON keine Kommentare. Einen Kommentar zu JSON hinzuzufügen macht es ungültig.
 
-There's another format named [JSON5](https://json5.org/), which allows unquoted keys, comments etc. But this is a standalone library, not in the specification of the language.
+Es gibt ein anderes Format names [JSON5](https://json5.org/), welches Schlüssel ohne Anführungszeichen, Kommentare etc. erlaubt. Aber dies ist eine alleinstehende Bibliothek, nicht in der Spezifikation der Sprache.
 
-The regular JSON is that strict not because its developers are lazy, but to allow easy, reliable and very fast implementations of the parsing algorithm.
+Das normale JSON ist nicht deshalb so strikt, weil seine Entwickler faul sind, aber um einfache, zuverlässige und sehr schnelle Implementation für den Übergabe Algorithmus zu erlauben.
 
-## Using reviver
+## reviver benutzen
 
-Imagine, we got a stringified `meetup` object from the server.
+Stell dir vor wir haben ein stringifiziertes Objekt `meetup` vom Server.
 
-It looks like this:
+Es sieht so aus:
 
 ```js
-// title: (meetup title), date: (meetup date)
+// title: (meetup Titel), date: (meetup Datum)
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
 ```
 
-...And now we need to *deserialize* it, to turn back into JavaScript object.
+...Und jetzt müssen wir es *deserialisieren* um es wieder zu einem JavaScript Objekt zu machen.
 
-Let's do it by calling `JSON.parse`:
+Lass uns das tun indem wir `JSON.parse` aufrufen:
 
 ```js run
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
@@ -476,15 +476,15 @@ let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
 let meetup = JSON.parse(str);
 
 *!*
-alert( meetup.date.getDate() ); // Error!
+alert( meetup.date.getDate() ); // Fehler!
 */!*
 ```
 
-Whoops! An error!
+Oops! Ein Fehler!
 
-The value of `meetup.date` is a string, not a `Date` object. How could `JSON.parse` know that it should transform that string into a `Date`?
+Der Wert von `meetup.date` ist eine Zeichenkette und kein `Date` Objekt. Wie könnte `JSON.parse` wissen, dass es diese Zeichenkette in ein `Datum` umwandeln sollte?
 
-Let's pass to `JSON.parse` the reviving function as the second argument, that returns all values "as is", but `date` will become a `Date`:
+Lass uns die Wiederbelebungsfunktion als zweites Argument an `JSON.parse` übergeben, die alle Werte so wie sie sind wiedergibt, aber `date` wird ein `Datum` :
 
 ```js run
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
@@ -496,10 +496,10 @@ let meetup = JSON.parse(str, function(key, value) {
 });
 */!*
 
-alert( meetup.date.getDate() ); // now works!
+alert( meetup.date.getDate() ); // funktioniert jetzt!
 ```
 
-By the way, that works for nested objects as well:
+Übrigens, das funktioniert auch für verschachtelte Objekte:
 
 ```js run
 let schedule = `{
@@ -515,16 +515,16 @@ schedule = JSON.parse(schedule, function(key, value) {
 });
 
 *!*
-alert( schedule.meetups[1].date.getDate() ); // works!
+alert( schedule.meetups[1].date.getDate() ); // funktioniert!
 */!*
 ```
 
 
 
-## Summary
+## Zusammenfassung
 
-- JSON is a data format that has its own independent standard and libraries for most programming languages.
-- JSON supports plain objects, arrays, strings, numbers, booleans, and `null`.
-- JavaScript provides methods [JSON.stringify](mdn:js/JSON/stringify) to serialize into JSON and [JSON.parse](mdn:js/JSON/parse) to read from JSON.
-- Both methods support transformer functions for smart reading/writing.
-- If an object has `toJSON`, then it is called by `JSON.stringify`.
+- JSON ist ein Datenformat, dass seinen eigenen unabhängigen Standard und eigene Bibliotheken für die meisten Programmiersprachen hat.
+- JSON unterstützt einfache Objekte, Arrays, Zeichenketten, Nummern, Booleans und `null`.
+- JavaScript stellt die Methoden [JSON.stringify](mdn:js/JSON/stringify) um zu JSON zu serialisieren und [JSON.parse](mdn:js/JSON/parse) um JSON auszulesen.
+- Beide Methoden unterstützen Transformatorfunktionen für schlaues lesen/schreiben.
+- Wenn ein Objekt `toJSON` hat, dann wird es mit `JSON.stringify` aufgerufen.
