@@ -1,10 +1,10 @@
 # JSON methods, toJSON
 
-Let's say we have a complex object, and we'd like to convert it into a string, to send it over a network, or just to output it for logging purposes.
+Wir stellen uns vor wir haben ein komplexes Objekt und wir würden es gern in eine Zeichenkette umwandeln, um es über ein Netzwerk zu senden oder es einfach nur für Dokumentationszwecke auszugeben.
 
-Naturally, such a string should include all important properties.
+Natürlicherweise sollte solch ein String alle wichtigen Eigenschaften besitzen.
 
-We could implement the conversion like this:
+Wir könnten die Unterhaltung folgendermaßen implementieren:
 
 ```js run
 let user = {
@@ -21,20 +21,20 @@ let user = {
 alert(user); // {name: "John", age: 30}
 ```
 
-...But in the process of development, new properties are added, old properties are renamed and removed. Updating such `toString` every time can become a pain. We could try to loop over properties in it, but what if the object is complex and has nested objects in properties? We'd need to implement their conversion as well.
+...Aber in dem Prozess der Entwicklung werden neue Eigenschaften hinzugefügt, alte werden umbenannt oder entfernt. Solch einen `toString` jedes mal zu aktualisieren ist nervig. Wir könnten versuchen in einer Schleife über die Eigenschaften zu gehen, aber was ist wenn das Objekt komplex ist und verschachtelte Objekt in seinen Eigenschaften hat? Wir müssten ihre Konversation auch implementieren.
 
-Luckily, there's no need to write the code to handle all this. The task has been solved already.
+Glücklicherweise müssen wir den Code nicht schreiben der das alles regelt. Die Aufgabe wurde bereits gelöst.
 
 ## JSON.stringify
 
-The [JSON](https://en.wikipedia.org/wiki/JSON) (JavaScript Object Notation) is a general format to represent values and objects. It is described as in [RFC 4627](https://tools.ietf.org/html/rfc4627) standard. Initially it was made for JavaScript, but many other languages have libraries to handle it as well.  So it's easy to use JSON for data exchange when the client uses JavaScript and the server is written on Ruby/PHP/Java/Whatever.
+Die [JSON](https://en.wikipedia.org/wiki/JSON) (JavaScript Object Notation) ist ein generelles Format um Werte und Objekte zu repräsentieren. Es ist als [RFC 4627](https://tools.ietf.org/html/rfc4627) Standard beschrieben. Ursprünglich wurde es für JavaScript gemacht, aber andere Sprachen haben auch Bibliotheken um so etwas zu regeln. Also ist es einfach JSON für den Datenaustausch zu benutzen wenn der Klient JavaScript benutzt und der Server in Ruby, PHP, Java oder was auch immer geschrieben ist.
 
-JavaScript provides methods:
+JavaScript stellt Methoden bereit:
 
-- `JSON.stringify` to convert objects into JSON.
-- `JSON.parse` to convert JSON back into an object.
+- `JSON.stringify` um Objekte in JSON zu konvertieren.
+- `JSON.parse` um JSON zurück in Objekte zu konvertieren.
 
-For instance, here we `JSON.stringify` a student:
+Zum Beispiel, hier benutzen wir `JSON.stringify` für einen Schüler:
 ```js run
 let student = {
   name: 'John',
@@ -48,11 +48,11 @@ let student = {
 let json = JSON.stringify(student);
 */!*
 
-alert(typeof json); // we've got a string!
+alert(typeof json); // wir haben eine zeichenkette!
 
 alert(json);
 *!*
-/* JSON-encoded object:
+/* JSON-codiertes Objekt:
 {
   "name": "John",
   "age": 30,
@@ -64,35 +64,35 @@ alert(json);
 */!*
 ```
 
-The method `JSON.stringify(student)` takes the object and converts it into a string.
+Die Methode `JSON.stringify(student)` nimmt das Objekt und konvertiert es in eine Zeichenkette.
 
-The resulting `json` string is called a *JSON-encoded* or *serialized* or *stringified* or *marshalled* object. We are ready to send it over the wire or put into a plain data store.
+Die daraus resultierende `json` Zeichenkette wir als *JSON-codiertes* oder *serialisiertes* oder *stringifiziertes* oder *eingeteiltes* Objekt bezeichnet. Wir sind bereit es über ein Kabel zu verschicken oder es in als puren Text in einen Datenspeicher zu packen.
 
 
-Please note that a JSON-encoded object has several important differences from the object literal:
+Bitte beachte, dass ein JSON-codiertes Objekt mehrere wichtige Unterschiede gegenüber einem wörtlichen Objekt besitzt:
 
-- Strings use double quotes. No single quotes or backticks in JSON. So `'John'` becomes `"John"`.
-- Object property names are double-quoted also. That's obligatory. So `age:30` becomes `"age":30`.
+- Zeichenketten benutzen doppelte Anführungszeichen. Keine einfachen Anführungsstricke oder Gravis in JSON. Aus `'John'` wird `"John"`.
+- Namen von Objekt Eigenschaften haben auch doppelte Anführungszeichen. Das ist obligatorisch. Aus `age:30` wird `"age":30`.
 
-`JSON.stringify` can be applied to primitives as well.
+`JSON.stringify` kann auch auf primitive Datentypen angewendet werden.
 
-JSON supports following data types:
+JSON unterstützt folgende Datentypen:
 
-- Objects `{ ... }`
+- Objekte `{ ... }`
 - Arrays `[ ... ]`
-- Primitives:
-    - strings,
-    - numbers,
-    - boolean values `true/false`,
+- Primitive:
+    - Zeichenketten,
+    - Nummern,
+    - bool'sche Werte `true/false`,
     - `null`.
 
-For instance:
+Zum Beispiel:
 
 ```js run
-// a number in JSON is just a number
+// Eine Nummer in JSON ist nur eine Nummer
 alert( JSON.stringify(1) ) // 1
 
-// a string in JSON is still a string, but double-quoted
+// Eine Zeichenkette in JSON ist auch eine Zeichenkette, aber mit doppelten Anführungszeichen
 alert( JSON.stringify('test') ) // "test"
 
 alert( JSON.stringify(true) ); // true
@@ -100,31 +100,31 @@ alert( JSON.stringify(true) ); // true
 alert( JSON.stringify([1, 2, 3]) ); // [1,2,3]
 ```
 
-JSON is data-only language-independent specification, so some JavaScript-specific object properties are skipped by `JSON.stringify`.
+JSON ist eine nur Daten, Sprachen unabhängige Spezifikation, deshalb werden manche JavaScript-spezifische Objekt Eigenschaften von `JSON.stringify` übersprungen.
 
-Namely:
+Hauptsächlich:
 
-- Function properties (methods).
-- Symbolic keys and values.
-- Properties that store `undefined`.
+- Funktionseigenschaften (Methoden).
+- Symbolische Schlüssel und Werte.
+- Eigenschaften welche `undefined` speichern.
 
 ```js run
 let user = {
-  sayHi() { // ignored
+  sayHi() { // ignoriert
     alert("Hello");
   },
-  [Symbol("id")]: 123, // ignored
-  something: undefined // ignored
+  [Symbol("id")]: 123, // ignoriert
+  something: undefined // ignoriert
 };
 
-alert( JSON.stringify(user) ); // {} (empty object)
+alert( JSON.stringify(user) ); // {} (leeres Objekt)
 ```
 
-Usually that's fine. If that's not what we want, then soon we'll see how to customize the process.
+Typischerweise ist das ok. Wenn das nicht ist was wir wollen, dann werden wir bald sehen wie wir den Prozess anpassen.
 
-The great thing is that nested objects are supported and converted automatically.
+Das gute ist, dass verschachtelte Objekte unterstützt werden und automatisch konvertiert werden.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let meetup = {
@@ -138,7 +138,7 @@ let meetup = {
 };
 
 alert( JSON.stringify(meetup) );
-/* The whole structure is stringified:
+/* Die ganze Struktur ist stringifiziert:
 {
   "title":"Conference",
   "room":{"number":23,"participants":["john","ann"]},
@@ -146,9 +146,9 @@ alert( JSON.stringify(meetup) );
 */
 ```
 
-The important limitation: there must be no circular references.
+Die wichtige Limitation: Es darf keine kreisförmigen Referenzen geben.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let room = {
@@ -160,41 +160,41 @@ let meetup = {
   participants: ["john", "ann"]
 };
 
-meetup.place = room;       // meetup references room
-room.occupiedBy = meetup; // room references meetup
+meetup.place = room;       // meetup referenziert room
+room.occupiedBy = meetup; // room referenziert meetup
 
 *!*
-JSON.stringify(meetup); // Error: Converting circular structure to JSON
+JSON.stringify(meetup); // Fehler: Kreisförmige Referenzen können nicht in JSON konvertiert werden.
 */!*
 ```
 
-Here, the conversion fails, because of circular reference: `room.occupiedBy` references `meetup`, and `meetup.place` references `room`:
+Here versagt die Umformung, wegen kreisförmigen Referenzen: `room.occupiedBy` referenziert `meetup`, und `meetup.place` referenziert `room`:
 
 ![](json-meetup.svg)
 
 
-## Excluding and transforming: replacer
+## Ausschließen und transformieren: replacer
 
-The full syntax of `JSON.stringify` is:
+Die vollständige Syntax für `JSON.stringify` ist:
 
 ```js
 let json = JSON.stringify(value[, replacer, space])
 ```
 
 value
-: A value to encode.
+: Ein Wert zum codieren.
 
 replacer
-: Array of properties to encode or a mapping function `function(key, value)`.
+: Ein Array an Eigenschaften zum codieren oder einer Funktion zuweisen `function(key, value)`.
 
 space
-: Amount of space to use for formatting
+: Menge des Platzes welcher für das formatieren genutzt wird.
 
-Most of the time, `JSON.stringify` is used with the first argument only. But if we need to fine-tune the replacement process, like to filter out circular references, we can use the second argument of `JSON.stringify`.
+In den meisten Fällen wird `JSON.stringify` nur mit dem ersten Argument verwendet. Aber wenn wir den Austauschprozess verfeinern müssen, z.B. um kreisförmige Referenzen heraus zu filtern, können wir das zweite Argument von `JSON.stringify` nutzen.
 
-If we pass an array of properties to it, only these properties will be encoded.
+Wenn wir ein Array von Eigenschaften übergeben werden nur diese Eigenschaften codiert.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let room = {
@@ -204,18 +204,18 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, *!*['title', 'participants']*/!*) );
 // {"title":"Conference","participants":[{},{}]}
 ```
 
-Here we are probably too strict. The property list is applied to the whole object structure. So the objects in `participants` are empty, because `name` is not in the list.
+Hier sind wir wahrscheinlich zu strikt. Die Eigenschaftsliste wird auf die komplette Objekt Struktur angewendet. Deshalb sind die Objekte in `participants` leer, weil `name` nicht in der Liste ist.
 
-Let's include in the list every property except `room.occupiedBy` that would cause the circular reference:
+Lass uns jede Eigenschaft einbinden außer `room.occupiedBy` welches eine kreisförmige Referenz bilden würde:
 
 ```js run
 let room = {
@@ -225,10 +225,10 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, *!*['title', 'participants', 'place', 'name', 'number']*/!*) );
 /*
@@ -240,13 +240,13 @@ alert( JSON.stringify(meetup, *!*['title', 'participants', 'place', 'name', 'num
 */
 ```
 
-Now everything except `occupiedBy` is serialized. But the list of properties is quite long.
+Jetzt ist alles außer `occupiedBy` serialisiert. Aber die Liste an Eigenschaften ist recht lang.
 
-Fortunately, we can use a function instead of an array as the `replacer`.
+Glücklicherweise können wir eine Funktion als `replacer` anstatt eines Arrays verwenden.
 
-The function will be called for every `(key, value)` pair and should return the "replaced" value, which will be used instead of the original one. Or `undefined` if the value is to be skipped.
+Die Funktion wird für jedes `(key, value)` Paar aufgerufen und sollte den "ersetzten" Wert zurückgeben, welcher anstelle für den originalen genutzt wird. Oder `undefined` wenn der Wert übersprungen werden soll.
 
-In our case, we can return `value` "as is" for everything except `occupiedBy`. To ignore `occupiedBy`, the code below returns `undefined`:
+In unserem Fall können wir `value` wie er ist für alles außer `occupiedBy`. Um `occupiedBy` zu ignorieren gibt der Code stattdessen `undefined` zurück:
 
 ```js run
 let room = {
@@ -256,44 +256,44 @@ let room = {
 let meetup = {
   title: "Conference",
   participants: [{name: "John"}, {name: "Alice"}],
-  place: room // meetup references room
+  place: room // meetup referenziert room
 };
 
-room.occupiedBy = meetup; // room references meetup
+room.occupiedBy = meetup; // room referenziert meetup
 
 alert( JSON.stringify(meetup, function replacer(key, value) {
   alert(`${key}: ${value}`);
   return (key == 'occupiedBy') ? undefined : value;
 }));
 
-/* key:value pairs that come to replacer:
-:             [object Object]
+/* key:value Paare die zu replacer kommen:
+:             [objekt Objekt]
 title:        Conference
-participants: [object Object],[object Object]
-0:            [object Object]
+participants: [objekt Objekt],[objekt Objekt]
+0:            [objekt Objekt]
 name:         John
-1:            [object Object]
+1:            [objekt Objekt]
 name:         Alice
-place:        [object Object]
+place:        [objekt Objekt]
 number:       23
-occupiedBy: [object Object]
+occupiedBy: [objekt Objekt]
 */
 ```
 
-Please note that `replacer` function gets every key/value pair including nested objects and array items. It is applied recursively. The value of `this` inside `replacer` is the object that contains the current property.
+Bitte beachte, dass das die `replacer` Funktion alle Schlüssel/Wert Paare einschließlich verschaltelter Objekte und Array Einträge kriegt. Es wird rekursiv angewendet. Der Wert von `this` in `replacer` ist das Objekt, das die aktuelle Eigenschaft beinhaltet.
 
-The first call is special. It is made using a special "wrapper object": `{"": meetup}`. In other words, the first `(key, value)` pair has an empty key, and the value is the target object as a whole. That's why the first line is `":[object Object]"` in the example above.
+Der erste Aufruf ist speziell. Er wird mithilfe eines speziellen "Wrapper Objekts" gemacht: `{"": meetup}`. In anderen Worten, das erste `(key, value)` Paar hat einen leeren Schlüssel und der Wert ist das Ziel Objekt als ganzes. Das ist der Grund warum die erste Zeile im Beispiel `":[object Object]"` ist.
 
-The idea is to provide as much power for `replacer` as possible: it has a chance to analyze and replace/skip even the whole object if necessary.
+Die Idee ist es `replacer` soviel Macht wie möglich zu geben: es hat eine Chance auch das ganze Objekt zu analysieren und zu ersetzen/überspringen wenn nötig.
 
 
-## Formatting: space
+## Formatieren: space
 
-The third argument of `JSON.stringify(value, replacer, space)` is the number of spaces to use for pretty formatting.
+Das dritte Argument von `JSON.stringify(value, replacer, space)` ist die Anzahl an Leerzeichen die für schönes Formatieren genutzt werden soll.
 
-Previously, all stringified objects had no indents and extra spaces. That's fine if we want to send an object over a network. The `space` argument is used exclusively for a nice output.
+Vorher hatten alle stringifizierten Objekte keine Einzüge und extra Leerzeichen. Das ist ok wenn wir ein Objekt über ein Netzwerk senden wollen. Das `space` Argument wird ausschließlich für eine schöne Ausgabe verwendet.
 
-Here `space = 2` tells JavaScript to show nested objects on multiple lines, with indentation of 2 spaces inside an object:
+Hier sagt `space = 2` JavaScript verschachtelte Objekte auf mehreren Zeilen anzuzeigen mit einem Einzug von 2 Leerzeichen in einem Objekt:
 
 ```js run
 let user = {
@@ -306,7 +306,7 @@ let user = {
 };
 
 alert(JSON.stringify(user, null, 2));
-/* two-space indents:
+/* Zwei Leerzeichen Einzüge:
 {
   "name": "John",
   "age": 25,
@@ -317,7 +317,7 @@ alert(JSON.stringify(user, null, 2));
 }
 */
 
-/* for JSON.stringify(user, null, 4) the result would be more indented:
+/* für JSON.stringify(user, null, 4) würde das Ergebnis mehr eingerückt sein:
 {
     "name": "John",
     "age": 25,
@@ -329,15 +329,15 @@ alert(JSON.stringify(user, null, 2));
 */
 ```
 
-The third argument can also be a string. In this case, the string is used for indentation instead of a number of spaces.
+Das dritte Argument kann auch eine Zeichenkette sein. In diesem Fall wird die Zeichenkette für als Einzug verwendet anstatt einer Anzahl von Leerzeichen.
 
-The `space` parameter is used solely for logging and nice-output purposes.
+Der `space` Parameter wird ausschließlich für Protokollierung und schöne Ausgaben verwendet.
 
-## Custom "toJSON"
+## Benutzerdefinierte "toJSON"
 
-Like `toString` for string conversion, an object may provide method `toJSON` for to-JSON conversion. `JSON.stringify` automatically calls it if available.
+Wie `toString` für Zeichenketten Umwandlung kann ein Objekt `toJSON` für zu-JSON Umwandlung nutzen. `JSON.stringify` ruft es automatisch auf, wenn verfügbar.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 let room = {
@@ -362,9 +362,9 @@ alert( JSON.stringify(meetup) );
 */
 ```
 
-Here we can see that `date` `(1)` became a string. That's because all dates have a built-in `toJSON` method which returns such kind of string.
+Hier können wir sehen, dass `date` `(1)` eine Zeichenkette geworden ist. Das liegt daran, dass alle Daten eine eingebautte `toJSON` Methode haben, die solch eine Zeichenkette zurückgibt.
 
-Now let's add a custom `toJSON` for our object `room` `(2)`:
+Lasst uns nun eine benutzerdefinierte `toJSON` für unser Objekt `room` `(2)` hinzufügen:
 
 ```js run
 let room = {
@@ -396,25 +396,25 @@ alert( JSON.stringify(meetup) );
 */
 ```
 
-As we can see, `toJSON` is used both for the direct call `JSON.stringify(room)` and when `room` is nested in another encoded object.
+Wie wir sehen können wird `toJSON` für den direkten Aufruf von `JSON.stringify(room)` und wenn `room` in einem anderen codierten Objekt verschachtelt ist genutzt.
 
 
 ## JSON.parse
 
-To decode a JSON-string, we need another method named [JSON.parse](mdn:js/JSON/parse).
+Um eine JSON-Zeichenkette zu decodieren brauchen wir eine andere Methode names [JSON.parse](mdn:js/JSON/parse).
 
-The syntax:
+Die Syntax:
 ```js
 let value = JSON.parse(str, [reviver]);
 ```
 
 str
-: JSON-string to parse.
+: Zu übergebende JSON-Zeichenkette.
 
 reviver
-: Optional function(key,value) that will be called for each `(key, value)` pair and can transform the value.
+: Optionale Funktion(Schlüssel, Wert), die für jedes `(key, value)` Paar aufgerufen wird und den Wert verändern kann.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 // stringified array
@@ -425,7 +425,7 @@ numbers = JSON.parse(numbers);
 alert( numbers[1] ); // 1
 ```
 
-Or for nested objects:
+Oder für verschachtelte Objekte:
 
 ```js run
 let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
@@ -435,40 +435,40 @@ let user = JSON.parse(userData);
 alert( user.friends[1] ); // 1
 ```
 
-The JSON may be as complex as necessary, objects and arrays can include other objects and arrays. But they must obey the same JSON format.
+Die JSON kann so komplex wie nötig sein, Objekte und Arrays können andere Objekte und Arrays enthalten. Aber sie müssen sich an das selbe JSON format halten.
 
-Here are typical mistakes in hand-written JSON (sometimes we have to write it for debugging purposes):
+Hier sind typische Fehler in handschriftlichen JSON (manchmal müssen wir es für Fehlersuche schreiben):
 
 ```js
 let json = `{
-  *!*name*/!*: "John",                     // mistake: property name without quotes
-  "surname": *!*'Smith'*/!*,               // mistake: single quotes in value (must be double)
-  *!*'isAdmin'*/!*: false                  // mistake: single quotes in key (must be double)
-  "birthday": *!*new Date(2000, 2, 3)*/!*, // mistake: no "new" is allowed, only bare values
-  "friends": [0,1,2,3]              // here all fine
+  *!*name*/!*: "John",                     // Fehler: Eigenschaftsname ohne Anführungszeichen
+  "surname": *!*'Smith'*/!*,               // Fehler: Einfache Anführungszeichen im Wert (müssen doppelt sein)
+  *!*'isAdmin'*/!*: false                  // Fehler: Einfache Anführungszeichen im Schlüssel (müssen doppelt sein)
+  "birthday": *!*new Date(2000, 2, 3)*/!*, // Fehler: Kein "new" ist erlaubt, nur nackte Werte
+  "friends": [0,1,2,3]              // Hier ist alles gut
 }`;
 ```
 
-Besides, JSON does not support comments. Adding a comment to JSON makes it invalid.
+Außerdem unterstützt JSON keine Kommentare. Einen Kommentar zu JSON hinzuzufügen macht es ungültig.
 
-There's another format named [JSON5](https://json5.org/), which allows unquoted keys, comments etc. But this is a standalone library, not in the specification of the language.
+Es gibt ein anderes Format names [JSON5](https://json5.org/), welches Schlüssel ohne Anführungszeichen, Kommentare etc. erlaubt. Aber dies ist eine alleinstehende Bibliothek, nicht in der Spezifikation der Sprache.
 
-The regular JSON is that strict not because its developers are lazy, but to allow easy, reliable and very fast implementations of the parsing algorithm.
+Das normale JSON ist nicht deshalb so strikt, weil seine Entwickler faul sind, aber um einfache, zuverlässige und sehr schnelle Implementation für den Übergabe Algorithmus zu erlauben.
 
-## Using reviver
+## reviver benutzen
 
-Imagine, we got a stringified `meetup` object from the server.
+Stell dir vor wir haben ein stringifiziertes Objekt `meetup` vom Server.
 
-It looks like this:
+Es sieht so aus:
 
 ```js
-// title: (meetup title), date: (meetup date)
+// title: (meetup Titel), date: (meetup Datum)
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
 ```
 
-...And now we need to *deserialize* it, to turn back into JavaScript object.
+...Und jetzt müssen wir es *deserialisieren* um es wieder zu einem JavaScript Objekt zu machen.
 
-Let's do it by calling `JSON.parse`:
+Lass uns das tun indem wir `JSON.parse` aufrufen:
 
 ```js run
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
@@ -476,15 +476,15 @@ let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
 let meetup = JSON.parse(str);
 
 *!*
-alert( meetup.date.getDate() ); // Error!
+alert( meetup.date.getDate() ); // Fehler!
 */!*
 ```
 
-Whoops! An error!
+Oops! Ein Fehler!
 
-The value of `meetup.date` is a string, not a `Date` object. How could `JSON.parse` know that it should transform that string into a `Date`?
+Der Wert von `meetup.date` ist eine Zeichenkette und kein `Date` Objekt. Wie könnte `JSON.parse` wissen, dass es diese Zeichenkette in ein `Datum` umwandeln sollte?
 
-Let's pass to `JSON.parse` the reviving function as the second argument, that returns all values "as is", but `date` will become a `Date`:
+Lass uns die Wiederbelebungsfunktion als zweites Argument an `JSON.parse` übergeben, die alle Werte so wie sie sind wiedergibt, aber `date` wird ein `Datum` :
 
 ```js run
 let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
@@ -496,10 +496,10 @@ let meetup = JSON.parse(str, function(key, value) {
 });
 */!*
 
-alert( meetup.date.getDate() ); // now works!
+alert( meetup.date.getDate() ); // funktioniert jetzt!
 ```
 
-By the way, that works for nested objects as well:
+Übrigens, das funktioniert auch für verschachtelte Objekte:
 
 ```js run
 let schedule = `{
@@ -515,16 +515,16 @@ schedule = JSON.parse(schedule, function(key, value) {
 });
 
 *!*
-alert( schedule.meetups[1].date.getDate() ); // works!
+alert( schedule.meetups[1].date.getDate() ); // funktioniert!
 */!*
 ```
 
 
 
-## Summary
+## Zusammenfassung
 
-- JSON is a data format that has its own independent standard and libraries for most programming languages.
-- JSON supports plain objects, arrays, strings, numbers, booleans, and `null`.
-- JavaScript provides methods [JSON.stringify](mdn:js/JSON/stringify) to serialize into JSON and [JSON.parse](mdn:js/JSON/parse) to read from JSON.
-- Both methods support transformer functions for smart reading/writing.
-- If an object has `toJSON`, then it is called by `JSON.stringify`.
+- JSON ist ein Datenformat, dass seinen eigenen unabhängigen Standard und eigene Bibliotheken für die meisten Programmiersprachen hat.
+- JSON unterstützt einfache Objekte, Arrays, Zeichenketten, Nummern, Booleans und `null`.
+- JavaScript stellt die Methoden [JSON.stringify](mdn:js/JSON/stringify) um zu JSON zu serialisieren und [JSON.parse](mdn:js/JSON/parse) um JSON auszulesen.
+- Beide Methoden unterstützen Transformatorfunktionen für schlaues lesen/schreiben.
+- Wenn ein Objekt `toJSON` hat, dann wird es mit `JSON.stringify` aufgerufen.
