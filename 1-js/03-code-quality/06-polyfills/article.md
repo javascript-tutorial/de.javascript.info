@@ -15,7 +15,11 @@ Es ist also durchaus üblich, dass eine Engine nur einen Teil des Standards impl
 So it's quite common for an engine to implement only part of the standard.
 >>>>>>> d694e895efe89922a109702085b6ca1efeffea10
 
+<<<<<<< HEAD
 Eine gute Seite, um den aktuellen Stand der Unterstützung für Sprachfunktionen zu sehen, ist <https://kangax.github.io/compat-table/es6/> (es ist groß, wir haben noch viel zu lernen).
+=======
+A good page to see the current state of support for language features is <https://compat-table.github.io/compat-table/es6/> (it's big, we have a lot to study yet).
+>>>>>>> b258d7d5b635c88228f7556e14fbe5e5ca7f736d
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
@@ -129,7 +133,6 @@ JavaScript is a highly dynamic language. Scripts may add/modify any function, ev
 
 Two interesting polyfill libraries are:
 - [core js](https://github.com/zloirock/core-js) that supports a lot, allows to include only needed features.
-- [polyfill.io](https://polyfill.io/) service that provides a script with polyfills, depending on the features and user's browser.
 
 
 ## Summary
@@ -141,7 +144,7 @@ Just don't forget to use a transpiler (if using modern syntax or operators) and 
 For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](https://webpack.js.org/) with the [babel-loader](https://github.com/babel/babel-loader) plugin.
 
 Good resources that show the current state of support for various features:
-- <https://kangax.github.io/compat-table/es6/> - for pure JavaScript.
+- <https://compat-table.github.io/compat-table/es6/> - for pure JavaScript.
 - <https://caniuse.com/> - for browser-related functions.
 
 P.S. Google Chrome is usually the most up-to-date with language features, try it if a tutorial demo fails. Most tutorial demos work with any modern browser though.
