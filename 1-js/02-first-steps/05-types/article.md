@@ -115,6 +115,7 @@ const bigInt = 1234567890123456789012345678901234567890n;
 Da `BigInt`-Zahlen selten benötigt werden, behandeln wir sie hier nicht, sondern widmen ihnen ein eigenes Kapitel <info:bigint>. Lies es, wenn du so große Zahlen brauchst.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```smart header="Compatability issues"
 Im Moment wird `BigInt` in Firefox/Chrome/Edge unterstützt, aber nicht in Safari/IE.
 =======
@@ -126,6 +127,8 @@ Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
 
 You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) to know which versions of a browser are supported.
 
+=======
+>>>>>>> b258d7d5b635c88228f7556e14fbe5e5ca7f736d
 ## String
 
 Ein String in JavaScript muss in Anführungszeichen gesetzt werden.
