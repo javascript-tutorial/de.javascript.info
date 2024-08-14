@@ -52,7 +52,7 @@ switch (a) {
 
     break;
   default:
-    alert( "Ich kenne keine solchen Werte" );
+    alert( "Ich kenne keinen solchen Werte" );
 }
 ```
 
