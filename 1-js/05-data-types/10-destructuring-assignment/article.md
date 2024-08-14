@@ -560,7 +560,7 @@ Im obigen Code ist das ganze Argumentobjekt per Default `{}`, so dass es immer e
 - Die destrukturierende Zuweisung ermöglicht eine sofortige Zuordnung eines Objekts oder Arrays auf viele Variablen.
 - Die vollständige Objektsyntax:
     ```js
-    let {prop : varName = default, ...rest} = object
+    let {prop : varName = defaultValue, ...rest} = object
     ```
 
     Das bedeutet, dass die Eigenschaft `prop` in die Variable `varName` gehen sollte, und wenn eine solche Eigenschaft nicht existiert, dann sollte der Wert `default` verwendet werden.

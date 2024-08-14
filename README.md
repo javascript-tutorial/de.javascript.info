@@ -1,14 +1,6 @@
 # The Modern JavaScript Tutorial in German
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 This repository hosts the translation of <https://javascript.info> in German.
-=======
-This repository hosts the English content of the Modern JavaScript Tutorial, published in [https://javascript.info](https://javascript.info).
->>>>>>> a82915575863d33db6b892087975f84dea6cb425
-=======
-This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
->>>>>>> d694e895efe89922a109702085b6ca1efeffea10
 
 
 **That's how you can contribute:**
@@ -29,33 +21,15 @@ If maintainers do not respond, or if you'd like to become a maintainer, write us
 
 🎉 Thank you!
 
-<<<<<<< HEAD
 Your name and the contribution size will appear in the "About project" page when the translation gets published.
 
-<<<<<<< HEAD
 P.S. The full list of languages can be found at <https://javascript.info/translate>.
-=======
-**You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
-=======
-Something's wrong? A topic is missing? Explain it to people, add it as PR 👏
-
-**You can edit the text in any editor.** The tutorial uses an enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
->>>>>>> d694e895efe89922a109702085b6ca1efeffea10
-
-The list of contributors is available at <https://javascript.info/about#contributors>.
->>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 ## Structure
 
-<<<<<<< HEAD
 Every chapter, an article or a task resides in its own folder.
 
 The folder is named `N-url`, where `N` – is the number for sorting (articles are ordered), and `url` is the URL-slug on the site.
-=======
-Every chapter, article, or task has its folder.
-
-The folder is named like `N-url`, where `N` is a number for the sorting purposes and `URL` is the URL part with the title of the material.
->>>>>>> d694e895efe89922a109702085b6ca1efeffea10
 
 The folder has one of files:
 
@@ -86,11 +60,15 @@ In English many terms have an obvious meaning. For a person who doesn't understa
 Please keep that in mind, sometimes explanations or additional translations are needed, e.g.
 
 ```md
-`ReadableStream` objects allows to read data chunk-by-chunk.
+`ReadableStream` allows to read data chunk-by-chunk.
 ```
 
+The class name `ReadableStream` has an obvious meaning for those who understand English.
+
+Some people who read translations may not know English so well. So we can add a translation of `ReadableStream` in parentheses, like this (Spanish below):
+
 ```md
-`ReadableStream` ("flujo legible") objeto ... 
+`ReadableStream` ("flujo legible") permite leer datos fragmento por fragmento. 
 ```
 
 ### Text in Code Blocks
@@ -128,13 +106,7 @@ document.querySelector('.hola').innerHTML = text;
 
 Please note, that sometimes code is followed by pictures, and if you translate text `Hello` -> `Hola` in the code, you need to translate text in picturess as well.
 
-<<<<<<< HEAD
 In that case it's probably easier not to translate such text. See more about translating images later.
-=======
-  - `index.md` stands for a chapter
-  - `article.md` stands for an article
-  - `task.md` stands for a task (solution must be provided in `solution.md` file as well)
->>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 
 ### External Links
@@ -164,7 +136,6 @@ Some files, usually tasks, have YAML metadata at the top, delimited by `---`:
 ```md
 importance: 5
 
-<<<<<<< HEAD
 ---
 ...
 ```
@@ -201,8 +172,3 @@ image.svg:        # image file
 You can run the tutorial server locally to see how the translation looks.
 
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
-=======
----  
-♥  
-Ilya Kantor @iliakan
->>>>>>> a82915575863d33db6b892087975f84dea6cb425
