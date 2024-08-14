@@ -6,7 +6,7 @@ Sie bietet eine anschauliche Möglichkeit, einen Wert mit mehreren Varianten zu 
 
 ## Die Syntax
 
-Die `switch` Anweisung hat eine oder mehrere `case` Blöcke und einen optionale default Block.
+Die `switch` Anweisung hat eine oder mehrere `case` Blöcke und einen optionalen default Block.
 
 Das sieht wie folgt aus:
 
