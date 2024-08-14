@@ -1,18 +1,18 @@
-The `new Date` constructor uses the local time zone. So the only important thing to remember is that months start from zero.
+Der `new Date` Konstruktor verwendet die lokale Zeitzone. Das Einzige, woran du dich erinnern musst, ist, dass die Zählung der Monate bei Null beginnt.
 
-So February has number 1.
+Also hat der Februar die Nummer 1.
 
-Here's an example with numbers as date components:
+Hier ist ein Beispiel mit Zahlen als Datumskomponenten:
 
 ```js run
-//new Date(year, month, date, hour, minute, second, millisecond)
+// new Date(Jahr, Monat, Tag, Stunde, Minute, Sekunde, Millisekunde)
 let d1 = new Date(2012, 1, 20, 3, 12);
 alert( d1 );
 ```
-We could also create a date from a string, like this:
+Wir könnten auch ein Datum aus einem String erstellen, so wie hier:
 
 ```js run
-//new Date(datastring)
-let d2 = new Date("February 20, 2012 03:12:00");
+//new Date(Datenstring)
+let d2 = new Date("2012-02-20T03:12");
 alert( d2 );
 ```

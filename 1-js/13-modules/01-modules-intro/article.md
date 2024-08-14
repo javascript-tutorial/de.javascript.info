@@ -9,11 +9,11 @@ But eventually scripts became more and more complex, so the community invented a
 
 To name some (for historical reasons):
 
-- [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition) -- one of the most ancient module systems, initially implemented by the library [require.js](http://requirejs.org/).
-- [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1) -- the module system created for Node.js server.
+- [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition) -- one of the most ancient module systems, initially implemented by the library [require.js](https://requirejs.org/).
+- [CommonJS](https://wiki.commonjs.org/wiki/Modules/1.1) -- the module system created for Node.js server.
 - [UMD](https://github.com/umdjs/umd) -- one more module system, suggested as a universal one, compatible with AMD and CommonJS.
 
-Now all these slowly become a part of history, but we still can find them in old scripts.
+Now these all slowly became a part of history, but we still can find them in old scripts.
 
 The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js. So we'll study the modern JavaScript modules from now on.
 
@@ -182,7 +182,7 @@ alert(admin.name); // Pete
 
 As you can see, when `1.js` changes the `name` property in the imported `admin`, then `2.js` can see the new `admin.name`.
 
-That's exactly because the module is executed only once. Exports are generated, and then they are shared between importers, so if something changes the `admin` object, other modules will see that.
+That's exactly because the module is executed only once. Exports are generated, and then they are shared between importers, so if something changes the `admin` object, other importers will see that.
 
 **Such behavior is actually very convenient, because it allows us to *configure* modules.**
 
@@ -272,7 +272,7 @@ In other words:
 - module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run.
 - relative order of scripts is maintained: scripts that go first in the document, execute first.
 
-As a side-effect, module scripts always "see" the fully loaded HTML-page, including HTML elements below them.
+As a side effect, module scripts always "see" the fully loaded HTML-page, including HTML elements below them.
 
 For instance:
 

@@ -58,7 +58,7 @@ alert(test); // ReferenceError: test is not defined
 
 The same thing for loops: `var` cannot be block- or loop-local:
 
-```js
+```js run
 for (var i = 0; i < 10; i++) {
   var one = 1;
   // ...
@@ -170,7 +170,7 @@ That's best demonstrated with an example:
 
 ```js run
 function sayHi() {
-  alert(phrase);  
+  alert(phrase);
 
 *!*
   var phrase = "Hello";
@@ -256,11 +256,11 @@ There exist other ways besides parentheses to tell JavaScript that we mean a Fun
 ```js run
 // Ways to create IIFE
 
-(function() {
+*!*(*/!*function() {
   alert("Parentheses around the function");
 }*!*)*/!*();
 
-(function() {
+*!*(*/!*function() {
   alert("Parentheses around the whole thing");
 }()*!*)*/!*;
 

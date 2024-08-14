@@ -72,7 +72,7 @@ promise.then(function(result) {
 });
 ```
 
-What we did here is just several handlers to one promise. They don't pass the result to each other; instead they process it independently.
+What we did here is just adding several handlers to one promise. They don't pass the result to each other; instead they process it independently.
 
 Here's the picture (compare it with the chaining above):
 
@@ -120,7 +120,7 @@ new Promise(function(resolve, reject) {
 });
 ```
 
-Here the first `.then` shows `1` and returns `new Promise(…)` in the line `(*)`. After one second it resolves, and the result (the argument of `resolve`, here it's `result * 2`) is passed on to handler of the second `.then`. That handler is in the line `(**)`, it shows `2` and does the same thing.
+Here the first `.then` shows `1` and returns `new Promise(…)` in the line `(*)`. After one second it resolves, and the result (the argument of `resolve`, here it's `result * 2`) is passed on to the handler of the second `.then`. That handler is in the line `(**)`, it shows `2` and does the same thing.
 
 So the output is the same as in the previous example: 1 -> 2 -> 4, but now with 1 second delay between `alert` calls.
 
@@ -224,7 +224,7 @@ This feature allows us to integrate custom objects with promise chains without h
 
 ## Bigger example: fetch
 
-In frontend programming promises are often used for network requests. So let's see an extended example of that.
+In frontend programming, promises are often used for network requests. So let's see an extended example of that.
 
 We'll use the [fetch](info:fetch) method to load the information about the user from the remote server. It has a lot of optional parameters covered in [separate chapters](info:fetch), but the basic syntax is quite simple:
 
