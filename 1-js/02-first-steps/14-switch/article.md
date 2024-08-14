@@ -141,7 +141,7 @@ switch (a) {
 
 Nun zeigen `3` und `5` die selbe Nachricht.
 
-Die Fähigkeit cases zu "grupieren" ist ein Seiteneffekt davon, wie `switch/case` ohne `break` funktioniert. Hier beginnt die Ausführung von `case 3` in der Zeile `(*)` und durchläuft `case 5`, weil dosich dort kein `break` befindet.
+Die Fähigkeit, Fälle "gruppieren" zu können, ist ein Nebeneffekt davon, wie `switch/case` ohne `break` funktioniert. Hier beginnt die Ausführung von `case 3` in der Zeile `(*)` und durchläuft `case 5`, weil es kein `break` gibt.
 
 ## Der Typ spielt eine Rolle
 
