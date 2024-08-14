@@ -86,7 +86,7 @@ Im obigen Beispiel sehen wir die sequentielle Ausführung von drei `alert`s:
 ```js
 alert( 'Exakt!' );
 alert( 'Zu gross' );
-alert( "Ich kenne keine solchen Werte" );
+alert( "Ich kenne keinen solchen Werte" );
 ```
 
 ````smart header="Jeder Ausdruck kann ein `switch/case` Argument sein"
