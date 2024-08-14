@@ -26,7 +26,7 @@ Verschiedene Engines haben unterschiedliche "Codenamen". Zum Beispiel:
 
 - [V8](https://de.wikipedia.org/wiki/V8_(JavaScript-Implementierung)) -- in Chrome und Opera.
 - [SpiderMonkey](https://de.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- Es gibt noch weitere *codenames*, sprich Engines, wie "Trident" und "Chakra" für verschiedene Versionen von IE, oder "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari usw.
+- ...Es gibt noch weitere Codenamen wie "Trident" und "Chakra" für verschiedene IE-Versionen, "ChakraCore" für Microsoft Edge, "Nitro" und "SquirrelFish" für Safari, usw.
 
 Die oben genannten Begriffe sollte man sich merken, weil sie in Entwicklerarikeln im Internet verwendet werden. Wir werden sie auch verwenden. Wenn, zum Beispiel, "ein Feature X von V8 unterstützt wird", dann funktioniert es wahrscheinlich in Chrome und Opera.
 
@@ -45,7 +45,7 @@ Die Engine wendet in jedem Schritt des Prozesses Optimierungen an. Es beobachtet
 
 Modernes JavaScript ist eine "sichere" Programmiersprache. Es bietet keinen Low-Level-Zugriff auf Speicher oder CPU, da es ursprünglich für Browser entwickelt wurde, die dies nicht benötigen.
 
-Die Funktionen von JavaScript hängen stark von der Umgebung ab in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://wikipedia.org/wiki/Node.js) Funktionen die es JavaScript z. B. ermöglichen beliebige Dateien zu lesen oder zu schreiben, sowie Netzwerkanfragen durchzuführen.
+Die Möglichkeiten von JavaScript hängen stark von der Umgebung ab, in der es ausgeführt wird. Beispielsweise unterstützt [Node.js](https://de.wikipedia.org/wiki/Node.js) Funktionen, die es JavaScript erlauben, beliebige Dateien zu lesen/schreiben, Netzwerkanfragen durchzuführen usw.
 
 Im Browser ausgeführtes JavaScript kann alles was mit der Manipulation von Webseiten, der Interaktion mit dem Benutzer und dem Webserver zu tun hat.
 
@@ -59,7 +59,7 @@ So ist beispielsweise im Browser laufendes JavaScript in der Lage:
 
 ## Was kann JavaScript im Browser nicht tun?
 
-Die Fähigkeiten von JavaScript im Browser sind aus Gründen der Sicherheit des Benutzers eingeschränkt. Ziel ist es zu verhindern, dass eine bösartige Webseite auf private Informationen zugreifen oder die Daten des Benutzers schädigen kann.
+Die Möglichkeiten von JavaScript im Browser sind aus Sicherheitsgründen für den Benutzer eingeschränkt. Damit soll verhindert werden, dass eine bösartige Webseite Zugang zu privaten Informationen erhält oder die Daten des Benutzers schädigt.
 
 Beispiele für solche Beschränkungen sind:
 
@@ -103,7 +103,7 @@ Das ist zu erwarten, denn Projekte und Anforderungen sind für jeden anders.
 
 So sind in letzter Zeit eine Fülle neuer Sprachen erschienen, die in JavaScript *transponiert* (konvertiert) werden, bevor sie im Browser laufen.
 
-Moderne Werkzeuge erledigen die Konvertierung sehr schnell und transparent was es Entwicklern erlaubt in einer anderen Sprache zu programmieren und diese automatisch zu konvertieren – ohne unbedingt ein genaueres Verständnis davon zu haben wie JavaScript im Kern funktioniert.
+Moderne Werkzeuge ermöglichen eine sehr schnelle und transparente Konvertierung, die es den Entwicklern tatsächlich erlauben in einer anderen Sprache zu programmieren, die diese dann, für die Entwickler nicht ersichtlich,  automatisch konvertieren. 
 
 Beispiele für solche Sprachen sind:
 
