@@ -60,11 +60,15 @@ In English many terms have an obvious meaning. For a person who doesn't understa
 Please keep that in mind, sometimes explanations or additional translations are needed, e.g.
 
 ```md
-`ReadableStream` objects allows to read data chunk-by-chunk.
+`ReadableStream` allows to read data chunk-by-chunk.
 ```
 
+The class name `ReadableStream` has an obvious meaning for those who understand English.
+
+Some people who read translations may not know English so well. So we can add a translation of `ReadableStream` in parentheses, like this (Spanish below):
+
 ```md
-`ReadableStream` ("flujo legible") objeto ... 
+`ReadableStream` ("flujo legible") permite leer datos fragmento por fragmento. 
 ```
 
 ### Text in Code Blocks

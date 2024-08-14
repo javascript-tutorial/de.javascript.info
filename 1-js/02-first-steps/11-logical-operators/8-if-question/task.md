@@ -2,15 +2,15 @@ importance: 5
 
 ---
 
-# A question about "if"
+# Eine Frage zu "if"
 
-Which of these `alert`s are going to execute?
+Welche der fogenden `alert`-Aufrufe werden ausgeführt?
 
-What will the results of the expressions be inside `if(...)`?
+Was sind die Ergebnisse der Ausdrücke in den Bedingungen `if(...)`?
 
 ```js
-if (-1 || 0) alert( 'first' );
-if (-1 && 0) alert( 'second' );
-if (null || -1 && 1) alert( 'third' );
+if (-1 || 0) alert( 'Erster' );
+if (-1 && 0) alert( 'Zweiter' );
+if (null || -1 && 1) alert( 'Dritter' );
 ```
 

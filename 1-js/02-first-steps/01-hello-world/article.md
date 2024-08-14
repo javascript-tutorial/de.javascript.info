@@ -9,7 +9,11 @@ Als erstes, lass uns sehen wie wir ein Skript einer Webseite hinzufügen. Für e
 
 ## Der "script"-Tag
 
+<<<<<<< HEAD
 JavaScript-Programme können an jeder beliebigen Stelle eines HTML-Dokuments mit Hilfe des `<script>`-Tag eingefügt werden.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Beispielsweise:
 
@@ -46,7 +50,7 @@ Der `<script>`-Tag beinhaltet JavaScript-Code, welcher automatisch ausgeführt w
 Der `<script>`-Tag hat einige Attribute die heutzutage nur selten Verwendung finden, aber noch immer in alten Code vorhanden sind:
 
 Das `type`-Attribute: <code>&lt;script <u>type</u>=...&gt;</code>
-: Der alte HTML-Standard, HTML4, setzte bei einem Skript den `Typ` voraus. Üblicherweise war es `type="text/javascript"`. Dies wird nicht länger benötigt. Zudem, der moderne HTML-Standard hat die Bedeutung des Attributs völlig verändert. Jetzt kann es für JavaScript-Module verwendet werden. Aber dies ist ein weiterführendes Thema; wir werden über Module in einem anderen Teil des Tutorials sprechen.
+: Der alte HTML-Standard, HTML4, setzte bei einem Skript den `Typ` voraus. Üblicherweise war es `type="text/javascript"`. Dies wird nicht länger benötigt. Zudem, der moderne HTML-Standard hat die Bedeutung des Attributs völlig verändert. Jetzt kann es für JavaScript-Module verwendet werden. Aber dies ist ein weiterführendes Thema, wir werden über Module in einem anderen Teil des Tutorials sprechen.
 
 Das `language`-Attribute: <code>&lt;script <u>language</u>=...&gt;</code>
 : Dieses Attribute war gedacht, um die Sprache des Skripts anzuzeigen. Dieses Attribute macht nicht länger Sinn, weil JavaScript die Standard-Sprache ist. Es gibt keinen Grund es zu nutzen.
@@ -73,12 +77,16 @@ Skript-Dateien werden zu HTML mit dem `src`-Attribute hinzugefügt:
 <script src="/pfad/zum/script.js"></script>
 ```
 
+<<<<<<< HEAD
 Hier ist `/pfad/zum/script.js` ein absoluter Pfad zu dem Skript, aus dem Wurzelverzeichnis der Seite. Auch ein relativer Pfad der aktuellen Seite kann angeben werden. Beispielsweise, `src="script.js"` würde eine Datei `"script.js"` im aktuellen Verzeichnis bedeuten.
+=======
+Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+>>>>>>> a82915575863d33db6b892087975f84dea6cb425
 
 Außerdem können wir auch eine komplette URL angeben. Beispielsweise:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
 Um mehrere Skripte einzufügen, nutze Mehrfach-Tags:

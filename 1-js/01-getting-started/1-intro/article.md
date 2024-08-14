@@ -65,20 +65,20 @@ Beispiele für solche Beschränkungen sind:
 
 - JavaScript auf einer Webseite darf keine willkürlichen Dateien auf der Festplatte lesen, schreiben oder kopieren, oder Programme ausführen. Es hat keinen direkten Zugriff auf die Funktionen des Betriebssystems.
 
-    Moderne Browser erlauben es, mit Dateien zu arbeiten, aber der Zugriff ist begrenzt und nur möglich, wenn der Benutzer bestimmte Aktionen ausführt, wie z. B. eine Datei in ein Browserfenster "zu ziehen" oder sie über ein <input>-Tag auszuwählen.
+Moderne Browser erlauben es, mit Dateien zu arbeiten, aber der Zugriff ist begrenzt und nur möglich, wenn der Benutzer bestimmte Aktionen ausführt, wie z. B. eine Datei in ein Browserfenster "zu ziehen" oder sie über ein <input>-Tag auszuwählen.
 
-    Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren, aber sie erfordern die ausdrückliche Genehmigung des Benutzers. JavaScript auf einer Webseite darf also nicht heimlich eine Webcam aktivieren, die Umgebung beobachten und die Informationen an die [NSA](https://de.wikipedia.org/wiki/National_Security_Agency) senden.
-- Verschiedene Tabs/Fenster wissen im Allgemeinen nichts voneinander. Manchmal tun sie es doch, z. B. wenn ein Fenster das andere mit JavaScript öffnet. Aber selbst in diesem Fall kann es vorkommen, dass JavaScript von einer Seite aus nicht auf die andere Seite zugreift, wenn ihr Ursprung verschieden ist (von einer anderen Domäne, einem anderen Protokoll oder Port).
+Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren, aber sie erfordern die ausdrückliche Genehmigung des Benutzers. JavaScript auf einer Webseite darf also nicht heimlich eine Webcam aktivieren, die Umgebung beobachten und die Informationen an die [NSA](https://de.wikipedia.org/wiki/National_Security_Agency) senden.
+- Unterschiedliche Tabs und Fenster wissen in der Regel nicht voneinander. Es gibt jedoch Ausnahmen, bei welchen dies doch der Fall ist. Dies kann z.B. passieren, wenn durch JavaScript ein neues Fenster geöffnet wird. Aber selbst in diesem Fall kann es sein, dass JavaScript von einer Seite nicht auf die andere Seite zugreifen kann, wenn sie von verschiedenen Seiten (von einer anderen Domäne, einem anderen Protokoll oder Port) kommen.
 
-    Dies wird die "Same-Origin-Policy" genannt. Um dies zu umgehen, müssen *beide Seiten* dem Datenaustausch zustimmen und einen speziellen JavaScript-Code enthalten, der dies ermöglicht. Wir werden das im Tutorial behandeln.
+Dies wird die "Same-Origin-Policy" genannt. Um dies zu umgehen, müssen *beide Seiten* dem Datenaustausch zustimmen und einen speziellen JavaScript-Code enthalten, der dies ermöglicht. Wir werden das im Tutorial behandeln.
 
-    Diese Einschränkung dient wiederum der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen, um von dort Informationen zu stehlen.
-- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite abgerufen wurde. Aber die Möglichkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt. Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (in HTTP-Headern angegeben) von der entfernten Seite. Noch einmal, das ist eine Sicherheitseinschränkung.
-Auch wenn es möglich ist erfordert es eine ausdrückliche Zustimmung (ausgedrückt in *HTTP-Headern*) von der anderen Seite. Auch dies ist eine sicherheitsbedingte Einschränkung.
+    Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
+- JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt.
+Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (ausgedrückt in HTTP-Headern) von der entfernten Seite. Auch dies ist eine Sicherheitseinschränkung.
 
 ![](limitations.svg)
 
-Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers, z. B. auf einem Server, ausgeführt wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
+Solche Einschränkungen bestehen nicht, wenn JavaScript außerhalb des Browsers, z.B. auf einem Server, verwendet wird. Moderne Browser erlauben auch Plugins/Erweiterungen, die unter Umständen nach erweiterten Rechten fragen.
 
 ## Was macht JavaScript einzigartig?
 
@@ -118,4 +118,4 @@ Es gibt noch mehr. Natürlich sollten wir, selbst wenn wir eine der transponiert
 
 - JavaScript wurde ursprünglich als reine Browser-Sprache entwickelt, wird aber mittlerweile auch in vielen anderen Umgebungen eingesetzt.
 - Heute hat JavaScript eine einzigartige Position als die am weitesten verbreitete Browsersprache mit voller Integration in HTML/CSS.
-- Es gibt viele Sprachen, die in JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem du JavaScript beherrscht.
+- Es gibt viele Sprachen, die in JavaScript "transponiert" werden und bestimmte Funktionen bieten. Es wird empfohlen, sich diese zumindest kurz anzuschauen, nachdem man JavaScript beherrscht.

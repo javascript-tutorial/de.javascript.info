@@ -19,8 +19,7 @@ Beispielsweise:
 ...
 ```
 
-Wir werden bald Funktionen (eine Möglichkeit, Befehle zu gruppieren) lernen. Mit Blick auf die Zukunft sei angemerkt, dass `"use strict"` anstelle des gesamten Skripts am Anfang des Funktionskörpers stehen kann. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird es jedoch für das gesamte Skript verwendet.
-
+Bald werden wir Funktionen kennenlernen (eine Möglichkeit, Anweisungen zu gruppieren), also, so viel sei verraten, `"use strict"` kann an den Anfang einer Funktion gestellt werden. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird er aber für das ganze Skript verwendet.
 
 ````warn header="Stellen sicher, dass \"use strict\" am Anfang steht"
 Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiv ist.
@@ -47,11 +46,13 @@ Sobald wir in den strikten Modus wechseln, gibt es kein Zurück mehr.
 
 ## Browser-Konsole
 
-Wenn du in Zukunft eine Browserkonsole zum Testen von Funktionalitäten verwendest, beachte bitte, dass `use strict` standardmäßig nicht verwendet wird.
+Wenn du eine [Entwicklerkonsole](info:devtools) zum Ausführen von Code verwendest, beachte bitte, dass sie standardmäßig nicht `use strict` verwendet.
 
 Manchmal, wenn `use strict` einen Unterschied macht, erhältst du falsche Ergebnisse.
 
-Du kannst versuchen, durch Drücken von `key:Umschalt+Eingabetaste` mehrere Zeilen einzugeben und `use strict` wie folgt an den Anfang zu setzen:
+Wie kann man also in der Konsole tatsächlich `use strict` verwenden?
+
+Zuerst kannst du versuchen, mit `key:Umschalt+Eingabe` mehrere Zeilen einzugeben, und oben drauf `use strict` setzen, so wie hier:
 
 ```js
 'use strict'; <Umschalt+Eingabe für eine neue Zeile>
@@ -61,25 +62,28 @@ Du kannst versuchen, durch Drücken von `key:Umschalt+Eingabetaste` mehrere Zeil
 
 Es funktioniert in den meisten Browsern, wie Firefox und Chrome.
 
-Wenn dies nicht der Fall ist, besteht die zuverlässigste Möglichkeit, um `use strict` sicherzustellen, darin, den Code wie folgt in die Konsole einzugeben:
+Wenn das nicht der Fall ist, z.B. in einem alten Browser, gibt es einen unsauberen, aber zuverlässigen Weg, um `use strict` sicherzustellen. Ummantel es wie folgt:
 
 ```js
 (function() {
   'use strict';
 
-  // ...Dein Code...
+  // ...your code here...
 })()
 ```
 
-## Immer "use strict" verwenden
+## Should we "use strict"?
 
-Wir müssen die Unterschiede zwischen dem striken Modus und dem "Standardmodus" noch behandeln.
+Die Frage mag offensichtlich klingen, aber dem ist nicht so.
 
-In den nächsten Kapiteln werden wir beim Erlernen der Sprachfunktionen die Unterschiede zwischen dem Strikten und dem Standardmodus feststellen. Zum Glück gibt es nicht viele und sie verbessern unser Leben.
+Man könnte empfehlen, Skripte mit `"use strict"` zu beginnen... Aber weißt du, was besser ist?
 
-Im Moment genügt es, allgemein zu wissen:
+Modernes JavaScript unterstützt "Klassen" und "Module" - fortgeschrittene Sprachstrukturen (zu denen wir sicher noch kommen werden), die automatisch die `use strict` Verwendung ermöglichen. Wir brauchen also nicht die `"use strict"`-Direktive hinzuzufügen, wenn wir sie verwenden.
 
-1. Die Anweisung `"use strict"` schaltet die Engine in den "modernen" Modus und ändert das Verhalten einiger eingebauter Funktionen. Wir werden die Details später im Tutorial sehen.
-2. Der strikte Modus wird aktiviert, indem `"use strict"` am Anfang eines Skripts oder einer Funktion platziert wird. Verschiedene Sprachfunktionen, wie "Klassen" und "Module", aktivieren den strikten Modus automatisch.
-3. Der strikte Modus wird von allen modernen Browsern unterstützt.
-4. Wir empfehlen, Skripte immer mit `"use strict"` zu starten. Alle Beispiele in diesen Tutorial gehen von einem strengen Modus aus, sofern nicht (sehr selten) anders angegeben.
+**Also, für den Moment ist `"use strict;"` ein willkommener Gast an der Spitze deiner Skripte. Später, wenn der Code nur noch aus Klassen und Modulen besteht, können wir ihn weglassen.**
+
+Ab jetzt sollten wir über `use strict` im Allgemeinen Bescheid wissen.
+
+In den nächsten Kapiteln werden wir, während wir die sprachlichen Merkmale kennen lernen, die Unterschiede zwischen dem strikten und dem herkömmlichen Modus sehen. Zum Glück gibt es nicht viele, und sie machen uns das Leben tatsächlich angenehmer.
+
+Alle Beispiele in diesem Tutorial gehen vom strikten Modus aus, sofern nicht (sehr selten) anders angegeben.

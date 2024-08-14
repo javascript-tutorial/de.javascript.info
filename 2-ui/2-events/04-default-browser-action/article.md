@@ -17,7 +17,7 @@ There are two ways to tell the browser we don't want it to act:
 - The main way is to use the `event` object. There's a method `event.preventDefault()`.
 - If the handler is assigned using `on<event>` (not by `addEventListener`), then returning `false` also works the same.
 
-In this HTML a click on a link doesn't lead to navigation, browser doesn't do anything:
+In this HTML, a click on a link doesn't lead to navigation; the browser doesn't do anything:
 
 ```html autorun height=60 no-beautify
 <a href="/" onclick="return false">Click here</a>
@@ -96,7 +96,7 @@ That's because the browser action is canceled on `mousedown`. The focusing is st
 
 The optional `passive: true` option of `addEventListener` signals the browser that the handler is not going to call `preventDefault()`.
 
-Why that may be needed?
+Why might that be needed?
 
 There are some events like `touchmove` on mobile devices (when the user moves their finger across the screen), that cause scrolling by default, but that scrolling can be prevented using `preventDefault()` in the handler.
 
@@ -113,7 +113,7 @@ The property `event.defaultPrevented` is `true` if the default action was preven
 
 There's an interesting use case for it.
 
-You remember in the chapter <info:bubbling-and-capturing> we talked about `event.stopPropagation()`  and why stopping bubbling is bad?
+You remember in the chapter <info:bubbling-and-capturing> we talked about `event.stopPropagation()` and why stopping bubbling is bad?
 
 Sometimes we can use `event.defaultPrevented` instead, to signal other event handlers that the event was handled.
 

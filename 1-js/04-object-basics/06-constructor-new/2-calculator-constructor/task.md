@@ -1,23 +1,19 @@
-importance: 5
+# Erstelle einen neuen Taschenrechner
 
----
+Erstelle eine Konstruktorfunktion `Calculator`, die Objekte mit 3 Methoden erstellt:
 
-# Create new Calculator
+- `read()` fordert zwei Werte an und speichert diese als Objekteigenschaften mit den Namen `a` und `b` entsprechend.
+- `sum()` gibt die Summe dieser Eigenschaften zurück.
+- `mul()` gibt das Produkt der Multiplikation dieser Eigenschaften zurück.
 
-Create a constructor function `Calculator` that creates objects with 3 methods:
-
-- `read()` asks for two values using `prompt` and remembers them in object properties.
-- `sum()` returns the sum of these properties.
-- `mul()` returns the multiplication product of these properties.
-
-For instance:
+Zum Beispiel:
 
 ```js
 let calculator = new Calculator();
 calculator.read();
 
-alert( "Sum=" + calculator.sum() );
-alert( "Mul=" + calculator.mul() );
+alert( "Summe=" + calculator.sum() );
+alert( "Produkt=" + calculator.mul() );
 ```
 
 [demo]
