@@ -4,9 +4,9 @@ Des öfteren kommt es vor, dass wir eine (ähnliche) Aktion an mehreren Stellen 
 
 Wenn sich der Benutzer einloggt, ausloggt oder sonstige Aktinen ausübt, möchten wir Ihm eine Nachricht anzeigen. 
 
-Funktionen kann man auch als das "Bausteine" des Programs verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
+Funktionen kann man auch als die "Bausteine" des Programms verstehen. Sie erlauben es uns geschriebenen Code häufig abzurufen ohne diesen erneut schreiben zu müssen.
 
-Wir wurden bereits Zeugen von eingebauten (*built-in*) Funktionen (*functions*) wie `alert(message)`, `prompt(message, default)` und `confirm(question)`. Es ist uns aber auch möglich selbst Funktionen zu kreieren.
+Wir haben bereits eingebaute (*built-in*) Funktionen (*functions*) wie `alert(message)`, `prompt(message, default)` und `confirm(question)` gesehen. Es ist uns aber auch möglich selbst Funktionen zu kreieren.
 
 ## Funktionsdeklarierung (*Function Declaration*)
 
@@ -20,7 +20,7 @@ function showMessage() {
 }
 ```
 
-Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Parenthesen (mit einem "," voneinander getrennt; im obigen Beispiel leer) und letztlich der Code der Funktion, der auch als "Körper der Funktion" (*the function body*) genannt wird, der zwischen den Akkoladen (*curly braces*) steht.
+Das *keyword* (Schlüsselwort) `function` steht an erster Stelle, darauf folgt der *Name der Funktion*. Dann noch eine Liste an Parameter zwischen den Klammern (mit einem "," voneinander getrennt; im obigen Beispiel leer) und letztlich der Code der Funktion, der auch "Körper der Funktion" (*the function body*) genannt wird, der zwischen den geschweiften Klammern (*curly braces*) steht.
 
 ```js
 function name(parameters) {
@@ -34,7 +34,7 @@ Zum Beispiel:
 
 ```js run
 function showMessage() {
-  alert( 'Hello everyone!' );
+  alert( 'Hallo an alle!' );
 }
 *!*
 showMessage();
@@ -61,7 +61,7 @@ function showMessage() {
   alert( message );
 }
 showMessage(); // Hallo, ich bin JavaScript!
-alert( message ); // <-- Fehler! Die Variabel ist lokal zur Funktion
+alert( message ); // <-- Fehler! Die Variable ist nicht aufrufbar weil sie lokal ist
 ```
 
 ## Außenstehende (*outer*) Variablen
@@ -77,7 +77,7 @@ function showMessage() {
 showMessage(); // Hallo, John
 ```
 
-Die Funktion hat vollständigen Zugriff auf außenstehende Variablen. Und kann diese auch modifieren.
+Die Funktion hat vollständigen Zugriff auf außenstehende Variablen. Und kann diese auch modifizieren.
 
 Hier zu sehen:
 
@@ -130,9 +130,9 @@ Es hat sich als gute und moderne Praxis entwickelt, so wenig globale Variablen w
 
 ## Parameter
 
-Wir können Funktionen jedliche Art von Daten zukommen lassen (auch Funktionsargumente [*function arguments*] genannt).
+Wir können Funktionen jegliche Art von Daten zukommen lassen (auch Funktionsargumente [*function arguments*] genannt).
 
-Im unten stehenden Beispiel hat die Funktion zwei Parameter: `from` und `text`.
+Im folgenden Beispiel hat die Funktion zwei Parameter: `from` und `text`.
 
 ```js run
 function showMessage(*!*from, text*/!*) { // Argumente: from, text
@@ -140,8 +140,8 @@ function showMessage(*!*from, text*/!*) { // Argumente: from, text
 }
 
 *!*
-showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
-showMessage('Ann', "What's up?"); // Ann: What's up? (**)
+showMessage('Ann', 'Hallo!'); // Ann: Hallo! (*)
+showMessage('Ann', "Wie geht's?"); // Ann: Wie geht's? (**)
 */!*
 ```
 
@@ -189,9 +189,9 @@ function showMessage(from, *!*text = "kein Text übergeben"*/!*) {
 
 showMessage("Ann"); // Ann: kein Text übergeben
 ```
-Wenn der `text` Parameter jetzt nicht gegeben wird, erhält er den Wert `"no text given"`
+Wenn der `text` Parameter jetzt nicht gegeben wird, erhält er den Wert `"kein Text übergeben"`
 
-Hier ist `"no text given"` nur ein String, kann aber auch ein viel komplexerer Ausdruck (*expression*) sein, der nur evaluiert und zugewiesen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
+Hier ist `"kein Text übergeben"` nur ein String, kann aber auch ein viel komplexerer Ausdruck (*expression*) sein, der nur evaluiert und zugewiesen wird, wenn der entsprechende Parameter fehlt. Das macht folgendes möglich:
 
 ```js run
 function showMessage(from, text = anotherFunction()) {
@@ -215,7 +215,7 @@ Beispielhaft ist eine strikte Prüfung auf `undefined`:
 function showMessage(from, text) {
 *!*
   if (text === undefined) {
-    text = 'no text given';
+    text = 'kein Text übergeben';
   }
 */!*
 
@@ -228,7 +228,7 @@ function showMessage(from, text) {
 ```js
 function showMessage(from, text) {
   // falls text nicht gegeben ist erhält es den "default" Wert
-  text = text || 'no text given';
+  text = text || 'kein Text übergeben';
   ...
 }
 ```
