@@ -76,7 +76,7 @@ switch (a) {
   case 5:
     alert( 'Zu gross' );
   default:
-    alert( "Ich kenne keine solchen Werte" );
+    alert( "Ich kenne keinen solchen Werte" );
 */!*
 }
 ```
