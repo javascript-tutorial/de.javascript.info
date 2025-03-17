@@ -6,11 +6,11 @@ describe("test", function() {
 
   // This is because of the "alert" function, because if you delay pressing the "OK" button the tests will not pass!
   
-  before(() => alert("Testing started – before all tests"));
-  after(() => alert("Testing finished – after all tests"));
+  before(() => alert("Test beginnt – vor allen Tests"));
+  after(() => alert("Test abgeschlossen – nach allen Tests"));
 
-  beforeEach(() => alert("Before a test – enter a test"));
-  afterEach(() => alert("After a test – exit a test"));
+  beforeEach(() => alert("Vor einem Test – beginne einen Test"));
+  afterEach(() => alert("Nach einem Test – beende einen Test"));
 
   it('test 1', () => alert(1));
   it('test 2', () => alert(2));
