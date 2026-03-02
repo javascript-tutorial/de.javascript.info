@@ -22,7 +22,7 @@ Die Entwicklerwerkzeuge öffnen sich standardmäßig auf dem Konsolen-Reiter.
 
 Es sieht in etwa so aus:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 Das genaue Aussehen der Entwicklerwerkzeuge hängt von deiner Chrome-Version ab. Es ändert sich von Zeit zu Zeit, sollte aber ähnlich aussehen.
 
@@ -49,7 +49,11 @@ Das Aussehen ist meist sehr ähnlich. Sobald du weißt wie man eins dieser Tools
 
 Safari (Mac Browser, nicht unterstützt werden Windows/Linux) ist etwas speziell. Wir müssen zuerst das "Entwickler-Menü" aktivieren.
 
+<<<<<<< HEAD
 Öffne Einstellungen und wähle "Erweitert" aus. Dort ist unten ein Kontrollkästchen:
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ![safari](safari.png)
 
