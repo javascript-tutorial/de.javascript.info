@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- add mocha css, to show results -->
+  <!-- Füge das Mocha CSS hinzu, um die Ergebnisse anzuzeigen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-  <!-- add mocha framework code -->
+  <!-- Füge den Mocha Framework-Code hinzu -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
   <script>
-    mocha.setup('bdd'); // minimal setup
+    mocha.setup('bdd'); // minimales Setup
   </script>
-  <!-- add chai -->
+  <!-- Füge Chai hinzu -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
   <script>
-    // chai has a lot of stuff, let's make assert global
+    // Chai hat viele Funktionen, lass uns assert global machen
     let assert = chai.assert;
   </script>
 </head>
@@ -20,17 +20,17 @@
 
   <script>
     function pow(x, n) {
-      /* function code is to be written, empty now */
+      /* Funktionscode muss geschrieben werden, ist momentan leer */
     }
   </script>
 
-  <!-- the script with tests (describe, it...) -->
+  <!-- das Skript mit Tests (describe, it...) -->
   <script src="test.js"></script>
 
-  <!-- the element with id="mocha" will contain test results -->
+  <!-- Das Element mit der ID "mocha" wird die Testergebnisse enthalten -->
   <div id="mocha"></div>
 
-  <!-- run tests! -->
+  <!-- Führe die Tests aus! -->
   <script>
     mocha.run();
   </script>

@@ -2,22 +2,22 @@ importance: 5
 
 ---
 
-# Store "unread" flags
+# Speicherung von "ungelesen"-Markierungen
 
-There's an array of messages:
+Gegeben sei ein Array von Nachrichten:
 
 ```js
 let messages = [
-  {text: "Hello", from: "John"},
-  {text: "How goes?", from: "John"},
-  {text: "See you soon", from: "Alice"}
+  {text: "Hallo", from: "John"},
+  {text: "Wie läuft's?", from: "John"},
+  {text: "Bis bald", from: "Alice"}
 ];
 ```
 
-Your code can access it, but the messages are managed by someone else's code. New messages are added, old ones are removed regularly by that code, and you don't know the exact moments when it happens.
+Dein Code kann darauf zugreifen, aber die Nachrichten werden von anderem Code verwaltet. Neue Nachrichten werden hinzugefügt, alte regelmäßig entfernt, und du weißt nicht genau, in welchen Momenten das passiert.
 
-Now, which data structure could you use to store information about whether the message "has been read"? The structure must be well-suited to give the answer "was it read?" for the given message object.
+Welche Datenstruktur könntest du nun verwenden, um Informationen darüber zu speichern, ob die Nachricht "gelesen wurde"? Die Struktur muss gut geeignet sein, um die Frage "wurde es gelesen?" für das gegebene Nachrichtenobjekt zu beantworten.
 
-P.S. When a message is removed from `messages`, it should disappear from your structure as well.
+P.S. Wenn eine Nachricht aus `messages` entfernt wird, sollte sie auch aus deiner Struktur verschwinden.
 
-P.P.S. We shouldn't modify message objects, add our properties to them. As they are managed by someone else's code, that may lead to bad consequences.
+P.P.S. Wir sollten die Nachrichtenobjekte nicht modifizieren oder unsere Eigenschaften hinzufügen. Da sie von anderem Code verwaltet werden, könnte das zu schlechten Konsequenzen führen.

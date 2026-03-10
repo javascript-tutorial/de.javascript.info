@@ -32,11 +32,11 @@ user.sayHi = function() {
 user.sayHi(); // Hello!
 ```
 
-Here we've just used a Function Expression to create the function and assign it to the property `user.sayHi` of the object.
+Here we've just used a Function Expression to create a function and assign it to the property `user.sayHi` of the object.
 
-Then we can call it. The user can now speak!
+Then we can call it as `user.sayHi()`. The user can now speak!
 
-A function that is the property of an object is called its *method*.
+A function that is a property of an object is called its *method*.
 
 So, here we've got a method `sayHi` of the object `user`.
 
@@ -51,7 +51,7 @@ let user = {
 // first, declare
 function sayHi() {
   alert("Hello!");
-};
+}
 
 // then add as a method
 user.sayHi = sayHi;
@@ -81,7 +81,7 @@ user = {
 // method shorthand looks better, right?
 user = {
 *!*
-  sayHi() { // same as "sayHi: function()"
+  sayHi() { // same as "sayHi: function(){...}"
 */!*
     alert("Hello");
   }
@@ -90,7 +90,7 @@ user = {
 
 As demonstrated, we can omit `"function"` and just write `sayHi()`.
 
-To tell the truth, the notations are not fully identical. There are subtle differences related to object inheritance (to be covered later), but for now they do not matter. In almost all cases the shorter syntax is preferred.
+To tell the truth, the notations are not fully identical. There are subtle differences related to object inheritance (to be covered later), but for now they do not matter. In almost all cases, the shorter syntax is preferred.
 
 ## "this" in methods
 
@@ -160,14 +160,16 @@ let user = {
 let admin = user;
 user = null; // overwrite to make things obvious
 
-admin.sayHi(); // Whoops! inside sayHi(), the old name is used! error!
+*!*
+admin.sayHi(); // TypeError: Cannot read property 'name' of null
+*/!*
 ```
 
 If we used `this.name` instead of `user.name` inside the `alert`, then the code would work.
 
 ## "this" is not bound
 
-In JavaScript, keyword `this` behaves unlike most other programming languages. It can be used in any function.
+In JavaScript, keyword `this` behaves unlike most other programming languages. It can be used in any function, even if it's not a method of an object.
 
 There's no syntax error in the following example:
 

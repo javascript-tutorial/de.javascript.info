@@ -1,4 +1,3 @@
-
 ```js run
 let user = {
   name: "John",

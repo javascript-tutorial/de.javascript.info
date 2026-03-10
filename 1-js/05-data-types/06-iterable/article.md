@@ -24,7 +24,7 @@ let range = {
 // for(let num of range) ... num=1,2,3,4,5
 ```
 
-To make the `range` iterable (and thus let `for..of` work) we need to add a method to the object named `Symbol.iterator` (a special built-in symbol just for that).
+To make the `range` object iterable (and thus let `for..of` work) we need to add a method to the object named `Symbol.iterator` (a special built-in symbol just for that).
 
 1. When `for..of` starts, it calls that method once (or errors if not found). The method must return an _iterator_ -- an object with the method `next`.
 2. Onward, `for..of` works _only with that returned object_.
@@ -42,7 +42,7 @@ let range = {
 // 1. call to for..of initially calls this
 range[Symbol.iterator] = function () {
   // ...it returns the iterator object:
-  // 2. Onward, for..of works only with this iterator, asking it for next values
+  // 2. Onward, for..of works only with the iterator object below, asking it for next values
   return {
     current: this.from,
     last: this.to,
@@ -136,7 +136,7 @@ for (let char of str) {
 
 ## Calling an iterator explicitly
 
-For deeper understanding let's see how to use an iterator explicitly.
+For deeper understanding, let's see how to use an iterator explicitly.
 
 We'll iterate over a string in exactly the same way as `for..of`, but with direct calls. This code creates a string iterator and gets values from it "manually":
 
@@ -161,16 +161,16 @@ That is rarely needed, but gives us more control over the process than `for..of`
 
 ## Iterables and array-likes [#array-like]
 
-There are two official terms that look similar, but are very different. Please make sure you understand them well to avoid the confusion.
+Two official terms look similar, but are very different. Please make sure you understand them well to avoid the confusion.
 
 - _Iterables_ are objects that implement the `Symbol.iterator` method, as described above.
 - _Array-likes_ are objects that have indexes and `length`, so they look like arrays.
 
-When we use JavaScript for practical tasks in browser or other environments, we may meet objects that are iterables or array-likes, or both.
+When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both.
 
 For instance, strings are both iterable (`for..of` works on them) and array-like (they have numeric indexes and `length`).
 
-But an iterable may be not array-like. And vice versa an array-like may be not iterable.
+But an iterable may not be array-like. And vice versa an array-like may not be iterable.
 
 For example, the `range` in the example above is iterable, but not array-like, because it does not have indexed properties and `length`.
 
@@ -214,7 +214,7 @@ alert(arr.pop()); // World (method works)
 
 The same happens for an iterable:
 
-```js
+```js run
 // assuming that range is taken from the example above
 let arr = Array.from(range);
 alert(arr); // 1,2,3,4,5 (array toString conversion works)
@@ -230,7 +230,7 @@ The optional second argument `mapFn` can be a function that will be applied to e
 
 For instance:
 
-```js
+```js run
 // assuming that range is taken from the example above
 
 // square each number
@@ -299,4 +299,4 @@ Objects that have indexed properties and `length` are called _array-like_. Such 
 
 If we look inside the specification -- we'll see that most built-in methods assume that they work with iterables or array-likes instead of "real" arrays, because that's more abstract.
 
-`Array.from(obj[, mapFn, thisArg])` makes a real `Array` of an iterable or array-like `obj`, and we can then use array methods on it. The optional arguments `mapFn` and `thisArg` allow us to apply a function to each item.
+`Array.from(obj[, mapFn, thisArg])` makes a real `Array` from an iterable or array-like `obj`, and we can then use array methods on it. The optional arguments `mapFn` and `thisArg` allow us to apply a function to each item.

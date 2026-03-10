@@ -1,6 +1,6 @@
-The maximal length must be `maxlength`, so we need to cut it a little shorter, to give space for the ellipsis.
+Die maximale Länge muss `maxlength` sein, daher müssen wir den Text ein wenig kürzen, um Platz für die Auslassungspunkte zu schaffen.
 
-Note that there is actually a single unicode character for an ellipsis. That's not three dots.
+Beachte, dass es tatsächlich ein einzelnes Unicode-Zeichen für eine Auslassung gibt. Das sind nicht drei Punkte.
 
 ```js run demo
 function truncate(str, maxlength) {

@@ -2,17 +2,17 @@ importance: 5
 
 ---
 
-# Filter unique array members
+# Filtere eindeutige Array-Elemente
 
-Let `arr` be an array.
+Lass `arr` ein Array sein.
 
-Create a function `unique(arr)` that should return an array with unique items of `arr`.
+Erstelle eine Funktion `unique(arr)`, die ein Array mit den eindeutigen Elementen von `arr` zurückgeben sollte.
 
-For instance:
+Zum Beispiel:
 
 ```js
 function unique(arr) {
-  /* your code */
+  /* Dein Code */
 }
 
 let values = ["Hare", "Krishna", "Hare", "Krishna",
@@ -22,6 +22,6 @@ let values = ["Hare", "Krishna", "Hare", "Krishna",
 alert( unique(values) ); // Hare, Krishna, :-O
 ```
 
-P.S. Here strings are used, but can be values of any type.
+P.S. Hier werden Zeichenketten verwendet, es können aber Werte jeglichen Typs sein.
 
-P.P.S. Use `Set` to store unique values.
+P.P.S. Verwende `Set`, um eindeutige Werte zu speichern.
