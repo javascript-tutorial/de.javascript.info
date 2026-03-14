@@ -2,8 +2,8 @@
 
 Wir kennen viele Vergleichsoperatoren aus der Mathematik:
 
-- Größer/kleiner: <code>a &gt; b</code>, <code>a &lt; b</code>.
-- Größer-gleich/kleiner-gleich: <code>a &gt;= b</code>, <code>a &lt;= b</code>.
+- Größer/kleiner als: <code>a &gt; b</code>, <code>a &lt; b</code>.
+- Größer/kleiner als oder gleich: <code>a &gt;= b</code>, <code>a &lt;= b</code>.
 - Gleich: `a == b` (beachte bitte das doppelte Gleichheitszeichen `=`. Ein einfaches Gleichheitszeiten `a = b` würde eine Zuweisung bedeuten).
 - Ungleich. In der Mathematik lautet die Notation <code>&ne;</code>, aber in JavaScript wird es als eine Zuweisung mit einem Ausrufezeichen davor geschrieben: <code>a != b</code>.
 
@@ -11,8 +11,8 @@ Wir kennen viele Vergleichsoperatoren aus der Mathematik:
 
 Wie alle anderen Operatoren liefert ein Vergleich einen Wert. In diesem Fall ist der Wert ein boolscher Wert.
 
-- `true` (engl. "wahr") -- bedeutet "ja", "richtig" oder "die Wahrheit".
-- `false` (engl. "unwahr") -- bedeutet "nein", "falsch" oder "nicht die Wahrheit".
+- `true` -- bedeutet "ja", "richtig" oder "die Wahrheit".
+- `false` -- bedeutet "nein", "falsch" oder "nicht die Wahrheit".
 
 Zum Beispiel:
 
@@ -26,14 +26,14 @@ Ein Vergleichsergebnis kann einer Variablen zugewiesen werden, genau wie jeder a
 
 ```js run
 let result = 5 > 4; // das Ergebnis des Vergleichs zuweisen
-alert( result ); // true (wahr)
+alert( result ); // true
 ```
 
 ## String Vergleiche
 
-Um zu sehen, ob ein String (Zeichenfolge) größer als ein anderer ist, verwendet JavaScript die so genannte "Wörterbuch-" oder "lexikografische" Reihenfolge.
+Um zu sehen, ob ein String größer als ein anderer ist, verwendet JavaScript die so genannte "Wörterbuch-" oder "lexikografische" Reihenfolge.
 
-Mit anderen Worten, die Strings werden Buchstabe für Buchstabe verglichen.
+Mit anderen Worten, Strings werden Buchstabe für Buchstabe verglichen.
 
 Zum Beispiel:
 
@@ -46,7 +46,7 @@ alert( 'Bee' > 'Be' ); // true
 Der Algorithmus zum Vergleichen zweier Strings ist einfach:
 
 1. Vergleiche das erste Zeichen der beiden Strings.
-2. Wenn das erste Zeichen aus dem ersten String größer (oder kleiner) als das des anderen String ist, dann ist der erste String größer (oder kleiner) als der zweite. Das war's.
+2. Wenn das erste Zeichen aus dem ersten String größer (oder kleiner) als das des anderen Strings ist, dann ist der erste String größer (oder kleiner) als der zweite. Das war's.
 3. Andernfalls, wenn die ersten Zeichen beider Strings gleich sind, vergleiche die zweiten Zeichen auf die gleiche Weise.
 4. Wiederhole dies bis zum Ende einer der beiden Strings.
 5. Wenn beide Strings mit der gleichen Länge enden, dann sind sie gleich. Andernfalls ist der längere String größer.
@@ -63,15 +63,15 @@ Der oben angegebene Vergleichsalgorithmus entspricht in etwa dem, der in Wörter
 Zum Beispiel, Groß/Kleinschreibung ist wichtig. Ein Großbuchstabe `"A"` ist nicht gleich dem Kleinbuchstaben `"a"`. Welcher ist größer? Der Kleinbuchstabe `"a"`. Und warum? Weil das Kleinbuchstabenzeichen einen größeren Index in der internen Codierungstabelle hat, die JavaScript verwendet (Unicode). Wir werden im Kapitel <info:string> auf die spezifischen Details und die Konsequenzen dieser Tatsache zurückkommen.
 ```
 
-## Vergleiche von verschiedenen Datentypen
+## Vergleich von verschiedenen Typen
 
-Beim Vergleich von Werten verschiedener Datentypen wandelt JavaScript die Werte in `number` (Zahlen) um.
+Beim Vergleichen von Werten verschiedener Typen konvertiert JavaScript die Werte in Zahlen.
 
 Zum Beispiel:
 
 ```js run
-alert( '2' > 1 ); // true, der String '2' wird zu number 2
-alert( '01' == 1 ); // true, der String '01' wird zu number 1
+alert( '2' > 1 ); // true, String '2' wird zur Zahl 2
+alert( '01' == 1 ); // true, String '01' wird zur Zahl 1
 ```
 
 Bei boolschen Werten wird `true` zu `1` und `false` zu `0`.
@@ -101,7 +101,7 @@ alert( Boolean(b) ); // true
 alert(a == b); // true!
 ```
 
-Aus der Sicht von JavaScript ist dieses Ergebnis ganz normal. Eine Gleichheitsprüfung konvertiert Werte mit Hilfe der numerischen Datentypumwandlung (daher wird `"0"` zu `0`), während die explizite Umwandlung in `Boolean` andere Regeln verwendet.
+Aus Sicht von JavaScript ist dieses Ergebnis ganz normal. Eine Gleichheitsprüfung konvertiert Werte unter Verwendung der numerischen Konvertierung (daher wird `"0"` zu `0`), während die explizite Konvertierung in `Boolean` einen anderen Regelsatz verwendet.
 ````
 
 ## Strikte Gleichheit
@@ -118,13 +118,13 @@ Dasselbe geschieht mit einem leeren String:
 alert( '' == false ); // true
 ```
 
-Dies geschieht, weil Operanden unterschiedlichen Typs mit dem Gleichheitsoperator `==` in `number` umgewandelt werden. Ein leerer String wird, genau wie bei `false`, zu einer numerischen Null.
+Dies geschieht, weil Operanden unterschiedlichen Typs mit dem Gleichheitsoperator `==` in Zahlen umgewandelt werden. Ein leerer String wird, genau wie bei `false`, zu einer Null.
 
 Was ist zu tun, wenn wir `0` von `false` unterscheiden wollen?
 
-**Der strikte Gleichheitsoperator `===` überprüft auf Gleichheit ohne Datentypumwandlung.**
+**Ein strikter Gleichheitsoperator `===` prüft auf Gleichheit ohne Datentypumwandlung.**
 
-Mit anderen Worten, wenn `a` und `b` von unterschiedlichem Datentyp sind, dann gibt `a === b` sofort `false` zurück, ohne einen Versuch, sie zu konvertieren.
+Mit anderen Worten, wenn `a` und `b` unterschiedliche Typen sind, gibt `a === b` sofort `false` zurück, ohne sie zu konvertieren.
 
 Versuchen wir es:
 
@@ -138,7 +138,7 @@ Der Operator für strikte Gleichheit ist etwas länger zu schreiben, macht aber 
 
 ## Vergleiche mit null und undefined
 
-Es gibt ein nicht-intuitives Verhalten, wenn `null` oder `undefined` mit anderen Werten verglichen wird.
+Es gibt ein nicht intuitives Verhalten, wenn `null` oder `undefined` mit anderen Werten verglichen wird.
 
 Für die strikte Gleichheitsprüfung `===`
 : sind diese Werte unterschiedlich, weil jeder von ihnen ein verschiedener Datentyp ist.
@@ -147,7 +147,7 @@ Für die strikte Gleichheitsprüfung `===`
     alert( null === undefined ); // false
     ```
 
-Für die nicht-strikte Gleichheitsprüfung `==`
+Für die nicht strikte Kontrolle `==`
 : gibt es eine besondere Regel. Diese beiden sind ein "süßes Pärchen": sie sind gleich (im Sinne von `==`), aber nicht irgendeinem anderen Wert.
 
     ```js run
@@ -155,7 +155,7 @@ Für die nicht-strikte Gleichheitsprüfung `==`
     ```
 
 Für mathematische und andere Vergleiche `< > <= >=`
-: werden `null/undefined` umgewandelt in number (Zahlen): `null` wird zu `0`, während `undefined` zu `NaN` wird.
+: `null/undefined` werden in Zahlen umgewandelt: `null` wird zu `0`, während `undefined` zu `NaN` wird.
 
 Jetzt wollen wir sehen, was bei der Anwendung dieser Regeln passiert. Und, was noch wichtiger ist, wie man damit nicht in eine Falle tappt.
 
@@ -171,7 +171,7 @@ alert( null >= 0 ); // (3) *!*true*/!*
 
 Mathematisch gesehen ist das seltsam. Das letzte Ergebnis besagt, dass "`null` größer oder gleich `0` ist", so dass es in einem der obigen Vergleiche `true` sein muss, aber beide sind `false`.
 
-Der Grund ist, dass die Gleichheitsprüfung `==` und vergleichende Operatoren `> < >= <=` verschieden funktionieren. Vergleichende Operatoren wandeln `null` in eine `number` um, behandeln es als `0`. Deshalb ist (3) `null >= 0` `true` und (1) `null > 0` `false`.
+Der Grund ist, dass die Gleichheitsprüfung `==` und vergleichende Operatoren `> < >= <=` verschieden funktionieren. Vergleichende Operatoren wandeln `null` in eine Zahl um, behandeln es als `0`. Deshalb ist (3) `null >= 0` `true` und (1) `null > 0` `false`.
 
 Auf der anderen Seite ist die Gleichheitsprüfung `==` für `undefined` und `null` so definiert, dass sie ohne Umwandlung einander gleich sind, aber nichts anderem. Deshalb ist (2) `null == 0` `false`.
 
@@ -202,8 +202,8 @@ Verwende keine Vergleiche `>= > < <=` mit einer Variablen, die `null/undefined` 
 
 ## Zusammenfassung
 
-- Vergleichende Operatoren geben einen boolschen Wert zurück.
-- Strings (Zeichenfolgen) werden Buchstabe für Buchstabe in der "Wörterbuch"-Reihenfolge verglichen.
-- Wenn Werte unterschiedlichen Typs verglichen werden, werden sie in Zahlen (`number`) umgewandelt (außer bei der strikten Gleichheitsprüfung).
+- Vergleichsoperatoren geben einen boolschen Wert zurück.
+- Strings werden Buchstabe für Buchstabe in der "Wörterbuch"-Reihenfolge verglichen.
+- Wenn Werte verschiedener Typen verglichen werden, werden sie in Zahlen umgewandelt (unter Ausschluss einer strikten Gleichheitsprüfung).
 - Die Werte `null` und `undefined` sind gleich `==`, aber ansonsten ist nichts gleich den zwei Werten.
 - Sei vorsichtig, wenn du Vergleiche wie `>` oder `<` mit Variablen verwendest, die gelegentlich `null/undefined` sein können. Es ist eine gute Idee, `null/undefined` separat zu prüfen.
