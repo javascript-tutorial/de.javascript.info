@@ -1,4 +1,4 @@
-# Function Expressions
+# Funktionsausdruck
 
 In JavaScript ist eine Funktion keine "magische Sprachstruktur", sondern eine besondere Art Wert.
 
