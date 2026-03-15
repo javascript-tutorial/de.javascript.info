@@ -2,9 +2,9 @@ importance: 5
 
 ---
 
-# Comparisons
+# Vergleiche
 
-What will be the result for these expressions?
+Was wird das Ergebnis dieser Ausdrücke sein?
 
 ```js no-beautify
 5 > 4
