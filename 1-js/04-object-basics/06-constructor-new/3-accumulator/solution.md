@@ -1,11 +1,9 @@
-
-
 ```js run demo
 function Accumulator(startingValue) {
   this.value = startingValue;
 
   this.read = function() {
-    this.value += +prompt('How much to add?', 0);
+    this.value += +prompt('Wieviel soll hinzugefügt werden?', 0);
   };
 
 }
@@ -15,3 +13,4 @@ accumulator.read();
 accumulator.read();
 alert(accumulator.value);
 ```
+

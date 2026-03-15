@@ -2,16 +2,16 @@ importance: 5
 
 ---
 
-# String quotes
+# String Anführungszeichen
 
-What is the output of the script?
+Was ist die Ausgabe des Skripts?
 
 ```js
 let name = "Ilya";
 
-alert( `hello ${1}` ); // ?
+alert( `Hallo ${1}` ); // ?
 
-alert( `hello ${"name"}` ); // ?
+alert( `Hallo ${"name"}` ); // ?
 
-alert( `hello ${name}` ); // ?
+alert( `Hallo ${name}` ); // ?
 ```

@@ -1,85 +1,89 @@
-# The modern mode, "use strict"
+# Der moderne Modus, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+JavaScript hat sich lange Zeit ohne Kompatibilitätsprobleme weiterentwickelt. Der Sprache wurden neue Funktionen hinzugefügt, während sich die alten Funktionen nicht geändert haben.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+Dies hatte den Vorteil, dass der vorhandene Code nie beschädigt wurde. Der Nachteil war jedoch, dass jeder Fehler oder eine Fehlentscheidung der JavaScript-Entwickler für immer in der Sprache hängen blieb.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Dies war bis zum Erscheinen von ECMAScript 5 (ES5) im Jahr 2009 der Fall. Es wurden der Sprache neue Funktionen hinzugefügt und einige der vorhandenen geändert. Damit der alte Code weiterhin funktioniert, sind die meisten dieser Änderungen standardmäßig deaktiviert. Du musst sie explizit mit einer speziellen Anweisung aktivieren: `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Die Direktive sieht aus wie ein String: `"use strict"` oder `'use strict'`. Wenn es sich am Anfang eines Skripts befindet, funktioniert das gesamte Skript auf "moderne" Weise.
 
-For example:
+Beispielsweise:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// Dieser Code funktioniert auf moderne Weise
 ...
 ```
 
-We will learn functions (a way to group commands) soon. Looking ahead, let's note that `"use strict"` can be put at the beginning of the function body instead of the whole script. Doing that enables strict mode in that function only. But usually, people use it for the whole script.
+Bald werden wir Funktionen kennenlernen (eine Möglichkeit, Anweisungen zu gruppieren), also, so viel sei verraten, `"use strict"` kann an den Anfang einer Funktion gestellt werden. Auf diese Weise wird der strikte Modus nur in dieser Funktion aktiviert. Normalerweise wird er aber für das ganze Skript verwendet.
 
+````warn header="Stellen sicher, dass \"use strict\" am Anfang steht"
+Stelle sicher, dass `"use strict"` am Anfang deiner Skripte steht, da sonst der strikte Modus möglicherweise nicht aktiv ist.
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
-
-Strict mode isn't enabled here:
+Der strikte Modus ist hier nicht aktiviert:
 
 ```js no-strict
-alert("some code");
-// "use strict" below is ignored--it must be at the top
+alert("etwas Code");
+// "use strict" wird ignoriert -- es muss am Anfang stehen
 
 "use strict";
 
-// strict mode is not activated
+// Der strikte Modus ist nicht aktiviert
 ```
 
-Only comments may appear above `"use strict"`.
+Nur Kommentare dürfen über `"use strict"` erscheinen.
 ````
 
-```warn header="There's no way to cancel `use strict`"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+```warn header="Es gibt keine Möglichkeit, `use strict` abzubrechen"
+Es gibt keine Direktive wie `"no use strict"`, die die Engine auf altes Verhalten zurücksetzt.
 
-Once we enter strict mode, there's no going back.
+Sobald wir in den strikten Modus wechseln, gibt es kein Zurück mehr.
 ```
 
-## Browser console
+## Browser-Konsole
 
-For the future, when you use a browser console to test features, please note that it doesn't `use strict` by default.
+Wenn du eine [Entwicklerkonsole](info:devtools) zum Ausführen von Code verwendest, beachte bitte, dass sie standardmäßig nicht `use strict` verwendet.
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+Manchmal, wenn `use strict` einen Unterschied macht, erhältst du falsche Ergebnisse.
 
-You can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+Wie kann man also in der Konsole tatsächlich `use strict` verwenden?
+
+Zuerst kannst du versuchen, mit `key:Umschalt+Eingabe` mehrere Zeilen einzugeben, und oben drauf `use strict` setzen, so wie hier:
 
 ```js
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
+'use strict'; <Umschalt+Eingabe für eine neue Zeile>
+//  ...Dein Code
+<Eingabe zum Ausführen>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+Es funktioniert in den meisten Browsern, wie Firefox und Chrome.
 
-If it doesn't, the most reliable way to ensure `use strict` would be to input the code into console like this:
+Wenn das nicht der Fall ist, z.B. in einem alten Browser, gibt es einen unsauberen, aber zuverlässigen Weg, um `use strict` sicherzustellen. Ummantel es wie folgt:
 
 ```js
 (function() {
   'use strict';
 
-  // ...your code...
+  // ...your code here...
 })()
 ```
 
-## Always "use strict"
+## Should we "use strict"?
 
-We have yet to cover the differences between strict mode and the "default" mode.
+Die Frage mag offensichtlich klingen, aber dem ist nicht so.
 
-In the next chapters, as we learn language features, we'll note the differences between the strict and default modes. Luckily, there aren't many and they actually make our lives better.
+Man könnte empfehlen, Skripte mit `"use strict"` zu beginnen... Aber weißt du, was besser ist?
 
-For now, it's enough to know about it in general:
+Modernes JavaScript unterstützt "Klassen" und "Module" - fortgeschrittene Sprachstrukturen (zu denen wir sicher noch kommen werden), die automatisch die `use strict` Verwendung ermöglichen. Wir brauchen also nicht die `"use strict"`-Direktive hinzuzufügen, wenn wir sie verwenden.
 
-1. The `"use strict"` directive switches the engine to the "modern" mode, changing the behavior of some built-in features. We'll see the details later in the tutorial.
-2. Strict mode is enabled by placing `"use strict"` at the top of a script or function. Several language features, like "classes" and "modules", enable strict mode automatically.
-3. Strict mode is supported by all modern browsers.
-4. We recommended always starting scripts with `"use strict"`. All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+**Also, für den Moment ist `"use strict;"` ein willkommener Gast an der Spitze deiner Skripte. Später, wenn der Code nur noch aus Klassen und Modulen besteht, können wir ihn weglassen.**
+
+Ab jetzt sollten wir über `use strict` im Allgemeinen Bescheid wissen.
+
+In den nächsten Kapiteln werden wir, während wir die sprachlichen Merkmale kennen lernen, die Unterschiede zwischen dem strikten und dem herkömmlichen Modus sehen. Zum Glück gibt es nicht viele, und sie machen uns das Leben tatsächlich angenehmer.
+
+Alle Beispiele in diesem Tutorial gehen vom strikten Modus aus, sofern nicht (sehr selten) anders angegeben.

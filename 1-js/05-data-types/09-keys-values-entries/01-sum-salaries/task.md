@@ -2,15 +2,15 @@ importance: 5
 
 ---
 
-# Sum the properties
+# Summe der Eigenschaften
 
-There is a `salaries` object with arbitrary number of salaries. 
+Es gibt ein `salaries` Objekt mit einer beliebigen Anzahl von Gehältern.
 
-Write the function `sumSalaries(salaries)` that returns the sum of all salaries using `Object.values` and the `for..of` loop.
+Schreibe die Funktion `sumSalaries(salaries)`, die die Summe aller Gehälter zurückgibt, indem sie `Object.values` und die Schleife `for..of` verwendet.
 
-If `salaries` is empty, then the result must be `0`.
+Wenn `salaries` leer ist, dann muss das Ergebnis `0` sein.
 
-For instance:
+Zum Beispiel:
 
 ```js
 let salaries = {
@@ -21,4 +21,3 @@ let salaries = {
 
 alert( sumSalaries(salaries) ); // 650
 ```
-

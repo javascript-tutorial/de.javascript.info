@@ -1,185 +1,180 @@
-# Ninja code
+# Ninja-Code
 
-
-```quote author="Confucius"
-Learning without thought is labor lost; thought without learning is perilous.
+```quote author="Konfuzius (Gespräche)"
+Lernen ohne zu denken ist eitel; Denken ohne zu lernen ist gefährlich.
 ```
 
-Programmer ninjas of the past used these tricks to sharpen the mind of code maintainers.
+Programmierninjas aus der Vergangenheit benutzten diese Tricks, um den Geist des Code-Maintainers zu schärfen.
 
-Code review gurus look for them in test tasks.
+Code-Review-Gurus suchen nach ihnen in Testaufgaben.
 
-Novice developers sometimes use them even better than programmer ninjas.
+Anfänger-Entwickler verwenden sie manchmal sogar besser als Programmierninjas.
 
-Read them carefully and find out who you are -- a ninja, a novice, or maybe a code reviewer?
+Lies sie sorgfältig und finde heraus, wer du bist -- ein Ninja, ein Anfänger oder vielleicht ein Code-Reviewer?
 
-
-```warn header="Irony detected"
-Many try to follow ninja paths. Few succeed.
+```warn header="Ironie entdeckt"
+Viele versuchen, den Ninja-Weg zu folgen. Wenige haben Erfolg.
 ```
 
+## Kürze ist die Seele des Witzes
 
-## Brevity is the soul of wit
+Mache den Code so kurz wie möglich. Zeige, wie klug du bist.
 
-Make the code as short as possible. Show how smart you are.
+Lass dich von subtilen Sprachfunktionen leiten.
 
-Let subtle language features guide you.
-
-For instance, take a look at this ternary operator `'?'`:
+Zum Beispiel sieh dir diesen ternären Operator `?` an:
 
 ```js
-// taken from a well-known javascript library
+// entnommen aus einer bekannten JavaScript-Bibliothek
 i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 ```
 
-Cool, right? If you write like that, a developer who comes across this line and tries to understand what is the value of `i` is going to have a merry time. Then come to you, seeking for an answer.
+Cool, oder? Wenn du so schreibst, wird ein Entwickler, der auf diese Zeile stößt und versucht zu verstehen, was der Wert von `i` ist, eine fröhliche Zeit haben. Dann kommen sie zu dir und suchen nach einer Antwort.
 
-Tell them that shorter is always better. Initiate them into the paths of ninja.
+Sag ihnen, dass kürzer immer besser ist. Führe sie in die Wege des Ninjas ein.
 
-## One-letter variables
+## Ein-Buchstaben-Variablen
 
 ```quote author="Laozi (Tao Te Ching)"
-The Dao hides in wordlessness. Only the Dao is well begun and well
-completed.
+Das Dao verbirgt sich in Wortlosigkeit. Nur das Dao ist gut begonnen und gut
+vollendet.
 ```
 
-Another way to code faster is to use single-letter variable names everywhere. Like `a`, `b` or `c`.
+Ein weiterer Weg, den Code kürzer zu machen, ist, überall Ein-Buchstaben-Variablennamen zu verwenden. Wie `a`, `b` oder `c`.
 
-A short variable disappears in the code like a real ninja in the forest. No one will be able to find it using "search" of the editor. And even if someone does, they won't be able to "decipher" what the name `a` or `b` means.
+Eine kurze Variable verschwindet im Code wie ein echter Ninja im Wald. Niemand wird sie mit der "Suche" des Editors finden können. Und wenn doch jemand es tut, werden sie nicht in der Lage sein zu "entschlüsseln", was der Name `a` oder `b` bedeutet.
 
-...But there's an exception. A real ninja will never use `i` as the counter in a `"for"` loop. Anywhere, but not here. Look around, there are many more exotic letters. For instance, `x` or `y`.
+...Aber es gibt eine Ausnahme. Ein echter Ninja wird niemals `i` als Zähler in einer `"for"`-Schleife verwenden. Überall, aber nicht hier. Schau dich um, es gibt viele exotischere Buchstaben. Zum Beispiel `x` oder `y`.
 
-An exotic variable as a loop counter is especially cool if the loop body takes 1-2 pages (make it longer if you can). Then if someone looks deep inside the loop, they won't be able to quickly figure out that the variable named `x` is the loop counter.
+Eine exotische Variable als Schleifenzähler ist besonders cool, wenn der Schleifenrumpf 1-2 Seiten lang ist (mach ihn länger, wenn du kannst). Wenn dann jemand tief in der Schleife nachschaut, wird er nicht schnell herausfinden können, dass die mit `x` benannte Variable der Schleifenzähler ist.
 
-## Use abbreviations
+## Verwende Abkürzungen
 
-If the team rules forbid the use of one-letter and vague names -- shorten them, make abbreviations.
+Wenn die Teamregeln die Verwendung von Ein-Buchstaben- und unklaren Namen verbieten -- kürze sie, mach Abkürzungen.
 
-Like this:
+So wie:
 
 - `list` -> `lst`.
 - `userAgent` -> `ua`.
 - `browser` -> `brsr`.
-- ...etc
+- ...usw
 
-Only the one with truly good intuition will be able to understand such names. Try to shorten everything. Only a worthy person should be able to uphold the development of your code.
+Nur derjenige mit wirklich guter Intuition wird solche Namen verstehen können. Versuche, alles zu kürzen. Nur eine würdige Person sollte in der Lage sein, die Entwicklung deines Codes aufrechtzuerhalten.
 
-## Soar high. Be abstract.
-
-```quote author="Laozi (Tao Te Ching)"
-The great square is cornerless<br>
-The great vessel is last complete,<br>
-The great note is rarified sound,<br>
-The great image has no form.
-```
-
-While choosing a name try to use the most abstract word. Like `obj`, `data`, `value`, `item`, `elem` and so on.
-
-- **The ideal name for a variable is `data`.** Use it everywhere you can. Indeed, every variable holds *data*, right?
-
-    ...But what to do if `data` is already taken? Try `value`, it's also universal. After all, a variable eventually gets a *value*.
-
-- **Name a variable by its type: `str`, `num`...**
-
-    Give them a try. A young initiate may wonder -- are such names really useful for a ninja? Indeed, they are!
-
-    Sure, the variable name still means something. It says what's inside the variable: a string, a number or something else. But when an outsider tries to understand the code, they'll be surprised to see that there's actually no information at all! And will ultimately fail to alter your well-thought code.
-
-    The value type is easy to find out by debugging. But what's the meaning of the variable? Which string/number does it store?
-
-    There's just no way to figure out without a good meditation!
-
-- **...But what if there are no more such names?** Just add a number: `data1, item2, elem5`...
-
-## Attention test
-
-Only a truly attentive programmer should be able to understand your code. But how to check that?
-
-**One of the ways -- use similar variable names, like `date` and `data`.**
-
-Mix them where you can.
-
-A quick read of such code becomes impossible. And when there's a typo... Ummm... We're stuck for long, time to drink tea.
-
-
-## Smart synonyms
-
-```quote author="Confucius"
-The hardest thing of all is to find a black cat in a dark room, especially if there is no cat.
-```
-
-Using *similar* names for *same* things makes life more interesting and shows your creativity to the public.
-
-For instance, consider function prefixes. If a function shows a message on the screen -- start it with `display…`, like `displayMessage`. And then if another function shows on the screen something else, like a user name, start it with `show…` (like `showName`).
-
-Insinuate that there's a subtle difference between such functions, while there is none.
-
-Make a pact with fellow ninjas of the team: if John starts "showing" functions with `display...` in his code, then Peter could use `render..`, and Ann -- `paint...`. Note how much more interesting and diverse the code became.
-
-...And now the hat trick!
-
-For two functions with important differences -- use the same prefix!
-
-For instance, the function `printPage(page)` will use a printer. And the function `printText(text)` will put the text on-screen. Let an unfamiliar reader think well over similarly named function `printMessage`: "Where does it put the message? To a printer or on the screen?". To make it really shine, `printMessage(message)` should output it in the new window!
-
-## Reuse names
+## Erhebe dich hoch. Sei abstrakt.
 
 ```quote author="Laozi (Tao Te Ching)"
-Once the whole is divided, the parts<br>
-need names.<br>
-There are already enough names.<br>
-One must know when to stop.
+Das große Quadrat hat keine Ecken<br>
+Das große Gefäß ist zuletzt vollendet,<br>
+Der große Ton ist ein verdünnter Klang,<br>
+Das große Bild hat keine Form.
 ```
 
-Add a new variable only when absolutely necessary.
+Beim Wählen eines Namens versuche, das abstrakteste Wort zu verwenden. Wie `obj`, `data`, `value`, `item`, `elem` und so weiter.
 
-Instead, reuse existing names. Just write new values into them.
+- **Der ideale Name für eine Variable ist `data`.** Verwende ihn überall dort, wo du kannst. Tatsächlich enthält jede Variable *Daten*, richtig?
 
-In a function try to use only variables passed as parameters.
+    ...Aber was tun, wenn `data` bereits vergeben ist? Versuche `value`, es ist auch universell. Schließlich bekommt eine Variable letztendlich einen *Wert*.
 
-That would make it really hard to identify what's exactly in the variable *now*. And also where it comes from. The purpose is to develop the intuition and memory of a person reading the code. A person with weak intuition would have to analyze the code line-by-line and track the changes through every code branch.
+- **Benenne eine Variable nach ihrem Typ: `str`, `num`...**
 
-**An advanced variant of the approach is to covertly (!) replace the value with something alike in the middle of a loop or a function.**
+    Probiere sie aus. Ein junger Initiand mag sich wundern -- sind solche Namen wirklich nützlich für einen Ninja? Tatsächlich sind sie das!
 
-For instance:
+    Sicher, der Variablenname bedeutet immer noch etwas. Er sagt aus, was in der Variablen steckt: ein String, eine Zahl oder etwas anderes. Aber wenn ein Außenstehender versucht, den Code zu verstehen, wird er überrascht sein zu sehen, dass tatsächlich überhaupt keine Informationen vorhanden sind! Und wird letztendlich scheitern, deinen wohl durchdachten Code zu verändern.
+
+    Der Werttyp ist leicht durch Debugging herauszufinden. Aber was ist die Bedeutung der Variablen? Welcher String/Wert wird darin gespeichert?
+
+    Es gibt einfach keine Möglichkeit, das ohne eine gute Meditation herauszufinden!
+
+- **...Aber was, wenn es keine solchen Namen mehr gibt?** Füge einfach eine Nummer hinzu: `data1, item2, elem5`...
+
+## Aufmerksamkeitstest
+
+Nur ein wirklich aufmerksamer Programmierer sollte in der Lage sein, deinen Code zu verstehen. Aber wie kann man das überprüfen?
+
+**Ein Weg -- verwende ähnliche Variablennamen, wie `date` und `data`.**
+
+Mische sie, wo immer du kannst.
+
+Ein schnelles Lesen eines solchen Codes wird unmöglich. Und wenn ein Tippfehler auftritt... Ummm... Wir stecken fest, Zeit für Tee.
+
+## Schlaue Synonyme
+
+```quote author="Laozi (Tao Te Ching)"
+Das ausgesprochene Dao ist nicht das ewige Dao. Der benannte Name ist nicht der ewige Name.
+```
+
+Die Verwendung von *ähnlichen* Namen für *gleiche* Dinge macht das Leben interessanter und zeigt deine Kreativität der Öffentlichkeit.
+
+Betrachte zum Beispiel Funktionspräfixe. Wenn eine Funktion eine Nachricht auf dem Bildschirm anzeigt, beginne sie mit `display…`, wie `displayMessage`. Und wenn eine andere Funktion etwas anderes auf dem Bildschirm anzeigt, wie einen Benutzernamen, beginne sie mit `show…` (wie `showName`).
+
+Unterstelle, dass es eine subtile Differenz zwischen solchen Funktionen gibt, obwohl es keine gibt.
+
+Schließe einen Pakt mit den Ninja-Kollegen des Teams: Wenn John anfängt, Funktionen in seinem Code mit `display...` zu "zeigen", dann könnte Peter `render..` verwenden und Ann -- `paint...`. Beachte, wie viel interessanter und vielfältiger der Code geworden ist.
+
+...Und jetzt der Höhepunkt!
+
+Für zwei Funktionen mit wichtigen Unterschieden -- verwende den gleichen Präfix!
+
+Zum Beispiel: Die Funktion `printPage(page)` verwendet einen Drucker. Und die Funktion `printText(text)` zeigt den Text auf dem Bildschirm an. Lass einen Leser, der mit der Funktion nicht vertraut ist, gut überlegen bei der ähnlich benannten Funktion `printMessage`: "Wohin schickt sie die Nachricht? An einen Drucker oder auf den Bildschirm?". Um es wirklich glänzen zu lassen, sollte `printMessage(message)` diese in einem neuen Fenster ausgeben!
+
+## Verwende Namen erneut
+
+```quote author="Laozi (Tao Te Ching)"
+Sobald das Ganze geteilt ist, brauchen die Teile<br>
+Namen.<br>
+Es gibt bereits genug Namen.<br>
+Man muss wissen, wann man aufhören muss.
+```
+
+Füge nur dann eine neue Variable hinzu, wenn es absolut notwendig ist.
+
+Verwende stattdessen vorhandene Namen wieder. Schreibe einfach neue Werte hinein.
+
+In einer Funktion versuche, nur Variablen zu verwenden, die als Parameter übergeben wurden.
+
+Das macht es wirklich schwer zu identifizieren, was *jetzt* wirklich in der Variablen steckt. Und auch, woher sie kommt. Der Zweck ist, die Intuition und das Gedächtnis einer Person, die den Code liest, zu entwickeln. Jemand mit schwacher Intuition müsste den Code Zeile für Zeile analysieren und die Änderungen durch jeden Code-Zweig verfolgen.
+
+**Eine fortgeschrittene Variante des Ansatzes besteht darin, heimlich (!) den Wert in der Mitte einer Schleife oder einer Funktion durch etwas Ähnliches zu ersetzen.**
+
+Zum Beispiel:
 
 ```js
 function ninjaFunction(elem) {
-  // 20 lines of code working with elem
+  // 20 Zeilen Code, die mit elem arbeiten
 
   elem = clone(elem);
 
-  // 20 more lines, now working with the clone of the elem!
+  // 20 weitere Zeilen, die jetzt mit dem Klon von elem arbeiten!
 }
 ```
 
-A fellow programmer who wants to work with `elem` in the second half of the function will be surprised... Only during the debugging, after examining the code they will find out that they're working with a clone!
+Ein Kollege, der mit `elem` in der zweiten Hälfte der Funktion arbeiten möchte, wird überrascht sein... Erst während des Debuggens, nachdem er den Code untersucht hat, wird er herausfinden, dass er mit einem Klon arbeitet!
 
-Seen in code regularly. Deadly effective even against an experienced ninja.
+Regelmäßig im Code gesehen. Tödlich effektiv, selbst gegen einen erfahrenen Ninja.
 
-## Underscores for fun
+## Unterstriche zum Spaß
 
-Put underscores `_` and `__` before variable names. Like `_name` or `__value`. It would be great if only you knew their meaning. Or, better, add them just for fun, without particular meaning at all. Or different meanings in different places.
+Setze Unterstriche `_` und `__` vor Variablennamen. Wie `_name` oder `__value`. Es wäre großartig, wenn nur du ihre Bedeutung kennen würdest. Oder noch besser, füge sie nur zum Spaß hinzu, ohne eine besondere Bedeutung. Oder unterschiedliche Bedeutungen an verschiedenen Stellen.
 
-You kill two rabbits with one shot. First, the code becomes longer and less readable, and the second, a fellow developer may spend a long time trying to figure out what the underscores mean.
+Du erledigst zwei Fliegen mit einer Klappe. Erstens wird der Code länger und unlesbarer und zweitens könnte ein Kollege lange darüber nachdenken, was die Unterstriche bedeuten.
 
-A smart ninja puts underscores at one spot of code and evades them at other places. That makes the code even more fragile and increases the probability of future errors.
+Ein schlauer Ninja setzt Unterstriche an einer Stelle des Codes und vermeidet sie an anderen Stellen. Das macht den Code noch brüchiger und erhöht die Wahrscheinlichkeit zukünftiger Fehler.
 
-## Show your love
+## Zeige deine Liebe
 
-Let everyone see how magnificent your entities are! Names like `superElement`, `megaFrame` and `niceItem` will definitely enlighten a reader.
+Lass jeden sehen, wie herrlich deine Entitäten sind! Namen wie `superElement`, `megaFrame` und `niceItem` werden definitiv einen Leser erleuchten.
 
-Indeed, from one hand, something is written: `super..`, `mega..`, `nice..` But from the other hand -- that brings no details. A reader may decide to look for a hidden meaning and meditate for an hour or two of their paid working time.
+Tatsächlich steht einerseits etwas geschrieben: `super..`, `mega..`, `nice..` Aber andererseits -- das bringt keine Details. Ein Leser könnte sich entscheiden, nach einer verborgenen Bedeutung zu suchen und eine Stunde oder zwei ihrer bezahlten Arbeitszeit zu meditieren.
 
-
-## Overlap outer variables
+## Überdecke äußere Variablen
 
 ```quote author="Guan Yin Zi"
-When in the light, can't see anything in the darkness.<br>
-When in the darkness, can see everything in the light.
+Wenn im Licht, kann man nichts in der Dunkelheit sehen.<br>
+Wenn in der Dunkelheit, kann man alles im Licht sehen.
 ```
 
-Use same names for variables inside and outside a function. As simple. No efforts to invent new names.
+Verwende für Variablen innerhalb und außerhalb einer Funktion dieselben Namen. So einfach. Keine Mühe, neue Namen zu erfinden.
 
 ```js
 let *!*user*/!* = authenticateUser();
@@ -187,54 +182,52 @@ let *!*user*/!* = authenticateUser();
 function render() {
   let *!*user*/!* = anotherValue();
   ...
-  ...many lines...
+  ...viele Zeilen...
   ...
-  ... // <-- a programmer wants to work with user here and...
+  ... // <-- ein Programmierer möchte hier mit user arbeiten und...
   ...
 }
 ```
 
-A programmer who jumps inside the `render` will probably fail to notice that there's a local `user` shadowing the outer one.
+Ein Programmierer, der in die `render`-Funktion springt, wird wahrscheinlich nicht bemerken, dass es eine lokale Variable `user` gibt, die die äußere überschattet.
 
-Then they'll try to work with `user` assuming that it's the external variable, the result of `authenticateUser()`... The trap is sprung! Hello, debugger...
+Dann werden sie versuchen, mit `user` zu arbeiten in der Annahme, dass es die externe Variable ist, das Ergebnis von `authenticateUser()`... Die Falle ist zugeschnappt! Hallo, Debugger...
 
+## Nebenwirkungen überall!
 
-## Side-effects everywhere!
+Es gibt Funktionen, die so aussehen, als würden sie nichts verändern. Wie `isReady()`, `checkPermission()`, `findTags()`... Sie werden vorausgesetzt, um Berechnungen durchzuführen, Daten zu finden und zurückzugeben, ohne etwas außerhalb von ihnen zu verändern. Mit anderen Worten, ohne "Nebenwirkungen".
 
-There are functions that look like they don't change anything. Like `isReady()`, `checkPermission()`, `findTags()`... They are assumed to carry out calculations, find and return the data, without changing anything outside of them. In other words, without "side-effects".
+**Ein wirklich schöner Trick ist, ihnen neben der Hauptaufgabe eine "nützliche" Aktion hinzuzufügen.**
 
-**A really beautiful trick is to add a "useful" action to them, besides the main task.**
+Ein Gesichtsausdruck der verdutzten Überraschung auf dem Gesicht deines Kollegen, wenn sie eine Funktion namens `is..`, `check..` oder `find...` sehen, die etwas verändert, wird definitiv deine Grenzen des Verstehens erweitern.
 
-An expression of dazed surprise on the face of your colleague when they see a function named `is..`, `check..` or `find...` changing something -- will definitely broaden your boundaries of reason.
+**Ein anderer Weg, zu überraschen, ist, ein nicht standardmäßiges Ergebnis zurückzugeben.**
 
-**Another way to surprise is to return a non-standard result.**
+Zeige dein originelles Denken! Lass den Aufruf von `checkPermission` nicht `true/false` zurückgeben, sondern ein komplexes Objekt mit den Ergebnissen der Überprüfung.
 
-Show your original thinking! Let the call of `checkPermission` return not `true/false`, but a complex object with the results of the check.
+Diejenigen Entwickler, die versuchen, `if (checkPermission(..))` zu schreiben, werden sich wundern, warum es nicht funktioniert. Sage ihnen: "Lies die Dokumentation!". Und gib ihnen diesen Artikel.
 
-Those developers who try to write `if (checkPermission(..))`, will wonder why it doesn't work. Tell them: "Read the docs!". And give this article.
-
-
-## Powerful functions!
+## Mächtige Funktionen!
 
 ```quote author="Laozi (Tao Te Ching)"
-The great Tao flows everywhere,<br>
-both to the left and to the right.
+Das große Dao fließt überallhin,<br>
+sowohl nach links als auch nach rechts.
 ```
 
-Don't limit the function by what's written in its name. Be broader.
+Begrenze die Funktion nicht durch das, was in ihrem Namen geschrieben steht. Lege sie breiter aus.
 
-For instance, a function `validateEmail(email)` could (besides checking the email for correctness) show an error message and ask to re-enter the email.
+Zum Beispiel könnte eine Funktion `validateEmail(email)` (neben der Überprüfung der E-Mail auf Korrektheit) eine Fehlermeldung anzeigen und dazu auffordern, die E-Mail erneut einzugeben.
 
-Additional actions should not be obvious from the function name. A true ninja coder will make them not obvious from the code as well.
+Zusätzliche Aktionen sollten aus dem Funktionsnamen nicht offensichtlich sein. Ein echter Ninja-Coder wird sie auch aus dem Code nicht offensichtlich machen.
 
-**Joining several actions into one protects your code from reuse.**
+**Mehrere Aktionen in einer zusammenzufassen schützt deinen Code vor Wiederverwendung.**
 
-Imagine, another developer wants only to check the email, and not output any message. Your function  `validateEmail(email)` that does both will not suit them. So they won't break your meditation by asking anything about it.
+Stelle dir vor, ein anderer Entwickler möchte nur die E-Mail überprüfen und keine Nachricht ausgeben. Deine Funktion `validateEmail(email)`, die beides tut, wird ihnen nicht entsprechen. So werden sie deine Meditation nicht durch irgendwelche Fragen stören.
 
-## Summary
+## Zusammenfassung
 
-All "pieces of advice" above are from the real code... Sometimes, written by experienced developers. Maybe even more experienced than you are ;)
+Alle "Ratschläge" oben stammen aus dem realen Code ... Manchmal von erfahrenen Entwicklern geschrieben. Vielleicht sogar erfahrener als du ;)
 
-- Follow some of them, and your code will become full of surprises.
-- Follow many of them, and your code will become truly yours, no one would want to change it.
-- Follow all, and your code will become a valuable lesson for young developers looking for enlightenment.
+- Befolge einige davon, und dein Code wird voller Überraschungen.
+- Befolge viele davon, und dein Code wird wirklich deiner, niemand wird ihn ändern wollen.
+- Befolge alle, und dein Code wird eine wertvolle Lektion für junge Entwickler sein, die nach Erleuchtung suchen.
