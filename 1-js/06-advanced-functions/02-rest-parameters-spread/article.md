@@ -25,12 +25,12 @@ alert( sum(1, 2, 3, 4, 5) );
 
 Es gibt keinen Fehler wegen "zu vieler" Argumente. Aber natürlich werden im Ergebnis nur die ersten beiden gezählt, also ist das Ergebnis im obigen Code `3`.
 
-Die restlichen Parameter können in der Funktionsdefinition durch drei Punkte `...` gefolgt vom Namen des Arrays, das sie enthalten wird, eingebunden werden. Die Punkte bedeuten wörtlich "sammle die restlichen Parameter in ein Array".
+Die restlichen Parameter können in der Funktionsdefinition durch drei Punkte `...` gefolgt vom Namen des Arrays, das sie enthält, eingebunden werden. Die Punkte bedeuten wörtlich "sammle die restlichen Parameter in ein Array".
 
 Um beispielsweise alle Argumente in ein Array `args` zu sammeln:
 
 ```js run
-function sumAll(...args) { // args is the name for the array
+function sumAll(...args) { // args ist der Name des Arrays
   let sum = 0;
 
   for (let arg of args) sum += arg;
@@ -51,8 +51,8 @@ Hier gehen die ersten zwei Argumente in Variablen und der Rest geht in das Array
 function showName(firstName, lastName, ...titles) {
   alert( firstName + ' ' + lastName ); // Julius Caesar
 
-  // the rest go into titles array
-  // i.e. titles = ["Consul", "Imperator"]
+  // der Rest geht in das Array titles
+  // d.h. titles = ["Consul", "Imperator"]
   alert( titles[0] ); // Consul
   alert( titles[1] ); // Imperator
   alert( titles.length ); // 2
@@ -204,9 +204,9 @@ alert( [...str] ); // H,e,l,l,o
 
 Die Spread-Syntax verwendet intern Iteratoren, um Elemente zu sammeln, genauso wie `for..of` es tut.
 
-So, for a string, `for..of` returns characters and `...str` becomes `"H","e","l","l","o"`. The list of characters is passed to array initializer `[...str]`.
+Also, bei einem String gibt `for..of` Zeichen zurück und `...str` wird zu `"H","e","l","l","o"`. Die Liste der Zeichen wird dem Array-Initializer `[...str]` übergeben.
 
-For this particular task we could also use `Array.from`, because it converts an iterable (like a string) into an array:
+Für diese spezielle Aufgabe könnten wir auch `Array.from` verwenden, weil es ein Iterable (wie einen String) in ein Array umwandelt:
 
 ```js run
 let str = "Hello";
@@ -241,7 +241,7 @@ let arrCopy = [...arr]; // Array in eine Parameterliste "ausbreiten"
 // Haben die Arrays denselben Inhalt?
 alert(JSON.stringify(arr) === JSON.stringify(arrCopy)); // true
 
-// are the arrays equal?
+// Sind die Arrays gleich?
 alert(arr === arrCopy); // false (nicht die gleiche Referenz)
 
 // Die Änderung unseres ursprünglichen Arrays ändert nicht die Kopie:
