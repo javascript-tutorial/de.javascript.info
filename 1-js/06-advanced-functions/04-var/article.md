@@ -2,7 +2,7 @@
 # Das alte "var"
 
 ```smart header="Dieser Artikel ist zum verstehen alter Scripte"
-Die Informationen in diesem Artikel sind nützlich um alte Scripts zu verstehen.
+Die Informationen in diesem Artikel sind nützlich um alte Scripts zu Verstehen.
 
 So schreiben wir keinen Code.
 ```
@@ -30,11 +30,11 @@ Andererseits ist es wichtig, die Unterschiede beim Migrieren alter Skripte von `
 
 Mit `var` deklarierte Variablen sind entweder funktions- oder global-scope. Sie sind durch Blöcke hindurch sichtbar.
 
-For instance:
+Zum Beispiel:
 
 ```js run
 if (true) {
-  var test = true; // nutze "var" instelle von "let"
+  var test = true; // nutze "var" anstelle von "let"
 }
 
 *!*
@@ -96,13 +96,13 @@ let nutzer;
 let nutzer; // SyntaxError: 'nutzer' has already been declared
 ```
 
-Mit `var`können wir eine Variable beliebig oft neu deklarieren. Wenn wir `var` zu einer bereits deklarierten Variable hinzufügen, wird das einfach ignoriert:
+Mit `var` können wir eine Variable beliebig oft neu deklarieren. Wenn wir `var` zu einer bereits deklarierten Variable hinzufügen, wird das einfach ignoriert:
 
 ```js run
 var nutzer = "Pete";
 
 var nutzer = "John"; // dieses "var" macht nichts (bereits deklariert)
-// ...es lößt keinen Fehler aus
+// ...es löst keinen Fehler aus
 
 alert(nutzer); // John
 ```
@@ -160,7 +160,7 @@ function sayHi() {
 sayHi();
 ```
 
-Man nennt dieses Verhalten auch "hoisting" (Hochziehen), weil alle `var` anach oben "gehoben" werden.
+Man nennt dieses Verhalten auch "hoisting" (Hochziehen), weil alle `var` nach oben "gehoben" werden.
 
 Also in obigem Beispiel wird der `if (false)`-Zweig nie ausgeführt, aber das spielt keine Rolle. Das `var` darin wird zu Beginn der Funktion verarbeitet, sodass die Variable zum Zeitpunkt von `(*)` existiert.
 
@@ -193,7 +193,7 @@ function sayHi() {
   var phrase; // Deklaration funktioniert am Start
 */!*
 
-  alert(phrase); // undefeniert
+  alert(phrase); // undefiniert
 
 *!*
   phrase = "Hallo"; // ...Zuweisung - wenn die Ausführung es erreicht
@@ -203,9 +203,9 @@ function sayHi() {
 sayHi();
 ```
 
-Weil alle `var`-Deklarationen zu Beginn der Funktion verarbeitet werden, können wir an jeder Stelle darauf verweisen. Variablen sind jedoch undefeniert, bis die Zuweisungen passieren.
+Weil alle `var`-Deklarationen zu Beginn der Funktion verarbeitet werden, können wir an jeder Stelle darauf verweisen. Variablen sind jedoch undefiniert, bis die Zuweisungen passieren.
 
-In beiden obigen Beispielen läuft `alert` ohne Fehler, weil die Variable `phrase` existiert. Ihr Wert ist jedoch noch nicht zugewiesen, daher wird `undefined` angezeigt.
+In beiden obigen Beispielen läuft `alert` ohne Fehler, weil die Variable `phrase` existiert. Ihr Wert ist jedoch noch nicht zugewiesen, daher wird `undefiniert` angezeigt.
 
 ## IIFE
 
@@ -226,7 +226,7 @@ Eine IIFE sieht so aus:
 
 Hier wird ein Function Expression erstellt und sofort aufgerufen. Der Code läuft sofort und hat seine eigenen private Variablen.
 
-Das Function Expression ist mit Klammern `(function {...})` umgeben, denn wenn die JavaScript-Engine im Hauptcode auf `"function"` stößt, versteht sie das als Beginn einer Funktions Deklaration. Eine Funktions Deklaration muss jedoch einen Namen haben, daher würde dieser Code einen Fehler geben:
+Das Function Expression ist mit Klammern `(function {...})` umgeben, denn wenn die JavaScript-Engine im Hauptcode auf `"function"` stößt, versteht sie das als Beginn einer Funktionsdeklaration. Eine Funktionsdeklaration muss jedoch einen Namen haben, daher würde dieser Code einen Fehler geben:
 
 ```js run
 // Versucht, eine Funktion zu deklarieren und sofort aufzurufen
@@ -239,13 +239,13 @@ function() { // <-- SyntaxError: Function statements require a function name
 }();
 ```
 
-Selbst wenn wir einen Namen hinzufügen, funktioniert das nicht, da JavaScript Funktions Deklarationen nicht sofort aufrufbar macht:
+Selbst wenn wir einen Namen hinzufügen, funktioniert das nicht, da JavaScript Funktionsdeklaration nicht sofort aufrufbar sind:
 
 ```js run
 // Syntaxfehler aufgrund der untenstehenden Klammern
 function go() {
 
-}(); // <-- Funktions Deklaration kann nicht direkt aufgerufen werden
+}(); // <-- Funktionsdeklaration kann nicht direkt aufgerufen werden
 ```
 
 Die Klammern um die Funktion sind also ein Trick, um JavaScript zu zeigen, dass die Funktion im Kontext eines Ausdrucks erstellt wird und damit ein Function Expression ist: es braucht keinen Namen und kann sofort aufgerufen werden.
@@ -283,4 +283,4 @@ Es gibt zwei Hauptunterschiede von `var` im Vergleich zu `let/const`:
 
 Es gibt noch einen sehr kleinen Unterschied in Bezug auf das globale Objekt, den wir im nächsten Kapitel behandeln.
 
-Diese Unterschiede machen `var` in den meisten Fällen schlechter als `let`. BBlocklevel-Variablen sind eine großartige Sache. Deshalb wurde `let` chon lange in den Standard aufgenommen und ist jetzt zusammen mit `const` eine Hauptmethode, Variablen zu deklarieren.
+Diese Unterschiede machen `var` in den meisten Fällen schlechter als `let`. Blocklevel-Variablen sind eine großartige Sache. Deshalb wurde `let` schon lange in den Standard aufgenommen und ist jetzt zusammen mit `const` eine Hauptmethode, Variablen zu deklarieren.
