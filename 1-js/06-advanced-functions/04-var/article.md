@@ -7,7 +7,7 @@ Die Informationen in diesem Artikel sind nützlich um alte Scripts zu Verstehen.
 So schreiben wir keinen Code.
 ```
 
-IIm allerersten Kapitel über Variablen [variables](info:variables) haben wir drei Arten der Variablendeklaration erwähnt:
+Im allerersten Kapitel über Variablen [variables](info:variables) haben wir drei Arten der Variablendeklaration erwähnt:
 
 1. `let`
 2. `const`
