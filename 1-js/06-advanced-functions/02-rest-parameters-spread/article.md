@@ -118,7 +118,7 @@ function f() {
 f(1); // 1
 ```
 
-Wie wir uns erinnern, haben Pfeilfunktionen nicht ihr eigenes `this`. Jetzt wissen wir, dass sie auch nicht das spezielle`arguments`-Objekt haben.
+Wie wir uns erinnern, haben Pfeilfunktionen nicht ihr eigenes `this`. Jetzt wissen wir, dass sie auch nicht das spezielle `arguments`-Objekt haben.
 ````
 
 
