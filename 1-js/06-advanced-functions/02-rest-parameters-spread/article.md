@@ -61,7 +61,7 @@ function showName(firstName, lastName, ...titles) {
 showName("Julius", "Caesar", "Consul", "Imperator");
 ```
 
-````warn header="The rest parameters must be at the end"
+````warn header="Die Rest-Parameter müssen am Ende sein"
 Rest-Parameter sammeln alle verbleibenden Argumente, daher ergibt das Folgende keinen Sinn und verursacht einen Fehler:
 
 ```js
@@ -211,85 +211,84 @@ For this particular task we could also use `Array.from`, because it converts an 
 ```js run
 let str = "Hello";
 
-// Array.from converts an iterable into an array
+// Array.from wandelt ein Iterierbares in ein Array um
 alert( Array.from(str) ); // H,e,l,l,o
 ```
 
-The result is the same as `[...str]`.
+Das Ergebnis ist das gleiche wie `[...str]`.
 
-But there's a subtle difference between `Array.from(obj)` and `[...obj]`:
+Es gibt aber einen subtilen Unterschied zwischen `Array.from(obj)` und `[...obj]`:
 
-- `Array.from` operates on both array-likes and iterables.
-- The spread syntax works only with iterables.
+- `Array.from` funktioniert mit Array-ähnlichen Objekten und Iterierbaren.
+- Die Spread-Syntax funktioniert nur mit Iterierbaren
+Also, für die Aufgabe, etwas in ein Array umzuwandeln, ist `Array.from` tendenziell universeller.
 
-So, for the task of turning something into an array, `Array.from` tends to be more universal.
 
+## Array oder Objekt kopieren
 
-## Copy an array/object
+Erinnern Sie sich, als wir früher über `Object.assign()` gesprochen haben [in the past](info:object-copy#cloning-and-merging-object-assign)?
 
-Remember when we talked about `Object.assign()` [in the past](info:object-copy#cloning-and-merging-object-assign)?
-
-It is possible to do the same thing with the spread syntax.
+Es ist möglich, dasselbe mit der Spread-Syntax zu tun.
 
 ```js run
 let arr = [1, 2, 3];
 
 *!*
-let arrCopy = [...arr]; // spread the array into a list of parameters
-                        // then put the result into a new array
+let arrCopy = [...arr]; // Array in eine Parameterliste "ausbreiten"
+                        // dann das Ergebnis in ein neues Array einfügen
 */!*
 
-// do the arrays have the same contents?
+// Haben die Arrays denselben Inhalt?
 alert(JSON.stringify(arr) === JSON.stringify(arrCopy)); // true
 
 // are the arrays equal?
-alert(arr === arrCopy); // false (not same reference)
+alert(arr === arrCopy); // false (nicht die gleiche Referenz)
 
-// modifying our initial array does not modify the copy:
+// Die Änderung unseres ursprünglichen Arrays ändert nicht die Kopie:
 arr.push(4);
 alert(arr); // 1, 2, 3, 4
 alert(arrCopy); // 1, 2, 3
 ```
 
-Note that it is possible to do the same thing to make a copy of an object:
+Beachten Sie, dass es möglich ist, dasselbe zu tun, um eine Kopie eines Objekts zu erstellen:
 
 ```js run
 let obj = { a: 1, b: 2, c: 3 };
 
 *!*
-let objCopy = { ...obj }; // spread the object into a list of parameters
-                          // then return the result in a new object
+let objCopy = { ...obj }; // Objekt in eine Parameterliste "ausbreiten"
+                          // dann das Ergebnis in ein neues Objekt zurückgeben
 */!*
 
-// do the objects have the same contents?
+// Haben die Objekte denselben Inhalt?
 alert(JSON.stringify(obj) === JSON.stringify(objCopy)); // true
 
-// are the objects equal?
-alert(obj === objCopy); // false (not same reference)
+// Sind die Objekte gleich?
+alert(obj === objCopy); // false (nicht die gleiche Referenz)
 
-// modifying our initial object does not modify the copy:
+// Die Änderung unseres ursprünglichen Objekts ändert nicht die Kopie:
 obj.d = 4;
 alert(JSON.stringify(obj)); // {"a":1,"b":2,"c":3,"d":4}
 alert(JSON.stringify(objCopy)); // {"a":1,"b":2,"c":3}
 ```
 
-This way of copying an object is much shorter than `let objCopy = Object.assign({}, obj)` or for an array `let arrCopy = Object.assign([], arr)` so we prefer to use it whenever we can.
+Diese Methode zum Kopieren eines Objekts ist viel kürzer als `let objCopy = Object.assign({}, obj)` oder für ein Array `let arrCopy = Object.assign([], arr)`, daher ziehen wir es vor, sie zu verwenden, wann immer wir können.
 
 
-## Summary
+## Zusammenfassung
 
-When we see `"..."` in the code, it is either rest parameters or the spread syntax.
+Wenn wir `"..."` im Code sehen, ist es entweder ein Rest-Parameter oder die Spread-Syntax.
 
-There's an easy way to distinguish between them:
+Es gibt einen einfachen Weg, sie zu unterscheiden:
 
-- When `...` is at the end of function parameters, it's "rest parameters" and gathers the rest of the list of arguments into an array.
-- When `...` occurs in a function call or alike, it's called a "spread syntax" and expands an array into a list.
+- Wenn `...` am Ende von Funktionsparametern steht, handelt es sich um "Rest-Parameter" und es werden die restlichen Argumente in ein Array eingefügt.
+- Wenn `...` in einem Funktionsaufruf oder ähnlichem auftritt, wird es "Spread-Syntax" genannt und es wird ein Array in eine Parameterliste expandiert.
 
-Use patterns:
+Anwendungsmuster:
 
-- Rest parameters are used to create functions that accept any number of arguments.
-- The spread syntax is used to pass an array to functions that normally require a list of many arguments.
+- Rest-Parameter werden verwendet, um Funktionen zu erstellen, die eine beliebige Anzahl von Argumenten akzeptieren.
+- Die Spread-Syntax wird verwendet, um ein Array an Funktionen zu übergeben, die normalerweise eine Liste mit vielen Argumenten erfordern.
 
-Together they help to travel between a list and an array of parameters with ease.
+Zusammen helfen sie dabei, einfach zwischen einer Liste und einem Array von Parametern zu wechseln.
 
-All arguments of a function call are also available in "old-style" `arguments`: array-like iterable object.
+Alle Argumente eines Funktionsaufrufs sind auch im "alten Stil" `arguments` verfügbar: ein Array-ähnliches iterierbare Objekt.
