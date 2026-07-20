@@ -82,7 +82,14 @@ Das funktioniert, weil intern eine Zuweisung über Destrukturierung durch Iterie
 ````smart header="Zuweisen an alles auf der linken Seite"
 Wir können jede "zuweisbare" Sache auf der linken Seite verwenden.
 
+<<<<<<< HEAD
 Zum Beispiel, eine Objekteigenschaft:
+=======
+````smart header="Assign to anything on the left-side"
+We can use any "assignables" on the left side.
+
+For instance, an object property:
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 ```js run
 let user = {};
 [user.name, user.surname] = "John Smith".split(' ');

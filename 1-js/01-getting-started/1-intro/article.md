@@ -72,9 +72,14 @@ Es gibt Möglichkeiten, mit Kamera/Mikrofon und anderen Geräten zu interagieren
 
 Dies wird die "Same-Origin-Policy" genannt. Um dies zu umgehen, müssen *beide Seiten* dem Datenaustausch zustimmen und einen speziellen JavaScript-Code enthalten, der dies ermöglicht. Wir werden das im Tutorial behandeln.
 
+<<<<<<< HEAD
     Auch diese Einschränkung dient der Sicherheit des Benutzers. Eine Seite von `http://anysite.com`, die ein Benutzer geöffnet hat, darf nicht in der Lage sein, auf einen anderen Browser-Tab mit der URL `http://gmail.com` zuzugreifen und Informationen von dort zu stehlen.
 - JavaScript kann leicht über das Netz mit dem Server kommunizieren, von dem die aktuelle Seite stammt. Aber seine Fähigkeit, Daten von anderen Seiten/Domains zu empfangen, ist eingeschränkt.
 Obwohl es möglich ist, erfordert es eine ausdrückliche Zustimmung (ausgedrückt in HTTP-Headern) von der entfernten Seite. Auch dies ist eine Sicherheitseinschränkung.
+=======
+    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
+- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is severely limited. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+>>>>>>> 725653fd99b19d42195e837ac3bb23c1784f8f6e
 
 ![](limitations.svg)
 
