@@ -311,7 +311,11 @@ alert( c ); // 4
 
 Verkettete Zuweisungen werden von rechts nach links ausgewertet. Zuerst wird der ganz rechte Ausdruck `2 + 2` ausgewertet und dann den Variablen auf der linken Seite zugewiesen: `c`, `b` und `a`. Am Ende teilen sich alle Variablen einen einzigen Wert.
 
+<<<<<<< HEAD
 Auch hier gilt: Aufgrund der Lesbarkeit ist es besser, solchen Code in wenige Zeilen aufzuteilen:
+=======
+Once again, for the purposes of readability it's better to split such code into a few lines:
+>>>>>>> 20208769e528337949e946f526534d61d38bac47
 
 ```js
 c = 2 + 2;
